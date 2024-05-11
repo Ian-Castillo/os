@@ -1,0 +1,38 @@
+.writings-container {
+  display: flex;  /* Enables flexbox layout */
+  flex-direction: row;  /* Align children (lists and content) in a row */
+  width: calc(100% - 250px); /* Adjust width minus sidebar */
+  margin-left: 250px; /* Space for the sidebar */
+  padding: 20px;
+}
+
+.list-container {
+  flex: 1;  /* Takes up 1 part of the flex container */
+  max-width: 300px; /* Maximum width of the list */
+}
+
+.writing-details {
+  flex: 2;  /* Takes up 2 parts of the flex container, making it larger */
+  padding-left: 20px;  /* Spacing between list and content */
+  border-left: 1px solid #ccc;  /* Visual separation */
+}
+
+/* Styling for individual items and details */
+.writing-item, .writing-details h2, .writing-details p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .writings-container {
+    flex-direction: column;  /* Stack list and content vertically on small screens */
+  }
+
+  .writing-details {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .list-container {
+    max-width: none;  /* Allow list to expand to full width */
+  }
+}

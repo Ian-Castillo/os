@@ -1,0 +1,59 @@
+/* Ensures that the main container covers the entire viewport and aligns items properly */
+.home-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh; /* Ensures full viewport height */
+    overflow: hidden; /* Avoids any scrollbars from flex items */
+  }
+  
+  /* Correct the content styling */
+  .content {
+    flex-grow: 1; /* Allows the content to fill the available space */
+    padding: 20px; /* Consistent padding around the content */
+    margin-left: 250px; /* Space for the sidebar */
+    max-width: calc(100% - 250px); /* Adjusts width to account for sidebar */
+    box-sizing: border-box; /* Includes padding in width calculation */
+  }
+  
+  /* Links styling within the content */
+  a {
+    color: #0077cc;
+    text-decoration: none; /* Default state without underline */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+  }
+  
+  /* Adjustments for mobile responsiveness */
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column; /* Stacks sidebar and content vertically */
+    }
+  
+    .sidebar {
+      width: 100%; /* Full width for the sidebar */
+      display: block; /* Ensure it is displayed */
+      position: relative; /* Reset position to flow in document */
+      height: auto; /* Adjust height for content */
+    }
+  
+    .content {
+      margin-left: 0; /* No need for margin on mobile */
+      max-width: 100%; /* Allows content to fit mobile screens */
+      padding: 15px; /* Slightly less padding on smaller screens */
+    }
+  
+    .menu-toggle {
+      display: block; /* Ensure menu toggle is visible */
+      position: fixed; /* Fixed at the top right corner */
+      top: 10px;
+      right: 10px;
+      background: #fff;
+      border: none;
+      padding: 10px;
+      z-index: 1050; /* High z-index to be above other content */
+      cursor: pointer;
+    }
+  }
+  
