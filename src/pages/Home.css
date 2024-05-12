@@ -44,16 +44,22 @@
       padding: 15px; /* Slightly less padding on smaller screens */
     }
   
+    .hamburger-icon {
+      font-size: 24px; /* Adjust size as needed */
+      color: black; /* Change color based on your design */
+    }
+    
     .menu-toggle {
       display: block; /* Ensure menu toggle is visible */
       position: fixed; /* Fixed at the top right corner */
       top: 10px;
       right: 10px;
-      background: #fff;
-      border: none;
+      background: #fff; /* Background to make it stand out */
+      border: 1px solid #ccc; /* Optional: adds a subtle border */
       padding: 10px;
       z-index: 1050; /* High z-index to be above other content */
       cursor: pointer;
     }
+    
   }
   

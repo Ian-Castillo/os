@@ -15,6 +15,8 @@ const Sidebar = () => {
         <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
         <NavLink to="/writings" onClick={() => setIsOpen(false)}>Writings</NavLink>
         <NavLink to="/projects" onClick={() => setIsOpen(false)}>Projects</NavLink>
+        <NavLink to="/bookmarks" onClick={() => setIsOpen(false)}>Bookmarks</NavLink>
+
         {/* Add more links as needed */}
       </div>
     </div>

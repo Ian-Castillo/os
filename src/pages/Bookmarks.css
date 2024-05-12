@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.bookmarks-container {
+    display: flex;
+    margin-left: 250px; /* Offset by the sidebar width */
+    min-height: 100vh;
+}
+
+.bookmarks-navigation {
+    width: 250px; /* Consistent with sidebar width for alignment */
+    height: 100vh; /* Full viewport height */
+    background-color: #fff; /* Optionally set a background color */
+    border-right: 1px solid #f1f1f1; /* Adds a separation line */
+    overflow-y: auto; /* Enables scrolling within the navigation only */
+}
+
+.bookmarks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bookmarks-list li {
+    padding: 10px 15px;
+    cursor: pointer;
+      box-shadow: 1px 0 2px rgba(216, 216, 216, 0.1);  /* Subtle shadow for depth */
+ /* Light line between items */
+}
+
+.bookmarks-list li:hover, .bookmarks-list li.active {
+    background-color: #f9f9f9;
+}
+
+.bookmark-details {
+    flex-grow: 1; /* Takes the remaining space */
+    padding: 20px;
+    background-color: #fff; /* Background color for the content area */
+}
+
+@media (max-width: 768px) {
+    .bookmarks-container {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .bookmarks-navigation {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .bookmark-details {
+        order: -1; /* Shows details above the list */
+    }
+}
