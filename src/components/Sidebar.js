@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import './Sidebar.css'; // Ensure your CSS file is linked
+import './Sidebar.css'; // Make sure this path is correct
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to handle the menu toggle
+    const [isOpen, setIsOpen] = useState(false); // State to handle the sidebar visibility
 
-  return (
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
-        ☰
-      </button>
-      <div className="menu">
-        <h2>Ian Castillo</h2>
-        <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
-        <NavLink to="/writings" onClick={() => setIsOpen(false)}>Writings</NavLink>
-        <NavLink to="/projects" onClick={() => setIsOpen(false)}>Projects</NavLink>
-        <NavLink to="/bookmarks" onClick={() => setIsOpen(false)}>Bookmarks</NavLink>
+    const toggleSidebar = () => {
+        setIsOpen(!isOpen); // Toggle the boolean state to show/hide the sidebar
+    };
 
-        {/* Add more links as needed */}
-      </div>
-    </div>
-  );
+    return (
+        <>
+            <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+                <a href="/">Home</a>
+                <a href="/writings">Writings</a>
+                <a href="/projects">Projects</a>
+                <a href="/bookmarks">Bookmarks</a>
+            </div>
+            <button className="menu-toggle" onClick={toggleSidebar}>
+                ☰
+            </button>
+        </>
+    );
 };
 
 export default Sidebar;
