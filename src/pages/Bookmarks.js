@@ -454,63 +454,50 @@ const bookmarksData = [
 
 const Bookmarks = () => {
   const [selectedBookmark, setSelectedBookmark] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   const handleBookmarkClick = (bookmark) => {
-    setSelectedBookmark(bookmark);
+      setSelectedBookmark(bookmark);
   };
 
   const handleBackClick = () => {
-    setSelectedBookmark(null);
-  };
-
-  const formatUrl = (url) => {
-    return url.replace(/^https?:\/\//, '').replace(/^www\./, '');
+      setSelectedBookmark(null);
   };
 
   return (
-    <div className="bookmarks-container">
-      {(!selectedBookmark || !isMobile) && (
-        <div className="bookmarks-sidebar">
-          <ul className="bookmarks-list">
-            {bookmarksData.map(bookmark => (
-              <li key={bookmark.id} onClick={() => handleBookmarkClick(bookmark)}>
-                <div className="bookmark-info">
-                  <span className="bookmark-title">{bookmark.title}</span>
-                  <div className="bookmark-favicon-url">
-                    <img src={bookmark.favicon} alt={`${bookmark.title} favicon`} className="bookmark-favicon" />
-                    <span className="bookmark-url">{formatUrl(bookmark.url)}</span>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-      {selectedBookmark && isMobile && (
-        <div className="bookmark-details">
-          <button onClick={handleBackClick} className="back-button">Back</button>
-          <h3>{selectedBookmark.title}</h3>
-          <p>{selectedBookmark.description}</p>
-          <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer">Visit</a>
-        </div>
-      )}
-      {selectedBookmark && !isMobile && (
-        <div className="bookmark-details">
-          <h3>{selectedBookmark.title}</h3>
-          <p>{selectedBookmark.description}</p>
-          <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer">Visit</a>
-        </div>
-      )}
-    </div>
+      <div className="bookmarks-container">
+          {(!selectedBookmark || window.innerWidth >= 768) && (
+              <div className="bookmarks-sidebar">
+                  <ul className="bookmarks-list">
+                      {bookmarksData.map((bookmark) => (
+                          <li key={bookmark.id} onClick={() => handleBookmarkClick(bookmark)}>
+                              <div className="bookmark-info">
+                                  <div className="bookmark-title">{bookmark.title}</div>
+                                  <div className="bookmark-favicon-url">
+                                      <img className="bookmark-favicon" src={bookmark.favicon} alt="" />
+                                      <div className="bookmark-url">{bookmark.url.replace(/^https?:\/\//, '')}</div>
+                                  </div>
+                              </div>
+                          </li>
+                      ))}
+                  </ul>
+              </div>
+          )}
+          {selectedBookmark && window.innerWidth < 768 && (
+              <div className="bookmark-details">
+                  <button className="back-button" onClick={handleBackClick}>Back</button>
+                  <h3>{selectedBookmark.title}</h3>
+                  <p>{selectedBookmark.description}</p>
+                  <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer">Visit</a>
+              </div>
+          )}
+          {selectedBookmark && window.innerWidth >= 768 && (
+              <div className="bookmark-details">
+                  <h3>{selectedBookmark.title}</h3>
+                  <p>{selectedBookmark.description}</p>
+                  <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer">Visit</a>
+              </div>
+          )}
+      </div>
   );
 };
 

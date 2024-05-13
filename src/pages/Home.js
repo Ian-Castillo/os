@@ -6,7 +6,7 @@ const Home = () => {
     <div className="home-container">
       <div className="content">
         <h1>Hey, I'm Ian!</h1>
-        <p>I'm an designer, <a href="https://github.com/ian-castillo">software engineer</a>, and entreprenuer. I'm currently building <a href="https://sunny.co/campsite">Sunny</a>, an app that re-imagines how we expereince weather.</p>
+        <p>I'm a designer, <a href="https://github.com/ian-castillo">software engineer</a>, and entrepreneur. I'm currently building <a href="https://sunny.co/campsite">Sunny</a>, an app that re-imagines how we experience weather.</p>
         <p>Before Sunny, I spent time as the first designer and product manager at <a href="https://github.com">Argus.AI</a>. Before Argus, I was a product manager at <a href="https://riiid.com">Riiid</a>.</p>
         <div className="online">
           <p>Online</p>

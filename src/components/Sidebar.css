@@ -1,18 +1,22 @@
 /* Sidebar styles */
 .sidebar {
   background-color: #ffffff; /* Light grey background */
-  width: 200px; /* Adjust width as necessary */
+  width: 150px; /* Adjust width as necessary */
   height: 100vh;
   position: fixed;
-  left: 0;
   top: 0;
-  border-right: 2px solid;
-  border-color: rgb(247, 247, 247);
+  left: 0; /* Visible on desktop */
+  border-right: 2px solid rgb(247, 247, 247);
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: start;
   overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0; /* Ensure it's visible when open */
 }
 
 .sidebar a {
@@ -31,26 +35,10 @@
   background-color: #e1e1e1;
 }
 
-.sidebar a svg {
-  margin-right: 10px; /* Space between icon and text */
-}
-
-/* Media query for mobile views */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    display: none; /* Hide by default on mobile */
-  }
-
-  .sidebar.open {
-    display: flex; /* Show when 'open' */
-  }
-}
-
 .menu-toggle {
   display: none;
   position: fixed;
-  top: 20px;
+  top: 0px;
   right: 20px;
   z-index: 1001;
   cursor: pointer;
@@ -60,6 +48,15 @@
 }
 
 @media (max-width: 768px) {
+  .sidebar {
+    left: -100%; /* Hide the sidebar off-screen for mobile */
+    transition: left 0.3s; /* Smooth transition for opening and closing */
+  }
+
+  .sidebar.open {
+    left: 0; /* Show the sidebar on-screen for mobile */
+  }
+
   .menu-toggle {
     display: block; /* Show on mobile */
   }

@@ -1,10 +1,10 @@
-/* index.css - Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 /* Base styling for the page */
 body {
   font-family: 'Arial', sans-serif; /* Ensures consistent font across the platform */
   margin: 0;
-  padding: 20px; /* Provides padding to avoid edge-to-edge text */
+  padding: 0; /* Remove default padding */
   background: #fff; /* Background color set to white */
   color: #333; /* Primary text color */
 }
@@ -38,18 +38,18 @@ a:hover, a:focus {
 /* Adjustments for mobile responsiveness */
 @media (max-width: 768px) {
   body {
-      padding: 10px; /* Less padding on smaller screens */
+    padding: 10px; /* Less padding on smaller screens */
   }
 
   h1 {
-      font-size: 22px; /* Slightly smaller font size on mobile */
+    font-size: 22px; /* Slightly smaller font size on mobile */
   }
 
   p {
-      font-size: 14px; /* Smaller font size for paragraphs on mobile */
+    font-size: 14px; /* Smaller font size for paragraphs on mobile */
   }
 
   .content {
-      padding: 10px 5px; /* Adjusting padding within the content area */
+    padding: 10px 5px; /* Adjusting padding within the content area */
   }
 }

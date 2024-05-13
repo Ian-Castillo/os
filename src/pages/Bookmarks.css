@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin-left: 0;
     background: #f9f9f9;
+    
 }
 
 .bookmarks-sidebar {
@@ -14,6 +14,7 @@
     overflow-y: auto;
     border-right: none;
     border-bottom: 2px solid #f7f7f7;
+    
 }
 
 .bookmarks-list {
@@ -88,7 +89,7 @@
 @media (min-width: 1024px) {
     .bookmarks-container {
         flex-direction: row;
-        margin-left: 224px; /* Adjust if needed for proper alignment */
+        margin-left: 60px; /* Adjust for sidebar width */
     }
 
     .bookmarks-sidebar {
@@ -103,7 +104,7 @@
     }
 }
 
-/* Specific styles for mobile */
+/* Mobile-specific styles */
 @media (max-width: 768px) {
     .bookmarks-container {
         flex-direction: column;

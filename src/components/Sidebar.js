@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import './Sidebar.css'; // Make sure this path is correct
+import './Sidebar.css'; // Ensure correct path
+import '../pages/Home.css'; // Ensure correct path
 
 const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(false); // State to handle the sidebar visibility
+    const [isOpen, setIsOpen] = useState(false); // State to handle sidebar visibility
 
     const toggleSidebar = () => {
-        setIsOpen(!isOpen); // Toggle the boolean state to show/hide the sidebar
+        setIsOpen(!isOpen); // Toggle sidebar visibility
     };
 
     return (
@@ -19,6 +20,9 @@ const Sidebar = () => {
             <button className="menu-toggle" onClick={toggleSidebar}>
                 ☰
             </button>
+            <div className={`content ${isOpen ? 'shifted' : ''}`}>
+                {/* Your main content goes here */}
+            </div>
         </>
     );
 };

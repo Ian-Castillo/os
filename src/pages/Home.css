@@ -1,34 +1,19 @@
 /* Home.css - Content styles adjustment */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .content {
-  margin-left: 250px; /* Offset by the width of the sidebar */
+  margin-left: 90px; /* Offset by the width of the sidebar */
   padding: 20px; /* Padding around the content */
   transition: margin-left 0.3s ease-in-out; /* Smooth transition for margin changes */
 }
 
-/* Mobile-specific adjustments (below 768px) */
 @media (max-width: 768px) {
-  .sidebar {
-    width: 100%; /* Full width on smaller screens */
-    transform: translateX(-100%); /* Start offscreen to the left */
-  }
-
-  .sidebar.open {
-    transform: translateX(0); /* Slide in when open */
-  }
-
-  .menu-toggle {
-    display: block; /* Show the toggle button on mobile */
-    position: fixed;
-    top: 20px;
-    right: 20px; /* Adjusted to be on the right for better accessibility */
-    font-size: 30px; /* Large enough for easy interaction */
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001; /* Above the sidebar */
-  }
-
   .content {
     margin-left: 0; /* No offset on mobile */
+    padding: 10px; /* Less padding on smaller screens */
   }
 }
