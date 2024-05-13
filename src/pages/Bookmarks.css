@@ -36,8 +36,16 @@
     padding: 30px;
     background: #ffffff;
     overflow-y: auto;
+    height: calc(100vh - 60px); /* Example height, adjust based on your layout */
 }
 
+/* Desktop-specific styles */
+@media (min-width: 1024px) {
+    .bookmark-details {
+        position: sticky;
+        top: 0; /* Adjust this value if you have a header or top bar */
+    }
+}
 /* Specific styles for mobile */
 @media (max-width: 768px) {
     .bookmarks-container {
