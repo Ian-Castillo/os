@@ -1,16 +1,19 @@
 /* Global styles applied to both mobile and desktop */
 .bookmarks-container {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    margin-left: 224px; /* Adjust if needed for proper alignment */
+    margin-left: 0;
+    background: #f9f9f9;
 }
 
 .bookmarks-sidebar {
-    width: 300px; /* Adjust width as needed */
+    width: 100%;
     background: #ffffff;
     padding: 10px;
     overflow-y: auto;
-    border-right: 2px solid #f7f7f7;
+    border-right: none;
+    border-bottom: 2px solid #f7f7f7;
 }
 
 .bookmarks-list {
@@ -24,7 +27,40 @@
     margin-bottom: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.bookmark-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bookmark-title {
+    font-size: 16px;
+    font-weight: bold;
     color: #000;
+    margin-bottom: 5px;
+}
+
+.bookmark-favicon-url {
+    display: flex;
+    align-items: center;
+}
+
+.bookmark-favicon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.bookmark-url {
+    font-size: 12px;
+    color: #555;
 }
 
 .bookmarks-list li:hover {
@@ -36,16 +72,37 @@
     padding: 30px;
     background: #ffffff;
     overflow-y: auto;
-    height: calc(100vh - 60px); /* Example height, adjust based on your layout */
+}
+
+.back-button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 /* Desktop-specific styles */
 @media (min-width: 1024px) {
+    .bookmarks-container {
+        flex-direction: row;
+        margin-left: 224px; /* Adjust if needed for proper alignment */
+    }
+
+    .bookmarks-sidebar {
+        width: 300px; /* Adjust width as needed */
+        border-right: 2px solid #f7f7f7;
+        border-bottom: none;
+    }
+
     .bookmark-details {
         position: sticky;
         top: 0; /* Adjust this value if you have a header or top bar */
     }
 }
+
 /* Specific styles for mobile */
 @media (max-width: 768px) {
     .bookmarks-container {
@@ -56,10 +113,5 @@
     .bookmarks-sidebar {
         width: 100%; /* Full width on mobile */
         border-right: none; /* Remove border on mobile */
-    }
-
-    /* Hide sidebar when not needed on mobile */
-    .sidebar:not(.open) {
-        display: none;
     }
 }
