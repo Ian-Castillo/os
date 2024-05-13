@@ -1,4 +1,4 @@
-  import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
   import './Bookmarks.css'; // Ensure your CSS file is linked
   
   const bookmarksData = [
@@ -391,31 +391,54 @@
   
     const Bookmarks = () => {
       const [selectedBookmark, setSelectedBookmark] = useState(null);
+      const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    
+      useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth < 768);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
     
       const handleBookmarkClick = (bookmark) => {
         setSelectedBookmark(bookmark);
       };
     
+      const handleBackClick = () => {
+        setSelectedBookmark(null);
+      };
+    
       return (
         <div className="bookmarks-container">
-    <div className="bookmarks-sidebar">
-      <ul className="bookmarks-list">
-        {bookmarksData.map(bookmark => (
-          <li key={bookmark.id} onClick={() => handleBookmarkClick(bookmark)}>
-            {bookmark.title}
-          </li>
-        ))}
-      </ul>
-    </div>
-    {selectedBookmark && (
-      <div className="bookmark-details">
-        <h3>{selectedBookmark.title}</h3>
-        <p>{selectedBookmark.description}</p>
-        <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer">Visit</a>
-      </div>
-    )}
-  </div>
+          {(!selectedBookmark || !isMobile) && (
+            <div className="bookmarks-sidebar">
+              <ul className="bookmarks-list">
+                {bookmarksData.map(bookmark => (
+                  <li key={bookmark.id} onClick={() => handleBookmarkClick(bookmark)}>
+                    {bookmark.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {selectedBookmark && isMobile && (
+            <div className="bookmark-details">
+              <button onClick={handleBackClick}>Back</button>
+              <h3>{selectedBookmark.title}</h3>
+              <p>{selectedBookmark.description}</p>
+              <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer">Visit</a>
+            </div>
+          )}
+          {selectedBookmark && !isMobile && (
+            <div className="bookmark-details">
+              <h3>{selectedBookmark.title}</h3>
+              <p>{selectedBookmark.description}</p>
+              <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer">Visit</a>
+            </div>
+          )}
+        </div>
       );
     };
-  
-    export default Bookmarks
+    
+    export default Bookmarks;

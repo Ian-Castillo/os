@@ -1,11 +1,13 @@
 /* Sidebar styles */
 .sidebar {
-  background-color: #f4f4f4; /* Light grey background */
-  width: 250px; /* Adjust width as necessary */
+  background-color: #ffffff; /* Light grey background */
+  width: 200px; /* Adjust width as necessary */
   height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
+  border-right: 2px solid;
+  border-color: rgb(247, 247, 247);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -14,9 +16,9 @@
 }
 
 .sidebar a {
-  color: black;
+  color: rgb(24, 24, 24);
   text-decoration: none;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   align-items: center;
   width: 100%;
