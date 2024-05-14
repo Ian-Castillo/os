@@ -1,6 +1,11 @@
-/* Sidebar styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+}
+
 .sidebar {
-  background-color: #ffffff; /* Light grey background */
+  background-color: #ffffff; /* Dark background color */
   width: 150px; /* Adjust width as necessary */
   height: 100vh;
   position: fixed;
@@ -8,56 +13,95 @@
   left: 0; /* Visible on desktop */
   border-right: 2px solid rgb(247, 247, 247);
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
   overflow-y: auto;
   z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
 .sidebar.open {
-  left: 0; /* Ensure it's visible when open */
+  transform: translateX(0); /* Ensure it's visible when open */
+}
+
+.menu-section {
+  margin-bottom: 30px;
+}
+
+.menu-section h2 {
+  font-size: 16px; /* Adjust font size */
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+
+.menu-section h3 {
+  font-size: 14px; /* Adjust font size */
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-section ul li {
+  margin-bottom: 15px; /* Adjust spacing */
 }
 
 .sidebar a {
-  color: rgb(24, 24, 24);
+  color: rgb(0, 0, 0); /* Lighter color for text */
   text-decoration: none;
-  padding: 20px;
+  font-size: 13px; /* Adjust font size */
+  padding: 10px 15px;
   display: flex;
   align-items: center;
-  width: 100%;
   border-radius: 5px;
-  margin-bottom: 5px; /* Spacing between items */
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.sidebar a:hover {
-  background-color: #e1e1e1;
+.sidebar a i {
+  margin-right: 10px;
+  font-size: 18px; /* Adjust icon size */
+}
+
+.sidebar a:hover,
+.sidebar a.selected {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .menu-toggle {
   display: none;
   position: fixed;
-  top: 0px;
+  top: 10px;
   right: 20px;
   z-index: 1001;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 18px;
   background: none;
   border: none;
 }
 
 @media (max-width: 768px) {
   .sidebar {
-    left: -100%; /* Hide the sidebar off-screen for mobile */
-    transition: left 0.3s; /* Smooth transition for opening and closing */
+      transform: translateX(-100%); /* Hide the sidebar off-screen for mobile */
   }
 
   .sidebar.open {
-    left: 0; /* Show the sidebar on-screen for mobile */
+      transform: translateX(0); /* Show the sidebar on-screen for mobile */
   }
 
   .menu-toggle {
-    display: block; /* Show on mobile */
+      display: block; /* Show on mobile */
   }
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 250px; /* Adjust according to sidebar width */
+  transition: margin-left 0.3s;
+}
+
+.content.shifted {
+  margin-left: 0; /* Adjust for mobile view when sidebar is open */
 }

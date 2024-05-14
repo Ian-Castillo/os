@@ -2,7 +2,7 @@
   display: flex;  /* Enables flexbox layout */
   flex-direction: row;  /* Align children (lists and content) in a row */
   width: calc(100% - 250px); /* Adjust width minus sidebar */
-  margin-left: 250px; /* Space for the sidebar */
+  margin-left: 90px; /* Space for the sidebar */
   padding: 20px;
 }
 
