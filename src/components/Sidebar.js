@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Sidebar = () => {
     const location = useLocation();
@@ -61,12 +60,12 @@ const Sidebar = () => {
                     <ul>
                         <li onClick={() => handleSelect('home')}>
                             <Link to="/" className={selected === 'home' ? 'selected' : ''}>
-                                <i className="fas fa-home"></i> Home
+                            <i class="fi fi-sr-house-blank"></i> Home
                             </Link>
                         </li>
                         <li onClick={() => handleSelect('writings')}>
                             <Link to="/writings" className={selected === 'writings' ? 'selected' : ''}>
-                                <i className="fas fa-pencil-alt"></i> Writings
+                            <i class="fi fi-ss-comment"></i> Thoughts
                             </Link>
                         </li>
                     </ul>
@@ -74,21 +73,22 @@ const Sidebar = () => {
                 <div className="menu-section">
                     <h3>Me</h3>
                     <ul>
+                    <li onClick={() => handleSelect('ama')}>
+                            <Link to="/ama" className={selected === 'ama' ? 'selected' : ''}>
+                            <i class="fi fi-sr-bookmark"></i> Bookmarks
+                            </Link>
+                        </li>
                         <li onClick={() => handleSelect('bookmarks')}>
                             <Link to="/bookmarks" className={selected === 'bookmarks' ? 'selected' : ''}>
-                                <i className="fas fa-bookmark"></i> Bookmarks
+                            <i class="fi fi-sr-layers"></i> Library
                             </Link>
                         </li>
-                        <li onClick={() => handleSelect('ama')}>
-                            <Link to="/ama" className={selected === 'ama' ? 'selected' : ''}>
-                                <i className="fas fa-question-circle"></i> AMA
-                            </Link>
-                        </li>
-                        <li onClick={() => handleSelect('stack')}>
+                      
+                        {/* <li onClick={() => handleSelect('stack')}>
                             <Link to="/stack" className={selected === 'stack' ? 'selected' : ''}>
                                 <i className="fas fa-layer-group"></i> Stack
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className="menu-section">
@@ -96,62 +96,32 @@ const Sidebar = () => {
                     <ul>
                         <li onClick={() => handleSelect('campsite')}>
                             <Link to="/projects/campsite" className={selected === 'campsite' ? 'selected' : ''}>
-                                <i className="fas fa-campground"></i> Campsite
+                            <i class="fi fi-sr-brightness"></i> Sunny
                             </Link>
                         </li>
-                        <li onClick={() => handleSelect('design-details')}>
-                            <Link to="/projects/design-details" className={selected === 'design-details' ? 'selected' : ''}>
-                                <i className="fas fa-paint-brush"></i> Design Details
-                            </Link>
-                        </li>
-                        <li onClick={() => handleSelect('staff-design')}>
-                            <Link to="/projects/staff-design" className={selected === 'staff-design' ? 'selected' : ''}>
-                                <i className="fas fa-users"></i> Staff Design
-                            </Link>
-                        </li>
-                        <li onClick={() => handleSelect('figma-plugins')}>
-                            <Link to="/projects/figma-plugins" className={selected === 'figma-plugins' ? 'selected' : ''}>
-                                <i className="fas fa-puzzle-piece"></i> Figma Plugins
-                            </Link>
-                        </li>
-                        <li onClick={() => handleSelect('security-checklist')}>
-                            <Link to="/projects/security-checklist" className={selected === 'security-checklist' ? 'selected' : ''}>
-                                <i className="fas fa-shield-alt"></i> Security Checklist
-                            </Link>
-                        </li>
-                        <li onClick={() => handleSelect('hacker-news')}>
-                            <Link to="/projects/hacker-news" className={selected === 'hacker-news' ? 'selected' : ''}>
-                                <i className="fas fa-hacker-news"></i> Hacker News
-                            </Link>
-                        </li>
-                        <li onClick={() => handleSelect('app-dissection')}>
-                            <Link to="/projects/app-dissection" className={selected === 'app-dissection' ? 'selected' : ''}>
-                                <i className="fas fa-mobile-alt"></i> App Dissection
-                            </Link>
-                        </li>
-                    </ul>
+                     
+                  </ul>
                 </div>
                 <div className="menu-section">
                     <h3>Online</h3>
                     <ul>
                         <li onClick={() => handleSelect('twitter')}>
                             <Link to="/twitter" className={selected === 'twitter' ? 'selected' : ''}>
-                                <i className="fab fa-twitter"></i> Twitter
+                               Twitter
                             </Link>
                         </li>
-                        <li onClick={() => handleSelect('youtube')}>
-                            <Link to="/youtube" className={selected === 'youtube' ? 'selected' : ''}>
-                                <i className="fab fa-youtube"></i> YouTube
-                            </Link>
+                        <li onClick={() => handleSelect('linkedin')}>
+                            <Link to="/linkedin" className={selected === 'linkedin' ? 'selected' : ''}>
+LinkedIn                            </Link>
                         </li>
                         <li onClick={() => handleSelect('github')}>
                             <Link to="/github" className={selected === 'github' ? 'selected' : ''}>
-                                <i className="fab fa-github"></i> GitHub
+                             GitHub
                             </Link>
                         </li>
                         <li onClick={() => handleSelect('figma')}>
                             <Link to="/figma" className={selected === 'figma' ? 'selected' : ''}>
-                                <i className="fab fa-figma"></i> Figma
+                               Figma
                             </Link>
                         </li>
                     </ul>
