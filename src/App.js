@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import Writings from './pages/Writings';  // Make sure this is correctly pointing to the Writings component file
-import Bookmarks from './pages/Bookmarks';
+import Bookmarks from './pages/Library';
 
 const App = () => {
   return (

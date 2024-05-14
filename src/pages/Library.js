@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Bookmarks.css'; // Ensure your CSS file is linked
+import './Library.css'; // Ensure your CSS file is linked
 
 const bookmarksData = [
   {
