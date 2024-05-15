@@ -1,3 +1,4 @@
+/* Sidebar.css */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -29,14 +30,8 @@ body {
 .menu-section h2, .menu-section h3 {
   color: #000000;
   margin: 0 0 10px 0;
-}
-
-.menu-section h2 {
   font-size: 16px;
-}
-
-.menu-section h3 {
-  font-size: 14px;
+  
 }
 
 .menu-section ul {
@@ -49,37 +44,49 @@ body {
 }
 
 .sidebar a {
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0); /* Default text color */
   text-decoration: none;
   font-size: 13px;
   padding: 10px 15px;
   display: flex;
   align-items: center;
   border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: none; /* No shadow by default */
+  
 }
 
 .sidebar a i {
-  margin-right: 10px; /* Existing margin */
-  font-size: 18px; /* Existing font size */
-  width: 30px; /* Width of the icon background */
-  height: 30px; /* Height of the icon background */
-  display: flex; /* Use flexbox to center the icon */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  border-radius: 4px; /* Rounded corners with specified radius */
-  background-color: #f0f0f0; /* Light gray background for the icon */
+  margin-right: 10px;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #f0f0f0; /* Default background color */
+
 }
 
+/* Hover and selected styles for the entire link */
 .sidebar a:hover, .sidebar a.selected {
-  background-color: #333; /* Dark background for contrast */
-  color: #fff; /* White text for visibility */
+  background-color: #333; /* Darker background for the whole link */
+  color: #bababa; /* White text for visibility */
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.8); /* Green glow effect */
+}
+@keyframes breathing {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+  }
 }
 
-/* Ensure the icon changes color appropriately on hover/selection */
-.sidebar a:hover i, .sidebar a.selected i {
-  background-color: #333; /* Dark background for the icon */
-  color: #fff; /* White color for the icon */
+/* Apply the breathing effect animation to the selected links */
+.sidebar a.selected {
+  animation: breathing 2s ease-in-out infinite;
 }
 
 .menu-toggle {
