@@ -1,0 +1,29 @@
+.tools-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.tools-container h1 {
+    color: #333;
+}
+
+.tools-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tools-container li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tools-container h3 {
+    margin-top: 0;
+}
+
+.tools-container p {
+    color: #666;
+}

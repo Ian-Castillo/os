@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './Sidebar.css';
+import './Sidebar.css'; // Ensure CSS is properly linked
 
 const Sidebar = () => {
     const location = useLocation();
@@ -9,39 +9,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         const currentPath = location.pathname;
-        if (currentPath === '/') {
-            setSelected('home');
-        } else if (currentPath.startsWith('/writings')) {
-            setSelected('writings');
-        } else if (currentPath.startsWith('/bookmarks')) {
-            setSelected('bookmarks');
-        } else if (currentPath.startsWith('/ama')) {
-            setSelected('ama');
-        } else if (currentPath.startsWith('/stack')) {
-            setSelected('stack');
-        } else if (currentPath.startsWith('/projects/campsite')) {
-            setSelected('campsite');
-        } else if (currentPath.startsWith('/projects/design-details')) {
-            setSelected('design-details');
-        } else if (currentPath.startsWith('/projects/staff-design')) {
-            setSelected('staff-design');
-        } else if (currentPath.startsWith('/projects/figma-plugins')) {
-            setSelected('figma-plugins');
-        } else if (currentPath.startsWith('/projects/security-checklist')) {
-            setSelected('security-checklist');
-        } else if (currentPath.startsWith('/projects/hacker-news')) {
-            setSelected('hacker-news');
-        } else if (currentPath.startsWith('/projects/app-dissection')) {
-            setSelected('app-dissection');
-        } else if (currentPath.startsWith('/twitter')) {
-            setSelected('twitter');
-        } else if (currentPath.startsWith('/youtube')) {
-            setSelected('youtube');
-        } else if (currentPath.startsWith('/github')) {
-            setSelected('github');
-        } else if (currentPath.startsWith('/figma')) {
-            setSelected('figma');
-        }
+        setSelected(currentPath.split('/')[1] || 'home'); // Simplifies selecting based on path
     }, [location]);
 
     useEffect(() => {
@@ -60,68 +28,62 @@ const Sidebar = () => {
                     <ul>
                         <li onClick={() => handleSelect('home')}>
                             <Link to="/" className={selected === 'home' ? 'selected' : ''}>
-                            <i class="fi fi-sr-house-blank"></i> Home
+                                <i className="fi fi-sr-house-blank"></i> Home
                             </Link>
                         </li>
                         <li onClick={() => handleSelect('writings')}>
                             <Link to="/writings" className={selected === 'writings' ? 'selected' : ''}>
-                            <i class="fi fi-ss-comment"></i> Thoughts
+                                <i className="fi fi-ss-comment"></i> Thoughts
                             </Link>
                         </li>
                     </ul>
                 </div>
                 <div className="menu-section">
-                    <h3>Me</h3>
+                    <h3>Resources</h3>
                     <ul>
-                    <li onClick={() => handleSelect('ama')}>
-                            <Link to="/ama" className={selected === 'ama' ? 'selected' : ''}>
-                            <i class="fi fi-sr-bookmark"></i> Bookmarks
+                        <li onClick={() => handleSelect('tools')}>
+                            <Link to="/tools" className={selected === 'tools' ? 'selected' : ''}>
+                                <i className="fi fi-sr-tools"></i> Tools
                             </Link>
                         </li>
-                        <li onClick={() => handleSelect('bookmarks')}>
-                            <Link to="/bookmarks" className={selected === 'bookmarks' ? 'selected' : ''}>
-                            <i class="fi fi-sr-layers"></i> Library
+                        <li onClick={() => handleSelect('library')}>
+                            <Link to="/library" className={selected === 'library' ? 'selected' : ''}>
+                                <i className="fi fi-sr-layers"></i> Library
                             </Link>
                         </li>
-                      
-                        {/* <li onClick={() => handleSelect('stack')}>
-                            <Link to="/stack" className={selected === 'stack' ? 'selected' : ''}>
-                                <i className="fas fa-layer-group"></i> Stack
-                            </Link>
-                        </li> */}
                     </ul>
                 </div>
                 <div className="menu-section">
                     <h3>Projects</h3>
                     <ul>
-                        <li onClick={() => handleSelect('campsite')}>
-                            <Link to="/projects/campsite" className={selected === 'campsite' ? 'selected' : ''}>
-                            <i class="fi fi-sr-brightness"></i> Sunny
+                        <li onClick={() => handleSelect('sunny')}>
+                            <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
+                                <i className="fi fi-sr-brightness"></i> Sunny
                             </Link>
                         </li>
-                     
-                  </ul>
+                    </ul>
                 </div>
                 <div className="menu-section">
                     <h3>Online</h3>
                     <ul>
                         <li onClick={() => handleSelect('twitter')}>
                             <Link to="/twitter" className={selected === 'twitter' ? 'selected' : ''}>
-                               Twitter
+                                Twitter
                             </Link>
                         </li>
                         <li onClick={() => handleSelect('linkedin')}>
                             <Link to="/linkedin" className={selected === 'linkedin' ? 'selected' : ''}>
-LinkedIn                            </Link>
+                                LinkedIn
+                            </Link>
                         </li>
                         <li onClick={() => handleSelect('github')}>
                             <Link to="/github" className={selected === 'github' ? 'selected' : ''}>
-                             GitHub
+                                GitHub
                             </Link>
                         </li>
                         <li onClick={() => handleSelect('figma')}>
                             <Link to="/figma" className={selected === 'figma' ? 'selected' : ''}>
-                               Figma
+                                Figma
                             </Link>
                         </li>
                     </ul>

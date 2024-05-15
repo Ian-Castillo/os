@@ -1,12 +1,12 @@
 /* Global styles applied to both mobile and desktop */
-.bookmarks-container {
+.libraries-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background: #f9f9f9;
 }
 
-.bookmarks-sidebar {
+.libraries-sidebar {
     width: 100%;
     background: #ffffff;
     padding: 10px;
@@ -16,13 +16,13 @@
     height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
 }
 
-.bookmarks-list {
+.libraries-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.bookmarks-list li {
+.libraries-list li {
     padding: 10px 15px;
     margin-bottom: 5px;
     cursor: pointer;
@@ -34,40 +34,40 @@
     align-items: flex-start;
 }
 
-.bookmark-info {
+.library-info {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.bookmark-title {
+.library-title {
     font-size: 14px;
     font-weight: medium;
     color: #000;
     margin-bottom: 5px;
 }
 
-.bookmark-favicon-url {
+.library-favicon-url {
     display: flex;
     align-items: center;
 }
 
-.bookmark-favicon {
+.library-favicon {
     width: 16px;
     height: 16px;
     margin-right: 5px;
 }
 
-.bookmark-url {
+.library-url {
     font-size: 12px;
     color: #a4a4a4;
 }
 
-.bookmarks-list li:hover {
+.libraries-list li:hover {
     background-color: #f0f0f0;
 }
 
-.bookmark-details {
+.library-details {
     flex-grow: 1;
     padding: 30px;
     background: #ffffff;
@@ -87,18 +87,18 @@
 
 /* Desktop-specific styles */
 @media (min-width: 1024px) {
-    .bookmarks-container {
+    .libraries-container {
         flex-direction: row;
         margin-left: 60px; /* Adjust for sidebar width */
     }
 
-    .bookmarks-sidebar {
+    .libraries-sidebar {
         width: 300px; /* Adjust width as needed */
         border-right: 2px solid #f7f7f7;
         border-bottom: none;
     }
 
-    .bookmark-details {
+    .library-details {
         position: sticky;
         top: 0; /* Adjust this value if you have a header or top bar */
     }
@@ -106,12 +106,12 @@
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-    .bookmarks-container {
+    .libraries-container {
         flex-direction: column;
         margin-left: 0; /* Remove margin left on mobile */
     }
 
-    .bookmarks-sidebar {
+    .libraries-sidebar {
         width: 100%; /* Full width on mobile */
         border-right: none; /* Remove border on mobile */
     }

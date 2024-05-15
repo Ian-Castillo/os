@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Library.css'; // Ensure your CSS file is linked
 
-const bookmarksData = [
+const librariesData = [
   {
     id: 1,
     title: "Paul Graham Essays",
@@ -452,53 +452,44 @@ const bookmarksData = [
   }
 ];
 
-const Bookmarks = () => {
-  const [selectedBookmark, setSelectedBookmark] = useState(null);
+const Libraries = () => {
+  const [selectedLibrary, setSelectedLibrary] = useState(null);
 
-  const handleBookmarkClick = (bookmark) => {
-      setSelectedBookmark(bookmark);
+  const handleLibraryClick = (library) => {
+    setSelectedLibrary(library);
   };
 
   const handleBackClick = () => {
-      setSelectedBookmark(null);
+    setSelectedLibrary(null);
   };
 
   return (
-      <div className="bookmarks-container">
-          {(!selectedBookmark || window.innerWidth >= 768) && (
-              <div className="bookmarks-sidebar">
-                  <ul className="bookmarks-list">
-                      {bookmarksData.map((bookmark) => (
-                          <li key={bookmark.id} onClick={() => handleBookmarkClick(bookmark)}>
-                              <div className="bookmark-info">
-                                  <div className="bookmark-title">{bookmark.title}</div>
-                                  <div className="bookmark-favicon-url">
-                                      <img className="bookmark-favicon" src={bookmark.favicon} alt="" />
-                                      <div className="bookmark-url">{bookmark.url.replace(/^https?:\/\//, '')}</div>
-                                  </div>
-                              </div>
-                          </li>
-                      ))}
-                  </ul>
+    <div className="libraries-container">
+      <div className="libraries-sidebar">
+        <ul className="libraries-list">
+          {librariesData.map((library) => (
+            <li key={library.id} onClick={() => handleLibraryClick(library)}>
+              <div className="library-info">
+                <div className="library-title">{library.title}</div>
+                <div className="library-favicon-url">
+                  <img className="library-favicon" src={library.favicon} alt="" />
+                  <div className="library-url">{library.url.replace(/^https?:\/\//, '')}</div>
+                </div>
               </div>
-          )}
-          {selectedBookmark && window.innerWidth < 768 && (
-              <div className="bookmark-details">
-                  <button className="back-button" onClick={handleBackClick}>Back</button>
-                  <h3>{selectedBookmark.title}</h3>
-                  <p>{selectedBookmark.description}</p>
-                  <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer">Visit</a>
-              </div>
-          )}
-          {selectedBookmark && window.innerWidth >= 768 && (
-              <div className="bookmark-details">
-                  <h3>{selectedBookmark.title}</h3>
-                  <p>{selectedBookmark.description}</p>
-                  <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer">Visit</a>
-              </div>
-          )}
+            </li>
+          ))}
+        </ul>
       </div>
+      {selectedLibrary && (
+        <div className="library-details">
+          <button className="back-button" onClick={handleBackClick}>Back</button>
+          <h3>{selectedLibrary.title}</h3>
+          <p>{selectedLibrary.description}</p>
+          <a href={selectedLibrary.url} target="_blank" rel="noopener noreferrer">Visit</a>
+        </div>
+      )}
+    </div>
   );
 };
 
-export default Bookmarks;
+export default Libraries;
