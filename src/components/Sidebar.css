@@ -60,8 +60,15 @@ body {
 }
 
 .sidebar a i {
-  margin-right: 10px;
-  font-size: 18px;
+  margin-right: 10px; /* Existing margin */
+  font-size: 18px; /* Existing font size */
+  width: 30px; /* Width of the icon background */
+  height: 30px; /* Height of the icon background */
+  display: flex; /* Use flexbox to center the icon */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  border-radius: 4px; /* Rounded corners with specified radius */
+  background-color: #f0f0f0; /* Light gray background for the icon */
 }
 
 .sidebar a:hover, .sidebar a.selected {
@@ -69,8 +76,10 @@ body {
   color: #fff; /* White text for visibility */
 }
 
+/* Ensure the icon changes color appropriately on hover/selection */
 .sidebar a:hover i, .sidebar a.selected i {
-  color: #fff; /* Change icon color to white */
+  background-color: #333; /* Dark background for the icon */
+  color: #fff; /* White color for the icon */
 }
 
 .menu-toggle {
