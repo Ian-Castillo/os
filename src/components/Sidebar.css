@@ -4,8 +4,9 @@
 body {
   font-family: 'Inter', sans-serif; /* Default to Inter for body content */
   margin: 0;
-  display: flex;
   background-color: #f0f0f0; /* Background color */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
 }
 
 .sidebar {
@@ -128,15 +129,18 @@ body {
   .content {
     margin-left: 0;
     padding: 10px;
-    max-width: 100%; /* Ensure content takes full width */
+    max-width: 1000px; /* Ensure content takes full width */
   }
 }
 
 .content {
   flex-grow: 1;
   padding: 20px;
-  margin-left: 100px; /* Align with sidebar width */
+  margin-left: 120px; /* Align with sidebar width */
   transition: margin-left 0.3s;
+  max-width: 1000px; /* Control content width */
+  text-align: center; /* Center text */
+  align-items: center; /* Center content vertically */
 }
 
 .content.shifted {
