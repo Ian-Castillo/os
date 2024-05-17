@@ -21,7 +21,6 @@ body {
 /* Main content area */
 .main-content {
   width: 100%;
-
   background: #ffffff;
   padding: 10px;
   box-sizing: border-box; /* Include padding and border in element's total width and height */
@@ -45,7 +44,6 @@ body {
   display: block;
   margin: 5px 0;
 }
-
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
