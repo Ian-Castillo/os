@@ -91,7 +91,7 @@ body {
 
 /* Hover and selected styles for icons */
 .sidebar a:hover i, .sidebar a.selected i {
-  animation: breathing 2s ease-in-out infinite;
+  animation: breathing 6s ease-in-out infinite;
   background-color: #000000; /* Change icon background color on hover/selected */
   color: #ffffff; /* Change icon color on hover/selected */
 }

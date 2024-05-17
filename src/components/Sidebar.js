@@ -24,7 +24,7 @@ const Sidebar = () => {
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
                 <div className="menu-section">
                     <h2>Ian Castillo</h2>
-                    <p>Designer, Software Engineer, & Founder of Sunny</p>
+                    <p>Founder of Sunny</p>
                     <ul>
                         <li onClick={() => setSelected('home')}>
                             <Link to="/" className={selected === 'home' ? 'selected' : ''}>
@@ -37,6 +37,16 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         {/* Add more links if necessary */}
+                    </ul>
+                </div>
+                <div className="menu-section">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li onClick={() => setSelected('sunny')}>
+                            <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
+                                <i className="fi fi-sr-brightness"></i> Sunny
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="menu-section">
@@ -54,16 +64,7 @@ const Sidebar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="menu-section">
-                    <h3>Projects</h3>
-                    <ul>
-                        <li onClick={() => setSelected('sunny')}>
-                            <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
-                                <i className="fi fi-sr-brightness"></i> Sunny
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+     
                 <div className="menu-section">
                     <h3>Online</h3>
                     <ul>

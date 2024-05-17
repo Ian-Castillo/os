@@ -13,7 +13,9 @@ body {
   justify-content: center; /* Center the content */
   align-items: center; /* Center the content vertically */
   min-height: 100vh;
-  padding: 120px;
+  padding: 100px;
+  background-image: radial-gradient(circle, rgb(239, 239, 239) 1px, rgba(231, 231, 231, 0) 1px);
+  background-size: 20px 18px; /* Adjust the size of the dots and spacing */
 }
 
 /* Main content area */
@@ -21,7 +23,7 @@ body {
   width: 100%;
 
   background: #ffffff;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
@@ -43,6 +45,7 @@ body {
   display: block;
   margin: 5px 0;
 }
+
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
