@@ -27,7 +27,7 @@ p {
 
 /* Link styling */
 a {
-  color: #007BFF; /* Blue color for links to stand out */
+  color: #454545; /* Blue color for links to stand out */
   text-decoration: none; /* No underline by default */
   font-weight: bold; /* Bold to highlight links */
   display: inline-block; /* Allows for margin and padding adjustments */

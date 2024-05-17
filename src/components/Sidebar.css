@@ -134,7 +134,7 @@ body {
 .content {
   flex-grow: 1;
   padding: 20px;
-  margin-left: 150px;
+  margin-left: 90px;
   transition: margin-left 0.3s;
 }
 
