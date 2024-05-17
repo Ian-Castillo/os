@@ -5,8 +5,6 @@ body {
   font-family: 'Inter', sans-serif; /* Default to Inter for body content */
   margin: 0;
   background-color: #f0f0f0; /* Background color */
-  display: flex;
-  justify-content: center; /* Center content horizontally */
 }
 
 .sidebar {
@@ -20,8 +18,14 @@ body {
   padding: 20px;
   overflow-y: auto;
   z-index: 1000;
-  transition: transform 0.3s ease;
 }
+
+.content {
+  margin-left: 150px; /* Adjust this value to provide space for the sidebar */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 
 .sidebar.open {
   transform: translateX(0);
@@ -129,20 +133,6 @@ body {
   .content {
     margin-left: 0;
     padding: 10px;
-    max-width: 1000px; /* Ensure content takes full width */
+    max-width: 100%; /* Ensure content takes full width */
   }
-}
-
-.content {
-  flex-grow: 1;
-  padding: 20px;
-  margin-left: 120px; /* Align with sidebar width */
-  transition: margin-left 0.3s;
-  max-width: 1000px; /* Control content width */
-  text-align: center; /* Center text */
-  align-items: center; /* Center content vertically */
-}
-
-.content.shifted {
-  margin-left: 0;
 }

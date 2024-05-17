@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
-import Writings from './pages/Writings';  // Make sure this is correctly pointing to the Writings component file
-import Bookmarks from './pages/Library';
+import Writings from './pages/Writings'; 
+import Library from './pages/Library'; 
 import Sunny from './pages/projects/Sunny';
 
 const App = () => {
@@ -15,10 +15,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/writings" element={<Writings />} />
-            <Route path="/bookmarks" element={<Bookmarks />} />
-            <Route path="/library" element={<Bookmarks />} />
-            <Route path="/sunny" element={<Sunny />} /> 
-
+            <Route path="/library" element={<Library />} />
+            <Route path="/sunny" element={<Sunny />} />
             {/* Define more routes as needed */}
           </Routes>
         </div>

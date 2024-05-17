@@ -1,18 +1,17 @@
 /* Global styles applied to both mobile and desktop */
 .libraries-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Ensure the sidebar and main content are side by side */
     min-height: 100vh;
     background: #ffffff;
 }
 
 .libraries-sidebar {
-    width: 100%;
+    width: 300px; /* Adjust width as needed */
     background: #ffffff;
     padding: 10px;
     overflow-y: auto; /* Enable scrolling for the list */
-    border-right: none;
-    border-bottom: 2px solid #f7f7f7;
+    border-right: 2px solid #f7f7f7;
     height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
 }
 
@@ -85,25 +84,6 @@
     margin-bottom: 20px;
 }
 
-/* Desktop-specific styles */
-@media (min-width: 1024px) {
-    .libraries-container {
-        flex-direction: row;
-        margin-left: 60px; /* Adjust for sidebar width */
-    }
-
-    .libraries-sidebar {
-        width: 300px; /* Adjust width as needed */
-        border-right: 2px solid #f7f7f7;
-        border-bottom: none;
-    }
-
-    .library-details {
-        position: sticky;
-        top: 0; /* Adjust this value if you have a header or top bar */
-    }
-}
-
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     .libraries-container {
@@ -114,5 +94,10 @@
     .libraries-sidebar {
         width: 100%; /* Full width on mobile */
         border-right: none; /* Remove border on mobile */
+        border-bottom: 2px solid #f7f7f7; /* Add bottom border on mobile */
+    }
+
+    .library-details {
+        height: auto; /* Adjust height for mobile */
     }
 }
