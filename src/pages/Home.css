@@ -1,4 +1,3 @@
-/* Home.css - Content styles adjustment */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -30,3 +29,4 @@
     padding: 10px; /* Less padding on smaller screens */
   }
 }
+
