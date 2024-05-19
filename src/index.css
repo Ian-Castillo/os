@@ -35,7 +35,7 @@ a {
 }
 
 a:hover, a:focus {
-  text-decoration: underline; /* Underline on hover/focus for better interaction */
+  text-decoration: none; /* Underline on hover/focus for better interaction */
 }
 
 /* Adjustments for mobile responsiveness */

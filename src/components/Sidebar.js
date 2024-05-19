@@ -44,7 +44,7 @@ const Sidebar = () => {
                     <ul>
                         <li onClick={() => setSelected('gradient')}>
                             <Link to="/gradient" className={selected === 'gradient' ? 'selected' : ''}>
-                                <i className="fi fi-sr-brightness"></i> Gradient
+                            <i class="fi fi-ss-book"></i>Gradient
                             </Link>
                         </li>
                     </ul>
@@ -64,7 +64,7 @@ const Sidebar = () => {
                     <ul>
                         <li onClick={() => setSelected('tools')}>
                             <Link to="/tools" className={selected === 'tools' ? 'selected' : ''}>
-                                <i className="fi fi-sr-tools"></i> Tools
+                            <i class="fi fi-ss-cursor"></i>Tools
                             </Link>
                         </li>
                         <li onClick={() => setSelected('library')}>
