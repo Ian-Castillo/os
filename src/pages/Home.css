@@ -10,12 +10,13 @@ body {
 /* Home container */
 .home-container {
   display: flex;
-  justify-content: center; /* Center the content */
-  align-items: center; /* Center the content vertically */
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   padding: 100px;
+  background-color: #ffffff; /* Ensure a white background to highlight the dots */
   background-image: radial-gradient(circle, rgb(239, 239, 239) 1px, rgba(231, 231, 231, 0) 1px);
-  background-size: 20px 18px; /* Adjust the size of the dots and spacing */
+  background-size: 20px 20px; /* Adjust the size of the dots and spacing */
 }
 
 /* Main content area */
@@ -23,7 +24,7 @@ body {
   width: 100%;
   background: #ffffff;
   padding: 10px;
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  box-sizing: border-box;
 }
 
 /* Profile image */
@@ -48,16 +49,16 @@ body {
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .home-container {
-    padding: 20px; /* Reduce padding for mobile view */
+    padding: 20px;
   }
 
   .profile-image {
-    width: 100%; /* Ensure profile image takes full width */
+    width: 100%;
     margin-top: 20px;
-    margin-bottom: 15px; /* Adjust margin for better spacing on mobile */
+    margin-bottom: 15px;
   }
 
   .main-content {
-    padding: 0px; /* Increase padding for a better layout on mobile */
+    padding: 0px;
   }
 }

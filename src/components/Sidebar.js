@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './Sidebar.css'; // Ensure CSS is properly linked
+import './Sidebar.css';
 
 const Sidebar = () => {
     const location = useLocation();
     const [selected, setSelected] = useState(() => localStorage.getItem('selectedItem') || 'home');
     const [isOpen, setIsOpen] = useState(false);
 
-    // Effect for updating selection based on the URL path
     useEffect(() => {
         const path = location.pathname.split('/')[1] || 'home';
         setSelected(path);
         localStorage.setItem('selectedItem', path);
     }, [location]);
 
-    // Function to handle sidebar toggle
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
@@ -36,7 +34,6 @@ const Sidebar = () => {
                                 <i className="fi fi-ss-comment"></i> Thoughts
                             </Link>
                         </li>
-                        {/* Add more links if necessary */}
                     </ul>
                 </div>
                 <div className="menu-section">
@@ -44,7 +41,7 @@ const Sidebar = () => {
                     <ul>
                         <li onClick={() => setSelected('gradient')}>
                             <Link to="/gradient" className={selected === 'gradient' ? 'selected' : ''}>
-                            <i class="fi fi-ss-book"></i>Gradient
+                                <i className="fi fi-ss-book"></i> Gradient
                             </Link>
                         </li>
                     </ul>
@@ -64,7 +61,7 @@ const Sidebar = () => {
                     <ul>
                         <li onClick={() => setSelected('tools')}>
                             <Link to="/tools" className={selected === 'tools' ? 'selected' : ''}>
-                            <i class="fi fi-ss-cursor"></i>Tools
+                                <i className="fi fi-ss-cursor"></i> Tools
                             </Link>
                         </li>
                         <li onClick={() => setSelected('library')}>
@@ -74,28 +71,27 @@ const Sidebar = () => {
                         </li>
                     </ul>
                 </div>
-     
                 <div className="menu-section">
                     <h3>Online</h3>
                     <ul>
                         <li onClick={() => setSelected('twitter')}>
                             <Link to="/twitter" className={selected === 'twitter' ? 'selected' : ''}>
-                            <i class="fi fi-brands-twitter"></i> Twitter
+                                <i className="fi fi-brands-twitter"></i> Twitter
                             </Link>
                         </li>
                         <li onClick={() => setSelected('linkedin')}>
                             <Link to="/linkedin" className={selected === 'linkedin' ? 'selected' : ''}>
-                            <i class="fi fi-brands-linkedin"></i> LinkedIn
+                                <i className="fi fi-brands-linkedin"></i> LinkedIn
                             </Link>
                         </li>
                         <li onClick={() => setSelected('github')}>
                             <Link to="/github" className={selected === 'github' ? 'selected' : ''}>
-                            <i class="fi fi-brands-github"></i> GitHub
+                                <i className="fi fi-brands-github"></i> GitHub
                             </Link>
                         </li>
                         <li onClick={() => setSelected('figma')}>
                             <Link to="/figma" className={selected === 'figma' ? 'selected' : ''}>
-                            <i class="fi fi-brands-figma"></i> Figma
+                                <i className="fi fi-brands-figma"></i> Figma
                             </Link>
                         </li>
                     </ul>
