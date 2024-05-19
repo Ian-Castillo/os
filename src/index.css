@@ -21,18 +21,13 @@ h1 {
   margin-bottom: 10px; /* Spacing below the heading */
 }
 
-p {
-  margin: 0 0 20px;
-  line-height: 1.5;
-}
 
 /* Link styling */
 a {
   color: #454545; /* Blue color for links to stand out */
   text-decoration: none; /* No underline by default */
   font-weight: bold; /* Bold to highlight links */
-  display: inline-block; /* Allows for margin and padding adjustments */
-  margin-bottom: 10px; /* Space below each link */
+  display: none; /* Allows for margin and padding adjustments */
 }
 
 a:hover, a:focus {

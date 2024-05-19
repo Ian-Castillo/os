@@ -23,7 +23,7 @@ const Sidebar = () => {
                 <button className="menu-close" onClick={toggleSidebar}>×</button>
                 <div className="menu-section">
                     <h2>Ian Castillo</h2>
-                    <p>Founder of Sunny</p>
+                    
                     <ul>
                         <li onClick={() => setSelected('home')}>
                             <Link to="/" className={selected === 'home' ? 'selected' : ''}>
