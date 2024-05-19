@@ -3,6 +3,7 @@
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-straight/css/uicons-solid-straight.css');
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css');
 /* Base styling for the page */
 body {
   font-family: 'Inter', sans-serif; /* Updated font to Inter */
@@ -15,7 +16,7 @@ body {
 /* Heading and text styling */
 h1 {
   font-size: 24px; /* Larger text for headings */
-  font-weight: bold; /* Bold for better readability */
+  font-weight: medium; /* Bold for better readability */
   margin-bottom: 10px; /* Spacing below the heading */
 }
 

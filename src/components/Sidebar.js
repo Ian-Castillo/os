@@ -40,6 +40,16 @@ const Sidebar = () => {
                     </ul>
                 </div>
                 <div className="menu-section">
+                    <h3>Concepts</h3>
+                    <ul>
+                        <li onClick={() => setSelected('gradient')}>
+                            <Link to="/gradient" className={selected === 'gradient' ? 'selected' : ''}>
+                                <i className="fi fi-sr-brightness"></i> Gradient
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="menu-section">
                     <h3>Projects</h3>
                     <ul>
                         <li onClick={() => setSelected('sunny')}>
@@ -70,22 +80,22 @@ const Sidebar = () => {
                     <ul>
                         <li onClick={() => setSelected('twitter')}>
                             <Link to="/twitter" className={selected === 'twitter' ? 'selected' : ''}>
-                                Twitter
+                            <i class="fi fi-brands-twitter"></i> Twitter
                             </Link>
                         </li>
                         <li onClick={() => setSelected('linkedin')}>
                             <Link to="/linkedin" className={selected === 'linkedin' ? 'selected' : ''}>
-                                LinkedIn
+                            <i class="fi fi-brands-linkedin"></i> LinkedIn
                             </Link>
                         </li>
                         <li onClick={() => setSelected('github')}>
                             <Link to="/github" className={selected === 'github' ? 'selected' : ''}>
-                                GitHub
+                            <i class="fi fi-brands-github"></i> GitHub
                             </Link>
                         </li>
                         <li onClick={() => setSelected('figma')}>
                             <Link to="/figma" className={selected === 'figma' ? 'selected' : ''}>
-                                Figma
+                            <i class="fi fi-brands-figma"></i> Figma
                             </Link>
                         </li>
                     </ul>
