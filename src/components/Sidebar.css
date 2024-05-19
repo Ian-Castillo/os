@@ -26,7 +26,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .sidebar.open {
   transform: translateX(0);
 }
@@ -67,9 +66,9 @@ body {
 
 .sidebar a i {
   margin-right: 10px;
-  font-size: 18px;
-  width: 30px;
-  height: 30px;
+  font-size: 16px; /* Adjust icon size */
+  width: 25px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +111,7 @@ body {
   right: 20px;
   z-index: 1001;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 12px;
   background: none;
   border: none;
 }
@@ -136,3 +135,4 @@ body {
     max-width: 100%; /* Ensure content takes full width */
   }
 }
+

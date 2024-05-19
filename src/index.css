@@ -4,6 +4,7 @@
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css');
+
 /* Base styling for the page */
 body {
   font-family: 'Inter', sans-serif; /* Updated font to Inter */
@@ -36,6 +37,11 @@ a {
 
 a:hover, a:focus {
   text-decoration: none; /* Underline on hover/focus for better interaction */
+}
+
+/* Icon size adjustment */
+[class*="flaticon"] {
+  font-size: 10px; /* Adjust this value to make icons smaller */
 }
 
 /* Adjustments for mobile responsiveness */

@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import Writings from './pages/Writings'; 
-import Library from './pages/Library'; 
+import Library from './pages/resources/Library'; 
 import Sunny from './pages/projects/Sunny';
 
 const App = () => {

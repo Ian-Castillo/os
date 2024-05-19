@@ -53,10 +53,11 @@ body {
 
   .profile-image {
     width: 100%; /* Ensure profile image takes full width */
+    margin-top: 20px;
     margin-bottom: 15px; /* Adjust margin for better spacing on mobile */
   }
 
   .main-content {
-    padding: 15px; /* Increase padding for a better layout on mobile */
+    padding: 0px; /* Increase padding for a better layout on mobile */
   }
 }
