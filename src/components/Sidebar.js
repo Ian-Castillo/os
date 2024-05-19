@@ -20,6 +20,7 @@ const Sidebar = () => {
     return (
         <>
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+                <button className="menu-close" onClick={toggleSidebar}>×</button>
                 <div className="menu-section">
                     <h2>Ian Castillo</h2>
                     <p>Founder of Sunny</p>
