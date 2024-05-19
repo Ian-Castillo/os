@@ -4,6 +4,7 @@
     flex-direction: row; /* Ensure the sidebar and main content are side by side */
     min-height: 100vh;
     background: #ffffff;
+    
 }
 
 .libraries-sidebar {

@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
-  font-family: 'Inter', sans-serif; /* Default to Inter for body content */
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: #f0f0f0; /* Background color */
+  background-color: #f0f0f0;
 }
 
 .sidebar {
@@ -21,7 +21,7 @@ body {
 }
 
 .content {
-  margin-left: 150px; /* Adjust this value to provide space for the sidebar */
+  margin-left: 150px;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -35,10 +35,10 @@ body {
 }
 
 .menu-section h2, .menu-section h3 {
-  color: #000000;
+  color: #a8a8a8;
   margin: 0 0 10px 0;
-  font-size: 16px;
-  font-family: 'IBM Plex Mono', monospace; /* Apply IBM Plex Mono for headings */
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .menu-section ul {
@@ -47,52 +47,50 @@ body {
 }
 
 .menu-section ul li {
-  margin-bottom: 15px;
-  font-family: 'IBM Plex Mono', monospace; /* Apply IBM Plex Mono here */
+  margin-bottom: 10px;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .sidebar a {
-  color: rgb(0, 0, 0); /* Default text color */
+  color: rgb(61, 61, 61);
   text-decoration: none;
-  font-size: 13px;
-  padding: 10px 15px;
+  font-size: 12px;
+  padding: 8px 14px;
   display: flex;
   align-items: center;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  box-shadow: none; /* No shadow by default */
-  font-family: 'Inter', sans-serif; /* Apply Inter for links */
+  box-shadow: none;
+  font-family: 'Inter', sans-serif;
 }
 
 .sidebar a i {
   margin-right: 10px;
-  font-size: 16px; /* Adjust icon size */
-  width: 25px;
-  height: 25px;
+  font-size: 12px; /* Adjust icon size */
+  width: 20px; /* Adjust width */
+  height: 20px; /* Adjust height */
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  background-color: #eeeeee; /* Default background color */
-  transition: box-shadow 0.3s, background-color 0.3s; /* Smooth transition for box-shadow and background-color */
+  background-color: #eeeeee;
+  transition: box-shadow 0.3s, background-color 0.3s;
 }
 
-/* Hover and selected styles for the entire link */
 .sidebar a:hover {
-  background-color: #f0f0f0; /* Darker background for the whole link */
-  color: #000000; /* Black text for visibility */
+  background-color: #f0f0f0;
+  color: #000000;
 }
 
 .sidebar a.selected {
-  background-color: #121212; /* Different background color for selected link */
-  color: #f2f2f2; /* Black text for visibility */
+  background-color: #121212;
+  color: #f2f2f2;
 }
 
-/* Hover and selected styles for icons */
 .sidebar a:hover i, .sidebar a.selected i {
   animation: breathing 6s ease-in-out infinite;
-  background-color: #000000; /* Change icon background color on hover/selected */
-  color: #ffffff; /* Change icon color on hover/selected */
+  background-color: #000000;
+  color: #ffffff;
 }
 
 @keyframes breathing {
@@ -132,7 +130,6 @@ body {
   .content {
     margin-left: 0;
     padding: 10px;
-    max-width: 100%; /* Ensure content takes full width */
+    max-width: 100%;
   }
 }
-
