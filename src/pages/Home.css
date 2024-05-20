@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-straight/css/uicons-solid-straight.css');
@@ -7,11 +8,11 @@
 
 /* Base styling for the page */
 body {
-  font-family: 'Inter', sans-serif; /* Updated font to Inter */
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  padding: 0; /* Remove default padding */
-  background: #fff; /* Background color set to white */
-  color: #333; /* Primary text color */
+  padding: 0;
+  background: #fff;
+  color: #333;
 }
 
 /* Home container */
@@ -21,9 +22,9 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 100px;
-  background-color: #ffffff; /* Ensure a white background to highlight the dots */
+  background-color: #ffffff;
   background-image: radial-gradient(circle, rgb(239, 239, 239) 1px, rgba(231, 231, 231, 0) 1px);
-  background-size: 20px 20px; /* Adjust the size of the dots and spacing */
+  background-size: 20px 20px;
 }
 
 /* Main content area */
@@ -45,38 +46,72 @@ body {
 /* Content text */
 .main-content p {
   text-align: left;
-  margin: 0 0 20px; /* Ensure consistent bottom margin */
-  line-height: 1.6; /* Improve readability */
+  margin: 0 0 20px;
+  line-height: 1.6;
 }
 
 /* Heading styling */
 h1 {
-  font-size: 24px; /* Larger text for headings */
-  font-weight: 700; /* Bold for better readability */
-  margin: 0 0 20px; /* Spacing below the heading */
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px;
 }
 
 /* Link styling */
 a {
-  color: #454545; /* Blue color for links to stand out */
-  text-decoration: none; /* No underline by default */
-  font-weight: bold; /* Bold to highlight links */
-  display: inline-block; /* Allows for margin and padding adjustments */
+  color: #454545;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
 }
 
 a:hover, a:focus {
-  text-decoration: underline; /* Underline on hover/focus for better interaction */
+  text-decoration: underline;
 }
 
 /* Icon size adjustment */
 [class*="flaticon"] {
-  font-size: 10px; /* Adjust this value to make icons smaller */
+  font-size: 10px;
 }
 
-/* Online links */
-.online a {
-  display: block;
-  margin: 5px 0;
+/* Location and social icons styling */
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace; /* Apply IBM Plex Mono font */
+}
+
+.location i {
+  margin-right: 10px; /* Add padding between the globe icon and text */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon i {
+  font-size: 16px;
+}
+
+.social-icon:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
 }
 
 /* Adjustments for mobile responsiveness */
@@ -96,15 +131,15 @@ a:hover, a:focus {
   }
 
   h1 {
-    font-size: 22px; /* Slightly smaller font size on mobile */
+    font-size: 22px;
   }
 
   p {
-    font-size: 14px; /* Smaller font size for paragraphs on mobile */
-    margin: 0 0 15px; /* Adjust margin for better spacing on mobile */
+    font-size: 14px;
+    margin: 0 0 15px;
   }
 
   .content {
-    padding: 10px 5px; /* Adjusting padding within the content area */
+    padding: 10px 5px;
   }
 }

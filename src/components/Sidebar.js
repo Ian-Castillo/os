@@ -21,9 +21,11 @@ const Sidebar = () => {
         <>
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
                 <button className="menu-close" onClick={toggleSidebar}>×</button>
-                <div className="menu-section">
+                <div className="menu-title">
                     <h2>Ian Castillo</h2>
-                    
+             
+                </div>
+                <div className="menu-section">
                     <ul>
                         <li onClick={() => setSelected('home')}>
                             <Link to="/" className={selected === 'home' ? 'selected' : ''}>
@@ -72,31 +74,7 @@ const Sidebar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="menu-section">
-                    <h3>Online</h3>
-                    <ul>
-                        <li onClick={() => setSelected('twitter')}>
-                            <Link to="/twitter" className={selected === 'twitter' ? 'selected' : ''}>
-                                <i className="fi fi-brands-twitter"></i> Twitter
-                            </Link>
-                        </li>
-                        <li onClick={() => setSelected('linkedin')}>
-                            <Link to="/linkedin" className={selected === 'linkedin' ? 'selected' : ''}>
-                                <i className="fi fi-brands-linkedin"></i> LinkedIn
-                            </Link>
-                        </li>
-                        <li onClick={() => setSelected('github')}>
-                            <Link to="/github" className={selected === 'github' ? 'selected' : ''}>
-                                <i className="fi fi-brands-github"></i> GitHub
-                            </Link>
-                        </li>
-                        <li onClick={() => setSelected('figma')}>
-                            <Link to="/figma" className={selected === 'figma' ? 'selected' : ''}>
-                                <i className="fi fi-brands-figma"></i> Figma
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+                
             </div>
             <button className="menu-toggle" onClick={toggleSidebar}>
                 ☰

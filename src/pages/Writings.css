@@ -27,6 +27,21 @@ body {
   height: calc(100vh - 20px); /* Adjust the height to fill the viewport */
 }
 
+.search-bar {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Add this to change the border color on focus */
+.search-bar:focus {
+  border-color: #000; /* Change border color to black */
+  outline: none; /* Remove default outline */
+}
+
 .writings-list {
   list-style: none;
   margin: 0;
@@ -58,9 +73,25 @@ body {
   margin-bottom: 5px;
 }
 
+.writing-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .writing-date {
   font-size: 12px;
   color: #a4a4a4;
+  margin-right: 10px;
+}
+
+.writing-tag {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-size: 12px;
+  margin-left: 5px;
+  color: #333;
 }
 
 .writing-item:hover {
@@ -95,7 +126,7 @@ body {
 }
 
 .back-button {
-  background: #007bff;
+  background: #1b1b1b;
   color: #fff;
   border: none;
   padding: 10px;

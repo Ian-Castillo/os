@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css'; // Ensure your CSS file is linked correctly
+import './Home.css';
 import profileImage from '../ian.jpg'; // Adjust the path as necessary
 
 const Home = () => {
@@ -7,6 +7,27 @@ const Home = () => {
     <div className="home-container">
       <div className="main-content">
         <img src={profileImage} alt="Ian Castillo" className="profile-image" />
+        <div className="location">
+          <i className="fi fi-br-globe"></i>
+          <span>Iowa City, Iowa, CST</span>
+        </div>
+        <div className="social-icons">
+          <div className="social-icon">
+            <i className="fi fi-rr-envelope"></i>
+          </div>
+          <div className="social-icon">
+            <i className="fi fi-rr-phone-call"></i>
+          </div>
+          <div className="social-icon">
+            <i className="fi fi-brands-github"></i>
+          </div>
+          <div className="social-icon">
+            <i className="fi fi-brands-linkedin"></i>
+          </div>
+          <div className="social-icon">
+            <i className="fi fi-brands-twitter"></i>
+          </div>
+        </div>
         <h1>Hi, I'm Ian.</h1>
         <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My focus is on zero-to-one design thinking, rapid prototyping, and accelerating the Iowa start-up ecosystem.</p>
         <p>Currently, I am leading product and design at <a href="https://www.argus.ai/">ArgusAI</a>, where we are re-imagining and setting new standards for college admissions. At ArgusAI, I oversee product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. Our mission is to revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants, helping colleges and universities make better-informed decisions.</p>
@@ -28,3 +49,4 @@ const Home = () => {
 };
 
 export default Home;
+

@@ -5,18 +5,35 @@ import './Writings.css';
 
 const Writings = () => {
   const [selectedWritingId, setSelectedWritingId] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredWritings = writingsData.filter(writing => 
+    writing.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
 
   const selectedWriting = writingsData.find(writing => writing.id === selectedWritingId);
 
   return (
     <div className="writings-container">
       <div className="writings-sidebar">
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search by tag..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
         <ul className="writings-list">
-          {writingsData.map((writing) => (
+          {filteredWritings.map((writing) => (
             <li key={writing.id} className="writing-item" onClick={() => setSelectedWritingId(writing.id)}>
               <div className="writing-info">
                 <div className="writing-title">{writing.title}</div>
-                <div className="writing-date">{writing.date}</div>
+                <div className="writing-meta">
+                  <span className="writing-date">{writing.date}</span>
+                  {writing.tags.map(tag => (
+                    <span key={tag} className="writing-tag">{tag}</span>
+                  ))}
+                </div>
               </div>
             </li>
           ))}
