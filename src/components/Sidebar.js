@@ -22,10 +22,14 @@ const Sidebar = () => {
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
                 <button className="menu-close" onClick={toggleSidebar}>×</button>
                 <div className="menu-title">
-                    <h2>Ian Castillo</h2>
-             
+                    <h2>Ian M. Castillo</h2>
+                    <div className="location">
+                    <i class="fi fi-sr-globe"></i>
+          <span>Iowa City, IA, CST</span>
+        </div>
                 </div>
                 <div className="menu-section">
+                <h3>About</h3>
                     <ul>
                         <li onClick={() => setSelected('home')}>
                             <Link to="/" className={selected === 'home' ? 'selected' : ''}>
@@ -35,6 +39,11 @@ const Sidebar = () => {
                         <li onClick={() => setSelected('writings')}>
                             <Link to="/writings" className={selected === 'writings' ? 'selected' : ''}>
                                 <i className="fi fi-ss-comment"></i> Thoughts
+                            </Link>
+                        </li>
+                        <li onClick={() => setSelected('experience')}>
+                            <Link to="/experience" className={selected === 'experience' ? 'selected' : ''}>
+                            <i class="fi fi-sr-briefcase-blank"></i> Experience
                             </Link>
                         </li>
                     </ul>

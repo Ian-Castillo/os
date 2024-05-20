@@ -123,6 +123,17 @@ body {
   border: none;
   cursor: pointer;
 }
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-family: 'IBM Plex Mono', monospace; /* Apply IBM Plex Mono font */
+  padding-bottom: 18px;
+}
+
+.location i {
+  margin-right: 6px; /* Add padding between the globe icon and text */
+}
 
 
 @media (max-width: 768px) {
