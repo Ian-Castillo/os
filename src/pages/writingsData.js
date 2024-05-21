@@ -59,7 +59,7 @@ So, next time you have a brilliant idea, remember: don't just think about it—p
         date: 'May 5, 2024',
         tags: ['UI/UX', 'Design'],
         content: `
-![Placeholder Image](https://via.placeholder.com/150/000000/FFFFFF/?text=Image)
+![Placeholder Image](https://via.placeholder.com/250/000000/FFFFFF/?text=Image)
 
 ### Minimalism in UI/UX Design: A Journey Towards Clarity and Purpose
 

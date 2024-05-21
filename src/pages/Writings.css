@@ -1,27 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 body {
-  font-family: 'Inter', sans-serif; /* Default to Inter for body content */
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: #ffffff; /* Background color */
-  height: 100vh; /* Ensure the body takes up the full viewport height */
+  background-color: #ffffff;
+  height: 100vh;
   display: flex;
 }
 
 .writings-container {
-  display: flex;  /* Enables flexbox layout */
-  flex-direction: row;  /* Align children (lists and content) in a row */
+  display: flex;
+  flex-direction: row;
   min-height: 100vh;
   background: #ffffff;
-  width: 100%; /* Ensure container takes full width */
+  width: 100%;
 }
 
 .writings-sidebar {
-  width: 300px; /* Fixed width for the list container */
-  min-width: 250px; /* Minimum width to prevent excessive shrinking */
+  width: 300px;
+  min-width: 250px;
   background: #ffffff;
   padding: 10px;
-  overflow-y: auto; /* Enable scrolling for the list */
+  overflow-y: auto;
   border-right: 2px solid #f7f7f7;
-  height: calc(100vh - 20px); /* Adjust the height to fill the viewport */
+  height: calc(100vh - 20px);
 }
 
 .search-bar {
@@ -33,10 +36,9 @@ body {
   font-size: 14px;
 }
 
-/* Add this to change the border color on focus */
 .search-bar:focus {
-  border-color: #000; /* Change border color to black */
-  outline: none; /* Remove default outline */
+  border-color: #000;
+  outline: none;
 }
 
 .writings-list {
@@ -70,16 +72,10 @@ body {
   margin-bottom: 5px;
 }
 
-.writing-meta {
+.writing-tags {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.writing-date {
-  font-size: 12px;
-  color: #a4a4a4;
-  margin-right: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 
 .writing-tag {
@@ -87,28 +83,41 @@ body {
   border-radius: 8px;
   padding: 2px 8px;
   font-size: 12px;
-  margin-left: 5px;
-  color: #333;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  color: #181818;
 }
 
-.writing-item:hover {
-  background-color: #f0f0f0;
+.writing-item:hover .writing-tag,
+.writing-item.selected .writing-tag {
+  background-color: #181818;
+  color: #ffffff;
+}
+
+.writing-date {
+  font-size: 12px;
+  color: #353535;
+}
+
+.writing-item:hover,
+.writing-item.selected {
+  background-color: #eeeeee;
 }
 
 .writing-details {
   flex-grow: 1;
   padding: 30px;
   background: #ffffff;
-  overflow-y: auto; /* Enable scrolling for the content */
-  height: calc(100vh - 20px); /* Adjust the height to fill the viewport */
-  font-family: 'Inter', sans-serif; /* Apply Inter for content */
-  max-width: 800px; /* Set a maximum width for the content area */
-  margin: auto; /* Center the content area */
-  word-wrap: break-word; /* Ensure long words are broken to fit within the container */
+  overflow-y: auto;
+  height: calc(100vh - 20px);
+  font-family: 'Inter', sans-serif;
+  max-width: 800px;
+  margin: auto;
+  word-wrap: break-word;
 }
 
 .writing-details h2 {
-  font-family: 'IBM Plex Mono', monospace; /* Apply IBM Plex Mono for headings */
+  font-family: 'IBM Plex Mono', monospace;
   margin-bottom: 10px;
 }
 
@@ -117,14 +126,15 @@ body {
 }
 
 .writing-details img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 300px;
   display: block;
   margin: 20px 0;
+  border-radius: 20px;
 }
 
 .back-button {
-  background: #1b1b1b;
+  background: #181818;
   color: #fff;
   border: none;
   padding: 10px;
@@ -135,27 +145,27 @@ body {
 
 @media (max-width: 768px) {
   .writings-container {
-    flex-direction: column;  /* Stack list and content vertically on small screens */
-    width: 100%; /* Full width for container */
-    background: #ffffff; /* Ensure white background */
-    height: auto; /* Adjust height for smaller screens */
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    height: auto;
   }
 
   .writings-sidebar {
-    width: 100%; /* Allow list to expand to full width */
-    min-width: 100%; /* Ensure full width on mobile */
-    border-right: none; /* Remove right border */
-    border-bottom: 2px solid #f7f7f7; /* Add bottom border on mobile */
-    padding: 10px; /* Adjust padding for smaller screens */
-    height: auto; /* Adjust height for smaller screens */
+    width: 100%;
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #f7f7f7;
+    padding: 10px;
+    height: auto;
   }
 
   .writing-details {
     border-left: none;
     padding-left: 0;
-    padding-top: 20px; /* Add top padding for separation */
-    height: auto; /* Adjust height for smaller screens */
-    max-width: 100%; /* Remove max-width on mobile */
-    margin: 0; /* Remove auto margin */
+    padding-top: 20px;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
   }
 }

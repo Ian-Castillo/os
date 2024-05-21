@@ -88,7 +88,7 @@ body {
 
 .sidebar a:hover i, .sidebar a.selected i {
   animation: breathing 6s ease-in-out infinite;
-  background-color: #000000;
+  background-color: #181818;
   color: #ffffff;
 }
 

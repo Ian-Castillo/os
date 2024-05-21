@@ -25,15 +25,19 @@ const Writings = () => {
         />
         <ul className="writings-list">
           {filteredWritings.map((writing) => (
-            <li key={writing.id} className="writing-item" onClick={() => setSelectedWritingId(writing.id)}>
+            <li 
+              key={writing.id} 
+              className={`writing-item ${writing.id === selectedWritingId ? 'selected' : ''}`} 
+              onClick={() => setSelectedWritingId(writing.id)}
+            >
               <div className="writing-info">
                 <div className="writing-title">{writing.title}</div>
-                <div className="writing-meta">
-                  <span className="writing-date">{writing.date}</span>
+                <div className="writing-tags">
                   {writing.tags.map(tag => (
                     <span key={tag} className="writing-tag">{tag}</span>
                   ))}
                 </div>
+                <div className="writing-date">{writing.date}</div>
               </div>
             </li>
           ))}
