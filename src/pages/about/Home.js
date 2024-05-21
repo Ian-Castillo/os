@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import profileImage from '../ian.jpg'; // Adjust the path as necessary
+import profileImage from '/Users/iancastillo/os/src/ian.jpg';
 
 const Home = () => {
   return (
@@ -32,11 +32,53 @@ const Home = () => {
         <p>Previously, I was a Product Manager at <a href="https://riiid.com">Riiid Labs</a>, where I facilitated advancements in AI-driven education applications. This role allowed me to collaborate with top-tier AI researchers, engineers, and designers, driving forward projects that utilized cutting-edge technology to enhance learning outcomes. My work at Riiid Labs was instrumental in developing products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
         <p>Outside of my professional endeavors, I am actively involved in the start-up community in Iowa. I regularly participate in local events, workshops, and mentoring programs, offering guidance and support to budding entrepreneurs. My goal is to contribute to a thriving ecosystem where innovative ideas can flourish and transform into successful ventures.</p>
         <p>My journey as an entrepreneur, designer, and software developer has been driven by a relentless pursuit of innovation and a desire to make a positive impact. I am excited about the future and look forward to continuing to push the boundaries of what is possible, both in my professional work and through my contributions to the entrepreneurial community.</p>
-    <p> Have an idea? Reach out. Let's build the future together.</p>
+        <p>Have an idea? Reach out. Let's build the future together.</p>
+
+        {/* New Section */}
+        <div className="location">
+          <h2>Where</h2>
+          <img src="/path/to/map-image.png" alt="Map of San Francisco, CA" className="map-image" />
+          <p className="location-text">San Francisco, CA</p>
+        </div>
+
+        <div className="work-experience">
+          <h2>Work</h2>
+          <ul>
+            <li>
+              <span className="company">Campsite</span>
+              <span className="role">CEO</span>
+              <span className="dates">2022—</span>
+            </li>
+            <li>
+              <span className="company">GitHub</span>
+              <span className="role">Product Designer</span>
+              <span className="dates">2018–22</span>
+            </li>
+            <li>
+              <span className="company">Design Details Podcast</span>
+              <span className="role">Co-host</span>
+              <span className="dates">2014—</span>
+            </li>
+            <li>
+              <span className="company">Spectrum.chat</span>
+              <span className="role">Co-founder</span>
+              <span className="dates">2017–18</span>
+            </li>
+            <li>
+              <span className="company">Facebook</span>
+              <span className="role">Product Designer</span>
+              <span className="dates">2015–17</span>
+            </li>
+            <li>
+              <span className="company">Buffer</span>
+              <span className="role">Product Designer</span>
+              <span className="dates">2013–15</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Home;
-

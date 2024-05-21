@@ -1,0 +1,130 @@
+/* Global styles applied to both mobile and desktop */
+.tools-container {
+    display: flex;
+    flex-direction: row; /* Ensure the sidebar and main content are side by side */
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.tools-sidebar {
+    width: 300px; /* Adjust width as needed */
+    background: #ffffff;
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling for the list */
+    border-right: 2px solid #f7f7f7;
+    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
+}
+
+.tools-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tools-list li {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.tool-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tool-title {
+    font-size: 14px;
+    font-weight: medium;
+    color: #808080;
+    margin-bottom: 5px;
+}
+
+.tool-favicon-url {
+    display: flex;
+    align-items: center;
+}
+
+.tool-favicon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.tool-url {
+    font-size: 12px;
+    color: #a4a4a4;
+}
+
+.tool-tags {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tool-tags span {
+    background: #f0f0f0;
+    border-radius: 3px;
+    padding: 2px 6px;
+    margin-right: 5px;
+    margin-top: 5px;
+    color: #555;
+    font-size: 12px;
+}
+
+.tools-list li:hover {
+    background-color: #1e1e1e;
+}
+
+.tool-details {
+    flex-grow: 1;
+    padding: 30px;
+    background: #ffffff;
+    overflow-y: auto; /* Enable scrolling for the content */
+    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
+}
+
+.back-button {
+    background: #1b1b1b;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 280px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .tools-container {
+        flex-direction: column;
+        margin-left: 0; /* Remove margin left on mobile */
+    }
+
+    .tools-sidebar {
+        width: 100%; /* Full width on mobile */
+        border-right: none; /* Remove border on mobile */
+        border-bottom: 2px solid #f7f7f7; /* Add bottom border on mobile */
+    }
+
+    .tool-details {
+        height: auto; /* Adjust height for mobile */
+    }
+}

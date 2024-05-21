@@ -1,10 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//components
 import Sidebar from './components/Sidebar';
-import Home from './pages/Home';
-import Writings from './pages/Writings'; 
-import Library from './pages/resources/Library'; 
+//about pages
+import Home from './pages/about/Home';
+import Writings from './pages/about/Writings'; 
+//project pages
 import Sunny from './pages/projects/Sunny';
+//resource pages
+import Library from './pages/resources/Library'; 
+import Tools from '/Users/iancastillo/os/src/pages/resources/Tools.js'
+
 
 const App = () => {
   return (
@@ -17,6 +23,7 @@ const App = () => {
             <Route path="/writings" element={<Writings />} />
             <Route path="/library" element={<Library />} />
             <Route path="/sunny" element={<Sunny />} />
+            <Route path="/tools" element={<Tools />} />
             {/* Define more routes as needed */}
           </Routes>
         </div>

@@ -7,6 +7,9 @@ body {
   background-color: #ffffff;
   height: 100vh;
   display: flex;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle, #e2e2e2 1px, #ececec00 1px);
+  background-size: 14px 14px;
 }
 
 .writings-container {
@@ -28,7 +31,7 @@ body {
 }
 
 .search-bar {
-  width: calc(100% - 20px);
+  width: calc(100% - 100px);
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ddd;

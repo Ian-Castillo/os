@@ -14,7 +14,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  border-right: 2px solid rgb(247, 247, 247);
+  border-right: 2px solid #f7f7f7;
   padding: 20px;
   overflow-y: auto;
   z-index: 1000;
