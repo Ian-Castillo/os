@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import profileImage from '/Users/iancastillo/os/src/ian.jpg';
+import profileImage from '../../ian.jpg';
 
 const Home = () => {
   return (
@@ -9,6 +9,9 @@ const Home = () => {
         <img src={profileImage} alt="Ian Castillo" className="profile-image" />
      
         <div className="social-icons">
+        <div className="social-icon">
+          <i class="fi fi-ss-marker"></i>
+          </div>
           <div className="social-icon">
             <i className="fi fi-rr-envelope"></i>
           </div>
@@ -24,6 +27,7 @@ const Home = () => {
           <div className="social-icon">
             <i className="fi fi-brands-twitter"></i>
           </div>
+        
         </div>
         <h1>Hi, I'm Ian.</h1>
         <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My focus is on zero-to-one design thinking, rapid prototyping, and accelerating the Iowa start-up ecosystem.</p>

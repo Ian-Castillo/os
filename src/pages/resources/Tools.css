@@ -42,7 +42,7 @@
 .tool-title {
     font-size: 14px;
     font-weight: medium;
-    color: #808080;
+    color: #000;
     margin-bottom: 5px;
 }
 
@@ -80,8 +80,18 @@
     font-size: 12px;
 }
 
+.tools-list li:hover .tool-tags span,
+.tools-list li.selected .tool-tags span {
+    background: #2c2c2c;
+    color: #fff;
+}
+
 .tools-list li:hover {
-    background-color: #1e1e1e;
+    background-color: #f0f0f0;
+}
+
+.tools-list li.selected {
+    background-color: #e0e0e0;
 }
 
 .tool-details {
@@ -93,7 +103,7 @@
 }
 
 .back-button {
-    background: #1b1b1b;
+    background: #2c2c2c;
     color: #fff;
     border: none;
     padding: 10px;
@@ -103,7 +113,7 @@
 }
 
 .search-bar {
-    width: 280px;
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;

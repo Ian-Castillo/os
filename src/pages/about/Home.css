@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-  color: #333;
+  color: #2c2c2c;
 }
 
 /* Home container */
@@ -52,7 +52,7 @@ h1 {
 
 /* Link styling */
 .main-content a {
-  color: #454545;
+  color: #2c2c2c;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
