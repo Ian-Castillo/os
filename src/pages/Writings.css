@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 body {
   font-family: 'Inter', sans-serif; /* Default to Inter for body content */
   margin: 0;
@@ -107,6 +104,7 @@ body {
   font-family: 'Inter', sans-serif; /* Apply Inter for content */
   max-width: 800px; /* Set a maximum width for the content area */
   margin: auto; /* Center the content area */
+  word-wrap: break-word; /* Ensure long words are broken to fit within the container */
 }
 
 .writing-details h2 {
