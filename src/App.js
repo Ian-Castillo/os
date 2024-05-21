@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 //about pages
 import Home from './pages/about/Home';
-import Writings from './pages/about/Writings'; 
+import Thoughts from './pages/about/Thoughts.js'; 
 //project pages
 import Sunny from './pages/projects/Sunny';
 //resource pages
@@ -20,7 +20,7 @@ const App = () => {
         <div className="content-wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/writings" element={<Writings />} />
+            <Route path="/thoughts" element={<Thoughts />} />
             <Route path="/library" element={<Library />} />
             <Route path="/sunny" element={<Sunny />} />
             <Route path="/tools" element={<Tools />} />

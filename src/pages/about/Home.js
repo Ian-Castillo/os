@@ -38,45 +38,29 @@ const Home = () => {
         <p>My journey as an entrepreneur, designer, and software developer has been driven by a relentless pursuit of innovation and a desire to make a positive impact. I am excited about the future and look forward to continuing to push the boundaries of what is possible, both in my professional work and through my contributions to the entrepreneurial community.</p>
         <p>Have an idea? Reach out. Let's build the future together.</p>
 
-        {/* New Section */}
         <div className="location">
           <h2>Where</h2>
           <img src="/path/to/map-image.png" alt="Map of San Francisco, CA" className="map-image" />
-          <p className="location-text">San Francisco, CA</p>
+          <p className="location-text"> Iowa City, IAA</p>
         </div>
 
         <div className="work-experience">
           <h2>Work</h2>
           <ul>
             <li>
-              <span className="company">Campsite</span>
-              <span className="role">CEO</span>
-              <span className="dates">2022—</span>
+              <span className="company">ArgusAI</span>
+              <span className="role">Head of Product & Design</span>
+              <span className="dates">Current</span>
             </li>
             <li>
-              <span className="company">GitHub</span>
-              <span className="role">Product Designer</span>
-              <span className="dates">2018–22</span>
+              <span className="company">University of Iowa - John Pappajohn Entrepreneurial Center</span>
+              <span className="role">Adjunct Faculty</span>
+              <span className="dates">Current</span>
             </li>
             <li>
-              <span className="company">Design Details Podcast</span>
-              <span className="role">Co-host</span>
-              <span className="dates">2014—</span>
-            </li>
-            <li>
-              <span className="company">Spectrum.chat</span>
-              <span className="role">Co-founder</span>
-              <span className="dates">2017–18</span>
-            </li>
-            <li>
-              <span className="company">Facebook</span>
-              <span className="role">Product Designer</span>
-              <span className="dates">2015–17</span>
-            </li>
-            <li>
-              <span className="company">Buffer</span>
-              <span className="role">Product Designer</span>
-              <span className="dates">2013–15</span>
+              <span className="company">Riiid Labs</span>
+              <span className="role">Product Manager</span>
+              <span className="dates">Previous</span>
             </li>
           </ul>
         </div>
