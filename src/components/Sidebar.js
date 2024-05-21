@@ -44,8 +44,10 @@ const Sidebar = () => {
                      
                     </ul>
                 </div>
+                <div className="menu-section">                   
+                </div>
                 <div className="menu-section">
-                    <h3>Concepts</h3>
+                    <h3>Projects</h3>
                     <ul>
                         <li onClick={() => setSelected('gradient')}>
                             <Link to="/gradient" className={selected === 'gradient' ? 'selected' : ''}>
@@ -53,9 +55,6 @@ const Sidebar = () => {
                             </Link>
                         </li>
                     </ul>
-                </div>
-                <div className="menu-section">
-                    <h3>Projects</h3>
                     <ul>
                         <li onClick={() => setSelected('sunny')}>
                             <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>

@@ -9,7 +9,7 @@ import Writings from './pages/about/Writings';
 import Sunny from './pages/projects/Sunny';
 //resource pages
 import Library from './pages/resources/Library'; 
-import Tools from '/Users/iancastillo/os/src/pages/resources/Tools.js'
+import Tools from './pages/resources/Tools.js'
 
 
 const App = () => {
