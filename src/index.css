@@ -1,3 +1,4 @@
+/* Importing the fonts */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
@@ -6,33 +7,41 @@
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css');
 @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
 /* Base styling for the page */
 body {
-  font-family: 'Inter', sans-serif; /* Updated font to Inter */
+  font-family: 'SF Mono', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
   margin: 0;
   padding: 0; /* Remove default padding */
   background: #fff; /* Background color set to white */
   color: #333; /* Primary text color */
 }
 
-/* Heading and text styling */
+/* Heading and subheading styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif; /* Use Inter for all heading levels */
+  font-weight: 700; /* Bold for better readability */
+}
+
 h1 {
-  font-size: 24px; /* Larger text for headings */
-  font-weight: medium; /* Bold for better readability */
+  font-size: 24px; /* Larger text for main headings */
   margin-bottom: 10px; /* Spacing below the heading */
 }
 
+h2 {
+  font-size: 20px; /* Smaller than h1 */
+  margin-bottom: 8px;
+}
 
 /* Link styling */
 a {
   color: #454545; /* Blue color for links to stand out */
   text-decoration: none; /* No underline by default */
   font-weight: bold; /* Bold to highlight links */
-  display: none; /* Allows for margin and padding adjustments */
 }
 
 a:hover, a:focus {
-  text-decoration: none; /* Underline on hover/focus for better interaction */
+  text-decoration: underline; /* Underline on hover/focus for better interaction */
 }
 
 /* Icon size adjustment */

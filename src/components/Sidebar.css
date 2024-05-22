@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
   background-color: #f0f0f0;
 }
@@ -21,6 +18,28 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
+/* Container for the globe and text */
+.globe {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  padding: 10px 4px;
+}
+
+/* Styling for the icon */
+.globe i {
+  font-size: 14px; /* Adjust size as needed */
+  margin-right: 5px; /* Space between icon and text */
+  display: flex; /* Ensure the icon is a flex container */
+  align-items: center; /* Center the content inside the icon */
+}
+
+/* Styling for the text */
+.globe .globe-text {
+  font-family: 'SF Mono', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
+  font-size: 10px; /* Adjust size as needed */
+  color: #333; /* Primary text color */
+}
+
 .content {
   margin-left: 150px;
   padding: 20px;
@@ -28,6 +47,7 @@ body {
 }
 .menu-title {
   font-size: 12px;
+  padding-bottom: 20px;
 }
 .menu-section {
   margin-bottom: 30px;
@@ -37,7 +57,7 @@ body {
   color: #a8a8a8;
   margin: 0 0 10px 0;
   font-size: 12px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: monospace;
 }
 
 .menu-section ul {
@@ -47,7 +67,7 @@ body {
 
 .menu-section ul li {
   margin-bottom: 10px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: monospace;
 }
 
 .sidebar a {
@@ -123,17 +143,6 @@ body {
   border: none;
   cursor: pointer;
 }
-.location {
-  display: flex;
-  align-items: center;
-  font-size: 10px;
-  font-family: 'IBM Plex Mono', monospace; /* Apply IBM Plex Mono font */
-  padding-bottom: 18px;
-}
-
-.location i {
-  margin-right: 6px; /* Add padding between the globe icon and text */
-}
 
 
 @media (max-width: 768px) {
@@ -158,4 +167,25 @@ body {
     padding: 10px;
     max-width: 100%;
   }
+
+/* Container for the location */
+.location {
+  display: flex;
+  align-items: center;
+  background: none; /* Remove grey background */
+  padding: 5px; /* Optional padding */
+}
+
+/* Styling for the icon */
+.location .fi {
+  margin-right: 5px; /* Space between icon and text */
+  font-size: 16px; /* Adjust size as needed */
+}
+
+/* Styling for the text */
+.location .location-text {
+  font-family: 'SF Mono', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
+  font-size: 14px; /* Adjust size as needed */
+  color: #333; /* Primary text color */
+}
 }

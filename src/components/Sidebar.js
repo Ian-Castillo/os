@@ -23,10 +23,10 @@ const Sidebar = () => {
                 <button className="menu-close" onClick={toggleSidebar}>×</button>
                 <div className="menu-title">
                     <h2>Ian M. Castillo</h2>
-                    <div className="location">
-                    <i class="fi fi-sr-globe"></i>
-          <span>Iowa City, IA, CST</span>
-        </div>
+                    <div class="globe">
+  <i class="fi fi-sr-globe"></i>
+  <span class="globe-text">Iowa City, IA, CST</span>
+</div>
                 </div>
                 <div className="menu-section">
                 <h3>About</h3>

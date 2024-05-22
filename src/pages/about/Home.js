@@ -9,8 +9,8 @@ const Home = () => {
         <img src={profileImage} alt="Ian Castillo" className="profile-image" />
      
         <div className="social-icons">
-        <div className="social-icon">
-          <i class="fi fi-ss-marker"></i>
+          <div className="social-icon">
+            <i className="fi fi-ss-marker"></i>
           </div>
           <div className="social-icon">
             <i className="fi fi-rr-envelope"></i>
@@ -27,8 +27,8 @@ const Home = () => {
           <div className="social-icon">
             <i className="fi fi-brands-twitter"></i>
           </div>
-        
         </div>
+
         <h1>Hi, I'm Ian.</h1>
         <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My focus is on zero-to-one design thinking, rapid prototyping, and accelerating the Iowa start-up ecosystem.</p>
         <p>Currently, I am leading product and design at <a href="https://www.argus.ai/">ArgusAI</a>, where we are re-imagining and setting new standards for college admissions. At ArgusAI, I oversee product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. Our mission is to revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants, helping colleges and universities make better-informed decisions.</p>
@@ -38,29 +38,48 @@ const Home = () => {
         <p>My journey as an entrepreneur, designer, and software developer has been driven by a relentless pursuit of innovation and a desire to make a positive impact. I am excited about the future and look forward to continuing to push the boundaries of what is possible, both in my professional work and through my contributions to the entrepreneurial community.</p>
         <p>Have an idea? Reach out. Let's build the future together.</p>
 
-        <div className="location">
-          <h2>Where</h2>
-          <img src="/path/to/map-image.png" alt="Map of San Francisco, CA" className="map-image" />
-          <p className="location-text"> Iowa City, IAA</p>
-        </div>
-
+        {/* New Section */}
         <div className="work-experience">
-          <h2>Work</h2>
+          <h2>Current</h2>
           <ul>
             <li>
-              <span className="company">ArgusAI</span>
+              <span className="company">The University of Iowa, Tippie College of Business <span className="location">Remote</span></span>
+              <span className="role">Adjunct Instructor, Management and Entrepreneurship</span>
+              <span className="dates">2023 - Current</span>
+              <p>UI/UX Design & Marketing Consultant for BELL Incubator.</p>
+            </li>
+            <li>
+              <span className="company">Argus.AI <span className="location">Remote</span></span>
               <span className="role">Head of Product & Design</span>
-              <span className="dates">Current</span>
+              <span className="dates">2022 - Current</span>
+              <p>Re-imagining college admissions.</p>
+            </li>
+          </ul>
+          <h2>Experience</h2>
+          <ul>
+            <li>
+              <span className="company">Riiid <span className="location">Remote</span></span>
+              <span className="role">Product Manager & Designer, Innovation</span>
+              <span className="dates">2021 - 2022</span>
+              <p>At Riiid I reported directly to the Chief Measurement Officer, Marten Roorda, collaborated with key internal partners, including AI research, engineering, design, and leadership teams, was instrumental in guiding project prioritization, ensuring focused and impactful product development. I was actively involved in soliciting ideas and feedback, gathering requirements, writing specifications, crafting wireframes and workflows, and coordinating cross-functionality.</p>
             </li>
             <li>
-              <span className="company">University of Iowa - John Pappajohn Entrepreneurial Center</span>
-              <span className="role">Adjunct Faculty</span>
-              <span className="dates">Current</span>
+              <span className="company">12 Triangles <span className="location">Remote</span></span>
+              <span className="role">Product Developer</span>
+              <span className="dates">2021 - 2021</span>
+              <p>In collaboration with the founder, Tyler Kuster, I wrote code that focused on elevating digital tools for creatives. My responsibilities extended to creating and maintaining software documentation, including requirements, design, while actively participating in code reviews to ensure high code quality.</p>
             </li>
             <li>
-              <span className="company">Riiid Labs</span>
-              <span className="role">Product Manager</span>
-              <span className="dates">Previous</span>
+              <span className="company">Nosh <span className="location">Remote</span></span>
+              <span className="role">Chief Operating Officer</span>
+              <span className="dates">2019 - 2020</span>
+              <p>As COO, I led Nosh’s growth from our first $1.00 to a $1 MM in MRR sales. My role also encompassed effective communication with investors, C-suite executives, and partners, while successfully managing relationships with over 200 restaurants and fostering conversations between engineering and stakeholders.</p>
+            </li>
+            <li>
+              <span className="company">textpress <span className="location">Iowa City, IA</span></span>
+              <span className="role">Co-Founder, Head of Growth + Product</span>
+              <span className="dates">2017 - 2019</span>
+              <p>While working along side my co-founders Aleksey Gurtovoy and Alexandar Golonov at textpress, I successfully built, managed, and expanded a digital community to over 3,000 members, aligning with our product launch strategy. My role was focused in monitoring project progress to meet our deadlines and in developing a strategic feature roadmap.</p>
             </li>
           </ul>
         </div>
