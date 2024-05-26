@@ -10,6 +10,7 @@ import Sunny from './pages/projects/Sunny';
 //resource pages
 import Library from './pages/resources/Library'; 
 import Tools from './pages/resources/Tools.js'
+import Gradient from './pages/projects/gradient.js';
 
 
 const App = () => {
@@ -24,6 +25,8 @@ const App = () => {
             <Route path="/library" element={<Library />} />
             <Route path="/sunny" element={<Sunny />} />
             <Route path="/tools" element={<Tools />} />
+            <Route path="/gradient" element={<Gradient />} />
+
             {/* Define more routes as needed */}
           </Routes>
         </div>
