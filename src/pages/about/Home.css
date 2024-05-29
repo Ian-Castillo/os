@@ -163,13 +163,8 @@ h1 {
 }
 .company-logo[alt="University of Iowa"] {
   background-color: black;
-  padding: 5px;
 }
 
-.company-logo[alt="University of Iowa"] {
-  background-color: black;
-  padding: 5px;
-}
 /* Role */
 .role {
   font-style: italic;
