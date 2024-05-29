@@ -9,6 +9,7 @@ import Nosh from '../../assets/Nosh.jpeg';
 import Bloomtech from '../../assets/BloomTech.jpeg'; 
 import Textpress from '../../assets/Textpress.jpeg'; 
 import SCC from '../../assets/SCC.jpeg'; 
+import Techstars from '../../assets/techstars.png'; 
 
 
 
@@ -170,14 +171,42 @@ const Home = () => {
                       <div className="company-info">
                         <img src={SCC} alt="Southeastern Community College" className="company-logo" />
                         <div>
-                          <span className="company">Southeastern Community College <span className="location">Remote</span></span>
-                          <span className="role">Associates Degree</span>
+                          <span className="company">Southeastern Community College <span className="location">Burlington, IA</span></span>
+                          <span className="role">General Studies, Associates Degree</span>
                           <span className="dates">2009 - 2013</span>
                         </div>
                       </div>
                     </li>
+                    
                   </ul>
                 </div>
+                <div className="education">
+                  <h2>Volunteer</h2>
+                  <ul>
+                    <li>
+                      <div className="company-info">
+                        <img src={Techstars} alt="Bloomtech" className="company-logo" />
+                        <div>
+                          <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
+                          <span className="role">Facilitator, Mentor, Judge</span>
+                          <span className="dates">2015 - Current</span>
+                          <p>Helping future entreprenuers build start-ups in 54 hours.
+</p>
+
+                        </div>
+                      </div>
+                    </li>
+               
+                  </ul>
+                </div>
+                <div>
+  <h2 className="text-xl font-bold">GitHub Contributions</h2>
+  <img
+    src="https://ghchart.rshah.org/OB6623/ian-castillo"
+    alt="GitHub Contribution Graph"
+    className="mx-auto"
+  />
+</div>
               </div>
             )}
           </div>

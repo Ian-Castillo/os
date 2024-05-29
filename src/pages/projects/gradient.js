@@ -6,7 +6,7 @@ const Gradient = () => {
     <div className="gradient-container">
     <div className=''>
       <h2>Gradient</h2>
-      <p>A bookstore providing a neural network for creatives.</p>
+      <p>A bookstore that functions as a neural network for the creative community.</p>
       <div className="bento-grid">
         <div className="bento-item small">
           <p>Pay supplier invoices</p>
