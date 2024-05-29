@@ -11,6 +11,23 @@
   background-size: 12px 12px;
 }
 
+.home-nav {
+  display: flex;
+  justify-content: left;
+}
+
+.home-nav h1 {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 8px;
+  padding: 8px;
+}
+.home-nav h1.active {
+  background-color: #F3F4F6;
+  border-radius: 5px;
+  margin-right: 10px;
+}
 /* Main content area */
 .main-content {
   width: 100%;
@@ -36,7 +53,7 @@
 
 /* Heading styling */
 h1 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0 0 20px;
 }
@@ -48,7 +65,7 @@ h1 {
   font-weight: bold;
   display: inline-block;
   padding: 1px 4px;
-  background-color: #eeeeee;
+  background-color: #F3F4F6;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -78,7 +95,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eeeeee;
+  background-color: #F3F4F6;
   border-radius: 5px;
   margin-right: 10px;
   transition: background-color 0.3s, transform 0.3s;
@@ -102,12 +119,11 @@ h1 {
 }
 
 .work-experience {
-  margin-top: 40px;
+  margin-top: 16px;
   text-align: left;
 }
 
 .work-experience h2 {
-  font-size: 28px;
   margin-bottom: 20px;
 }
 
@@ -122,8 +138,9 @@ h1 {
 
 .company {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   display: block;
+  margin-bottom: 4px;
 }
 
 .dates {
@@ -132,20 +149,24 @@ h1 {
 }
 
 .location {
-  background-color: #e0e0e0;
+  background-color: #F3F4F6;
   border-radius: 5px;
-  padding: 2px 6px;
-  font-size: 12px;
+  padding: 4px 8px;
+  font-size: 10px;
   margin-top: 5px;
   display: inline-block;
 }
 
 .role {
   font-style: italic;
-  color: #555;
-  margin-bottom: 10px;
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 50px;
 }
-
+.bio {
+  font-size: 14px;
+ margin-top: 10px;
+}
 
 /* Adjustments for mobile responsiveness */
 @media (max-width: 768px) {
@@ -168,7 +189,7 @@ h1 {
   }
 
   p {
-    font-size: 14px;
+    font-size: 12px;
     margin: 0 0 15px;
   }
 
@@ -177,10 +198,10 @@ h1 {
   }
 
   .location h2, .work-experience h2 {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .location-text, .work-experience li {
-    font-size: 14px;
+    font-size: 10px;
   }
 }

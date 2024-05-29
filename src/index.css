@@ -35,7 +35,7 @@ h2 {
 
 /* Link styling */
 a {
-  color: #454545; /* Blue color for links to stand out */
+  color: #F3F4F6; /* Blue color for links to stand out */
   text-decoration: none; /* No underline by default */
   font-weight: bold; /* Bold to highlight links */
 }
@@ -56,11 +56,11 @@ a:hover, a:focus {
   }
 
   h1 {
-    font-size: 22px; /* Slightly smaller font size on mobile */
+    font-size: 12px; /* Slightly smaller font size on mobile */
   }
 
   p {
-    font-size: 14px; /* Smaller font size for paragraphs on mobile */
+    font-size: 12px; /* Smaller font size for paragraphs on mobile */
   }
 
   .content {

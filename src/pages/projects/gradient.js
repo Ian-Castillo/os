@@ -5,8 +5,8 @@ const Gradient = () => {
   return (
     <div className="gradient-container">
     <div className=''>
-      <h2>Something new!</h2>
-      <p>Managing a small business today is already tough.</p>
+      <h2>Gradient</h2>
+      <p>A bookstore providing a neural network for creatives.</p>
       <div className="bento-grid">
         <div className="bento-item small">
           <p>Pay supplier invoices</p>
