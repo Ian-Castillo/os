@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import './Home.css';
 import profileImage from '../../ian.jpg';
+import Iowa from '../../assets/Gold.png';
+import Argus from '../../assets/ArgusAI.png'; 
+import Riiid from '../../assets/Riiid.jpeg'; 
+import Twelve from '../../assets/Twelve.jpeg'; 
+import Nosh from '../../assets/Nosh.jpeg'; 
+import Bloomtech from '../../assets/BloomTech.jpeg'; 
+import Textpress from '../../assets/Textpress.jpeg'; 
+import SCC from '../../assets/SCC.jpeg'; 
+
+
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -60,77 +70,119 @@ const Home = () => {
         </>
         )}
         {activeSection === 'experience' && (
-          <div className="work-experience">
-                        <h2>Current</h2>
-
-            <ul>
-          <li>
-             <span className="company">The University of Iowa, Tippie College of Business <span className="location">Hybrid</span></span>
-            <span className="role">Adjunct Instructor, Management and Entrepreneurship</span>
-          <span className="dates">2023 - Current</span>
-            <span className="p">UI/UX Design & Marketing Consultant for BELL Incubator.</span>
-           </li>
-           <li>
-             <span className="company">Argus.AI <span className="location">Remote</span></span>
-            <span className="role">Head of Product & Design</span>
-        <span className="dates">2022 - Current</span>
-          <p>Re-imagining college admissions.</p>
-        </li>
-     </ul>
-            <h2>Experience</h2>
-            <ul>
-            <li>
-              <span className="company">Riiid <span className="location">Remote</span></span>
-              <span className="role">Product Manager & Designer, Innovation</span>
-             <span className="dates">2021 - 2022</span>
-              <p>At Riiid I reported directly to the Chief Measurement Officer, Marten Roorda, collaborated with key internal partners, including AI research, engineering, design, and leadership teams, was instrumental in guiding project prioritization, ensuring focused and impactful product development. I was actively involved in soliciting ideas and feedback, gathering requirements, writing specifications, crafting wireframes and workflows, and coordinating cross-functionality.</p>           </li>
-             <li>
-              <span className="company">12 Triangles <span className="location">Remote</span></span>
-              <span className="role">Product Developer</span>
-             <span className="dates">2021 - 2021</span>
-             <p>In collaboration with the founder, Tyler Kuster, I wrote code that focused on elevating digital tools for creatives. My responsibilities extended to creating and maintaining software documentation, including requirements, design, while actively participating in code reviews to ensure high code quality.</p>
-           </li>
-           <li>
-             <span className="company">Nosh <span className="location">Remote</span></span>
-             <span className="role">Chief Operating Officer</span>
-             <span className="dates">2019 - 2020</span>
-              <p>As COO, I led Nosh’s growth from our first $1.00 to a $1 MM in MRR sales. My role also encompassed effective communication with investors, C-suite executives, and partners, while successfully managing relationships with over 200 restaurants and fostering conversations between engineering and stakeholders.</p>
-            </li>
-            <li>
-             <span className="company">textpress <span className="location">Iowa City, IA</span></span>
-             <span className="role">Co-Founder, Head of Growth + Product</span>
-             <span className="dates">2017 - 2019</span>
-            <p>While working along side my co-founders Aleksey Gurtovoy and Alexandar Golonov at textpress, I successfully built, managed, and expanded a digital community to over 3,000 members, aligning with our product launch strategy. My role was focused in monitoring project progress to meet our deadlines and in developing a strategic feature roadmap.</p>
-         </li>
-            </ul>
-            <div className="education">
-            <h2>Education</h2>
-            <ul>
-           
-              <span className="company">Bloomtech <span className="location">Remote</span></span>
-              <span className="role">Full Stack Software Engineer</span>
-             <span className="dates">2019 - 2020</span>
-       
-             
-              <span className="company">The University of Iowa <span className="location">Iowa City, IA</span></span>
-              <span className="role">Political Science, Incomplete</span>
-             <span className="dates">2011 - 2013</span>
-       
-             <span className="company">Southeastern Community College <span className="location">Remote</span></span>
-             <span className="role">Associates Degree</span>
-             <span className="dates">2009 - 2013</span>
-        
-           
-            </ul>
+                <div className="work-experience">
+                <h2>Current</h2>
+                <ul>
+                  <li>
+                    <div className="company-info">
+                      <img src={Iowa} alt="University of Iowa" className="company-logo" />
+                      <div>
+                        <span className="company">The University of Iowa, Tippie College of Business <span className="location">Hybrid</span></span>
+                        <span className="role">Adjunct Instructor, Management and Entrepreneurship</span>
+                        <span className="dates">2023 - Current</span>
+                        <span className="p">UI/UX Design & Marketing Consultant for BELL Incubator.</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="company-info">
+                      <img src={Argus} alt="Argus" className="company-logo" />
+                      <div>
+                        <span className="company">Argus.AI <span className="location">Remote</span></span>
+                        <span className="role">Head of Product & Design</span>
+                        <span className="dates">2022 - Current</span>
+                        <p>Re-imagining college admissions.</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h2>Previous</h2>
+                <ul>
+                  <li>
+                    <div className="company-info">
+                      <img src={Riiid} alt="Riiid" className="company-logo" />
+                      <div>
+                        <span className="company">Riiid <span className="location">Remote</span></span>
+                        <span className="role">Product Manager & Designer, Innovation</span>
+                        <span className="dates">2021 - 2022</span>
+                        <p>At Riiid I reported directly to the Chief Measurement Officer, Marten Roorda, collaborated with key internal partners, including AI research, engineering, design, and leadership teams, was instrumental in guiding project prioritization, ensuring focused and impactful product development. I was actively involved in soliciting ideas and feedback, gathering requirements, writing specifications, crafting wireframes and workflows, and coordinating cross-functionality.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="company-info">
+                      <img src={Twelve} alt="12 Triangles" className="company-logo" />
+                      <div>
+                        <span className="company">12 Triangles <span className="location">Remote</span></span>
+                        <span className="role">Product Developer</span>
+                        <span className="dates">2021 - 2021</span>
+                        <p>In collaboration with the founder, Tyler Kuster, I wrote code that focused on elevating digital tools for creatives. My responsibilities extended to creating and maintaining software documentation, including requirements, design, while actively participating in code reviews to ensure high code quality.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="company-info">
+                      <img src={Nosh} alt="Nosh" className="company-logo" />
+                      <div>
+                        <span className="company">Nosh <span className="location">Remote</span></span>
+                        <span className="role">Chief Operating Officer</span>
+                        <span className="dates">2019 - 2020</span>
+                        <p>As COO, I led Nosh's growth from our first $1.00 to a $1 MM in MRR sales. My role also encompassed effective communication with investors, C-suite executives, and partners, while successfully managing relationships with over 200 restaurants and fostering conversations between engineering and stakeholders.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="company-info">
+                      <img src={Textpress} alt="Textpress" className="company-logo" />
+                      <div>
+                        <span className="company">textpress <span className="location">Iowa City, IA</span></span>
+                        <span className="role">Co-Founder, Head of Growth + Product</span>
+                        <span className="dates">2017 - 2019</span>
+                        <p>While working along side my co-founders Aleksey Gurtovoy and Alexandar Golonov at textpress, I successfully built, managed, and expanded a digital community to over 3,000 members, aligning with our product launch strategy. My role was focused in monitoring project progress to meet our deadlines and in developing a strategic feature roadmap.</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div className="education">
+                  <h2>Education</h2>
+                  <ul>
+                    <li>
+                      <div className="company-info">
+                        <img src={Bloomtech} alt="Bloomtech" className="company-logo" />
+                        <div>
+                          <span className="company">Bloomtech <span className="location">Remote</span></span>
+                          <span className="role">Full Stack Software Engineer</span>
+                          <span className="dates">2019 - 2020</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="company-info">
+                        <img src={Iowa} alt="University of Iowa" className="company-logo" />
+                        <div>
+                          <span className="company">The University of Iowa <span className="location">Iowa City, IA</span></span>
+                          <span className="role">Political Science, Incomplete</span>
+                          <span className="dates">2011 - 2013</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="company-info">
+                        <img src={SCC} alt="Southeastern Community College" className="company-logo" />
+                        <div>
+                          <span className="company">Southeastern Community College <span className="location">Remote</span></span>
+                          <span className="role">Associates Degree</span>
+                          <span className="dates">2009 - 2013</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
-          </div>
-          
-        )}
-
-      
-      </div>
-    </div>
-  );
-};
-
-export default Home;
+        </div>
+      );
+    };
+    
+    export default Home;

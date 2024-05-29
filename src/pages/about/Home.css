@@ -142,7 +142,40 @@ h1 {
   display: block;
   margin-bottom: 4px;
 }
+/* Company info container */
+.company-info {
+  display: flex;
+}
 
+/* Company logo */
+.company-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+/* Company and role container */
+.company-info > div {
+  display: flex;
+  flex-direction: column;
+}
+.company-logo[alt="University of Iowa"] {
+  background-color: black;
+  padding: 5px;
+}
+
+.company-logo[alt="University of Iowa"] {
+  background-color: black;
+  padding: 5px;
+}
+/* Role */
+.role {
+  font-style: italic;
+  font-size: 14px;
+  color: #000000;
+}
 .dates {
   float: right;
   color: #999;
@@ -161,12 +194,8 @@ h1 {
   font-style: italic;
   font-size: 14px;
   color: #000000;
-  margin-bottom: 50px;
 }
-.bio {
-  font-size: 14px;
- margin-top: 10px;
-}
+
 
 /* Adjustments for mobile responsiveness */
 @media (max-width: 768px) {
