@@ -1,5 +1,5 @@
 import React from 'react';
-import './gradient.css';
+import './Gradient.css';
 
 const Gradient = () => {
   return (

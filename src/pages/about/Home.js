@@ -53,12 +53,12 @@ const Home = () => {
             onClick={() => setActiveSection('experience')}
           >
             Experience
-          </h1>
-        </div>
-{activeSection === 'about' && (
+           </h1>
+        
+           </div>
+          {activeSection === 'about' && (
           <>
-                    <div className="work-experience">
-
+        <div className="work-experience">
         <h2>Hi, I'm Ian.</h2>
         </div>
         <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My focus is on zero-to-one design thinking, rapid prototyping, and accelerating the Iowa start-up ecosystem.</p>
@@ -191,8 +191,7 @@ const Home = () => {
                           <span className="role">Facilitator, Mentor, Judge</span>
                           <span className="dates">2015 - Current</span>
                           <p>Helping future entreprenuers build start-ups in 54 hours.
-</p>
-
+                          </p>
                         </div>
                       </div>
                     </li>

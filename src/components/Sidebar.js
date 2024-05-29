@@ -41,7 +41,11 @@ const Sidebar = () => {
                                 <i className="fi fi-ss-comment"></i> Thoughts
                             </Link>
                         </li>
-                     
+                        <li onClick={() => setSelected('concepts')}>
+                            <Link to="/concepts" className={selected === 'concepts' ? 'selected' : ''}>
+                            <i class="fi fi-br-scribble"></i> Concepts
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="menu-section">                   
