@@ -7,7 +7,7 @@
 }
 
 .tools-sidebar {
-    flex: 0 0 300px; /* Prevent shrinking and set a fixed width */
+    width: 300px; /* Prevent shrinking and set a fixed width */
     background: #ffffff;
     padding: 10px;
     overflow-y: auto;
