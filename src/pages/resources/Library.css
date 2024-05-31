@@ -4,7 +4,6 @@
     flex-direction: row; /* Ensure the sidebar and main content are side by side */
     min-height: 100vh;
     background: #ffffff;
-    
 }
 
 .libraries-sidebar {
@@ -85,11 +84,10 @@
     margin-bottom: 20px;
 }
 
-/* Mobile-specific styles */
+/* Media query for mobile view */
 @media (max-width: 768px) {
     .libraries-container {
         flex-direction: column;
-        margin-left: 0; /* Remove margin left on mobile */
     }
 
     .libraries-sidebar {

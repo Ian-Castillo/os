@@ -27,6 +27,7 @@ body {
   overflow-y: auto;
   border-right: 2px solid #f7f7f7;
   height: calc(100vh - 20px);
+  flex-shrink: 0; /* Add this line to prevent the sidebar from shrinking */
 }
 
 .search-bar {
@@ -75,9 +76,11 @@ body {
 }
 
 .thought-tags {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 5px;
 }
 
 .thought-tag {
@@ -103,11 +106,10 @@ body {
 
 .thought-item:hover,
 .thought-item.selected {
-  background-color: #eeeeee;
+  background-color: #f0f0f0;
 }
 
 .thought-details {
-  flex-grow: 1;
   padding: 30px;
   background: #ffffff;
   overflow-y: auto;
@@ -134,7 +136,6 @@ body {
   margin: 20px 0;
   border-radius: 20px;
 }
-
 .back-button {
   background: #2c2c2c;
   color: #fff;

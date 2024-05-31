@@ -13,21 +13,40 @@
 
 .home-nav {
   display: flex;
-  justify-content: left;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.home-nav h1 {
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   margin: 8px;
   padding: 8px;
 }
-.home-nav h1.active {
+
+.nav-item.active {
   background-color: #F3F4F6;
   border-radius: 5px;
-  margin-right: 10px;
 }
+
+.nav-item-text {
+  margin-left: 8px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: left;
+}
+
 /* Main content area */
 .main-content {
   width: 100%;
@@ -38,7 +57,7 @@
 
 /* Profile image */
 .profile-image {
-  width: 100%;
+  max-width: 100%; /* Set the maximum width to 100% */
   height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -49,6 +68,7 @@
   text-align: left;
   margin: 0 0 20px;
   line-height: 1.6;
+  font-size: 14px;
 }
 
 /* Heading styling */
@@ -70,7 +90,8 @@ h1 {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.main-content a:hover, .main-content a:focus {
+.main-content a:hover,
+.main-content a:focus {
   text-decoration: none;
   background-color: #ddd;
   transform: scale(1.05);
@@ -82,14 +103,8 @@ h1 {
 }
 
 /* Location and social icons styling */
-.social-icons {
-  display: flex;
-  justify-content: left;
-  margin: 10px 0;
-  padding-bottom: 14px;
-}
-
 .social-icon {
+  position: relative;
   width: 30px;
   height: 30px;
   display: flex;
@@ -97,7 +112,7 @@ h1 {
   justify-content: center;
   background-color: #F3F4F6;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-left: 24px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -111,6 +126,17 @@ h1 {
 .social-icon:hover {
   background-color: #ddd;
   transform: scale(1.1);
+}
+
+.social-icon-text {
+  position: absolute;
+  left: 100%;
+  margin-left: 8px;
+  padding: 4px 8px;
+  background-color: #F3F4F6;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .location-text::before {
@@ -142,6 +168,7 @@ h1 {
   display: block;
   margin-bottom: 4px;
 }
+
 /* Company info container */
 .company-info {
   display: flex;
@@ -161,6 +188,7 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+
 .company-logo[alt="University of Iowa"] {
   background-color: black;
 }
@@ -171,6 +199,7 @@ h1 {
   font-size: 14px;
   color: #000000;
 }
+
 .dates {
   float: right;
   color: #999;
@@ -191,7 +220,6 @@ h1 {
   color: #000000;
 }
 
-
 /* Adjustments for mobile responsiveness */
 @media (max-width: 768px) {
   .home-container {
@@ -199,8 +227,8 @@ h1 {
   }
 
   .profile-image {
-    width: 100%;
-    margin-top: 20px;
+    max-width: 100%;
+    margin-right: 20px;
     margin-bottom: 15px;
   }
 
@@ -213,7 +241,7 @@ h1 {
   }
 
   p {
-    font-size: 12px;
+    font-size: 10px;
     margin: 0 0 15px;
   }
 
@@ -221,11 +249,13 @@ h1 {
     padding: 10px 5px;
   }
 
-  .location h2, .work-experience h2 {
+  .location h2,
+  .work-experience h2 {
     font-size: 14px;
   }
 
-  .location-text, .work-experience li {
+  .location-text,
+  .work-experience li {
     font-size: 10px;
   }
 }

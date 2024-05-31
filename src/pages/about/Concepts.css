@@ -1,18 +1,18 @@
 /* Global styles applied to both mobile and desktop */
 .concepts-container {
     display: flex;
-    flex-direction: row; /* Ensure the sidebar and main content are side by side */
+    flex-direction: row;
     min-height: 100vh;
     background: #ffffff;
 }
 
 .concepts-sidebar {
-    width: 300px; /* Adjust width as needed */
+    flex: 0 0 300px; /* Prevent shrinking and set a fixed width */
     background: #ffffff;
     padding: 10px;
-    overflow-y: auto; /* Enable scrolling for the list */
+    overflow-y: auto;
     border-right: 2px solid #f7f7f7;
-    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
+    height: calc(100vh - 60px);
 }
 
 .concepts-list {
@@ -46,17 +46,6 @@
     margin-bottom: 5px;
 }
 
-/* .concept-favicon-url {
-    display: flex;
-    align-items: center;
-} */
-
-/* .concept-favicon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-} */
-
 .concept-url {
     font-size: 12px;
     color: #a4a4a4;
@@ -80,8 +69,8 @@
     font-size: 12px;
 }
 
-.concepts-list li:hover .tool-tags span,
-.concepts-list li.selected .tool-tags span {
+.concepts-list li:hover .concept-tags span,
+.concepts-list li.selected .concept-tags span {
     background: #2c2c2c;
     color: #fff;
 }
@@ -95,11 +84,11 @@
 }
 
 .concept-details {
-    flex-grow: 1;
+    flex: 1; /* Take the remaining width */
     padding: 30px;
     background: #ffffff;
-    overflow-y: auto; /* Enable scrolling for the content */
-    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
+    overflow-y: auto;
+    height: calc(100vh - 60px);
 }
 
 .back-button {
@@ -121,20 +110,26 @@
     font-size: 14px;
 }
 
+/* Dark button fill when a selection is made */
+.concepts-list li.selected .back-button {
+    background: #2c2c2c;
+    color: #fff;
+}
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     .concepts-container {
         flex-direction: column;
-        margin-left: 0; /* Remove margin left on mobile */
     }
 
     .concepts-sidebar {
-        width: 100%; /* Full width on mobile */
-        border-right: none; /* Remove border on mobile */
-        border-bottom: 2px solid #f7f7f7; /* Add bottom border on mobile */
+        flex: 0 0 auto; /* Reset the flex properties for mobile */
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #f7f7f7;
     }
 
     .concept-details {
-        height: auto; /* Adjust height for mobile */
+        height: auto;
     }
 }

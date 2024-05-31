@@ -1,18 +1,18 @@
 /* Global styles applied to both mobile and desktop */
 .tools-container {
     display: flex;
-    flex-direction: row; /* Ensure the sidebar and main content are side by side */
+    flex-direction: row;
     min-height: 100vh;
     background: #ffffff;
 }
 
 .tools-sidebar {
-    width: 300px; /* Adjust width as needed */
+    flex: 0 0 300px; /* Prevent shrinking and set a fixed width */
     background: #ffffff;
     padding: 10px;
-    overflow-y: auto; /* Enable scrolling for the list */
+    overflow-y: auto;
     border-right: 2px solid #f7f7f7;
-    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
+    height: calc(100vh - 60px);
 }
 
 .tools-list {
@@ -95,11 +95,11 @@
 }
 
 .tool-details {
-    flex-grow: 1;
+    flex: 1; /* Take the remaining width */
     padding: 30px;
     background: #ffffff;
-    overflow-y: auto; /* Enable scrolling for the content */
-    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
+    overflow-y: auto;
+    height: calc(100vh - 60px);
 }
 
 .back-button {
@@ -121,20 +121,20 @@
     font-size: 14px;
 }
 
-/* Mobile-specific styles */
+/* Media query for mobile view */
 @media (max-width: 768px) {
     .tools-container {
         flex-direction: column;
-        margin-left: 0; /* Remove margin left on mobile */
     }
 
     .tools-sidebar {
-        width: 100%; /* Full width on mobile */
-        border-right: none; /* Remove border on mobile */
-        border-bottom: 2px solid #f7f7f7; /* Add bottom border on mobile */
+        flex: 0 0 auto; /* Reset the flex properties for mobile */
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #f7f7f7;
     }
 
     .tool-details {
-        height: auto; /* Adjust height for mobile */
+        height: auto;
     }
 }

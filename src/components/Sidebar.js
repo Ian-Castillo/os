@@ -80,6 +80,11 @@ const Sidebar = () => {
                                 <i className="fi fi-sr-layers"></i> Library
                             </Link>
                         </li>
+                        <li onClick={() => setSelected('highlights')}>
+                            <Link to="/highlights" className={selected === 'highlights' ? 'selected' : ''}>
+                            <i class="fi fi-ss-quote-right"></i> Highlights
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 
