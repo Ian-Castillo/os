@@ -67,7 +67,7 @@
 }
 
 .library-details {
-    flex-grow: 1;
+    flex: 1;
     padding: 30px;
     background: #ffffff;
     overflow-y: auto; /* Enable scrolling for the content */
