@@ -4,7 +4,7 @@ import './Concepts.css'; // Ensure your CSS file is linked
 const conceptsData = [
   {
     id: 1,
-    title: "DisplayETF    ",
+    title: "DisplayETF",
     url: "Display individual ETFs.",
     description: "Display individual ETFs.",
     // favicon: "https://www.google.com/s2/favicons?domain=canva.com",
