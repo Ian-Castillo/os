@@ -13,12 +13,16 @@
     overflow-y: auto;
     border-right: 2px solid #f7f7f7;
     height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column; /* Ensure children are stacked vertically */
 }
 
 .tools-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex: 1; /* Take up remaining space */
+    overflow-y: auto; /* Scroll if content overflows */
 }
 
 .tools-list li {
@@ -119,6 +123,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 /* Media query for mobile view */

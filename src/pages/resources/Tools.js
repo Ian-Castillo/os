@@ -333,63 +333,63 @@ const toolsData = [
 ];
 
 const Tools = () => {
-    const [selectedTool, setSelectedTool] = useState(null);
-    const [searchTerm, setSearchTerm] = useState('');
-  
-    const handleToolClick = (tool) => {
-      setSelectedTool(tool);
-    };
-  
-    const handleBackClick = () => {
-      setSelectedTool(null);
-    };
-  
-    const handleSearchChange = (event) => {
-      setSearchTerm(event.target.value);
-    };
-  
-    const filteredTools = toolsData.filter(tool => 
-      tool.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      tool.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    );
-  
-    return (
-      <div className="tools-container">
-        <div className="tools-sidebar">
-          <input 
-            type="text" 
-            placeholder="Search tools..." 
-            value={searchTerm} 
-            onChange={handleSearchChange} 
-            className="search-bar"
-          />
-          <ul className="tools-list">
-            {filteredTools.map((tool) => (
-              <li key={tool.id} onClick={() => handleToolClick(tool)}>
-                <div className="tool-info">
-                  <div className="tool-title">{tool.title}</div>
-                  <div className="tool-favicon-url">
-                    <img className="tool-favicon" src={tool.favicon} alt="" />
-                    <div className="tool-url">{tool.url.replace(/^https?:\/\//, '')}</div>
-                  </div>
-                  <div className="tool-tags">
-                    {tool.tags.map(tag => <span key={tag}>{tag}</span>)}
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-        {selectedTool && (
-          <div className="tool-details">
-            <button className="back-button" onClick={handleBackClick}>Back</button>
-            <h3>{selectedTool.title}</h3>
-            <p>{selectedTool.description}</p>
-            <a href={selectedTool.url} target="_blank" rel="noopener noreferrer">Visit</a>
-          </div>
-        )}
-      </div>
-    );
+  const [selectedTool, setSelectedTool] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleToolClick = (tool) => {
+    setSelectedTool(tool);
   };
-  
-  export default Tools;
+
+  const handleBackClick = () => {
+    setSelectedTool(null);
+  };
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredTools = toolsData.filter(tool => 
+    tool.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    tool.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
+
+  return (
+    <div className="tools-container">
+      <div className="tools-sidebar">
+        <input 
+          type="text" 
+          placeholder="Search tools..." 
+          value={searchTerm} 
+          onChange={handleSearchChange} 
+          className="search-bar"
+        />
+        <ul className="tools-list">
+          {filteredTools.map((tool) => (
+            <li key={tool.id} onClick={() => handleToolClick(tool)}>
+              <div className="tool-info">
+                <div className="tool-title">{tool.title}</div>
+                <div className="tool-favicon-url">
+                  <img className="tool-favicon" src={tool.favicon} alt={`${tool.title} favicon`} />
+                  <div className="tool-url">{tool.url.replace(/^https?:\/\//, '')}</div>
+                </div>
+                <div className="tool-tags">
+                  {tool.tags.map(tag => <span key={tag}>{tag}</span>)}
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {selectedTool && (
+        <div className="tool-details">
+          <button className="back-button" onClick={handleBackClick}>Back</button>
+          <h3>{selectedTool.title}</h3>
+          <p>{selectedTool.description}</p>
+          <a href={selectedTool.url} target="_blank" rel="noopener noreferrer">Visit</a>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Tools;
