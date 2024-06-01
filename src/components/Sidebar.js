@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
+import gradientLogoDark from '../assets/gradientDark.svg';
+import gradientLogoLight from '../assets/gradientLight.svg';
 
 const Sidebar = () => {
     const location = useLocation();
@@ -23,13 +25,13 @@ const Sidebar = () => {
                 <button className="menu-close" onClick={toggleSidebar}>×</button>
                 <div className="menu-title">
                     <h2>Ian M. Castillo</h2>
-                    <div class="globe">
-  <i class="fi fi-sr-globe"></i>
-  <span class="globe-text">Iowa City, IA, CST</span>
-</div>
+                    <div className="globe">
+                        <i className="fi fi-sr-globe"></i>
+                        <span className="globe-text">Iowa City, IA, CST</span>
+                    </div>
                 </div>
                 <div className="menu-section">
-                <h3>About</h3>
+                    <h3>About</h3>
                     <ul>
                         <li onClick={() => setSelected('home')}>
                             <Link to="/" className={selected === 'home' ? 'selected' : ''}>
@@ -43,19 +45,21 @@ const Sidebar = () => {
                         </li>
                         <li onClick={() => setSelected('concepts')}>
                             <Link to="/concepts" className={selected === 'concepts' ? 'selected' : ''}>
-                            <i class="fi fi-br-scribble"></i> Concepts
+                                <i className="fi fi-br-scribble"></i> Concepts
                             </Link>
                         </li>
                     </ul>
-                </div>
-                <div className="menu-section">                   
                 </div>
                 <div className="menu-section">
                     <h3>Projects</h3>
                     <ul>
                         <li onClick={() => setSelected('gradient')}>
                             <Link to="/gradient" className={selected === 'gradient' ? 'selected' : ''}>
-                                <i className="fi fi-ss-book"></i> Gradient
+                                <div className="icon-container">
+                                    <img src={gradientLogoDark} alt="Gradient Logo Dark" className="icon dark" />
+                                    <img src={gradientLogoLight} alt="Gradient Logo Light" className="icon light" />
+                                </div>
+                                Gradient
                             </Link>
                         </li>
                     </ul>
@@ -82,12 +86,11 @@ const Sidebar = () => {
                         </li>
                         <li onClick={() => setSelected('highlights')}>
                             <Link to="/highlights" className={selected === 'highlights' ? 'selected' : ''}>
-                            <i class="fi fi-ss-quote-right"></i> Highlights
+                                <i className="fi fi-ss-quote-right"></i> Highlights
                             </Link>
                         </li>
                     </ul>
                 </div>
-                
             </div>
             <button className="menu-toggle" onClick={toggleSidebar}>
                 ☰
