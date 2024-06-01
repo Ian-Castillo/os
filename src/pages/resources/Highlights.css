@@ -1,72 +1,119 @@
 .highlights-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.highlight-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.highlight-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.highlight-description {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+.highlight-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.highlight-tag {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.highlight-footer {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #999999;
+}
+
+.highlight-favicon {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+
+.section-heading {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  .highlights-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlight-title {
+    font-size: 16px;
+  }
+
+  .highlight-description {
+    font-size: 12px;
+  }
+
+  .highlight-tag {
+    font-size: 10px;
+  }
+
+  .highlight-footer {
+    font-size: 10px;
+  }
+
+  .section-heading {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .highlights-container {
+    grid-template-columns: 1fr;
     gap: 15px;
     padding: 15px;
   }
-  
+
   .highlight-card {
-    background-color: #ffffff;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 15px;
   }
-  
+
   .highlight-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-size: 14px;
   }
-  
+
   .highlight-description {
-    font-size: 12px;
-    color: #666666;
-    margin-bottom: 8px;
+    font-size: 10px;
   }
-  
-  .highlight-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-bottom: 8px;
-  }
-  
+
   .highlight-tag {
-    background-color: #f0f0f0;
-    border-radius: 3px;
-    padding: 2px 5px;
-    font-size: 10px;
-    color: #333333;
+    font-size: 8px;
   }
-  
+
   .highlight-footer {
-    display: flex;
-    align-items: center;
-    font-size: 10px;
-    color: #800000;
+    font-size: 8px;
   }
-  
-  .highlight-favicon {
-    width: 12px;
-    height: 12px;
-    margin-right: 4px;
-  }
-  
+
   .section-heading {
     margin-left: 15px;
-    margin-bottom: 10px;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
   }
-  
-  @media screen and (max-width: 1024px) {
-    .section-heading {
-      margin-left: 15px;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .section-heading {
-      margin-left: 15px;
-    }
-  }
+}
