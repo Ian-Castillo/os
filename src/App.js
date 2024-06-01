@@ -5,13 +5,14 @@ import Sidebar from './components/Sidebar';
 //about pages
 import Home from './pages/about/Home';
 import Thoughts from './pages/about/Thoughts.js'; 
+import Concepts from './pages/about/Concepts.js';
 //project pages
 import Gradient from './pages/projects/gradient.js';
 import Sunny from './pages/projects/Sunny';
 //resource pages
 import Library from './pages/resources/Library'; 
 import Tools from './pages/resources/Tools.js'
-import Concepts from './pages/about/Concepts.js';
+import Highlights from './pages/resources/Highlights.js';
 
 const App = () => {
   return (
@@ -30,6 +31,8 @@ const App = () => {
            
             <Route path="/tools" element={<Tools />} />
             <Route path="/library" element={<Library />} />
+            <Route path="/highlights" element={<Highlights />} />
+
 
           </Routes>
         </div>
