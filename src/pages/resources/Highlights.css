@@ -1,125 +1,72 @@
-/* Global styles applied to both mobile and desktop */
 .highlights-container {
-    display: flex;
-    flex-direction: row; /* Ensure the sidebar and main content are side by side */
-    min-height: 100vh;
-    background: #ffffff;
-}
-
-.highlights-sidebar {
-    width: 300px; /* Adjust width as needed */
-    background: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .highlight-card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    overflow-y: auto; /* Enable scrolling for the list */
-    border-right: 2px solid #f7f7f7;
-    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
-}
-
-.highlights-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.highlights-list li {
-    padding: 10px 15px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    background: #fff;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    display: flex;
-    align-items: flex-start;
-}
-
-.highlight-info {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.highlight-title {
-    font-size: 14px;
-    font-weight: medium;
-    color: #3d3d3d;
-    margin-bottom: 5px;
-}
-
-.highlight-favicon-url {
-    display: flex;
-    align-items: center;
-}
-
-.highlight-favicon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-}
-
-.highlight-url {
+  }
+  
+  .highlight-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .highlight-description {
     font-size: 12px;
-    color: #a4a4a4;
-}
-
-.highlights-list li:hover {
-    background-color: #f0f0f0;
-}
-
-.highlight-details {
-    flex: 1;
-    padding: 30px;
-    background: #ffffff;
-    overflow-y: auto; /* Enable scrolling for the content */
-    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
-}
-
-.highlight-tags {
-    font-size: 12px;
-    color: #888;
-    margin-top: 5px;
+    color: #666666;
+    margin-bottom: 8px;
+  }
+  
+  .highlight-tags {
     display: flex;
     flex-wrap: wrap;
-}
-
-.highlight-tags span {
-    background: #f0f0f0;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  
+  .highlight-tag {
+    background-color: #f0f0f0;
     border-radius: 3px;
-    padding: 2px 6px;
-    margin-right: 5px;
-    margin-top: 5px;
-    color: #555;
-    font-size: 12px;
-}
-.highlights-list li:hover .highlight-tags span,
-.highlights-list li.selected .highlight-tags span {
-    background: #2c2c2c;
-    color: #fff;
-}
-
-.back-button {
-    background: #2c2c2c;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-/* Media query for mobile view */
-@media (max-width: 768px) {
-    .highlights-container {
-        flex-direction: column;
+    padding: 2px 5px;
+    font-size: 10px;
+    color: #333333;
+  }
+  
+  .highlight-footer {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    color: #800000;
+  }
+  
+  .highlight-favicon {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+  }
+  
+  .section-heading {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .section-heading {
+      margin-left: 15px;
     }
-
-    .highlights-sidebar {
-        width: 100%; /* Full width on mobile */
-        border-right: none; /* Remove border on mobile */
-        border-bottom: 2px solid #f7f7f7; /* Add bottom border on mobile */
+  }
+  
+  @media screen and (max-width: 600px) {
+    .section-heading {
+      margin-left: 15px;
     }
-
-    .highlight-details {
-        height: auto; /* Adjust height for mobile */
-    }
-}
+  }

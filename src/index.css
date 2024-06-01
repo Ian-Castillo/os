@@ -35,7 +35,7 @@ h2 {
 
 /* Link styling */
 a {
-  color: #F3F4F6; /* Blue color for links to stand out */
+  color: #232323; /* Blue color for links to stand out */
   text-decoration: none; /* No underline by default */
   font-weight: bold; /* Bold to highlight links */
 }
