@@ -32,6 +32,10 @@ h2 {
   font-size: 20px; /* Smaller than h1 */
   margin-bottom: 8px;
 }
+h3 {
+  font-size: 18px; /* Smaller than h1 */
+  margin-bottom: 8px;
+}
 
 /* Link styling */
 a {

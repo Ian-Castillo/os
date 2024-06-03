@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
 import gradientLogoDark from '../assets/gradientDark.svg';
 import gradientLogoLight from '../assets/gradientLight.svg';
+import sunnyLight from '../assets/sunnyLight.svg';
+import sunnyDark from '../assets/sunnyDark.svg';
 
 const Sidebar = () => {
     const location = useLocation();
@@ -51,26 +53,30 @@ const Sidebar = () => {
                     </ul>
                 </div>
                 <div className="menu-section">
-                    <h3>Projects</h3>
-                    <ul>
-                        <li onClick={() => setSelected('gradient')}>
-                            <Link to="/gradient" className={selected === 'gradient' ? 'selected' : ''}>
-                                <div className="icon-container">
-                                    <img src={gradientLogoDark} alt="Gradient Logo Dark" className="icon dark" />
-                                    <img src={gradientLogoLight} alt="Gradient Logo Light" className="icon light" />
-                                </div>
-                                Gradient
-                            </Link>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li onClick={() => setSelected('sunny')}>
-                            <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
-                                <i className="fi fi-sr-brightness"></i> Sunny
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+  <h3>Projects</h3>
+  <ul>
+    <li onClick={() => setSelected('gradient')}>
+      <Link to="/gradient" className={selected === 'gradient' ? 'selected' : ''}>
+        <div className="icon-container">
+          <img src={gradientLogoDark} alt="Gradient Logo Dark" className="icon dark" />
+          <img src={gradientLogoLight} alt="Gradient Logo Light" className="icon light" />
+        </div>
+        Gradient
+      </Link>
+    </li>
+  </ul>
+  <ul>
+    <li onClick={() => setSelected('sunny')}>
+      <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
+        <div className="icon-container">
+          <img src={sunnyDark} alt="Sunny Logo Dark" className="icon dark" />
+          <img src={sunnyLight} alt="Sunny Logo Light" className="icon light" />
+        </div>
+        Sunny
+      </Link>
+    </li>
+  </ul>
+</div>
                 <div className="menu-section">
                     <h3>Resources</h3>
                     <ul>

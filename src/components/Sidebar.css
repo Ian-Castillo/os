@@ -5,13 +5,12 @@ body {
 
 .sidebar {
   background-color: #ffffff;
-  width: 200px;
+  width: 190px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   border-right: 2px solid #f7f7f7;
-  padding: 20px;
   overflow-y: auto;
   z-index: 1000;
   transition: transform 0.3s ease-in-out;

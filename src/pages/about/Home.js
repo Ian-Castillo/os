@@ -43,7 +43,6 @@ const Home = () => {
               onMouseLeave={() => setHoveredIcon(null)}
             >
               <i className="fi fi-rr-envelope"></i>
-              {hoveredIcon === 'email' && <span className="social-icon-text">Email</span>}
             </div>
             <div
               className="social-icon"
@@ -51,7 +50,6 @@ const Home = () => {
               onMouseLeave={() => setHoveredIcon(null)}
             >
               <i className="fi fi-brands-github"></i>
-              {hoveredIcon === 'github' && <span className="social-icon-text">GitHub</span>}
             </div>
             <div
               className="social-icon"
@@ -59,7 +57,6 @@ const Home = () => {
               onMouseLeave={() => setHoveredIcon(null)}
             >
               <i className="fi fi-brands-linkedin"></i>
-              {hoveredIcon === 'linkedin' && <span className="social-icon-text">LinkedIn</span>}
             </div>
             <div
               className="social-icon"
@@ -67,7 +64,6 @@ const Home = () => {
               onMouseLeave={() => setHoveredIcon(null)}
             >
               <i className="fi fi-brands-twitter"></i>
-              {hoveredIcon === 'twitter' && <span className="social-icon-text">Twitter</span>}
             </div>
           </div>
         </div>

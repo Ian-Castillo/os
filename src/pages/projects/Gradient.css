@@ -1,75 +1,57 @@
 .gradient-container {
-    border-radius: 10px;
-    padding: 100px;
-    min-height: 100vh;
-    background-color: #ffffff;
-    background-image: radial-gradient(circle, #e2e2e2 1px, #ececec00 1px);
-    background-size: 14px 14px;
- 
-  }
+  border-radius: 10px;
+  padding: 100px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle, #e2e2e2 1px, rgba(236, 236, 236, 0) 1px);
+  background-size: 14px 14px;
+}
 
-  .gradient-container h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.gradient-container h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.gradient-container > p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.gradient-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .gradient-container {
+    padding: 50px;
   }
-  
-  .gradient-container > p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #666;
-  }
-  
-  .bento-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 1fr; /* Adjust row height */
-    grid-gap: 20px;
-  }
-  
-  .bento-item {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    padding: 30px; /* Increase padding */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .bento-item.small {
-    grid-row-end: span 1;
-  }
-  
-  .bento-item.medium {
-    grid-row-end: span 2;
-  }
-  
-  .bento-item.large {
-    grid-row-end: span 3;
-  }
-  
-  .bento-item p:first-child {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .bento-item p:last-child {
-    font-size: 14px;
-    color: #666;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .bento-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media screen and (min-width: 769px) {
-    .content {
-      margin-left: 200px;
-    }
-  
-    .gradient-container {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+}
