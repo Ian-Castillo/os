@@ -22,7 +22,7 @@
 }
 
 .libraries-list li {
-    padding: 10px 15px;
+    padding: 20px 15px;
     margin-bottom: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
