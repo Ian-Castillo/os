@@ -4,7 +4,6 @@ import interactionColor from '../../assets/interactionColor.png';
 
 const Gradient = () => {
   const [activeSection, setActiveSection] = useState('about');
-  const [setHoveredIcon] = useState(null);
 
   const handleIconClick = (url) => {
     window.open(url, '_blank');
@@ -26,40 +25,30 @@ const Gradient = () => {
           <div className="social-icons">
             <div
               className="social-icon"
-              onMouseEnter={() => setHoveredIcon('email')}
-              onMouseLeave={() => setHoveredIcon(null)}
               onClick={() => handleIconClick('mailto:your-email@example.com')}
             >
               <i className="fi fi-rr-envelope"></i>
             </div>
             <div
               className="social-icon"
-              onMouseEnter={() => setHoveredIcon('linkedin')}
-              onMouseLeave={() => setHoveredIcon(null)}
               onClick={() => handleIconClick('https://www.linkedin.com/in/your-profile')}
             >
               <i className="fi fi-brands-linkedin"></i>
             </div>
             <div
               className="social-icon"
-              onMouseEnter={() => setHoveredIcon('twitter')}
-              onMouseLeave={() => setHoveredIcon(null)}
               onClick={() => handleIconClick('https://twitter.com/your-profile')}
             >
               <i className="fi fi-brands-twitter"></i>
             </div>
             <div
               className="social-icon"
-              onMouseEnter={() => setHoveredIcon('instagram')}
-              onMouseLeave={() => setHoveredIcon(null)}
               onClick={() => handleIconClick('https://www.instagram.com/your-profile')}
             >
               <i className="fi fi-brands-instagram"></i>
             </div>
             <div
               className="social-icon"
-              onMouseEnter={() => setHoveredIcon('tiktok')}
-              onMouseLeave={() => setHoveredIcon(null)}
               onClick={() => handleIconClick('https://www.tiktok.com/@your-profile')}
             >
               <i className="fi fi-brands-tik-tok"></i>
