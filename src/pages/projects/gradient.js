@@ -15,17 +15,18 @@ const Gradient = () => {
         <img src={interactionColor} alt="Ian Castillo" className="profile-image" />
         <div className="gradient-nav">
           <div className="nav-items">
-            <div
-              className={`nav-item ${activeSection === 'about' ? 'active' : ''}`}
-              onClick={() => setActiveSection('about')}
-            >
-              <span className="nav-item-text">About</span>
+            <div>
+              <span className="gradient-item-text">About</span>
+          
+            </div>
+            <div>
+              <span className="gradient-item-text">gradientbooks.com</span>
             </div>
           </div>
           <div className="social-icons">
             <div
               className="social-icon"
-              onClick={() => handleIconClick('mailto:your-email@example.com')}
+              onClick={() => handleIconClick('mailto:hello@gradientbooks.com')}
             >
               <i className="fi fi-rr-envelope"></i>
             </div>
