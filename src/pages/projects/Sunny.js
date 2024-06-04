@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Sunny.css';
-import interactionColor from '../../assets/interactionColor.png';
+import weather from '../../assets/weather.png';
 
 const Gradient = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -12,7 +12,7 @@ const Gradient = () => {
   return (
     <div className="sunny-container">
       <div className="main-content">
-        <img src={interactionColor} alt="Ian Castillo" className="profile-image" />
+        <img src={weather} alt="Ian Castillo" className="profile-image" />
         <div className="gradient-nav">
           <div className="nav-items">
             <div>

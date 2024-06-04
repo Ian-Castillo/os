@@ -187,12 +187,15 @@ body {
   width: 100%;
   height: 100%;
   display: inline-block;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: opacity 0.3s ease-in-out;
   position: absolute;
   top: 0;
   left: 0;
 }
+
 
 .icon.light {
   opacity: 0;
@@ -204,4 +207,23 @@ a:hover .icon.light, a:focus .icon.light, a:active .icon.light {
 
 a:hover .icon.dark, a:focus .icon.dark, a:active .icon.dark {
   opacity: 0;
+}
+.sunny-logo {
+  width: 20px; /* Adjust the size as needed */
+  height: 20px; /* Adjust the size as needed */
+}
+
+/* For the Sunny logo */
+.sunny-icon-container {
+  width: 20px; /* Adjust the size as needed */
+  height: 20px; /* Adjust the size as needed */
+  margin-right: 10px; /* Add margin to align with other icons */
+}
+
+.sunny-icon-container .icon {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

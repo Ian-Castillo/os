@@ -58,23 +58,23 @@ const Sidebar = () => {
     <li onClick={() => setSelected('gradient')}>
       <Link to="/gradient" className={selected === 'gradient' ? 'selected' : ''}>
         <div className="icon-container">
-          <img src={gradientLogoDark} alt="Gradient Logo Dark" className="icon dark" />
-          <img src={gradientLogoLight} alt="Gradient Logo Light" className="icon light" />
+        <img src={gradientLogoDark} alt="Gradient Logo Dark" className="icon dark Gradient" />
+<img src={gradientLogoLight} alt="Gradient Logo Light" className="icon light Gradient" />
         </div>
         Gradient
       </Link>
     </li>
   </ul>
   <ul>
-    <li onClick={() => setSelected('sunny')}>
-      <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
-        <div className="icon-container">
-          <img src={sunnyDark} alt="Sunny Logo Dark" className="icon dark" />
-          <img src={sunnyLight} alt="Sunny Logo Light" className="icon light" />
-        </div>
-        Sunny
-      </Link>
-    </li>
+  <li onClick={() => setSelected('sunny')}>
+  <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
+    <div className="icon-container sunny-icon-container">
+      <img src={sunnyDark} alt="Sunny Logo Dark" className="icon dark" />
+      <img src={sunnyLight} alt="Sunny Logo Light" className="icon light" />
+    </div>
+    Sunny
+  </Link>
+</li>
   </ul>
 </div>
                 <div className="menu-section">
