@@ -2,7 +2,8 @@
 .home-container {
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Ensure vertical alignment */
+  justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
   padding: 100px;
@@ -16,7 +17,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .nav-items {
@@ -36,22 +37,46 @@
 }
 
 .nav-item.active {
-  background-color: #F3F4F6;
+  background-color: #000000;
   border-radius: 5px;
+  color: white;
 }
 
 .nav-item.inactive {
-  outline: 1px solid black;
+  background-color: #F3F4F6;
+  border-radius: 4px;
 }
 
 .nav-item-text {
   margin-left: 8px;
 }
 
-.social-icons {
+/* Location and social icons styling */
+.social-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: #F3F4F6;
+  border-radius: 5px;
+  margin-left: 24px;
+  transition: background-color 0.3s, transform 0.3s;
 }
+
+.social-icon i {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}
+
 
 /* Main content area */
 .main-content {
@@ -59,6 +84,9 @@
   background: #ffffff;
   padding: 10px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content */
 }
 
 /* Profile image */
@@ -262,48 +290,49 @@ flex-direction: column;
 align-items: flex-start;
 }
 .nav-items {
-margin-bottom: 20px;
+margin-bottom: 10px;
 }
 .social-icons {
-margin-top: 20px;
+margin-top: 10px;
 }
 }
-/* Adjustments for mobile responsiveness */
 @media (max-width: 768px) {
-  /* ... */
-
   .work-experience {
     padding: 0 20px;
+    overflow-x: hidden;
   }
 
-  .work-experience h2 {
-    font-size: 18px;
-    margin-bottom: 15px;
+  .work-list,
+  .advisory-list {
+    flex-direction: column;
   }
 
-  .work-experience li {
+  .work-list li,
+  .advisory-list li {
+    width: 100%;
     margin-bottom: 20px;
   }
 
-  .company {
-    font-size: 12px;
+  .company-info {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .role {
-    font-size: 12px;
+  .company-logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .company-info > div {
+    margin-left: 0;
   }
 
   .dates {
-    font-size: 10px;
+    margin-top: 5px;
   }
 
   .location {
-    font-size: 8px;
-    padding: 2px 6px;
-  }
-
-  .company-info p {
-    font-size: 10px;
+    margin-left: 0;
     margin-top: 5px;
   }
 }
