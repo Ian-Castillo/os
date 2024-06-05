@@ -28,7 +28,7 @@ const App = () => {
             <Route path="/gradient" element={<Gradient />} />
 
             <Route path="/sunny" element={<Sunny />} />
-           
+
             <Route path="/tools" element={<Tools />} />
             <Route path="/library" element={<Library />} />
             <Route path="/highlights" element={<Highlights />} />

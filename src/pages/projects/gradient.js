@@ -16,7 +16,6 @@ const Gradient = () => {
         <div className="gradient-nav">
           <div className="nav-items">
             <div>
-              <span className="gradient-item-text">About</span>
           
             </div>
             <div>
