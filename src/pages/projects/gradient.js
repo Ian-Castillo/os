@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Gradient.css';
-import interactionColor from '../../assets/interactionColor.png';
+import interactionColor from '../../assets/gradient.svg';
 
 const Gradient = () => {
   const [activeSection, setActiveSection] = useState('about');

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Sunny.css';
-import weather from '../../assets/weather.png';
+import weather from '../../assets/sunny.svg';
 
 const Gradient = () => {
   const [activeSection, setActiveSection] = useState('about');
