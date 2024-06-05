@@ -13,6 +13,7 @@
 
 .home-nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
@@ -31,11 +32,16 @@
   font-weight: 700;
   margin: 8px;
   padding: 8px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .nav-item.active {
   background-color: #F3F4F6;
   border-radius: 5px;
+}
+
+.nav-item.inactive {
+  outline: 1px solid black;
 }
 
 .nav-item-text {
@@ -44,7 +50,7 @@
 
 .social-icons {
   display: flex;
-  align-items: left;
+  align-items: center;
 }
 
 /* Main content area */
@@ -108,154 +114,196 @@ h1 {
   width: 30px;
   height: 30px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F3F4F6;
-  border-radius: 5px;
-  margin-left: 24px;
-  transition: background-color 0.3s, transform 0.3s;
+align-items: center;
+justify-content: center;
+background-color: #F3F4F6;
+border-radius: 5px;
+margin-left: 24px;
+transition: background-color 0.3s, transform 0.3s;
 }
-
 .social-icon i {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+font-size: 16px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
-
 .social-icon:hover {
-  background-color: #ddd;
-  transform: scale(1.1);
+background-color: #ddd;
+transform: scale(1.1);
 }
-
 .social-icon-text {
-  position: absolute;
-  left: 100%;
-  margin-left: 8px;
-  padding: 4px 8px;
-  background-color: #F3F4F6;
-  border-radius: 5px;
-  font-size: 12px;
-  white-space: nowrap;
+position: absolute;
+left: 100%;
+margin-left: 8px;
+padding: 4px 8px;
+background-color: #F3F4F6;
+border-radius: 5px;
+font-size: 12px;
+white-space: nowrap;
 }
-
 .location-text::before {
-  content: "📍";
-  margin-right: 5px;
+content: "📍";
+margin-right: 5px;
 }
-
 .work-experience {
-  margin-top: 16px;
-  text-align: left;
+margin-top: 16px;
+text-align: left;
 }
-
 .work-experience h2 {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
-
 .work-experience ul {
-  list-style: none;
-  padding: 0;
+list-style: none;
+padding: 0;
 }
-
 .work-experience li {
-  margin-bottom: 30px;
+margin-bottom: 30px;
 }
-
 .company {
-  font-weight: bold;
-  font-size: 14px;
-  display: block;
-  margin-bottom: 4px;
+font-weight: bold;
+font-size: 14px;
+display: block;
+margin-bottom: 4px;
 }
-
 /* Company info container */
 .company-info {
-  display: flex;
+display: flex;
 }
-
 /* Company logo */
 .company-logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  margin-right: 10px;
-  border-radius: 4px;
+width: 40px;
+height: 40px;
+object-fit: contain;
+margin-right: 10px;
+border-radius: 4px;
 }
-
 /* Company and role container */
 .company-info > div {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
-
 .company-logo[alt="University of Iowa"] {
-  background-color: black;
+background-color: black;
 }
-
 /* Role */
 .role {
-  font-style: italic;
-  font-size: 14px;
-  color: #000000;
+font-style: italic;
+font-size: 14px;
+color: #000000;
 }
-
 .dates {
-  float: right;
-  color: #999;
+float: right;
+color: #999;
 }
-
 .location {
-  background-color: #F3F4F6;
-  border-radius: 5px;
-  padding: 4px 8px;
-  font-size: 10px;
-  margin-top: 5px;
-  display: inline-block;
+background-color: #F3F4F6;
+border-radius: 5px;
+padding: 4px 8px;
+font-size: 10px;
+margin-top: 5px;
+display: inline-block;
 }
-
 .role {
-  font-style: italic;
-  font-size: 14px;
-  color: #000000;
+font-style: italic;
+font-size: 14px;
+color: #000000;
+}
+.work-list,
+.advisory-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+.work-list li,
+.advisory-list li {
+  width: 48%;
+}
+
+@media (max-width: 768px) {
+  .work-list li,
+  .advisory-list li {
+    width: 100%;
+  }
+}
 /* Adjustments for mobile responsiveness */
 @media (max-width: 768px) {
-  .home-container {
-    padding: 20px;
+.home-container {
+padding: 20px;
+}
+.profile-image {
+max-width: 100%;
+margin-right: 20px;
+margin-bottom: 15px;
+}
+.main-content {
+padding: 0px;
+}
+h1 {
+font-size: 22px;
+}
+p {
+font-size: 10px;
+margin: 0 0 15px;
+}
+.content {
+padding: 10px 5px;
+}
+.location h2,
+.work-experience h2 {
+font-size: 14px;
+}
+.location-text,
+.work-experience li {
+font-size: 10px;
+}
+.home-nav {
+flex-direction: column;
+align-items: flex-start;
+}
+.nav-items {
+margin-bottom: 20px;
+}
+.social-icons {
+margin-top: 20px;
+}
+}
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+  /* ... */
+
+  .work-experience {
+    padding: 0 20px;
   }
 
-  .profile-image {
-    max-width: 100%;
-    margin-right: 20px;
+  .work-experience h2 {
+    font-size: 18px;
     margin-bottom: 15px;
   }
 
-  .main-content {
-    padding: 0px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 10px;
-    margin: 0 0 15px;
-  }
-
-  .content {
-    padding: 10px 5px;
-  }
-
-  .location h2,
-  .work-experience h2 {
-    font-size: 14px;
-  }
-
-  .location-text,
   .work-experience li {
+    margin-bottom: 20px;
+  }
+
+  .company {
+    font-size: 12px;
+  }
+
+  .role {
+    font-size: 12px;
+  }
+
+  .dates {
     font-size: 10px;
+  }
+
+  .location {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+
+  .company-info p {
+    font-size: 10px;
+    margin-top: 5px;
   }
 }

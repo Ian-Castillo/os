@@ -10,6 +10,8 @@ import Bloomtech from '../../assets/BloomTech.jpeg';
 import Textpress from '../../assets/Textpress.jpeg'; 
 import SCC from '../../assets/SCC.jpeg'; 
 import Techstars from '../../assets/techstars.png'; 
+import SXSW from '../../assets/sxsw.png';
+import Rally from '../../assets/rally.png';
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -22,14 +24,14 @@ const Home = () => {
         <div className="home-nav">
           <div className="nav-items">
             <div
-              className={`nav-item ${activeSection === 'about' ? 'active' : ''}`}
+              className={`nav-item ${activeSection === 'about' ? 'active' : 'inactive'}`}
               onClick={() => setActiveSection('about')}
             >
               <i className="fi fi-rr-user"></i>
               <span className="nav-item-text">About</span>
             </div>
             <div
-              className={`nav-item ${activeSection === 'experience' ? 'active' : ''}`}
+              className={`nav-item ${activeSection === 'experience' ? 'active' : 'inactive'}`}
               onClick={() => setActiveSection('experience')}
             >
               <i className="fi fi-rr-briefcase"></i>
@@ -84,15 +86,16 @@ const Home = () => {
         {activeSection === 'experience' && (
           <div className="work-experience">
             <h2>Current</h2>
-            <ul>
+            <h3>Work</h3>
+            <ul className="work-list">
               <li>
                 <div className="company-info">
                   <img src={Iowa} alt="University of Iowa" className="company-logo" />
                   <div>
                     <span className="company">The University of Iowa, Tippie College of Business <span className="location">Hybrid</span></span>
-                    <span className="role">Adjunct Instructor, Management and Entrepreneurship</span>
+                    <span className="role">Adjunct Instructor, Management & Entrepreneurship</span>
                     <span className="dates">2023 - Current</span>
-                    <p>Accelerating marketing and growth for the Start-Up Incubator.</p>
+                    <p>Accelerating marketing and growth for the JPEC Start-Up Incubator.</p>
                   </div>
                 </div>
               </li>
@@ -104,6 +107,32 @@ const Home = () => {
                     <span className="role">Head of Product & Design</span>
                     <span className="dates">2022 - Current</span>
                     <p>Re-imagining college admissions.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <h3>Advisory</h3>
+            <ul className="advisory-list">
+              <li>
+                <div className="company-info">
+                  <img src={SXSW} alt="SXSW" className="company-logo" />
+                  <div>
+                    <span className="company">SXSW <span className="location">Remote</span></span>
+                    <span className="role">Advisory Board</span>
+                    <span className="dates">2023 -</span>
+                    <p>A renowned annual conference and festival that takes place in Austin, Texas, focusing on the convergence of the tech, film, music, and comedy industries. </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="company-info">
+                  <img src={Rally} alt="Rally" className="company-logo" />
+                  <div>
+                    <span className="company">Rally <span className="location">Remote</span></span>
+                    <span className="role">Advisory Board</span>
+                    <span className="dates">2023 -</span>
+                    <p>A global cross-sector innovation conference featuring 200+ speakers, Rally IN-prize pitch competition, and 6 innovation tracks.
+</p>
                   </div>
                 </div>
               </li>
