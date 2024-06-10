@@ -7,8 +7,8 @@ import Home from './pages/about/Home';
 import Thoughts from './pages/about/Thoughts.js'; 
 import Concepts from './pages/about/Concepts.js';
 //project pages
-import Gradient from './pages/projects/gradient.js';
-import Sunny from './pages/projects/Sunny';
+import Sunny from './pages/projects/Sunny.js';
+import TimeMachine from './pages/projects/TimeMachine.js';
 //resource pages
 import Library from './pages/resources/Library'; 
 import Tools from './pages/resources/Tools.js'
@@ -21,19 +21,14 @@ const App = () => {
         <Sidebar />
         <div className="content-wrapper">
           <Routes>
-       
             <Route path="/" element={<Home />} />
             <Route path="/thoughts" element={<Thoughts />} />
             <Route path="/concepts" element={<Concepts />} />
-            <Route path="/gradient" element={<Gradient />} />
-
             <Route path="/sunny" element={<Sunny />} />
-
+            <Route path="/TimeMachine" element={<TimeMachine />} />
             <Route path="/tools" element={<Tools />} />
             <Route path="/library" element={<Library />} />
             <Route path="/highlights" element={<Highlights />} />
-
-
           </Routes>
         </div>
       </div>

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import './Gradient.css';
+import './TimeMachine.css';
 import interactionColor from '../../assets/gradient.svg';
 
-const Gradient = () => {
+const TimeMachine = () => {
   const [activeSection, setActiveSection] = useState('about');
 
   const handleIconClick = (url) => {
     window.open(url, '_blank');
   };
-
   return (
     <div className="gradient-container">
       <div className="main-content">
@@ -19,13 +18,13 @@ const Gradient = () => {
           
             </div>
             <div>
-              <span className="gradient-item-text">gradientbooks.com</span>
+              <span className="gradient-item-text">timemachineprint.com</span>
             </div>
           </div>
           <div className="social-icons">
             <div
               className="social-icon"
-              onClick={() => handleIconClick('mailto:hello@gradientbooks.com')}
+              onClick={() => handleIconClick('mailto:hello@timemachineprint.com')}
             >
               <i className="fi fi-rr-envelope"></i>
             </div>
@@ -56,20 +55,20 @@ const Gradient = () => {
           </div>
         </div>
         <div>
-          <h1>Gradient</h1>
+          <h1>Time Machine</h1>
           <h2>A bookstore that functions as a neural network for the creative community.</h2>
-          <p>As an entrepreneur and artist, I have long been fascinated by the transformative power of books. Throughout my personal and professional journey, I have witnessed countless instances where a single book has sparked a groundbreaking idea, challenged deeply held perceptions, and equipped individuals with the insights and knowledge needed to shape their future. This fascination has been the driving force behind my unwavering belief in the potential of books to catalyze change, inspire innovation, and empower people to reach their full potential.</p>
-          <p>Gradient was born out of this very belief – a belief that the right book, discovered at the right time, can be a catalyst for profound transformation. It is a testament to the idea that knowledge, when accessed and internalized, can lead to paradigm shifts in the way we think, work, and create. The concept of Gradient is deeply rooted in the understanding that books are not merely words on a page but are powerful tools that can unlock new perspectives, challenge the status quo, and provide the foundation for personal and professional growth.</p>
-          <p>As Gradient continues to evolve and expand, it will remain firmly anchored in this core idea. We are committed to curating a collection of books that not only inform and educate but also inspire and ignite the imagination. By carefully selecting titles that span a wide range of creative disciplines and themes, we aim to provide our community with a diverse array of perspectives and ideas that can fuel their own unique journeys of growth and discovery.</p>
-          <p>Ultimately, Gradient will grow from the very thought that sparked its creation – the transformative power of books. As we continue to build and nurture a platform that connects individuals with the knowledge and inspiration they need to thrive, we will remain steadfast in our commitment to harnessing the potential of books to drive change, foster innovation, and empower our community to shape their own futures. Through Gradient, we will create a space where the transformative power of books can be fully realized, and where individuals can access the tools and resources they need to unlock their full potential and make a lasting impact on the world.</p>
+          <p>I've been a builder all my life. I've launched startups, crafted brand identities, captured moments through my lens, and embarked on a handful of creative ventures. And through it all, I've learned that every journey forward begins with a glance back.</p>
+          <p>Before I start a new project, I always take the time to look in the rearview mirror. I study the work of those who came before me, the pioneers who thought to dream big and pave the way. Because I believe that to create something truly remarkable, you must first stand on the shoulders of giants.</p>
+          <p>That's the principle that inspired me to build Time Machine Print. It's a testament to my conviction that to go forward, you must first understand how we got here. Every book in our collection is a piece of that puzzle, a chapter in the story of innovation and creativity.</p>
+          <p>At Time Machine Print, we don't just celebrate the past - we use it as a springboard for the future. We believe that every creator has the power to shape the world, but to do so, they need to understand the context of their own journey. They need to see themselves as part of a lineage, a continuum of innovation that stretches back through time. So whether you're an entrepreneur charting new territory, a photographer capturing unseen perspectives, or a designer redefining what's possible, Time Machine Print is here to be your guide. I've curated a collection that doesn't just span disciplines - it spans eras. Because we know that the key to unlocking your creative potential lies in understanding the giants who came before you.</p>
+          <p>To go forward, go back.</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default Gradient;
-
+export default TimeMachine;
 //     <div className="gradient-container">
 //     <div className=''>
 //       <h2>Gradient</h2>

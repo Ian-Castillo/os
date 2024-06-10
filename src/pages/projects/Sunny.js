@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './Sunny.css';
 import weather from '../../assets/sunny.svg';
 
-const Gradient = () => {
+const Sunny = () => {
   const [activeSection, setActiveSection] = useState('about');
 
   const handleIconClick = (url) => {
@@ -70,4 +69,4 @@ const Gradient = () => {
   );
 };
 
-export default Gradient;
+export default Sunny;

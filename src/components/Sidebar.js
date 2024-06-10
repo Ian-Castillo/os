@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
-import gradientLogoDark from '../assets/gradientDark.svg';
-import gradientLogoLight from '../assets/gradientLight.svg';
+import timeMachineLogoDark from '../assets/timeMachineLogoDark.png';
+import timeMachineLogoLight from '../assets/timeMachineLogoLight.png';
 import sunnyLight from '../assets/sunnyLight.svg';
 import sunnyDark from '../assets/sunnyDark.svg';
 
@@ -55,13 +55,13 @@ const Sidebar = () => {
                 <div className="menu-section">
                     <h3>Projects</h3>
                     <ul>
-                        <li onClick={() => setSelected('gradient')}>
-                            <Link to="/gradient" className={selected === 'gradient' ? 'selected' : ''}>
+                        <li onClick={() => setSelected('timeMachine')}>
+                            <Link to="/timeMachine" className={selected === 'timeMachine' ? 'selected' : ''}>
                                 <div className="icon-container">
-                                    <img src={gradientLogoDark} alt="Gradient Logo Dark" className="icon dark Gradient" />
-                                    <img src={gradientLogoLight} alt="Gradient Logo Light" className="icon light Gradient" />
+                                    <img src={timeMachineLogoDark} alt="Time Machine Logo Dark" className="icon dark TimeMachine" />
+                                    <img src={timeMachineLogoLight} alt="Time Machine Logo Light" className="icon light TimeMachine" />
                                 </div>
-                                Gradient
+                                Time Machine
                             </Link>
                         </li>
                     </ul>
