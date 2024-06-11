@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './TimeMachine.css';
-import interactionColor from '../../assets/gradient.svg';
 
 const TimeMachine = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -11,7 +10,6 @@ const TimeMachine = () => {
   return (
     <div className="gradient-container">
       <div className="main-content">
-        <img src={interactionColor} alt="Ian Castillo" className="profile-image" />
         <div className="gradient-nav">
           <div className="nav-items">
             <div>

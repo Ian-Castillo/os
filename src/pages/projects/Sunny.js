@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import weather from '../../assets/sunny.svg';
+import weather from '../../assets/sunnyHeader.svg';
 
 const Sunny = () => {
   const [activeSection, setActiveSection] = useState('about');
