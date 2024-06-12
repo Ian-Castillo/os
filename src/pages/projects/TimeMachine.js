@@ -56,7 +56,8 @@ const TimeMachine = () => {
         </div>
         <div>
           <h1>Time Machine</h1>
-          <h2>A bookstore that functions as a neural network for the creative community.</h2>
+          <h2>A neural network for the creative community.
+          </h2>
           <p>I've been a builder all my life. I've launched startups, crafted brand identities, captured moments through my lens, and embarked on a handful of creative ventures. And through it all, I've learned that every journey forward begins with a glance back.</p>
           <p>Before I start a new project, I always take the time to look in the rearview mirror. I study the work of those who came before me, the pioneers who thought to dream big and pave the way. Because I believe that to create something truly remarkable, you must first stand on the shoulders of giants.</p>
           <p>That's the principle that inspired me to build Time Machine Print. It's a testament to my conviction that to go forward, you must first understand how we got here. Every book in our collection is a piece of that puzzle, a chapter in the story of innovation and creativity.</p>
