@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './TimeMachine.css';
+import tmp from '../../assets/TMP.png';
 
 const TimeMachine = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -10,6 +11,7 @@ const TimeMachine = () => {
   return (
     <div className="gradient-container">
       <div className="main-content">
+      <img src={tmp} alt="time machine grid background" className="profile-image" />
         <div className="gradient-nav">
           <div className="nav-items">
             <div>
@@ -34,13 +36,13 @@ const TimeMachine = () => {
             </div>
             <div
               className="social-icon"
-              onClick={() => handleIconClick('https://twitter.com/your-profile')}
+              onClick={() => handleIconClick('https://twitter.com/tsprintcompany')}
             >
               <i className="fi fi-brands-twitter"></i>
             </div>
             <div
               className="social-icon"
-              onClick={() => handleIconClick('https://www.instagram.com/your-profile')}
+              onClick={() => handleIconClick('https://www.instagram.com/timemachineprint')}
             >
               <i className="fi fi-brands-instagram"></i>
             </div>

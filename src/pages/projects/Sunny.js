@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import weather from '../../assets/sunnyHeader.svg';
+import './Sunny.css';
 
 const Sunny = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -12,13 +13,13 @@ const Sunny = () => {
     <div className="sunny-container">
       <div className="main-content">
         <img src={weather} alt="Ian Castillo" className="profile-image" />
-        <div className="gradient-nav">
+        <div className="sunny-nav">
           <div className="nav-items">
             <div>
           
             </div>
             <div>
-              <span className="gradient-item-text">sunnyweather.co</span>
+              <span className="sunny-item-text">sunnyweather.co</span>
             </div>
           </div>
           <div className="social-icons">
