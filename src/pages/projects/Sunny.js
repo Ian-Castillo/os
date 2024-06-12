@@ -57,7 +57,7 @@ const Sunny = () => {
         </div>
         <div>
           <h1>Sunny</h1>
-          <h2>A weather company connecting people to the weather.</h2>
+          <h2>A weather companion that cares about your day.</h2>
           <p>In the last several years, I have come to understand the profound significance of weather in our daily lives. It is not merely a topic of idle conversation but a fundamental aspect of the human experience that shapes our decisions, influences our moods, and connects us to the world around us. This deep appreciation for the power of weather has been the catalyst behind my vision for Sunny – a groundbreaking social platform that aims to revolutionize the way we engage with and understand weather.</p>
           <p>Sunny is not just another weather app or social network. It is a manifestation of the idea that the fusion of technology, data, and human interaction can create something truly transformative. By harnessing the power of advanced algorithms, real-time data, and user-generated content, Sunny aims to create a neural network that enables individuals to not only access accurate and personalized weather information but also to connect with others who share their passion for weather.</p>
           <p>At its core, Sunny is driven by the belief that the sharing of knowledge, experiences, and perspectives can lead to a deeper understanding of the world around us. By providing a platform that encourages users to engage in meaningful conversations, share their unique insights, and collaborate on weather-related projects, Sunny seeks to foster a sense of community that transcends geographic boundaries and demographic differences.</p>
