@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
-import timeMachineLogoDark from '../assets/timeMachineLogoDark.png';
-import timeMachineLogoLight from '../assets/timeMachineLogoLight.png';
+import timeMachineLogoLight from '../assets/timeMachineLogoDark.png';
+import timeMachineLogoDark from '../assets/timeMachineLogoLight.png';
 import sunnyLight from '../assets/sunnyLight.svg';
 import sunnyDark from '../assets/sunnyDark.svg';
 
