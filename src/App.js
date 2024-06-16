@@ -8,6 +8,7 @@ import Thoughts from './pages/about/Thoughts.js';
 import Concepts from './pages/about/Concepts.js';
 //project pages
 import Sunny from './pages/projects/Sunny.js';
+import SPL from './pages/projects/SpacePirateLabs.js';
 import TimeMachine from './pages/projects/TimeMachine.js';
 //resource pages
 import Library from './pages/resources/Library'; 
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/concepts" element={<Concepts />} />
             <Route path="/sunny" element={<Sunny />} />
             <Route path="/TimeMachine" element={<TimeMachine />} />
+            <Route path="/SpacePirateLabs" element={<SPL />} />
             <Route path="/tools" element={<Tools />} />
             <Route path="/library" element={<Library />} />
             <Route path="/highlights" element={<Highlights />} />

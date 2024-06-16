@@ -55,14 +55,13 @@ const Sidebar = () => {
                 <div className="menu-section">
                     <h3>Projects</h3>
                     <ul>
-                        <li onClick={() => setSelected('timeMachine')}>
-                            <Link to="/timeMachine" className={selected === 'timeMachine' ? 'selected' : ''}>
+                        <li onClick={() => setSelected('spl')}>
+                            <Link to="/SpacePirateLabs" className={selected === 'spl' ? 'selected' : ''}>
                                 <div className="icon-container">
-                                    <img src={timeMachineLogoDark} alt="Time Machine Logo Dark" className="icon dark TimeMachine" />
-                                    <img src={timeMachineLogoLight} alt="Time Machine Logo Light" className="icon light TimeMachine" />
+                                    {/* <img src={Spl} alt="Spl Logo Dark" className="icon dark Spl" />
+                                    <img src={Spl} alt="Spl Logo Light" className="icon light Spl" /> */}
                                 </div>
-                                Time Machine
-                            </Link>
+Space Pirate Labs                            </Link>
                         </li>
                     </ul>
                     <ul>
@@ -73,6 +72,17 @@ const Sidebar = () => {
                                     <img src={sunnyLight} alt="Sunny Logo Light" className="icon light sunny-logo" />
                                 </div>
                                 Sunny
+                            </Link>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li onClick={() => setSelected('timeMachine')}>
+                            <Link to="/timeMachine" className={selected === 'timeMachine' ? 'selected' : ''}>
+                                <div className="icon-container">
+                                    <img src={timeMachineLogoDark} alt="Time Machine Logo Dark" className="icon dark TimeMachine" />
+                                    <img src={timeMachineLogoLight} alt="Time Machine Logo Light" className="icon light TimeMachine" />
+                                </div>
+                                Time Machine
                             </Link>
                         </li>
                     </ul>

@@ -1,0 +1,95 @@
+.spl-container {
+    border-radius: 10px;
+    padding: 50px;
+    min-height: 100vh;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle, #e2e2e2 1px, rgba(236, 236, 236, 0) 1px);
+    background-size: 14px 14px;
+  }
+  
+  .spl-container h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .spl-container > p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* Updated sunny-nav for left and right alignment */
+  .spl-nav {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px;
+  }
+  
+  .spl-nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spl-item-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1c1c;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 6px;
+    color: #ffffff;
+  }
+  
+  .nav-items {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+  }
+  
+  .nav-item {
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .nav-item.active {
+    font-weight: bold;
+  }
+  
+  /* Adjusted social-icons to align right */
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    flex-wrap: wrap;
+  }
+  
+  .social-icon {
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .spl-container {
+        padding: 30px;
+    }
+  
+    .spl-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .spl-nav-item {
+        margin-bottom: 10px;
+    }
+  
+    .social-icons {
+        margin-top: 20px;
+        justify-content: flex-start; /* Align to the left on smaller screens */
+    }
+  }
+  
