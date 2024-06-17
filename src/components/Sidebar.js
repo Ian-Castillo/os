@@ -55,14 +55,7 @@ const Sidebar = () => {
                 <div className="menu-section">
                     <h3>Projects</h3>
                     <ul>
-                        <li onClick={() => setSelected('spl')}>
-                            <Link to="/SpacePirateLabs" className={selected === 'spl' ? 'selected' : ''}>
-                                <div className="icon-container">
-                                    {/* <img src={Spl} alt="Spl Logo Dark" className="icon dark Spl" />
-                                    <img src={Spl} alt="Spl Logo Light" className="icon light Spl" /> */}
-                                </div>
-Space Pirate Labs                            </Link>
-                        </li>
+                    
                     </ul>
                     <ul>
                         <li onClick={() => setSelected('sunny')}>

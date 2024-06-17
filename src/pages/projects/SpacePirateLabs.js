@@ -57,7 +57,7 @@ const SPL = () => {
         </div>
         <div>
           <h1>Space Pirate Labs</h1>
-          <h2>A symphony of visual experiences.</h2>
+          <h2>A visual symphony <i>pas de deux.</i></h2>
           <p>Our approach to visual design is one of meticulous craftsmanship, where every pixel, every line, and every color is thoughtfully considered and refined to achieve a level of perfection that is truly remarkable. We believe that great design is not merely about aesthetics; it is about creating experiences that evoke emotion, tell compelling stories, and forge meaningful connections with those who encounter our work.</p>
           <p>At Space Pirate Labs, we have a profound understanding of the power of simplicity. By stripping away the superfluous and focusing on the essential, we create designs that are elegantly minimalistic yet profoundly impactful. Our work is characterized by a sense of clarity and purpose, where every element serves a specific function and contributes to the overall narrative.</p>
           <p>The range of our expertise is as vast as the cosmos itself. From crafting brand identities that are as iconic as they are memorable to designing user interfaces that are intuitive and delightful to use, we approach each project with a level of dedication and attention to detail that is unparalleled.</p>
