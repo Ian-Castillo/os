@@ -248,7 +248,7 @@ link {
   font-style: italic;
   font-size: 14px;
   color: #000000;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 
 }
 
@@ -256,7 +256,7 @@ link {
   float: right;
   color: #434343;
   font-size: 12px;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 
 .location {
