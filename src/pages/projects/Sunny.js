@@ -23,7 +23,7 @@ const Sunny = () => {
             </div>
           </div>
           <div className="social-icons">
-            <div
+            {/* <div
               className="social-icon"
               onClick={() => handleIconClick('mailto:hello@gradientbooks.com')}
             >
@@ -52,7 +52,7 @@ const Sunny = () => {
               onClick={() => handleIconClick('https://www.tiktok.com/@your-profile')}
             >
               <i className="fi fi-brands-tik-tok"></i>
-            </div>
+            </div> */}
           </div>
         </div>
         <div>

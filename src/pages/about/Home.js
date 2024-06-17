@@ -93,10 +93,13 @@ const Home = () => {
                 <div className="company-info">
                   <img src={Iowa} alt="University of Iowa" className="company-logo" />
                   <div>
-                    <span className="company">The University of Iowa, Tippie College of Business <span className="location">Hybrid</span></span>
+                    <span className="company">
+                    <a href="https://iowajpec.org/" className="company-link">The University of Iowa, Tippie College of Business</a>
+
+                      <span className="location">Hybrid</span></span>
                     <span className="role">Adjunct Instructor, Management & Entrepreneurship</span>
                     <span className="dates">2023 - Current</span>
-                    <span className="about">Accelerating ideas & people in the Start-Up Incubator.</span>
+                    <span className="about">Accelerating ideas & people in the JPEC Start-Up Incubator.</span>
                   </div>
                 </div>
               </li>
@@ -104,7 +107,10 @@ const Home = () => {
                 <div className="company-info">
                   <img src={Argus} alt="Argus" className="company-logo" />
                   <div>
-                    <span className="company">Argus.AI <span className="location">Remote</span></span>
+                    <span className="company">
+                    <a href="https://www.argus.ai" className="company-link">Argus.AI</a>
+                    <span className="location">Remote</span>
+                    </span>
                     <span className="role">Head of Product & Design</span>
                     <span className="dates">2022 - Current</span>
                     <span className="about">Re-imagining college admissions.</span>
@@ -118,7 +124,10 @@ const Home = () => {
                 <div className="company-info">
                   <img src={SXSW} alt="SXSW" className="company-logo" />
                   <div>
-                    <span className="company">SXSW <span className="location">Remote</span></span>
+                    <span className="company">
+                    <a href="https://www.sxsw.com/" className="company-link">SXSW</a>
+
+                    <span className="location">Remote</span></span>
                     <span className="role">Advisory Board</span>
                     <span className="dates">2023 -</span>
                     <span className="about">A renowned annual conference and festival that takes place in Austin, Texas, focusing on the convergence of the tech, film, music, and comedy industries. </span>
@@ -129,7 +138,9 @@ const Home = () => {
                 <div className="company-info">
                   <img src={Rally} alt="Rally" className="company-logo" />
                   <div>
-                    <span className="company">Rally <span className="location">Remote</span></span>
+                    <span className="company">
+                    <a href="https://rallyinnovation.com/" className="company-link">Rally</a>
+                    <span className="location">Remote</span></span>
                     <span className="role">Advisory Board</span>
                     <span className="dates">2023 -</span>
                     <span className="about">A global cross-sector innovation conference featuring 200+ speakers, Rally IN-prize pitch competition, and 6 innovation tracks.</span>
@@ -143,7 +154,9 @@ const Home = () => {
                 <div className="company-info">
                   <img src={Riiid} alt="Riiid" className="company-logo" />
                   <div>
-                    <span className="company">Riiid <span className="location">Remote</span></span>
+                    <span className="company">
+                    <a href="https://riiid.com/" className="company-link">Riiid</a>
+                      <span className="location">Remote</span></span>
                     <span className="role">Product Manager & Designer, Innovation</span>
                     <span className="dates">2021 - 2022</span>
                     <span className="about">At Riiid I reported directly to the Chief Measurement Officer, Marten Roorda, collaborated with key internal partners, including AI research, engineering, design, and leadership teams, was instrumental in guiding project prioritization, ensuring focused and impactful product development. I was actively involved in soliciting ideas and feedback, gathering requirements, writing specifications, crafting wireframes and workflows, and coordinating cross-functionality.</span>
@@ -154,7 +167,9 @@ const Home = () => {
                 <div className="company-info">
                   <img src={Twelve} alt="12 Triangles" className="company-logo" />
                   <div>
-                    <span className="company">12 Triangles <span className="location">Remote</span></span>
+                    <span className="company">
+                    <a href="https://12triangles.com/" className="company-link">12 Triangles </a>
+                      <span className="location">Remote</span></span>
                     <span className="role">Product Developer</span>
                     <span className="dates">2021 - 2021</span>
                     <span className="about">In collaboration with the founder, Tyler Kuster, I wrote code that focused on elevating digital tools for creatives. My responsibilities extended to creating and maintaining software documentation, including requirements, design, while actively participating in code reviews to ensure high code quality.</span>
@@ -165,7 +180,9 @@ const Home = () => {
                 <div className="company-info">
                   <img src={Nosh} alt="Nosh" className="company-logo" />
                   <div>
-                    <span className="company">Nosh <span className="location">Remote</span></span>
+                    <span className="company"> 
+                    <a href="https://noshdelivery.co/" className="company-link">Nosh </a>
+                      <span className="location">Remote</span></span>
                     <span className="role">Chief Operating Officer</span>
                     <span className="dates">2019 - 2020</span>
                     <span className="about">As COO, I led Nosh's growth from our first $1.00 to a $1 MM in MRR sales. My role also encompassed effective communication with investors, C-suite executives, and partners, while successfully managing relationships with over 200 restaurants and fostering conversations between engineering and stakeholders.</span>

@@ -118,6 +118,11 @@ h1 {
   margin: 0 0 20px;
 }
 
+link {
+  text-decoration: none;
+  
+}
+
 /* Link styling */
 .main-content a {
   color: #454545;
@@ -125,7 +130,6 @@ h1 {
   font-weight: bold;
   display: inline-block;
   padding: 1px 4px;
-  background-color: #F3F4F6;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -133,8 +137,6 @@ h1 {
 .main-content a:hover,
 .main-content a:focus {
   text-decoration: none;
-  background-color: #ddd;
-  transform: scale(1.05);
 }
 
 /* Icon size adjustment */
@@ -165,7 +167,6 @@ h1 {
 
 .social-icon:hover {
   background-color: #ddd;
-  transform: scale(1.1);
 }
 
 .social-icon-text {
@@ -208,6 +209,14 @@ h1 {
   font-size: 14px;
   display: block;
   margin-bottom: 4px;
+}
+
+.company-link {
+  text-decoration: none; /* Removes the default underline of links */
+}
+
+.company-link:hover {
+  text-decoration: line; /* Adds underline on hover for better UX */
 }
 
 /* Company info container */
