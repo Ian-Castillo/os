@@ -5,6 +5,8 @@ import timeMachineLogoLight from '../assets/timeMachineLogoDark.png';
 import timeMachineLogoDark from '../assets/timeMachineLogoLight.png';
 import sunnyLight from '../assets/sunnyLight.svg';
 import sunnyDark from '../assets/sunnyDark.svg';
+import daydrinklight from '../assets/daydrinklight.svg'
+import daydrinkdark from '../assets/daydrinkdark.svg'
 
 const Sidebar = () => {
     const location = useLocation();
@@ -53,9 +55,17 @@ const Sidebar = () => {
                     </ul>
                 </div>
                 <div className="menu-section">
-                    <h3>Weekend Projects</h3>
+                    <h3>Projects</h3>
                     <ul>
-                    
+                        <li onClick={() => setSelected('daydrink')}>
+                            <Link to="/daydrink" className={selected === 'daydrink' ? 'selected' : ''}>
+                                <div className="icon-container">
+                                    <img src={daydrinklight} alt="Daydrink Logo Dark" className="icon dark Daydrink" />
+                                    <img src={daydrinkdark} alt="Daydrink Logo Light" className="icon light Daydrink" />
+                                </div>
+                                Daydrink
+                            </Link>
+                        </li>
                     </ul>
                     <ul>
                         <li onClick={() => setSelected('sunny')}>

@@ -7,6 +7,7 @@ import Home from './pages/about/Home';
 import Thoughts from './pages/about/Thoughts.js'; 
 import Concepts from './pages/about/Concepts.js';
 //project pages
+import Daydrink from './pages/projects/Daydrink.js';
 import Sunny from './pages/projects/Sunny.js';
 import SPL from './pages/projects/SpacePirateLabs.js';
 import TimeMachine from './pages/projects/TimeMachine.js';
@@ -26,6 +27,8 @@ const App = () => {
             <Route path="/thoughts" element={<Thoughts />} />
             <Route path="/concepts" element={<Concepts />} />
             <Route path="/sunny" element={<Sunny />} />
+            <Route path="/Daydrink" element={<Daydrink />} />
+
             <Route path="/TimeMachine" element={<TimeMachine />} />
             <Route path="/SpacePirateLabs" element={<SPL />} />
             <Route path="/tools" element={<Tools />} />

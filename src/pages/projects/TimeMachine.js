@@ -55,7 +55,7 @@ const TimeMachine = () => {
           </div>
         </div>
         <div>
-          <h1>Time Machine</h1>
+          <h1>Time Machine | Founder</h1>
           <h2>A neural network for the creative community.
           </h2>
           <p>I've always been a builder at heart. Over the years, I've launched startups, developed brand identities, captured moments through photography, and embarked on numerous creative ventures. One crucial lesson I've learned along the way is that every journey forward begins with a glance back.</p>
