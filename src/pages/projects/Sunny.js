@@ -19,11 +19,13 @@ const Sunny = () => {
           
             </div>
             <div>
-              <span className="sunny-item-text">sunnyweather.co</span>
+              <span className="sunny-item-text">
+              sunnyweather.co
+              </span>
             </div>
           </div>
           <div className="social-icons">
-            {/* <div
+            <div
               className="social-icon"
               onClick={() => handleIconClick('mailto:hello@gradientbooks.com')}
             >
@@ -47,12 +49,7 @@ const Sunny = () => {
             >
               <i className="fi fi-brands-instagram"></i>
             </div>
-            <div
-              className="social-icon"
-              onClick={() => handleIconClick('https://www.tiktok.com/@your-profile')}
-            >
-              <i className="fi fi-brands-tik-tok"></i>
-            </div> */}
+           
           </div>
         </div>
         <div>

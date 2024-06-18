@@ -53,7 +53,7 @@ const Sidebar = () => {
                     </ul>
                 </div>
                 <div className="menu-section">
-                    <h3>Projects</h3>
+                    <h3>Weekend Projects</h3>
                     <ul>
                     
                     </ul>
