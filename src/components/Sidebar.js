@@ -63,7 +63,7 @@ const Sidebar = () => {
                                     <img src={daydrinklight} alt="Daydrink Logo Dark" className="icon dark Daydrink" />
                                     <img src={daydrinkdark} alt="Daydrink Logo Light" className="icon light Daydrink" />
                                 </div>
-                                Daydrink
+                                Daydrink Coffee
                             </Link>
                         </li>
                     </ul>
@@ -74,7 +74,7 @@ const Sidebar = () => {
                                     <img src={sunnyDark} alt="Sunny Logo Dark" className="icon dark sunny-logo" />
                                     <img src={sunnyLight} alt="Sunny Logo Light" className="icon light sunny-logo" />
                                 </div>
-                                Sunny
+                                Sunny Weather
                             </Link>
                         </li>
                     </ul>
@@ -85,7 +85,7 @@ const Sidebar = () => {
                                     <img src={timeMachineLogoDark} alt="Time Machine Logo Dark" className="icon dark TimeMachine" />
                                     <img src={timeMachineLogoLight} alt="Time Machine Logo Light" className="icon light TimeMachine" />
                                 </div>
-                                Time Machine
+                                Time Machine Print
                             </Link>
                         </li>
                     </ul>
