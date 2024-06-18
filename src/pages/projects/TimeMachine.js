@@ -64,6 +64,7 @@ const TimeMachine = () => {
 <p>At Time Machine Print, we don't just celebrate the past; we use it as a foundation for the future. We believe that every creator has the power to shape the world, but to do so, they must understand the context of their own journey. They need to see themselves as part of a lineage, a continuum of innovation that stretches back through time. Whether you're an entrepreneur exploring new territories, a photographer capturing unseen perspectives, or a designer pushing the boundaries of possibility, Time Machine Print is here to guide you. </p>
           <p>Our curated collection spans not just disciplines, but eras, because we know that the key to unlocking your creative potential lies in understanding the giants who came before you.</p>
           <p>To go forward, go back.</p>
+          <p>Coming August 15th, 2024</p>
         </div>
       </div>
     </div>
