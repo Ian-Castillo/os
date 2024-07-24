@@ -57,7 +57,7 @@ const Sidebar = () => {
                 <div className="menu-section">
                     <h3>Projects</h3>
                     <ul>
-                        <li onClick={() => setSelected('daydrink')}>
+                        {/* <li onClick={() => setSelected('daydrink')}>
                             <Link to="/daydrink" className={selected === 'daydrink' ? 'selected' : ''}>
                                 <div className="icon-container">
                                     <img src={daydrinklight} alt="Daydrink Logo Dark" className="icon dark Daydrink" />
@@ -65,7 +65,7 @@ const Sidebar = () => {
                                 </div>
                                 Daydrink Coffee
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                     <ul>
                         <li onClick={() => setSelected('sunny')}>
