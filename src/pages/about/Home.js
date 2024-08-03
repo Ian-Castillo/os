@@ -173,7 +173,7 @@ const Home = () => {
                       <span className="location">Remote</span></span>
                     <span className="role">Product Developer</span>
                     <span className="dates">2021 - 2021</span>
-                    <span className="about">In collaboration with the founder, Tyler Kuster, I wrote code that focused on elevating digital tools for creatives. My responsibilities extended to creating and maintaining software documentation, including requirements, design, while actively participating in code reviews to ensure high code quality.</span>
+                    <span className="about">At 12 Triangles, I wrote code that focused on elevating digital tools for creatives. My responsibilities extended to creating and maintaining software documentation, including requirements, design, while actively participating in code reviews to ensure high code quality.</span>
                   </div>
                 </div>
               </li>
@@ -202,7 +202,8 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-            <div className="education">
+            <div className="bottom-section">
+            <div className="education-column">
               <h2>Education</h2>
               <ul>
                 <li>
@@ -237,34 +238,28 @@ const Home = () => {
                 </li>
               </ul>
             </div>
-            <div className="education">
+            <div className="community-column">
               <h2>Community</h2>
               <ul>
                 <li>
                   <div className="company-info">
-                    <img src={Techstars} alt="Bloomtech" className="company-logo" />
+                    <img src={Techstars} alt="Techstars" className="company-logo" />
                     <div>
                       <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
                       <span className="role">Facilitator, Mentor, Judge</span>
                       <span className="dates">2015 - Current</span>
-                      <p>Helping future entreprenuers build start-ups in 54 hours.</p>
+                      <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
-            {/* <div>
-              <h2 className="text-xl font-bold">GitHub Contributions</h2>
-              <img
-                src="https://ghchart.rshah.org/OB6623/ian-castillo"
-                alt="GitHub Contribution Graph"
-                className="mx-auto"
-              />
-            </div> */}
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
+    </div>
+
   );
 };
 
