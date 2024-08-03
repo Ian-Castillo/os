@@ -238,7 +238,7 @@ const Home = () => {
               </ul>
             </div>
             <div className="education">
-              <h2>Volunteer</h2>
+              <h2>Community</h2>
               <ul>
                 <li>
                   <div className="company-info">
