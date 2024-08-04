@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Concepts.css'; // Ensure your CSS file is linked
+import './Concepts.css';
+import SunnyWeatherApp from './SunnyWeatherApp';
 
 const conceptsData = [
   {
@@ -59,7 +60,6 @@ const conceptsData = [
     tags: ["Mobile App"]
   },
 ];
-
 const Concepts = () => {
   const [selectedConcept, setSelectedConcept] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
@@ -96,10 +96,7 @@ const Concepts = () => {
             <li key={concept.id} onClick={() => handleConceptClick(concept)}>
               <div className="concept-info">
                 <div className="concept-title">{concept.title}</div>
-                {/* <div className="concept-favicon-url">
-                  <img className="concept-favicon" src={concept.favicon} alt="" /> */}
-                  <div className="concept-url">{concept.url.replace(/^https?:\/\//, '')}</div>
-                {/* </div> */}
+                <div className="concept-url">{concept.url}</div>
                 <div className="concept-tags">
                   {concept.tags.map(tag => <span key={tag}>{tag}</span>)}
                 </div>
@@ -110,14 +107,20 @@ const Concepts = () => {
       </div>
       {selectedConcept && (
         <div className="concept-details">
-          <button className="back-button" onClick={handleBackClick}>Back</button>
-            <h3>{selectedConcept.title}</h3>
-            <p>{selectedConcept.description}</p>
-            <a href={selectedConcept.url} target="_blank" rel="noopener noreferrer">Visit</a>
-          </div>
-        )}
-      </div>
-    );
-  };
-  
-  export default Concepts;
+          {selectedConcept.title === "Sunny Weather Mobile App" ? (
+            <SunnyWeatherApp onBack={handleBackClick} />
+          ) : (
+            <>
+              <button className="back-button" onClick={handleBackClick}>Back</button>
+              <h3>{selectedConcept.title}</h3>
+              <p>{selectedConcept.description}</p>
+              <a href={selectedConcept.url} target="_blank" rel="noopener noreferrer">Visit</a>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Concepts;
