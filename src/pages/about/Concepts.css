@@ -133,3 +133,74 @@
         height: auto;
     }
 }
+
+/* Add these styles to your existing Concepts.css file */
+
+.project-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .project-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .project-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .project-metadata {
+    margin-bottom: 20px;
+  }
+  
+  .project-metadata p {
+    margin: 5px 0;
+  }
+  
+  .back-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .project-section {
+    margin-bottom: 30px;
+  }
+  
+  .project-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project-section p {
+    line-height: 1.6;
+  }
+  
+  .project-screenshot,
+  .project-feature-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .project-container {
+      padding: 10px;
+    }
+    
+    .project-screenshot,
+    .project-feature-image {
+      margin: 10px 0;
+    }
+  }
