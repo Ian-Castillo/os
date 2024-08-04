@@ -50,6 +50,14 @@ const conceptsData = [
     // favicon: "https://www.google.com/s2/favicons?domain=adobe.com",
     tags: ["Conference"]
   },
+  {
+    id: 7,
+    title: "Sunny Weather Mobile App",
+    url: "A social weather company.",
+    description: "A social weather company.",
+    // favicon: "https://www.google.com/s2/favicons?domain=adobe.com",
+    tags: ["Mobile App"]
+  },
 ];
 
 const Concepts = () => {
