@@ -52,8 +52,8 @@ const Sidebar = () => {
                                 <i className="fi fi-br-scribble"></i> Designs
                             </Link>
                         </li>
-                        <li onClick={() => setSelected('concepts')}>
-                            <Link to="/concepts" className={selected === 'concepts' ? 'selected' : ''}>
+                        <li onClick={() => setSelected('photos')}>
+                            <Link to="/photos" className={selected === 'photos' ? 'selected' : ''}>
                                 <i className="fi fi-br-scribble"></i> Photos
                             </Link>
                         </li>
