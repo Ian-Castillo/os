@@ -3,56 +3,56 @@ import './Concepts.css';
 import SunnyWeatherApp from './SunnyWeatherApp';
 
 const conceptsData = [
+  // {
+  //   id: 1,
+  //   title: "DisplayETF",
+  //   url: "Display individual ETFs.",
+  //   description: "Display individual ETFs.",
+  //   // favicon: "https://www.google.com/s2/favicons?domain=canva.com",
+  //   tags: ["Artifical Intelligence","Financial"]
+  // },
+  // {
+  //   id: 2,
+  //   title: "Summit.XYZ    ",
+  //   url: "Curated media for learning and experiencing web 3.0 talks.",
+  //   description: "Curated media for learning and experiencing web 3.0 talks.",
+  //   // favicon: "https://www.google.com/s2/favicons?domain=adobe.com",
+  //   tags: ["WEB 3.0","Media"]
+  // },
+  // {
+  //   id: 3,
+  //   title: "Project E",
+  //   url: "Secure academic transcripts, on chain.",
+  //   description: "Secure academic transcripts, on chain.",
+  //   // favicon: "https://www.google.com/s2/favicons?domain=figma.com",
+  //   tags: ["WEB 3.0", "Education"]
+  // },
+  // {
+  //   id: 4,
+  //   title: "TwotoEight",
+  //   url: "Bridging the wealth gap for underserved communities.",
+  //   description: "",
+  //   // favicon: "https://www.google.com/s2/favicons?domain=sketch.com",
+  //   tags: ["Financial Literacy","Education"]
+  // },
+  // {
+  //   id: 5,
+  //   title: "Showcase",
+  //   url: "Display custom curated gallery for NFT's.",
+  //   description: "Display custom curated gallery for NFT's.",
+  //   // favicon: "https://www.figma.com/proto/bTQUlOz40VBa3nMZ8J7aQ1/Gallery?page-id=0%3A1&type=design&node-id=1-4&viewport=143%2C-419%2C0.2&t=hIv7R5xfwSO2cTo5-1&scaling=scale-down&mode=design",
+  //   tags: ["WEB 3.0"]
+  // },
+  // {
+  //   id: 6,
+  //   title: "Zero Day",
+  //   url: "Modern conference for forward-thinking entreprenuers.",
+  //   description: "Modern conference for forward-thinking entreprenuers.",
+  //   // favicon: "https://www.google.com/s2/favicons?domain=adobe.com",
+  //   tags: ["Conference"]
+  // },
   {
     id: 1,
-    title: "DisplayETF",
-    url: "Display individual ETFs.",
-    description: "Display individual ETFs.",
-    // favicon: "https://www.google.com/s2/favicons?domain=canva.com",
-    tags: ["Artifical Intelligence","Financial"]
-  },
-  {
-    id: 2,
-    title: "Summit.XYZ    ",
-    url: "Curated media for learning and experiencing web 3.0 talks.",
-    description: "Curated media for learning and experiencing web 3.0 talks.",
-    // favicon: "https://www.google.com/s2/favicons?domain=adobe.com",
-    tags: ["WEB 3.0","Media"]
-  },
-  {
-    id: 3,
-    title: "Project E",
-    url: "Secure academic transcripts, on chain.",
-    description: "Secure academic transcripts, on chain.",
-    // favicon: "https://www.google.com/s2/favicons?domain=figma.com",
-    tags: ["WEB 3.0", "Education"]
-  },
-  {
-    id: 4,
-    title: "TwotoEight",
-    url: "Bridging the wealth gap for underserved communities.",
-    description: "",
-    // favicon: "https://www.google.com/s2/favicons?domain=sketch.com",
-    tags: ["Financial Literacy","Education"]
-  },
-  {
-    id: 5,
-    title: "Showcase",
-    url: "Display custom curated gallery for NFT's.",
-    description: "Display custom curated gallery for NFT's.",
-    // favicon: "https://www.figma.com/proto/bTQUlOz40VBa3nMZ8J7aQ1/Gallery?page-id=0%3A1&type=design&node-id=1-4&viewport=143%2C-419%2C0.2&t=hIv7R5xfwSO2cTo5-1&scaling=scale-down&mode=design",
-    tags: ["WEB 3.0"]
-  },
-  {
-    id: 6,
-    title: "Zero Day",
-    url: "Modern conference for forward-thinking entreprenuers.",
-    description: "Modern conference for forward-thinking entreprenuers.",
-    // favicon: "https://www.google.com/s2/favicons?domain=adobe.com",
-    tags: ["Conference"]
-  },
-  {
-    id: 7,
     title: "Sunny Weather Mobile App",
     url: "A social weather company.",
     description: "A social weather company.",
