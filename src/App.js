@@ -5,7 +5,7 @@ import Sidebar from './components/Sidebar';
 //about pages
 import Home from './pages/about/Home';
 import Thoughts from './pages/about/Thoughts.js'; 
-import Concepts from './pages/about/Concepts.js';
+import Designs from './pages/about/Designs.js';
 //project pages
 import Daydrink from './pages/projects/Daydrink.js';
 import Sunny from './pages/projects/Sunny.js';
@@ -25,7 +25,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/thoughts" element={<Thoughts />} />
-            <Route path="/concepts" element={<Concepts />} />
+            <Route path="/designs" element={<Designs />} />
             <Route path="/sunny" element={<Sunny />} />
             <Route path="/Daydrink" element={<Daydrink />} />
 

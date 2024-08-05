@@ -95,10 +95,10 @@ const Home = () => {
                   <img src={Iowa} alt="University of Iowa" className="company-logo" />
                   <div>
                     <span className="company">
-                    <a href="https://iowajpec.org/" className="company-link">The University of Iowa, Tippie College of Business</a>
+                    <a href="https://iowajpec.org/" className="company-link">The University of Iowa</a>
 
                       <span className="location">Hybrid</span></span>
-                    <span className="role">Adjunct Instructor, Management & Entrepreneurship</span>
+                    <span className="role">Tippie College of Business Adjunct Instructor, Management & Entrepreneurship</span>
                     <span className="dates">2023 - Current</span>
                     <span className="about">Accelerating ideas & people in the JPEC Start-Up Incubator.</span>
                   </div>
@@ -149,9 +149,32 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-           
-            <div className="work-list">
-            
+            <h3>Community</h3>
+            <ul className="advisory-list">
+                <li>
+                  <div className="company-info">
+                    <img src={Techstars} alt="Techstars" className="company-logo" />
+                    <div>
+                      <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
+                      <span className="role">Facilitator, Mentor, Judge</span>
+                      <span className="dates">2015 - Current</span>
+                      <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  {/* <div className="company-info">
+                    <img src={RaidGuild} alt="RaidGuild" className="company-logo" />
+                    <div>
+                      <span className="company">RaidGuild <span className="location">Remote</span></span>
+                      <span className="role">Designer</span>
+                      <span className="dates">2044 - Current</span>
+                      <p>Designing open source tooling and public goods for the web3 community.</p>
+                    </div>
+                  </div> */}
+                </li>
+              </ul>
+            <div className="">
             <h3>Experience</h3>
             <ul>
               <li>
@@ -205,36 +228,9 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-            <h2>Community</h2>
-              <ul>
-                <li>
-                  <div className="company-info">
-                    <img src={Techstars} alt="Techstars" className="company-logo" />
-                    <div>
-                      <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
-                      <span className="role">Facilitator, Mentor, Judge</span>
-                      <span className="dates">2015 - Current</span>
-                      <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="company-info">
-                    <img src={RaidGuild} alt="RaidGuild" className="company-logo" />
-                    <div>
-                      <span className="company">RaidGuild <span className="location">Remote</span></span>
-                      <span className="role">Designer</span>
-                      <span className="dates">2044 - Current</span>
-                      <p>Designing open source tooling and public goods for the web3 community.</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="bottom-section">
-            <div className="community-column">
-              <h2>Education</h2>
-              <ul>
+        
+              <h3>Education</h3>
+              <ul className="work-list">
                 <li>
                   <div className="company-info">
                     <img src={Bloomtech} alt="Bloomtech" className="company-logo" />
@@ -266,9 +262,9 @@ const Home = () => {
                   </div>
                 </li>
               </ul>
-            </div>
           
-          </div>
+          
+            </div>
         </div>
       )}
     </div>

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.project-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.back-button {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 20px 0;
+}
+
+.metadata-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.metadata-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.metadata-label {
+  font-weight: 700;
+  color: #666;
+  margin-right: 5px;
+}
+
+.metadata-value {
+  color: #333;
+}
+
+.about-section {
+  margin-bottom: 20px;
+}
+
+.section-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.about-text {
+  color: #ff4500;
+}
+
+.image-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.overlay-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.overlay-subtitle {
+  font-size: 18px;
+}
+
+.overview-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.overview-text {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .metadata-row {
+    flex-direction: column;
+  }
+
+  .metadata-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .overlay-title {
+    font-size: 24px;
+  }
+
+  .overlay-subtitle {
+    font-size: 16px;
+  }
+}
