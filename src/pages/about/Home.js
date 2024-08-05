@@ -150,7 +150,7 @@ const Home = () => {
               </li>
             </ul>
             <h3>Experience</h3>
-            <div className="community-column">
+            <div className="work-list">
               <h2>Community</h2>
               <ul>
                 <li>
@@ -168,7 +168,7 @@ const Home = () => {
                   <div className="company-info">
                     <img src={RaidGuild} alt="RaidGuild" className="company-logo" />
                     <div>
-                      <span className="company">RaidGuild<span className="location">Remote</span></span>
+                      <span className="company">RaidGuild <span className="location">Remote</span></span>
                       <span className="role">Designer</span>
                       <span className="dates">2044 - Current</span>
                       <p>Designing open source tooling and public goods for the web3 community.</p>
@@ -230,7 +230,7 @@ const Home = () => {
               </li>
             </ul>
             <div className="bottom-section">
-            <div className="education-column">
+            <div className="community-column">
               <h2>Education</h2>
               <ul>
                 <li>
