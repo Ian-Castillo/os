@@ -150,7 +150,33 @@ const Home = () => {
               </li>
             </ul>
             <h3>Experience</h3>
-
+            <div className="community-column">
+              <h2>Community</h2>
+              <ul>
+                <li>
+                  <div className="company-info">
+                    <img src={Techstars} alt="Techstars" className="company-logo" />
+                    <div>
+                      <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
+                      <span className="role">Facilitator, Mentor, Judge</span>
+                      <span className="dates">2015 - Current</span>
+                      <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="company-info">
+                    <img src={RaidGuild} alt="RaidGuild" className="company-logo" />
+                    <div>
+                      <span className="company">RaidGuild<span className="location">Remote</span></span>
+                      <span className="role">Designer</span>
+                      <span className="dates">2044 - Current</span>
+                      <p>Designing open source tooling and public goods for the web3 community.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <ul>
               <li>
                 <div className="company-info">
@@ -239,33 +265,7 @@ const Home = () => {
                 </li>
               </ul>
             </div>
-            <div className="community-column">
-              <h2>Community</h2>
-              <ul>
-                <li>
-                  <div className="company-info">
-                    <img src={Techstars} alt="Techstars" className="company-logo" />
-                    <div>
-                      <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
-                      <span className="role">Facilitator, Mentor, Judge</span>
-                      <span className="dates">2015 - Current</span>
-                      <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="company-info">
-                    <img src={RaidGuild} alt="RaidGuild" className="company-logo" />
-                    <div>
-                      <span className="company">RaidGuild<span className="location">Remote</span></span>
-                      <span className="role">Designer</span>
-                      <span className="dates">2044 - Current</span>
-                      <p>Designing open source tooling and public goods for the web3 community.</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+          
           </div>
         </div>
       )}
