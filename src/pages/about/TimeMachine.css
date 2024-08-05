@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Roboto Mono', monospace;
+  background-color: #ffffff;
 }
 
 .project-container {
@@ -24,44 +25,41 @@ body {
 
 .header {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
   margin-bottom: 20px;
+
 }
 
-
-
-.title {
-  font-size: 24px;
-  font-weight: 700;
+.logo-image {
+  max-width: 200px;
+  height: auto;
 }
 
 .divider {
   border: none;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px dashed #000000;
   margin: 20px 0;
 }
 
 .metadata-row {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .metadata-item {
   display: flex;
-  align-items: center;
-  margin-right: 20px;
+  flex-direction: column;
 }
 
 .metadata-label {
   font-weight: 700;
-  color: #666;
-  margin-right: 5px;
+  color: #000000;
 }
 
 .metadata-value {
-  color: #333;
+  color: #B7B7B7;
 }
 
 .about-section {
@@ -69,9 +67,9 @@ body {
 }
 
 .section-label {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  color: #666;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -109,6 +107,7 @@ body {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: lowercase;
 }
 
 .overlay-subtitle {
@@ -120,24 +119,26 @@ body {
 }
 
 .section-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   margin-bottom: 10px;
+  color: #000000;
 }
 
 .overview-text {
-  color: #333;
+  color: #B7B7B7;
+  font-size: 14px;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
   .metadata-row {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .metadata-item {
-    margin-right: 0;
+    width: 50%;
     margin-bottom: 10px;
   }
 

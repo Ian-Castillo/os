@@ -67,7 +67,7 @@ const Designs = () => {
       </div>
       {selectedDesign && (
         <div className="design-details">
-          {selectedDesign.title === "Sunny Weather Mobile App" ? (
+          {selectedDesign.title === "Sunny Weather" ? (
             <SunnyWeatherApp onBack={handleBackClick} />
           ) : selectedDesign.title === "Time Machine Print" ? (
             <TimeMachine onBack={handleBackClick} />
