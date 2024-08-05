@@ -126,7 +126,7 @@ const Home = () => {
                   <img src={SXSW} alt="SXSW" className="company-logo" />
                   <div>
                     <span className="company">
-                    <a href="https://www.sxsw.com/" className="company-link">SXSW</a>
+                    <a href="https://www.sxsw.com/" className="company-link">SXSW </a>
 
                     <span className="location">Remote</span></span>
                     <span className="role">Advisory Board</span>
@@ -149,7 +149,7 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-            <h3>Experience</h3>
+           
             <div className="work-list">
               <h2>Community</h2>
               <ul>
@@ -177,6 +177,7 @@ const Home = () => {
                 </li>
               </ul>
             </div>
+            <h3>Experience</h3>
             <ul>
               <li>
                 <div className="company-info">
