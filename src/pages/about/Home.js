@@ -12,6 +12,7 @@ import SCC from '../../assets/SCC.jpeg';
 import Techstars from '../../assets/techstars.png'; 
 import SXSW from '../../assets/sxsw.png';
 import Rally from '../../assets/rally.png';
+import RaidGuild from '../../assets/RaidGuild.jpg'
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -249,6 +250,17 @@ const Home = () => {
                       <span className="role">Facilitator, Mentor, Judge</span>
                       <span className="dates">2015 - Current</span>
                       <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="company-info">
+                    <img src={RaidGuild} alt="RaidGuild" className="company-logo" />
+                    <div>
+                      <span className="company">RaidGuild<span className="location">Remote</span></span>
+                      <span className="role">Designer</span>
+                      <span className="dates">2044 - Current</span>
+                      <p>Designing open source tooling and public goods for the web3 community.</p>
                     </div>
                   </div>
                 </li>
