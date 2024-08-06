@@ -6,7 +6,7 @@ import TimeMachine from './TimeMachinePrintWeb';
 const designsData = [
   {
     id: 1,
-    title: "Sunny Weather Mobile App",
+    title: "Sunny Weather",
     url: "A social weather company.",
     description: "A social weather company.",
     tags: ["Mobile App"]
@@ -14,9 +14,9 @@ const designsData = [
   {
     id: 2,
     title: "Time Machine Print",
-    url: "A modern bookstore.",
+    url: "A bookstore for creatives.",
     description: "An online bookstore, resource, and community for creatives, builders, and those imagining the future.",
-    tags: ["Website", "Bookstore"]
+    tags: ["Website"]
   },
 ];
 
