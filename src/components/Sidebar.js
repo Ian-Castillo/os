@@ -47,14 +47,20 @@ const Sidebar = () => {
                                 <i className="fi fi-ss-comment"></i> Thoughts
                             </Link>
                         </li>
+                      
+                        <li onClick={() => setSelected('photos')}>
+                            <Link to="/photos" className={selected === 'photos' ? 'selected' : ''}>
+                                <i className="fi fi-br-photo-capture"></i> Photos
+                            </Link>
+                        </li>
                         <li onClick={() => setSelected('designs')}>
                             <Link to="/designs" className={selected === 'designs' ? 'selected' : ''}>
                                 <i className="fi fi-br-scribble"></i> Designs
                             </Link>
-                        </li>
-                        <li onClick={() => setSelected('photos')}>
-                            <Link to="/photos" className={selected === 'photos' ? 'selected' : ''}>
-                                <i className="fi fi-br-photo-capture"></i> Photos
+                        </li>  
+                        <li onClick={() => setSelected('designs')}>
+                            <Link to="/" className={selected === 'designs' ? 'selected' : ''}>
+                                <i className="fi fi-br-circle-overlap"></i> Projects
                             </Link>
                         </li>
                     </ul>

@@ -105,7 +105,7 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #cd0000;
     border-radius: 5px;
     font-size: 14px;
 }
@@ -114,24 +114,6 @@
 .designs-list li.selected .back-button {
     background: #2c2c2c;
     color: #fff;
-}
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-    .designs-container {
-        flex-direction: column;
-    }
-
-    .designs-sidebar {
-        flex: 0 0 auto; /* Reset the flex properties for mobile */
-        width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #f7f7f7;
-    }
-
-    .concept-details {
-        height: auto;
-    }
 }
 
 
@@ -193,13 +175,33 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   
-  @media (max-width: 768px) {
-    .project-container {
-      padding: 10px;
-    }
-    
-    .project-screenshot,
-    .project-feature-image {
-      margin: 10px 0;
-    }
+ /* Mobile-specific styles */
+@media (max-width: 768px) {
+  .designs-container {
+      flex-direction: column;
   }
+
+  .designs-sidebar {
+      flex: 0 0 auto;
+      width: 100%;
+      border-right: none;
+      border-bottom: 2px solid #f7f7f7;
+  }
+
+  .design-details {
+      height: auto;
+  }
+
+  .search-bar {
+      width: 50%; /* Full width on mobile */
+      padding: 20px; /* Slightly larger padding for better touch targets */
+      margin-top: 40px;
+      border: 1px solid #f90000;
+      border-radius: 5px;
+      font-size: 16px; /* Slightly larger font size for better readability on mobile */
+      -webkit-appearance: none; /* Remove default styling on iOS */
+      appearance: none;
+  }
+
+
+}
