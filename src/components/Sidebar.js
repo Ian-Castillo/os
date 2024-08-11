@@ -58,15 +58,15 @@ const Sidebar = () => {
                                 <i className="fi fi-br-scribble"></i> Designs
                             </Link>
                         </li>  
-                        <li onClick={() => setSelected('designs')}>
-                            <Link to="/" className={selected === 'designs' ? 'selected' : ''}>
-                                <i className="fi fi-br-circle-overlap"></i> Projects
+                        <li onClick={() => setSelected('')}>
+                            <Link to="/" className={selected === '' ? '' : ''}>
+                                <i className="fi fi-br-build-alt"></i> Projects
                             </Link>
                         </li>
                     </ul>
                 </div>
                 <div className="menu-section">
-                    <h3>Projects</h3>
+                    <h3>Ventures</h3>
                     <ul>
                         {/* <li onClick={() => setSelected('daydrink')}>
                             <Link to="/daydrink" className={selected === 'daydrink' ? 'selected' : ''}>
@@ -102,7 +102,7 @@ const Sidebar = () => {
                     </ul>
                 </div>
                 <div className="menu-section">
-                    <h3>Resources</h3>
+                    <h3>Bookmarks</h3>
                     <ul>
                         <li onClick={() => setSelected('tools')}>
                             <Link to="/tools" className={selected === 'tools' ? 'selected' : ''}>
@@ -111,12 +111,17 @@ const Sidebar = () => {
                         </li>
                         <li onClick={() => setSelected('library')}>
                             <Link to="/library" className={selected === 'library' ? 'selected' : ''}>
-                                <i className="fi fi-sr-layers"></i> Library
+                                <i className="fi fi-br-chart-simple-horizontal "></i> Articles
                             </Link>
                         </li>
                         <li onClick={() => setSelected('highlights')}>
                             <Link to="/highlights" className={selected === 'highlights' ? 'selected' : ''}>
-                                <i className="fi fi-ss-quote-right"></i> Highlights
+                                <i className="fi fi-ss-quote-right"></i> Quotes
+                            </Link>
+                        </li>
+                        <li onClick={() => setSelected('highlights')}>
+                            <Link to="/" className={selected === 'highlights' ? 'selected' : ''}>
+                                <i className="fi fi-br-camera-movie"></i> Videos
                             </Link>
                         </li>
                     </ul>
