@@ -58,11 +58,11 @@ const Sidebar = () => {
                                 <i className="fi fi-br-scribble"></i> Designs
                             </Link>
                         </li>  
-                        <li onClick={() => setSelected('')}>
+                        {/* <li onClick={() => setSelected('')}>
                             <Link to="/" className={selected === '' ? '' : ''}>
                                 <i className="fi fi-br-build-alt"></i> Projects
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className="menu-section">

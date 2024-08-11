@@ -9,7 +9,7 @@ import Nosh from '../../assets/Nosh.jpeg';
 import Bloomtech from '../../assets/BloomTech.jpeg'; 
 import Textpress from '../../assets/Textpress.jpeg'; 
 import SCC from '../../assets/SCC.jpeg'; 
-import Techstars from '../../assets/techstars.png'; 
+import Techstars from '../../assets/techstars.png';
 import SXSW from '../../assets/sxsw.png';
 import Rally from '../../assets/rally.png';
 import RaidGuild from '../../assets/RaidGuild.jpg'
@@ -17,6 +17,39 @@ import RaidGuild from '../../assets/RaidGuild.jpg'
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [hoveredIcon, setHoveredIcon] = useState(null);
+
+  const renderSocialIcons = () => (
+    <div className="social-icons">
+      <div
+        className="social-icon"
+        onMouseEnter={() => setHoveredIcon('email')}
+        onMouseLeave={() => setHoveredIcon(null)}
+      >
+        <i className="fi fi-rr-envelope"></i>
+      </div>
+      <div
+        className="social-icon"
+        onMouseEnter={() => setHoveredIcon('github')}
+        onMouseLeave={() => setHoveredIcon(null)}
+      >
+        <i className="fi fi-brands-github"></i>
+      </div>
+      <div
+        className="social-icon"
+        onMouseEnter={() => setHoveredIcon('linkedin')}
+        onMouseLeave={() => setHoveredIcon(null)}
+      >
+        <i className="fi fi-brands-linkedin"></i>
+      </div>
+      <div
+        className="social-icon"
+        onMouseEnter={() => setHoveredIcon('twitter')}
+        onMouseLeave={() => setHoveredIcon(null)}
+      >
+        <i className="fi fi-brands-twitter"></i>
+      </div>
+    </div>
+  );
 
   return (
     <div className="home-container">
@@ -39,55 +72,24 @@ const Home = () => {
               <span className="nav-item-text">Experience</span>
             </div>
           </div>
-          <div className="social-icons">
-            <div
-              className="social-icon"
-              onMouseEnter={() => setHoveredIcon('email')}
-              onMouseLeave={() => setHoveredIcon(null)}
-            >
-              <i className="fi fi-rr-envelope"></i>
-            </div>
-            <div
-              className="social-icon"
-              onMouseEnter={() => setHoveredIcon('github')}
-              onMouseLeave={() => setHoveredIcon(null)}
-            >
-              <i className="fi fi-brands-github"></i>
-            </div>
-            <div
-              className="social-icon"
-              onMouseEnter={() => setHoveredIcon('linkedin')}
-              onMouseLeave={() => setHoveredIcon(null)}
-            >
-              <i className="fi fi-brands-linkedin"></i>
-            </div>
-            <div
-              className="social-icon"
-              onMouseEnter={() => setHoveredIcon('twitter')}
-              onMouseLeave={() => setHoveredIcon(null)}
-            >
-              <i className="fi fi-brands-twitter"></i>
-            </div>
-          </div>
         </div>
         {activeSection === 'about' && (
           <>
             <div className="work-experience">
               <h2>Hi, I'm Ian.</h2>
       
-            <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My career focus is on zero-to-one design thinking, rapid prototyping, and accelerating the Iowa start-up ecosystem.</p>
-            <p>Currently, I am leading product and design at <a href="https://www.argus.ai/">ArgusAI</a>, where myself, Marten Roorda, and Michael Weiler are re-imagining and setting new standards for college admissions. At ArgusAI, I oversee product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. Our mission is to revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants, helping colleges and universities make better-informed decisions.</p>
-            <p>In addition to my work at ArgusAI, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <a href="https://tippie.uiowa.edu/people/ian-castillo">John Pappajohn Entrepreneurial Center</a>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
-            <p>Previously, I was a Product Manager at <a href="https://riiid.com">Riiid Labs</a>, where I facilitated advancements in AI-driven education applications. This role allowed me to collaborate with top-tier AI researchers, engineers, and designers, driving forward projects that utilized cutting-edge technology to enhance learning outcomes. My work at Riiid Labs was instrumental in developing products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
-            <p>Outside of my professional endeavors, I am actively involved in the start-up community in Iowa. I regularly participate in local events, workshops, and mentoring programs, offering guidance and support to budding entrepreneurs. My goal is to contribute to a thriving ecosystem where innovative ideas can flourish and transform into successful ventures.</p>
-            <p>My journey as an entrepreneur, designer, and software developer has been driven by a relentless pursuit of turning ideas into tangible experiences. I am excited about the future and look forward to continuing to push the boundaries of what is possible, both in my professional work and through my contributions to the entrepreneurial community.</p>
-            <p>Interested in building the future? Let's connect and see what we can re-imagine together.</p>
+              <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My career focus is on zero-to-one design thinking, rapid prototyping, and accelerating the Iowa start-up ecosystem.</p>
+              <p>Currently, I am leading product and design at <a href="https://www.argus.ai/">ArgusAI</a>, where myself, Marten Roorda, and Michael Weiler are re-imagining and setting new standards for college admissions. At ArgusAI, I oversee product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. Our mission is to revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants, helping colleges and universities make better-informed decisions.</p>
+              <p>In addition to my work at ArgusAI, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <a href="https://tippie.uiowa.edu/people/ian-castillo">John Pappajohn Entrepreneurial Center</a>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
+              <p>Previously, I was a Product Manager at <a href="https://riiid.com">Riiid Labs</a>, where I facilitated advancements in AI-driven education applications. This role allowed me to collaborate with top-tier AI researchers, engineers, and designers, driving forward projects that utilized cutting-edge technology to enhance learning outcomes. My work at Riiid Labs was instrumental in developing products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
+              <p>Beyond my career, I'm passionate about advancinsg climate change discussions and raising awareness of our environmental impact.</p>
+              <p>Are you interested in designing a better tomorrow? Let's connect and explore re-imagining the future together.</p>
+              {renderSocialIcons()}
             </div>
           </>
         )}
         {activeSection === 'experience' && (
           <div className="work-experience">
-            
             <h3>Work</h3>
             <ul className="work-list">
               <li>
@@ -96,7 +98,6 @@ const Home = () => {
                   <div>
                     <span className="company">
                     <a href="https://iowajpec.org/" className="company-link">The University of Iowa</a>
-
                       <span className="location">Hybrid</span></span>
                     <span className="role">Tippie College of Business Adjunct Instructor, Management & Entrepreneurship</span>
                     <span className="dates">2023 - Current</span>
@@ -127,7 +128,6 @@ const Home = () => {
                   <div>
                     <span className="company">
                     <a href="https://www.sxsw.com/" className="company-link">SXSW </a>
-
                     <span className="location">Remote</span></span>
                     <span className="role">Advisory Board</span>
                     <span className="dates">2023 -</span>
@@ -162,19 +162,7 @@ const Home = () => {
                     </div>
                   </div>
                 </li>
-                <li>
-                  {/* <div className="company-info">
-                    <img src={RaidGuild} alt="RaidGuild" className="company-logo" />
-                    <div>
-                      <span className="company">RaidGuild <span className="location">Remote</span></span>
-                      <span className="role">Designer</span>
-                      <span className="dates">2044 - Current</span>
-                      <p>Designing open source tooling and public goods for the web3 community.</p>
-                    </div>
-                  </div> */}
-                </li>
               </ul>
-            <div className="">
             <h3>Experience</h3>
             <ul>
               <li>
@@ -228,48 +216,43 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-        
-              <h3>Education</h3>
-              <ul className="work-list">
-                <li>
-                  <div className="company-info">
-                    <img src={Bloomtech} alt="Bloomtech" className="company-logo" />
-                    <div>
-                      <span className="company">Bloomtech <span className="location">Remote</span></span>
-                      <span className="role">Full Stack Software Engineer</span>
-                      <span className="dates">2019 - 2020</span>
-                    </div>
+            <h3>Education</h3>
+            <ul className="work-list">
+              <li>
+                <div className="company-info">
+                  <img src={Bloomtech} alt="Bloomtech" className="company-logo" />
+                  <div>
+                    <span className="company">Bloomtech <span className="location">Remote</span></span>
+                    <span className="role">Full Stack Software Engineer</span>
+                    <span className="dates">2019 - 2020</span>
                   </div>
-                </li>
-                <li>
-                  <div className="company-info">
-                    <img src={Iowa} alt="University of Iowa" className="company-logo" />
-                    <div>
-                      <span className="company">The University of Iowa <span className="location">Iowa City, IA</span></span>
-                      <span className="role">Political Science, Incomplete</span>
-                      <span className="dates">2011 - 2013</span>
-                    </div>
+                </div>
+              </li>
+              <li>
+                <div className="company-info">
+                  <img src={Iowa} alt="University of Iowa" className="company-logo" />
+                  <div>
+                    <span className="company">The University of Iowa <span className="location">Iowa City, IA</span></span>
+                    <span className="role">Political Science, Incomplete</span>
+                    <span className="dates">2011 - 2013</span>
                   </div>
-                </li>
-                <li>
-                  <div className="company-info">
-                    <img src={SCC} alt="Southeastern Community College" className="company-logo" />
-                    <div>
-                      <span className="company">Southeastern Community College <span className="location">Burlington, IA</span></span>
-                      <span className="role">General Studies, Associates Degree</span>
-                      <span className="dates">2009 - 2013</span>
-                    </div>
+                </div>
+              </li>
+              <li>
+                <div className="company-info">
+                  <img src={SCC} alt="Southeastern Community College" className="company-logo" />
+                  <div>
+                    <span className="company">Southeastern Community College <span className="location">Burlington, IA</span></span>
+                    <span className="role">General Studies, Associates Degree</span>
+                    <span className="dates">2009 - 2013</span>
                   </div>
-                </li>
-              </ul>
-          
-          
-            </div>
-        </div>
-      )}
+                </div>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
-    </div>
-
   );
 };
 
