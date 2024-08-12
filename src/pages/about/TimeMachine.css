@@ -131,6 +131,66 @@ body {
   line-height: 1.6;
   margin-bottom: 10px;
 }
+.overview-text {
+  color: #B7B7B7;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.challenge-solution-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.challenge-column, .solution-column {
+  width: 48%;
+}
+
+.section-text {
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.quote-section {
+  margin-bottom: 20px;
+}
+
+.quote-text {
+  font-style: italic;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.quote-text {
+  font-style: italic;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sitemap-section,
+.logo-wordmark-section,
+.typography-section {
+  margin-bottom: 40px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: #000000;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  color: #B7B7B7;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
 
 @media (max-width: 768px) {
   .metadata-row {
@@ -148,5 +208,17 @@ body {
 
   .overlay-subtitle {
     font-size: 16px;
+  }
+
+  .challenge-solution-section {
+    flex-direction: column;
+  }
+
+  .challenge-column, .solution-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .image-placeholder {
+    height: 200px;
   }
 }
