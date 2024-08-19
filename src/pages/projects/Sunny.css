@@ -41,7 +41,7 @@
   border-radius: 4px;
   padding: 4px;
   margin: 6px;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .nav-items {
@@ -49,6 +49,7 @@
   justify-content: left;
   align-items: left;
   flex-wrap: wrap;
+  
 }
 
 .nav-item {

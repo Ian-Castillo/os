@@ -16,51 +16,61 @@ const Sunny = () => {
         <div className="sunny-nav">
           <div className="nav-items">
             <div>
-          
+              <a
+                href="https://sunnyweather.co"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sunny-item-text"
+              >
+                sunnyweather.co
+              </a>
             </div>
-            <div>
-              <span className="sunny-item-text">
-              sunnyweather.co
-              </span>
-            </div>
-          </div>
-          <div className="social-icons">
-            <div
-              className="social-icon"
-              onClick={() => handleIconClick('mailto:hello@gradientbooks.com')}
-            >
-              <i className="fi fi-rr-envelope"></i>
-            </div>
-            <div
-              className="social-icon"
-              onClick={() => handleIconClick('https://www.linkedin.com/in/your-profile')}
-            >
-              <i className="fi fi-brands-linkedin"></i>
-            </div>
-            <div
-              className="social-icon"
-              onClick={() => handleIconClick('https://twitter.com/your-profile')}
-            >
-              <i className="fi fi-brands-twitter"></i>
-            </div>
-            <div
-              className="social-icon"
-              onClick={() => handleIconClick('https://www.instagram.com/your-profile')}
-            >
-              <i className="fi fi-brands-instagram"></i>
-            </div>
-           
           </div>
         </div>
         <div>
-          <h1>Sunny | Founder</h1>
-          <h2>A weather companion that cares about your day.</h2>
-          <p>In the last several years, I have come to understand the significance of weather in our daily lives. It is not merely a topic of idle conversation but a fundamental aspect of the human experience that shapes our decisions, influences our moods, and connects us to the world around us. This deep appreciation for the power of weather has been the catalyst behind my vision for Sunny – a groundbreaking social platform that aims to revolutionize the way we engage with and understand weather.</p>
-          <p>Sunny is not just another weather app or social network. It is a manifestation of the idea that the fusion of technology, data, and human interaction can create something truly transformative. By harnessing the power of advanced algorithms, real-time data, and user-generated content, Sunny aims to create a neural network that enables individuals to not only access accurate and personalized weather information but also to connect with others who share their passion for weather.</p>
-          <p>At its core, Sunny is driven by the belief that the sharing of knowledge, experiences, and perspectives can lead to a deeper understanding of the world around us. By providing a platform that encourages users to engage in meaningful conversations, share their unique insights, and collaborate on weather-related projects, Sunny seeks to foster a sense of community that transcends geographic boundaries and demographic differences.</p>
-          <p>As Sunny evolves and expands, it will remain rooted in the principles of innovation, collaboration, and empowerment. We will continuously push the boundaries of what is possible, leveraging cutting-edge technology and user feedback to create a platform that is not only informative but also intuitive and engaging. Through strategic partnerships with leading meteorological organizations, academic institutions, and industry experts, we will ensure that Sunny remains at the forefront of weather-based social interaction.</p>
-          <p>Ultimately, the success of Sunny will be measured not just by its technological achievements but by its ability to make a meaningful impact on the lives of its users. By empowering individuals to make informed decisions, fostering a sense of connection and community, and inspiring a greater appreciation for the beauty and power of weather, Sunny aims to create a world where people are more in tune with their environment and with each other.</p>
-          <p>In the words of Marc Porat, "The future belongs to those who can see the potential in the present and have the courage to pursue it." With Sunny, we are not just building a social platform – we are creating a movement that has the potential to transform the way we understand and engage with weather. Join us on this exciting journey as we unlock the power of weather-based social interaction and create a brighter, more connected future for all.</p>
+          <h1>The Sunny Weather Company</h1>
+          <h2>A Weather Companion That Understands and Empowers You</h2>
+          <h3>Launching Q4 of 2024</h3>
+
+          <p>In recent years, I’ve come to realize the profound impact that weather has on our daily lives. It's more than just a fleeting topic of conversation; weather is a fundamental force that shapes our decisions, influences our emotions, and connects us to the broader world.</p>
+
+          <p>Sunny is not just another weather app— it’s the embodiment of a new era where technology, data, and human connection converge to create something transformative. Traditional weather apps offer information, but they don’t know what you care about. Sunny changes that. By leveraging advanced AI and deep customization, Sunny becomes a weather companion that understands your unique needs and cares about how the weather affects your life.</p>
+
+          <p>At its core, Sunny is driven by the belief that knowledge is not just power but a means to deepen our understanding of the world around us. By providing a platform that encourages meaningful dialogue, shares diverse insights, and fosters collaboration on weather-related projects, Sunny creates a community that transcends geographical and social boundaries. This is not merely about information—it’s about creating a shared experience, a collective intelligence that enriches all who participate.</p>
+
+          <p>As Sunny evolves, it remains steadfast in its commitment to innovation, collaboration, and empowerment. We continually push the boundaries of what’s possible, guided by AI and enriched by user feedback, to create a platform that is not only accurate and personalized but also intuitive and engaging. Through strategic alliances with leading meteorological organizations, academic institutions, and industry thought leaders, Sunny ensures it stays at the forefront of weather-based social interaction.</p>
+
+          <p>In the end, Sunny’s success will not be measured solely by its technological achievements but by the meaningful impact it has on the lives of its users. By empowering individuals to make informed decisions, fostering a deep sense of connection, and inspiring a greater appreciation for the power and beauty of weather, Sunny aspires to create a world where people are more attuned to their environment—and to one another.</p>
+
+          <p>"The future of the information economy lies in the use of knowledge as a strategic resource." – Marc Porat.</p>
+
+          <p>At Sunny, we are not merely building a platform; we are pioneering a movement that redefines our relationship with weather. By unlocking the potential of weather-based social interaction, we’re forging a brighter, more connected future. Join us on this journey, and become part of a transformation that transcends the ordinary.</p>
+        </div>
+        <div className="social-icons">
+          <div
+            className="social-icon"
+            onClick={() => handleIconClick('mailto:hello@sunnyweather.co')}
+          >
+            <i className="fi fi-rr-envelope"></i>
+          </div>
+          <div
+            className="social-icon"
+            onClick={() => handleIconClick('https://www.linkedin.com/in/sunnyweather')}
+          >
+            <i className="fi fi-brands-linkedin"></i>
+          </div>
+          <div
+            className="social-icon"
+            onClick={() => handleIconClick('https://twitter.com/sunnyweather')}
+          >
+            <i className="fi fi-brands-twitter"></i>
+          </div>
+          <div
+            className="social-icon"
+            onClick={() => handleIconClick('https://www.instagram.com/sunnyweatherco')}
+          >
+            <i className="fi fi-brands-instagram"></i>
+          </div>
         </div>
       </div>
     </div>
