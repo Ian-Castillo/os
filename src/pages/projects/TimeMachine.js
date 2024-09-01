@@ -27,7 +27,7 @@ const TimeMachine = () => {
           <h1>Time Machine Print (aka Time Machine)</h1>
           <h2>A neural network for the creative community.
           </h2>
-          <p>I've spent years exploring the intersection of technology, creativity, and culture. From launching startups to developing brand identities, I've learned that innovation often comes from unexpected places. Sometimes, the most groundbreaking ideas are born when we connect seemingly unrelated dots across time and space.
+          <p>I've inadvertently spent the lastseveralyears exploring the intersection of technology, creativity, and culture. From launching startups to developing brand identities, I've learned that innovation often comes from unexpected places. Sometimes, the most groundbreaking ideas are born when we connect seemingly unrelated dots across time and space.
           </p>
           <p>Studying the work of visionaries and rebels from various fields has shown me that creativity thrives on cross-pollination. To create something truly impactful, we need to understand not just the giants of our own industries, but also the cultural forces that shape our world.
           </p>
