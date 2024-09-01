@@ -109,14 +109,15 @@ const Sidebar = () => {
                                 <i className="fi fi-ss-cursor"></i> Tools
                             </Link>
                         </li>
-                        <li onClick={() => setSelected('library')}>
-                            <Link to="/library" className={selected === 'library' ? 'selected' : ''}>
-                                <i className="fi fi-br-chart-simple-horizontal "></i> Articles
-                            </Link>
-                        </li>
+                    
                         <li onClick={() => setSelected('highlights')}>
                             <Link to="/highlights" className={selected === 'highlights' ? 'selected' : ''}>
                                 <i className="fi fi-ss-quote-right"></i> Quotes
+                            </Link>
+                        </li>
+                        <li onClick={() => setSelected('library')}>
+                            <Link to="/library" className={selected === 'library' ? 'selected' : ''}>
+                                <i className="fi fi-br-chart-simple-horizontal "></i> www
                             </Link>
                         </li>
                         {/* <li onClick={() => setSelected('highlights')}>
