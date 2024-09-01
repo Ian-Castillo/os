@@ -27,12 +27,21 @@ const TimeMachine = () => {
           <h1>Time Machine</h1>
           <h2>A neural network for the creative community.
           </h2>
-          <p>I've always been a builder at heart. I've launched startups, developed brand identities, captured moments through photography, and embarked on numerous creative ventures. One lesson I've learned along the way is that every journey forward begins with a glance back.</p>
-          <p>Spending time studing the work of those who came before me, the pioneers who dared to dream big and paved the way has made me want to be apart of the lineage. To create something truly remarkable, I believe you must first stand on the shoulders of giants.</p>
-<p>This principle inspired me to create Time Machine Print. It's a testament to my conviction that understanding our history is essential for moving forward. Each book that is curated represents a piece of that puzzle, a chapter in the ongoing story of innovation and creativity.</p>
-<p>At Time Machine Print, we don't just celebrate the past; we use it as a foundation for the future. We believe that every creator has the power to shape the world, but to do so, they must understand the context of their own journey. They need to see themselves as part of a lineage, a continuum of innovation that stretches back through time. Whether you're an entrepreneur exploring new territories, a photographer capturing unseen perspectives, or a designer pushing the boundaries of possibility, Time Machine Print is here to guide you. </p>
-          <p>Our curated collection spans not just disciplines, but eras, because we know that the key to unlocking your creative potential lies in understanding the giants who came before you.</p>
-          <p>To go forward, go back.</p>
+          <p>I've spent years navigating the intersection of technology, creativity, and culture. From launching startups to developing brand identities, I've learned that innovation often comes from unexpected places. Sometimes, the most groundbreaking ideas are born when we connect seemingly unrelated dots across time and space.
+          </p>
+          <p>Studying the work of visionaries and rebels from various fields has shown me that creativity thrives on cross-pollination. To create something truly impactful, I need to understand not just the giants of our own industries, but also the cultural forces that shape our world.
+          </p>
+          <p>This realization led me to create Time Machine Print, a curated bookstore that's part digital-age oracle, part cultural time capsule. Each book featured is a window into a different world of ideas, a fragment of the larger story of human ingenuity and cultural evolution.
+          </p>
+          <p>Whether you're a tech entrepreneur looking to humanize your next big idea, a designer seeking to infuse your work with global influences, or a creative professional aiming to bridge the gap between tradition and innovation, Time Machine Print is your launchpad.
+          </p>
+        
+        <p> The curated collection spans disciplines, eras, and cultures, offering insights from the trailblazers who came before us - their successes, their audacious failures, and the messy, beautiful process in between. I believe that understanding the past and present of global creativity is key to shaping its future.
+</p>
+        <p>At Time Machine Print, we're not just selling books; we're cultivating a community of curious minds ready to explore, experiment, and create. Because in this interconnected world, the next big idea might come from anywhere - a centuries-old artistic technique, a cutting-edge technological breakthrough, or a street food vendor's ingenious solution.
+        </p>
+        <p>To move forward, sometimes you need to step back, look around, and then leap in an unexpected direction. Let's take that journey together.</p>
+        </div>
         </div>
         <div className="social-icons">
             <div
@@ -67,7 +76,7 @@ const TimeMachine = () => {
             </div>
           </div>
       </div>
-    </div>
+    
   );
 };
 

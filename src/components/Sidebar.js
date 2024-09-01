@@ -78,7 +78,7 @@ const Sidebar = () => {
                             </Link>
                         </li> */}
                     </ul>
-                    <ul>
+                    {/* <ul>
                         <li onClick={() => setSelected('sunny')}>
                             <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
                                 <div className="icon-container">
@@ -88,7 +88,7 @@ const Sidebar = () => {
                                 Sunny Weather
                             </Link>
                         </li>
-                    </ul>
+                    </ul> */}
                     <ul>
                         <li onClick={() => setSelected('timeMachine')}>
                             <Link to="/timeMachine" className={selected === 'timeMachine' ? 'selected' : ''}>

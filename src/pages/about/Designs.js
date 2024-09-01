@@ -4,13 +4,13 @@ import SunnyWeatherApp from './SunnyWeatherApp';
 import TimeMachine from './TimeMachinePrintWeb';
 
 const designsData = [
-  {
-    id: 1,
-    title: "Sunny Weather",
-    url: "A social weather company.",
-    description: "A social weather company.",
-    tags: ["Mobile App"]
-  },
+  // {
+  //   id: 1,
+  //   title: "Sunny Weather",
+  //   url: "A social weather company.",
+  //   description: "A social weather company.",
+  //   tags: ["Mobile App"]
+  // },
   {
     id: 2,
     title: "Time Machine Print",
