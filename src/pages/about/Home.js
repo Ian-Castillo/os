@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LazyLoad from 'react-lazyload';
 import './Home.css';
 import profileImage from '../../ian.jpg';
 import Iowa from '../../assets/Gold.png';
@@ -54,7 +55,9 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="main-content">
-        <img src={profileImage} alt="Ian Castillo" className="profile-image" />
+        <LazyLoad height={200} once>
+          <img src={profileImage} alt="Ian Castillo" className="profile-image" />
+        </LazyLoad>
         <div className="home-nav">
           <div className="nav-items">
             <div
@@ -78,12 +81,12 @@ const Home = () => {
             <div className="work-experience">
               <h2>Hi, I'm Ian.</h2>
       
-              <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My career focus is on zero-to-one design thinking, rapid prototyping, and accelerating the Iowa start-up ecosystem.</p>
-              <p>Currently, I am leading product and design at <a href="https://www.argus.ai/">ArgusAI</a>, where myself, Marten Roorda, and Michael Weiler are re-imagining and setting new standards for college admissions. At ArgusAI, I oversee product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. Our mission is to revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants, helping colleges and universities make better-informed decisions.</p>
+              <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My career interests are in zero-to-one design thinking, safety in AI, and accelerating the Iowa start-up ecosystem.</p>
+              <p>Currently, I lead product and design as a co-founder of <a href="https://www.argus.ai/">ArgusAI</a>, where myself, Marten Roorda (former CEO of ACT), and Michael Weiler (former CEO of EduPath) are re-imagining and setting new standards for college admissions. At ArgusAI, I oversee product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. Our mission is to revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants and a more personalized experience for students.</p>
               <p>In addition to my work at ArgusAI, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <a href="https://tippie.uiowa.edu/people/ian-castillo">John Pappajohn Entrepreneurial Center</a>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
-              <p>Previously, I was a Product Manager at <a href="https://riiid.com">Riiid Labs</a>, where I facilitated advancements in AI-driven education applications. This role allowed me to collaborate with top-tier AI researchers, engineers, and designers, driving forward projects that utilized cutting-edge technology to enhance learning outcomes. My work at Riiid Labs was instrumental in developing products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
-              <p>Beyond my career, I'm passionate about advancinsg climate change discussions and raising awareness of our environmental impact.</p>
-              <p>Are you interested in designing a better tomorrow? Let's connect and explore re-imagining the future together.</p>
+              <p>Previously, I was a Product Manager & Designer at <a href="https://riiid.com">Riiid Labs</a>, where I facilitated advancements in AI-driven education applications. While on the LX team, I collaborated with AI researchers, engineers, and designers, driving forward projects that utilized Machine Learning and LLMs to enhance learning outcomes. My work centered on developing digital products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
+              <p>Beyond my career, I'm passionate about advancing climate change discussions and raising awareness of our environmental impact.</p>
+              <p>I'm at capacity at the moment working on my own ideas, but I'm always interested in connecting with other builders/designers/developers. If thats you, let's connect and explore re-imagining the future.</p>
               {renderSocialIcons()}
             </div>
           </>
@@ -94,7 +97,9 @@ const Home = () => {
             <ul className="work-list">
               <li>
                 <div className="company-info">
-                  <img src={Iowa} alt="University of Iowa" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={Iowa} alt="University of Iowa" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">
                     <a href="https://iowajpec.org/" className="company-link">The University of Iowa</a>
@@ -107,7 +112,9 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <img src={Argus} alt="Argus" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={Argus} alt="Argus" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">
                     <a href="https://www.argus.ai" className="company-link">Argus.AI</a>
@@ -124,7 +131,9 @@ const Home = () => {
             <ul className="advisory-list">
               <li>
                 <div className="company-info">
-                  <img src={SXSW} alt="SXSW" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={SXSW} alt="SXSW" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">
                     <a href="https://www.sxsw.com/" className="company-link">SXSW </a>
@@ -137,7 +146,9 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <img src={Rally} alt="Rally" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={Rally} alt="Rally" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">
                     <a href="https://rallyinnovation.com/" className="company-link">Rally</a>
@@ -153,7 +164,9 @@ const Home = () => {
             <ul className="advisory-list">
                 <li>
                   <div className="company-info">
-                    <img src={Techstars} alt="Techstars" className="company-logo" />
+                    <LazyLoad height={50} once>
+                      <img src={Techstars} alt="Techstars" className="company-logo" />
+                    </LazyLoad>
                     <div>
                       <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
                       <span className="role">Facilitator, Mentor, Judge</span>
@@ -167,7 +180,9 @@ const Home = () => {
             <ul>
               <li>
                 <div className="company-info">
-                  <img src={Riiid} alt="Riiid" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={Riiid} alt="Riiid" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">
                     <a href="https://riiid.com/" className="company-link">Riiid</a>
@@ -180,7 +195,9 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <img src={Twelve} alt="12 Triangles" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={Twelve} alt="12 Triangles" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">
                     <a href="https://12triangles.com/" className="company-link">12 Triangles </a>
@@ -193,7 +210,9 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <img src={Nosh} alt="Nosh" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={Nosh} alt="Nosh" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company"> 
                     <a href="https://noshdelivery.co/" className="company-link">Nosh </a>
@@ -206,7 +225,9 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <img src={Textpress} alt="Textpress" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={Textpress} alt="Textpress" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">textpress <span className="location">Iowa City, IA</span></span>
                     <span className="role">Co-Founder, Head of Growth + Product</span>
@@ -220,7 +241,9 @@ const Home = () => {
             <ul className="work-list">
               <li>
                 <div className="company-info">
-                  <img src={Bloomtech} alt="Bloomtech" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={Bloomtech} alt="Bloomtech" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">Bloomtech <span className="location">Remote</span></span>
                     <span className="role">Full Stack Software Engineer</span>
@@ -230,7 +253,9 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <img src={Iowa} alt="University of Iowa" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={Iowa} alt="University of Iowa" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">The University of Iowa <span className="location">Iowa City, IA</span></span>
                     <span className="role">Political Science, Incomplete</span>
@@ -240,7 +265,9 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <img src={SCC} alt="Southeastern Community College" className="company-logo" />
+                  <LazyLoad height={50} once>
+                    <img src={SCC} alt="Southeastern Community College" className="company-logo" />
+                  </LazyLoad>
                   <div>
                     <span className="company">Southeastern Community College <span className="location">Burlington, IA</span></span>
                     <span className="role">General Studies, Associates Degree</span>
