@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import LazyLoad from 'react-lazyload';
+import React, { useState, useEffect } from 'react';
+import LazyLoad, { forceCheck } from 'react-lazyload';
+import { useLocation } from 'react-router-dom';
 import './Home.css';
 import profileImage from '../../ian.jpg';
 import Iowa from '../../assets/Gold.png';
@@ -18,6 +19,26 @@ import RaidGuild from '../../assets/RaidGuild.jpg'
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [hoveredIcon, setHoveredIcon] = useState(null);
+  const [key, setKey] = useState(0);
+  const location = useLocation();
+
+  // Force remount of LazyLoad components when the route changes
+  useEffect(() => {
+    setKey(prevKey => prevKey + 1);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    return () => {
+      // This will force a check of all LazyLoad components when the component unmounts
+      forceCheck();
+    };
+  }, []);
+
+  const renderLazyImage = (src, alt, className, height = 50) => (
+    <LazyLoad key={`${key}-${src}`} height={height} once>
+      <img src={src} alt={alt} className={className} />
+    </LazyLoad>
+  );
 
   const renderSocialIcons = () => (
     <div className="social-icons">
@@ -55,9 +76,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="main-content">
-        <LazyLoad height={200} once>
-          <img src={profileImage} alt="Ian Castillo" className="profile-image" />
-        </LazyLoad>
+        {renderLazyImage(profileImage, "Ian Castillo", "profile-image", 200)}
         <div className="home-nav">
           <div className="nav-items">
             <div
@@ -97,9 +116,7 @@ const Home = () => {
             <ul className="work-list">
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={Iowa} alt="University of Iowa" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(Iowa, "University of Iowa", "company-logo")}
                   <div>
                     <span className="company">
                     <a href="https://iowajpec.org/" className="company-link">The University of Iowa</a>
@@ -112,9 +129,7 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={Argus} alt="Argus" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(Argus, "Argus", "company-logo")}
                   <div>
                     <span className="company">
                     <a href="https://www.argus.ai" className="company-link">Argus.AI</a>
@@ -131,9 +146,7 @@ const Home = () => {
             <ul className="advisory-list">
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={SXSW} alt="SXSW" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(SXSW, "SXSW", "company-logo")}
                   <div>
                     <span className="company">
                     <a href="https://www.sxsw.com/" className="company-link">SXSW </a>
@@ -146,9 +159,7 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={Rally} alt="Rally" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(Rally, "Rally", "company-logo")}
                   <div>
                     <span className="company">
                     <a href="https://rallyinnovation.com/" className="company-link">Rally</a>
@@ -164,9 +175,7 @@ const Home = () => {
             <ul className="advisory-list">
                 <li>
                   <div className="company-info">
-                    <LazyLoad height={50} once>
-                      <img src={Techstars} alt="Techstars" className="company-logo" />
-                    </LazyLoad>
+                    {renderLazyImage(Techstars, "Techstars", "company-logo")}
                     <div>
                       <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
                       <span className="role">Facilitator, Mentor, Judge</span>
@@ -180,9 +189,7 @@ const Home = () => {
             <ul>
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={Riiid} alt="Riiid" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(Riiid, "Riiid", "company-logo")}
                   <div>
                     <span className="company">
                     <a href="https://riiid.com/" className="company-link">Riiid</a>
@@ -195,9 +202,7 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={Twelve} alt="12 Triangles" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(Twelve, "12 Triangles", "company-logo")}
                   <div>
                     <span className="company">
                     <a href="https://12triangles.com/" className="company-link">12 Triangles </a>
@@ -210,9 +215,7 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={Nosh} alt="Nosh" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(Nosh, "Nosh", "company-logo")}
                   <div>
                     <span className="company"> 
                     <a href="https://noshdelivery.co/" className="company-link">Nosh </a>
@@ -225,9 +228,7 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={Textpress} alt="Textpress" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(Textpress, "Textpress", "company-logo")}
                   <div>
                     <span className="company">textpress <span className="location">Iowa City, IA</span></span>
                     <span className="role">Co-Founder, Head of Growth + Product</span>
@@ -241,9 +242,7 @@ const Home = () => {
             <ul className="work-list">
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={Bloomtech} alt="Bloomtech" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(Bloomtech, "Bloomtech", "company-logo")}
                   <div>
                     <span className="company">Bloomtech <span className="location">Remote</span></span>
                     <span className="role">Full Stack Software Engineer</span>
@@ -253,9 +252,7 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={Iowa} alt="University of Iowa" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(Iowa, "University of Iowa", "company-logo")}
                   <div>
                     <span className="company">The University of Iowa <span className="location">Iowa City, IA</span></span>
                     <span className="role">Political Science, Incomplete</span>
@@ -265,9 +262,7 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  <LazyLoad height={50} once>
-                    <img src={SCC} alt="Southeastern Community College" className="company-logo" />
-                  </LazyLoad>
+                  {renderLazyImage(SCC, "Southeastern Community College", "company-logo")}
                   <div>
                     <span className="company">Southeastern Community College <span className="location">Burlington, IA</span></span>
                     <span className="role">General Studies, Associates Degree</span>
