@@ -112,7 +112,7 @@ const Home = () => {
         )}
         {activeSection === 'experience' && (
           <div className="work-experience">
-            <h3>Work</h3>
+            <h3>Current</h3>
             <ul className="work-list">
               <li>
                 <div className="company-info">
@@ -171,20 +171,7 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-            <h3>Community</h3>
-            <ul className="advisory-list">
-                <li>
-                  <div className="company-info">
-                    {renderLazyImage(Techstars, "Techstars", "company-logo")}
-                    <div>
-                      <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
-                      <span className="role">Facilitator, Mentor, Judge</span>
-                      <span className="dates">2015 - Current</span>
-                      <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+            
             <h3>Experience</h3>
             <ul>
               <li>
@@ -238,6 +225,20 @@ const Home = () => {
                 </div>
               </li>
             </ul>
+            <h3>Community</h3>
+            <ul className="advisory-list">
+                <li>
+                  <div className="company-info">
+                    {renderLazyImage(Techstars, "Techstars", "company-logo")}
+                    <div>
+                      <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
+                      <span className="role">Facilitator, Mentor, Judge</span>
+                      <span className="dates">2015 - Current</span>
+                      <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             <h3>Education</h3>
             <ul className="work-list">
               <li>
