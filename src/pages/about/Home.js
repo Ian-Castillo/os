@@ -15,6 +15,7 @@ import Techstars from '../../assets/techstars.png';
 import SXSW from '../../assets/sxsw.png';
 import Rally from '../../assets/rally.png';
 import RaidGuild from '../../assets/RaidGuild.jpg'
+import EmojiManager from '../../assets/EmojiManager.svg' // Add this import
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -92,6 +93,13 @@ const Home = () => {
             >
               <i className="fi fi-rr-briefcase"></i>
               <span className="nav-item-text">Experience</span>
+            </div>
+            <div
+              className={`nav-item ${activeSection === 'projects' ? 'active' : 'inactive'}`}
+              onClick={() => setActiveSection('projects')}
+            >
+              <i className="fi fi-rr-rocket-lunch"></i>
+              <span className="nav-item-text">Projects</span>
             </div>
           </div>
         </div>
@@ -268,6 +276,42 @@ const Home = () => {
                     <span className="company">Southeastern Community College <span className="location">Burlington, IA</span></span>
                     <span className="role">General Studies, Associates Degree</span>
                     <span className="dates">2009 - 2013</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        )}
+        {activeSection === 'projects' && (
+          <div className="work-experience">
+            <h3>Projects</h3>
+            <ul className="work-list">
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(EmojiManager, "Emoji Manager", "company-logo")}
+                  <div>
+                    <span className="company">
+                      <a href="https://emojimanager.com" className="company-link">Emoji Manager</a>
+                      <span className="stack">API</span>
+                      <span className="stack">React</span>
+                    </span>
+                    <span className="role">Creator</span>
+                    <span className="dates">2024</span>
+                    <span className="about">A tool for managing and organizing emojis, enhancing digital communication and expression.</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(RaidGuild, "RaidGuild", "company-logo")}
+                  <div>
+                    <span className="company">
+                      <a href="https://www.raidguild.org/" className="company-link">RaidGuild</a>
+                      <span className="stack">Figma</span>
+                    </span>
+                    <span className="role">Contributor</span>
+                    <span className="dates">2024 - Current</span>
+                    <span className="about">Decentralized collective of digital mercenaries, delivering Web3 products and services to clients across the globe.</span>
                   </div>
                 </div>
               </li>
