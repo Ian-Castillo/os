@@ -120,7 +120,7 @@ const Home = () => {
         )}
         {activeSection === 'experience' && (
           <div className="work-experience">
-            <h3>Current</h3>
+            <h3>Work</h3>
             <ul className="work-list">
               <li>
                 <div className="company-info">
