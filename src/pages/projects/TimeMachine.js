@@ -25,21 +25,11 @@ const TimeMachine = () => {
         </div>
         <div>
           <h1>Time Machine Print (aka Time Machine)</h1>
-          <h2>A neural network for the creative community.
+          <h2>A neural network for the creatives and creators.
           </h2>
-          <p>I've inadvertently spent the last several years exploring the intersection of technology, creativity, and culture. From launching startups to developing brand identities, I've learned that innovation often comes from unexpected places. Sometimes, the most groundbreaking ideas are born when we connect seemingly unrelated dots across time and space.
-          </p>
-          <p>Studying the work of visionaries and rebels from various fields has shown me that creativity thrives on cross-pollination. To create something truly impactful, we need to understand not just the giants of our own industries, but also the cultural forces that shape our world.
-          </p>
-          <p>This realization led me to create Time Machine Print (aka, Time Machine), a curated bookstore that's part digital-age oracle, part cultural time capsule. Each book featured is a window into a different world of ideas, a fragment of the larger story of human ingenuity and cultural evolution.
-          </p>
-        
-        <p> The curated collection spans disciplines, eras, and cultures, offering insights from the trailblazers who came before us - their successes, their audacious failures, and the messy, beautiful process in between. I believe that understanding the past and present of global creativity is key to shaping its future.
-</p>
-      
-        <p>Whether you're a tech entrepreneur looking to humanize your next big idea, a designer seeking to infuse your work with global influences, or a creative professional aiming to bridge the gap between tradition and innovation, Time Machine Print is your launchpad.
-          </p>
-        <p>To move forward, sometimes you need to step back, look around, and then leap in an unexpected direction. Let's take that journey together.</p>
+        <p>Welcome to Time Machine Print, where culture and creativity collide like two celestial bodies sparking an explosion of ideas. We’re not just a bookstore—we're a portal for the curious, the creators, and the disruptors. Here, stories aren’t just printed on paper; they are the seeds of revolutions, the musings of rebels, and the blueprints of tomorrow’s icons.</p>
+      <p>In a world obsessed with the fast and the forgettable, we celebrate the deep thinkers, the dreamers, and the outliers who shape our creative future. Time Machine Print is a sanctuary for those who seek the kind of inspiration that lingers—a place where every book has a purpose, every page a manifesto.</p>
+     <p>Think of it as a time capsule for the bold, the weird, and the beautiful—a place where today’s ideas meet the timeless ethos of those who came before us. Let’s turn the pages together. The future has always belonged to the creators.</p>
         <p>Launching September 28th, 2024</p>
         </div>
         </div>
