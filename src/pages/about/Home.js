@@ -286,8 +286,8 @@ const Home = () => {
         {activeSection === 'projects' && (
           <div className="work-experience">
             <h3>Projects</h3>
-            <p>Here are a few projects I've developed or am currently involved in. While they aren't designed for broad public use, they serve to address my "annoying" work, helping me tackle larger problems more efficiently.</p>
-<p>All of these started off with Figma files I designed. From there, a fair amount of these were engineered by Claude or Replit and developed approximately 80% of the code. The rest I wrote myself since the initial prompts were able to navigate the code pretty well.</p>
+            <p>Here are a few projects I've developed or am currently working on to get to atleast a v1.0. While they aren't designed for broad public use, they serve to accelerate my busy work so I can focus on more fun problems.</p>
+<p>These started off with me prototyping in Figma. From there, a fair amount of these were engineered by Claude or Replit, developing approximately 80% of the code. The rest I wrote myself since the initial prompts were able to navigate the code pretty well.</p>
             <p>-Ian</p>
             <ul className="work-list">
               <li>
