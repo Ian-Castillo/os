@@ -286,6 +286,9 @@ const Home = () => {
         {activeSection === 'projects' && (
           <div className="work-experience">
             <h3>Projects</h3>
+            <p>Here are a few projects I've developed or am currently involved in. While they aren't designed for broad public use, they serve to address my "annoying" work, helping me tackle larger problems more efficiently.</p>
+<p>All of these started off with Figma files I designed. From there, a fair amount of these were engineered by Claude or Replit and developed approximately 80% of the code. The rest I wrote myself since the initial prompts were able to navigate the code pretty well.</p>
+            <p>-Ian</p>
             <ul className="work-list">
               <li>
                 <div className="company-info">
@@ -293,12 +296,11 @@ const Home = () => {
                   <div>
                     <span className="company">
                       <a href="https://emojimanager.com" className="company-link">Emoji Manager</a>
-                      <span className="stack">API</span>
-                      <span className="stack">React</span>
+                      <span className="stack">v1.0</span>
                     </span>
-                    <span className="role">Creator</span>
+                    <span className="role">Founder</span>
                     <span className="dates">2024</span>
-                    <span className="about">A emoji search engine.</span>
+                    <span className="about">An emoji search engine.</span>
                   </div>
                 </div>
                 
@@ -309,11 +311,11 @@ const Home = () => {
                   <div>
                     <span className="company">
                       <a href="" className="company-link">SoundWave</a>
-                      <span className="stack">Python</span>
+                      <span className="stack">Alpha</span>
                     </span>
-                    <span className="role">Creator</span>
+                    <span className="role">Founder</span>
                     <span className="dates">2024</span>
-                    <span className="about">Transcript & summary tool for Youtube videos.</span>
+                    <span className="about">Transcript & summary assistant for Youtube videos.</span>
                   </div>
                 </div>
               </li>
@@ -323,12 +325,11 @@ const Home = () => {
                   <div>
                     <span className="company">
                       <a href="https://houndsync.vercel.app/" className="company-link">HoundSync</a>
-                      <span className="stack">API</span>
-                      <span className="stack">React</span>
+                      <span className="stack">Beta</span>
                     </span>
-                    <span className="role">Creator</span>
+                    <span className="role">Founder</span>
                     <span className="dates">2024</span>
-                    <span className="about">A data entry tool for small businesses.</span>
+                    <span className="about">An invoice parse tool for data entry.</span>
                   </div>
                 </div>
               </li>
