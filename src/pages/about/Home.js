@@ -15,8 +15,9 @@ import Techstars from '../../assets/techstars.png';
 import SXSW from '../../assets/sxsw.png';
 import Rally from '../../assets/rally.png';
 import RaidGuild from '../../assets/RaidGuild.jpg'
-import EmojiManager from '../../assets/EmojiManager.svg' // Add this import
-
+import EmojiManager from '../../assets/EmojiManager.svg' 
+import HoundSync from '../../assets/houndsync.svg'
+import SoundWave from '../../assets/soundwave.svg'
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -297,21 +298,37 @@ const Home = () => {
                     </span>
                     <span className="role">Creator</span>
                     <span className="dates">2024</span>
-                    <span className="about">A tool for managing and organizing emojis, enhancing digital communication and expression.</span>
+                    <span className="about">A emoji search engine.</span>
+                  </div>
+                </div>
+                
+              </li>
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(SoundWave, "SoundWave", "company-logo")}
+                  <div>
+                    <span className="company">
+                      <a href="" className="company-link">SoundWave</a>
+                      <span className="stack">Python</span>
+                    </span>
+                    <span className="role">Creator</span>
+                    <span className="dates">2024</span>
+                    <span className="about">Transcript & summary tool for Youtube videos.</span>
                   </div>
                 </div>
               </li>
               <li>
-                <div className="company-info">
-                  {renderLazyImage(RaidGuild, "RaidGuild", "company-logo")}
+              <div className="company-info">
+                  {renderLazyImage(HoundSync, "HoundSync", "company-logo")}
                   <div>
                     <span className="company">
-                      <a href="https://www.raidguild.org/" className="company-link">RaidGuild</a>
-                      <span className="stack">Figma</span>
+                      <a href="https://houndsync.vercel.app/" className="company-link">HoundSync</a>
+                      <span className="stack">API</span>
+                      <span className="stack">React</span>
                     </span>
-                    <span className="role">Contributor</span>
-                    <span className="dates">2024 - Current</span>
-                    <span className="about">Decentralized collective of digital mercenaries, delivering Web3 products and services to clients across the globe.</span>
+                    <span className="role">Creator</span>
+                    <span className="dates">2024</span>
+                    <span className="about">A data entry tool for small businesses.</span>
                   </div>
                 </div>
               </li>
