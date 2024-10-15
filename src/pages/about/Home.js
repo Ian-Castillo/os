@@ -18,6 +18,7 @@ import RaidGuild from '../../assets/RaidGuild.jpg'
 import EmojiManager from '../../assets/EmojiManager.svg' 
 import HoundSync from '../../assets/houndsync.svg'
 import SoundWave from '../../assets/soundwave.svg'
+import Mirage from '../../assets/mirage.svg'
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -330,6 +331,20 @@ const Home = () => {
                     <span className="role">Founder</span>
                     <span className="dates">2024</span>
                     <span className="about">An invoice parse tool for data entry.</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+              <div className="company-info">
+                  {renderLazyImage(Mirage, "Mirage", "company-logo")}
+                  <div>
+                    <span className="company">
+                      <a href="" className="company-link">Mirage</a>
+                      <span className="stack">Beta</span>
+                    </span>
+                    <span className="role">Founder</span>
+                    <span className="dates">2024</span>
+                    <span className="about">An image background removal tool.</span>
                   </div>
                 </div>
               </li>
