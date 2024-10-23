@@ -24,7 +24,7 @@ import tmlogofull from '../../assets/tmlogofull.png';
 import spacemono from '../../assets/spacemono.png';
 import tmp from '../../assets/TMP.png';
 import './TimeMachine.css';
-// import ChapterIcon from '../../assets/Chapter.svg'; // Make sure to add this icon
+import Chapter from '../../assets/Chapter.svg'; 
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -310,7 +310,7 @@ const Home = () => {
             <ul className="work-list">
               <li>
                 <div className="company-info">
-                  {/* {renderLazyImage(ChapterIcon, "Chapter", "company-logo")} */}
+                  {renderLazyImage(Chapter, "Chapter", "company-logo")}
                   <div>
                     <span className="company">
                       <a href="#" className="company-link">Chapter</a>
@@ -318,7 +318,7 @@ const Home = () => {
                     </span>
                     <span className="role">NOV-Anticipated</span>
                     <span className="dates">2024</span>
-                    <span className="about">A mobile app bookmark, tracking, and recommendation engine for book enthusiasts.</span>
+                    <span className="about">A mobile app for book lovers to bookmark, track, and discover personalized recommendations.</span>
                   </div>
                 </div>
               </li>
@@ -347,7 +347,7 @@ const Home = () => {
                     </span>
                     <span className="role">AUG</span>
                     <span className="dates">2024</span>
-                    <span className="about">An invoice parse tool for data entry.</span>
+                    <span className="about">An application for parsing invoices to streamline data entry.</span>
                   </div>
                 </div>
               </li>
@@ -361,7 +361,7 @@ const Home = () => {
                     </span>
                     <span className="role">AUG</span>
                     <span className="dates">2024</span>
-                    <span className="about">An image background removal tool.</span>
+                    <span className="about">A tool for removing backgrounds from images.</span>
                   </div>
                 </div>
               </li>
@@ -375,7 +375,7 @@ const Home = () => {
                     </span>
                     <span className="role">JULY</span>
                     <span className="dates">2024</span>
-                    <span className="about">An emoji search engine.</span>
+                    <span className="about">A web app for searching emojis.</span>
                   </div>
                 </div>
                 
