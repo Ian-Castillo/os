@@ -66,7 +66,7 @@ const Sidebar = () => {
                     </ul>
                 </div>
                 <div className="menu-section">
-                    <h3>Ventures</h3>
+                    {/* <h3>Ventures</h3> */}
                     <ul>
                         {/* <li onClick={() => setSelected('daydrink')}>
                             <Link to="/daydrink" className={selected === 'daydrink' ? 'selected' : ''}>
@@ -89,7 +89,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                     </ul> */}
-                    <ul>
+                    {/* <ul>
                         <li onClick={() => setSelected('timeMachine')}>
                             <Link to="/timeMachine" className={selected === 'timeMachine' ? 'selected' : ''}>
                                 <div className="icon-container">
@@ -99,7 +99,7 @@ const Sidebar = () => {
                                 Time Machine Print
                             </Link>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="menu-section">
                     <h3>Bookmarks</h3>

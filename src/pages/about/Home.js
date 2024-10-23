@@ -19,6 +19,13 @@ import EmojiManager from '../../assets/EmojiManager.svg'
 import HoundSync from '../../assets/houndsync.svg'
 import SoundWave from '../../assets/soundwave.svg'
 import Mirage from '../../assets/mirage.svg'
+import tmintroImage from '../../assets/tmintro.png';
+import tmlogofull from '../../assets/tmlogofull.png';
+import spacemono from '../../assets/spacemono.png';
+import tmp from '../../assets/TMP.png';
+import './TimeMachine.css';
+// import ChapterIcon from '../../assets/Chapter.svg'; // Make sure to add this icon
+
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -76,6 +83,10 @@ const Home = () => {
     </div>
   );
 
+  const handleIconClick = (url) => {
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="home-container">
       <div className="main-content">
@@ -100,8 +111,15 @@ const Home = () => {
               className={`nav-item ${activeSection === 'projects' ? 'active' : 'inactive'}`}
               onClick={() => setActiveSection('projects')}
             >
-              <i className="fi fi-rr-rocket-lunch"></i>
+              <i className="fi fi-rr-cube"></i>
               <span className="nav-item-text">Projects</span>
+            </div>
+            <div
+              className={`nav-item ${activeSection === 'timemachine' ? 'active' : 'inactive'}`}
+              onClick={() => setActiveSection('timemachine')}
+            >
+              <i className="fi fi-rr-building"></i>
+              <span className="nav-item-text">Ventures</span>
             </div>
           </div>
         </div>
@@ -114,7 +132,6 @@ const Home = () => {
               <p>Currently, I lead product and design as a co-founder of <button onClick={() => window.open('https://www.argus.ai/', '_blank')} className="nav-button">ArgusAI</button>, where myself, Marten Roorda (former CEO of ACT), and Michael Weiler (former CEO of EduPath) are re-imagining and setting new standards for college admissions. At ArgusAI, I oversee product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. Our mission is to revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants and a more personalized experience for students.</p>
               <p>In addition to my work at ArgusAI, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <button onClick={() => window.open('https://tippie.uiowa.edu/people/ian-castillo', '_blank')} className="nav-button">John Pappajohn Entrepreneurial Center</button>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
               <p>Before ArgusAI, I was a Product Manager & Designer at <button onClick={() => window.open('https://riiid.com', '_blank')} className="nav-button">Riiid Labs</button>, where I facilitated advancements in AI-driven education applications. While on the LX team, I collaborated with AI researchers, engineers, and designers, driving forward projects that utilized Machine Learning and LLMs to enhance learning outcomes. My work centered on developing digital products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
-              <p>Outside of my day job, I’m tackling the climate crisis by rethinking how people interact with weather data through <button onClick={() => window.open('http://sunnyweather.co', '_blank')} className="nav-button">Sunny Weather</button>, an AI-powered platform. Traditional weather apps offer broad, impersonal forecasts, leaving users disconnected from how weather truly impacts their daily lives. Sunny Weather will deliver personalized insights that reflect the realities of our changing climate, helping users anticipate and adapt to increasingly unpredictable conditions.</p>
               <p>I apperciate you reading this far and hopefully you look around at the things I'm building or have built. I'm at capacity at the moment working on my own projects, but I'm always interested in connecting with other builders/designers/developers. If thats you, let's connect and explore re-imagining the digital future.</p>
               {renderSocialIcons()}
             </div>
@@ -287,25 +304,25 @@ const Home = () => {
         {activeSection === 'projects' && (
           <div className="work-experience">
             <h3>Projects</h3>
-            <p>Here are a few projects I've developed or am currently working on to get to atleast a v1.0. While they aren't designed for broad public use, they serve to accelerate my busy work so I can focus on more fun problems.</p>
-<p>These started off with me prototyping in Figma. From there, a fair amount of these were engineered by Claude or Replit, developing approximately 80% of the code. The rest I wrote myself since the initial prompts were able to navigate the code pretty well.</p>
+            <p>Here are a few projects I've developed or am currently working on to get to at least a v1.0. While they aren't designed for broad public use, their main intent is to accelerate my busy work so I can focus on more fun problems.</p>
+            <p>These typically start off with me prototyping in Figma. From there, a fair amount of these were engineered by Claude or Replit, which accounts for approximately 70ish percent of the code. The rest I wrote myself since the initial prompts were able to navigate the code pretty well.</p>
             <p>-Ian</p>
             <ul className="work-list">
               <li>
                 <div className="company-info">
-                  {renderLazyImage(EmojiManager, "Emoji Manager", "company-logo")}
+                  {/* {renderLazyImage(ChapterIcon, "Chapter", "company-logo")} */}
                   <div>
                     <span className="company">
-                      <a href="https://emojimanager.com" className="company-link">Emoji Manager</a>
-                      <span className="stack">v1.0</span>
+                      <a href="#" className="company-link">Chapter</a>
+                      <span className="stack">In-Progress</span>
                     </span>
-                    <span className="role">Founder</span>
+                    <span className="role">NOV-Anticipated</span>
                     <span className="dates">2024</span>
-                    <span className="about">An emoji search engine.</span>
+                    <span className="about">A mobile app bookmark, tracking, and recommendation engine for book enthusiasts.</span>
                   </div>
                 </div>
-                
               </li>
+              
               <li>
                 <div className="company-info">
                   {renderLazyImage(SoundWave, "SoundWave", "company-logo")}
@@ -314,7 +331,7 @@ const Home = () => {
                       <a href="" className="company-link">SoundWave</a>
                       <span className="stack">Alpha</span>
                     </span>
-                    <span className="role">Founder</span>
+                    <span className="role">SEPT</span>
                     <span className="dates">2024</span>
                     <span className="about">Transcript & summary assistant for Youtube videos.</span>
                   </div>
@@ -328,7 +345,7 @@ const Home = () => {
                       <a href="https://houndsync.vercel.app/" className="company-link">HoundSync</a>
                       <span className="stack">Beta</span>
                     </span>
-                    <span className="role">Founder</span>
+                    <span className="role">AUG</span>
                     <span className="dates">2024</span>
                     <span className="about">An invoice parse tool for data entry.</span>
                   </div>
@@ -342,13 +359,68 @@ const Home = () => {
                       <a href="" className="company-link">Mirage</a>
                       <span className="stack">Beta</span>
                     </span>
-                    <span className="role">Founder</span>
+                    <span className="role">AUG</span>
                     <span className="dates">2024</span>
                     <span className="about">An image background removal tool.</span>
                   </div>
                 </div>
               </li>
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(EmojiManager, "Emoji Manager", "company-logo")}
+                  <div>
+                    <span className="company">
+                      <a href="https://emojimanager.com" className="company-link">Emoji Manager</a>
+                      <span className="stack">v1.0</span>
+                    </span>
+                    <span className="role">JULY</span>
+                    <span className="dates">2024</span>
+                    <span className="about">An emoji search engine.</span>
+                  </div>
+                </div>
+                
+              </li>
             </ul>
+          </div>
+        )}
+        {activeSection === 'timemachine' && (
+          <div className="gradient-container">
+            <div className="main-content">
+              <img src={tmp} alt="time machine grid background" className="profile-image" />
+              <div className="gradient-nav">
+                <div className="nav-items">
+                  <div></div>
+                  <div>
+                    <span className="gradient-item-text">timemachineprint.com</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1>Time Machine Print (aka Time Machine)</h1>
+                <h2>A neural network for the creatives and creators.</h2>
+                <p>Welcome to Time Machine Print, where culture and creativity collide like two celestial bodies sparking an explosion of ideas. We're not just a bookstore—we're a portal for the curious, the creators, and the disruptors. Here, stories aren't just printed on paper; they are the seeds of revolutions, the musings of rebels, and the blueprints of tomorrow's icons.</p>
+                <p>In a world obsessed with the fast and the forgettable, we celebrate the deep thinkers, the dreamers, and the outliers who shape our creative future. Time Machine Print is a sanctuary for those who seek the kind of inspiration that lingers—a place where every book has a purpose, every page a manifesto.</p>
+                <p>Think of it as a time capsule for the bold, the weird, and the beautiful—a place where today's ideas meet the timeless ethos of those who came before us. Let's turn the pages together. </p>
+                <p>The future has always belonged to the creators.</p>
+              </div>
+            </div>
+            <div className="social-icons">
+              <div className="social-icon" onClick={() => handleIconClick('mailto:hello@timemachineprint.com')}>
+                <i className="fi fi-rr-envelope"></i>
+              </div>
+              <div className="social-icon" onClick={() => handleIconClick('https://www.linkedin.com/in/your-profile')}>
+                <i className="fi fi-brands-linkedin"></i>
+              </div>
+              <div className="social-icon" onClick={() => handleIconClick('https://twitter.com/tsprintcompany')}>
+                <i className="fi fi-brands-twitter"></i>
+              </div>
+              <div className="social-icon" onClick={() => handleIconClick('https://www.instagram.com/timemachineprint')}>
+                <i className="fi fi-brands-instagram"></i>
+              </div>
+              <div className="social-icon" onClick={() => handleIconClick('https://www.tiktok.com/@your-profile')}>
+                <i className="fi fi-brands-tik-tok"></i>
+              </div>
+            </div>
           </div>
         )}
       </div>
