@@ -8,7 +8,7 @@ import overtureImage from '../../assets/Overture.png';
 import projectEImage from '../../assets/ProjectE.png';
 import statusImage from '../../assets/Status.png';
 import summitImage from '../../assets/Summit.png';
-import houndsyncImage from '../../assets/houndsync.svg';
+import houndsyncImage from '../../assets/Houndsync.png';
 import updexImage from '../../assets/Updex.png';
 import walkthroughImage from '../../assets/Walkthrough.png';
 
@@ -17,11 +17,18 @@ import walkthroughImage from '../../assets/Walkthrough.png';
 const designsData = [
 
   {
-    id: 2,
+    id: 1,
     title: "Argus",
     description: "AI-powered education platform.",
     tags: ["AI", "Education"],
     image: argusHero
+  },
+  {
+    id: 2,
+    title: "HoundSync",
+    description: "A data clean up tool for small businesses.",
+    tags: ["OCR", "Data"],
+    image: houndsyncImage
   },
   {
     id: 3,
@@ -58,13 +65,7 @@ const designsData = [
     tags: ["Productivity", "Management"],
     image: statusImage
   },
-  {
-    id: 8,
-    title: "HoundSync",
-    description: "A data clean up tool for small businesses.",
-    tags: ["OCR", "Data"],
-    image: houndsyncImage
-  },
+
   {
     id: 9,
     title: "Updex",
@@ -81,13 +82,15 @@ const designsData = [
   }
 ];
 
-const DesignItem = ({ design, onClick }) => (
-  <li onClick={() => onClick(design)}>
+const DesignItem = ({ design, onClick, isSelected }) => (
+  <li onClick={() => onClick(design)} className={isSelected ? 'selected' : ''}>
     <div className="design-info">
       <div className="design-title">{design.title}</div>
       <div className="design-description">{design.description}</div>
       <div className="design-tags">
-        {design.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
+        {design.tags.map(tag => (
+          <span key={tag} className={`tag ${isSelected ? 'selected' : ''}`}>{tag}</span>
+        ))}
       </div>
     </div>
   </li>
@@ -141,7 +144,12 @@ const Designs = () => {
         />
         <ul className="designs-list">
           {filteredDesigns.map((design) => (
-            <DesignItem key={design.id} design={design} onClick={setSelectedDesign} />
+            <DesignItem
+              key={design.id}
+              design={design}
+              onClick={setSelectedDesign}
+              isSelected={selectedDesign && selectedDesign.id === design.id}
+            />
           ))}
         </ul>
       </div>

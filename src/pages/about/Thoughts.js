@@ -34,15 +34,21 @@ const ThoughtSidebar = ({ thoughts, selectedThoughtId, onThoughtSelect, searchTe
   </div>
 );
 
-const ThoughtDetails = ({ thought, onBack }) => (
-  <div className="thought-details">
-    <button className="back-button" onClick={onBack}>Back</button>
-    <h2>{thought.title}</h2>
-    <p>{thought.date}</p>
-    {thought.image && <img src={thought.image} alt={thought.title} className="thought-image" />}
-    <ReactMarkdown>{thought.content}</ReactMarkdown>
-  </div>
-);
+const ThoughtDetails = ({ thought, onBack }) => {
+  return (
+    <div className="thought-details">
+      <button onClick={onBack} className="back-button">Back to Thoughts</button>
+      <div className="thought-content">
+        <h2>{thought.title}</h2>
+        {thought.image && <img src={thought.image} alt={thought.title} className="thought-image" />}
+        <p>{thought.content}</p>
+        <div className="thought-tags">
+          {thought.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Thoughts = () => {
   const [selectedThoughtId, setSelectedThoughtId] = useState(null);

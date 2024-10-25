@@ -42,11 +42,11 @@ const Sidebar = () => {
                                 <i className="fi fi-sr-house-blank"></i> Home
                             </Link>
                         </li>
-                        <li onClick={() => setSelected('thoughts')}>
+                        {/* <li onClick={() => setSelected('thoughts')}>
                             <Link to="/thoughts" className={selected === 'thoughts' ? 'selected' : ''}>
                                 <i className="fi fi-ss-comment"></i> Thoughts
                             </Link>
-                        </li>
+                        </li> */}
                       
                         {/* <li onClick={() => setSelected('photos')}>
                             <Link to="/photos" className={selected === 'photos' ? 'selected' : ''}>
