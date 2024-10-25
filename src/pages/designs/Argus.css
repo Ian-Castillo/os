@@ -1,0 +1,16 @@
+.argus-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.argus-logo {
+  max-width: 300px;
+  height: auto;
+}

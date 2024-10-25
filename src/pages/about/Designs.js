@@ -1,45 +1,133 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import './Designs.css';
-import SunnyWeatherApp from './SunnyWeatherApp';
-import TimeMachine from './TimeMachinePrintWeb';
+
+// Import all design images
+import argusHero from '../../assets/argus.png';
+import nounsImage from '../../assets/Nouns.png';
+import overtureImage from '../../assets/Overture.png';
+import projectEImage from '../../assets/ProjectE.png';
+import statusImage from '../../assets/Status.png';
+import summitImage from '../../assets/Summit.png';
+import houndsyncImage from '../../assets/houndsync.svg';
+import updexImage from '../../assets/Updex.png';
+import walkthroughImage from '../../assets/Walkthrough.png';
+
+// Import TimeMachine component if it exists
 
 const designsData = [
-  // {
-  //   id: 1,
-  //   title: "Sunny Weather",
-  //   url: "A social weather company.",
-  //   description: "A social weather company.",
-  //   tags: ["Mobile App"]
-  // },
+
   {
     id: 2,
-    title: "Time Machine Print",
-    url: "A bookstore for creatives.",
-    description: "An online bookstore, resource, and community for creatives, builders, and those imagining the future.",
-    tags: ["Website"]
+    title: "Argus",
+    description: "AI-powered education platform.",
+    tags: ["AI", "Education"],
+    image: argusHero
   },
+  {
+    id: 3,
+    title: "Nouns",
+    description: "An escrow tool proposed to the Nouns DAO.",
+    tags: ["WEB3", "DAO"],
+    image: nounsImage
+  },
+  {
+    id: 4,
+    title: "Overture",
+    description: "An AI-powered time and mood based music platform.",
+    tags: ["AI", "Music"],
+    image: overtureImage
+  },
+  {
+    id: 5,
+    title: "Project E",
+    description: "Blockchainfor academic transcripts.",
+    tags: ["WEB3", "Education"],
+    image: projectEImage
+  },
+  {
+    id: 6,
+    title: "Summit",
+    description: "A comprehensive platform for consuming web3 media.",
+    tags: ["WEB3", "Platform"],
+    image: summitImage
+  },
+  {
+    id: 7,
+    title: "Status",
+    description: "A streamlined system for tracking and updating project statuses.",
+    tags: ["Productivity", "Management"],
+    image: statusImage
+  },
+  {
+    id: 8,
+    title: "HoundSync",
+    description: "A data clean up tool for small businesses.",
+    tags: ["OCR", "Data"],
+    image: houndsyncImage
+  },
+  {
+    id: 9,
+    title: "Updex",
+    description: "A system for efficiently indexing and tracking updates across multiple projects.",
+    tags: ["Productivity", "Organization"],
+    image: updexImage
+  },
+  {
+    id: 10,
+    title: "Walkthrough",
+    description: "A tool for creating interactive walkthroughs and guides for digital cameras.",
+    tags: ["Education", "Software"],
+    image: walkthroughImage
+  }
 ];
+
+const DesignItem = ({ design, onClick }) => (
+  <li onClick={() => onClick(design)}>
+    <div className="design-info">
+      <div className="design-title">{design.title}</div>
+      <div className="design-description">{design.description}</div>
+      <div className="design-tags">
+        {design.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
+      </div>
+    </div>
+  </li>
+);
+
+const DesignDetails = ({ design, onBack }) => {
+  if (design.component) {
+    const Component = design.component;
+    return <Component onBack={onBack} />;
+  }
+
+  return (
+    <div className="design-details">
+      <button className="back-button" onClick={onBack}>Back</button>
+      {design.image && (
+        <div className="hero-image-container">
+          <img src={design.image} alt={design.title} className="hero-image" />
+        </div>
+      )}
+      <div className="design-content">
+        <h3>{design.title}</h3>
+        <p>{design.description}</p>
+        <div className="design-tags">
+          {design.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Designs = () => {
   const [selectedDesign, setSelectedDesign] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleDesignClick = (design) => {
-    setSelectedDesign(design);
-  };
-
-  const handleBackClick = () => {
-    setSelectedDesign(null);
-  };
-
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const filteredDesigns = designsData.filter(design =>
-    design.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    design.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
+  const filteredDesigns = useMemo(() => {
+    return designsData.filter(design =>
+      design.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      design.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    );
+  }, [searchTerm]);
 
   return (
     <div className="designs-container">
@@ -48,38 +136,17 @@ const Designs = () => {
           type="text"
           placeholder="Search designs..."
           value={searchTerm}
-          onChange={handleSearchChange}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className="search-bar"
         />
         <ul className="designs-list">
           {filteredDesigns.map((design) => (
-            <li key={design.id} onClick={() => handleDesignClick(design)}>
-              <div className="design-info">
-                <div className="design-title">{design.title}</div>
-                <div className="design-url">{design.url}</div>
-                <div className="design-tags">
-                  {design.tags.map(tag => <span key={tag}>{tag}</span>)}
-                </div>
-              </div>
-            </li>
+            <DesignItem key={design.id} design={design} onClick={setSelectedDesign} />
           ))}
         </ul>
       </div>
       {selectedDesign && (
-        <div className="design-details">
-          {selectedDesign.title === "Sunny Weather" ? (
-            <SunnyWeatherApp onBack={handleBackClick} />
-          ) : selectedDesign.title === "Time Machine Print" ? (
-            <TimeMachine onBack={handleBackClick} />
-          ) : (
-            <>
-              <button className="back-button" onClick={handleBackClick}>Back</button>
-              <h3>{selectedDesign.title}</h3>
-              <p>{selectedDesign.description}</p>
-              <a href={selectedDesign.url} target="_blank" rel="noopener noreferrer">Visit</a>
-            </>
-          )}
-        </div>
+        <DesignDetails design={selectedDesign} onBack={() => setSelectedDesign(null)} />
       )}
     </div>
   );

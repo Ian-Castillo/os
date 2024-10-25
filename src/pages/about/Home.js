@@ -112,14 +112,14 @@ const Home = () => {
               onClick={() => setActiveSection('projects')}
             >
               <i className="fi fi-rr-cube"></i>
-              <span className="nav-item-text">Projects</span>
+              <span className="nav-item-text">Prototypes</span>
             </div>
             <div
               className={`nav-item ${activeSection === 'timemachine' ? 'active' : 'inactive'}`}
               onClick={() => setActiveSection('timemachine')}
             >
               <i className="fi fi-rr-building"></i>
-              <span className="nav-item-text">Ventures</span>
+              <span className="nav-item-text">Projects</span>
             </div>
           </div>
         </div>
@@ -303,10 +303,8 @@ const Home = () => {
         )}
         {activeSection === 'projects' && (
           <div className="work-experience">
-            <h3>Projects</h3>
-            <p>Here are a few projects I've developed or am currently working on to get to at least a v1.0. While they aren't designed for broad public use, their main intent is to accelerate my busy work so I can focus on more fun problems.</p>
-            <p>These typically start off with me prototyping in Figma. From there, a fair amount of these were engineered by Claude or Replit, which accounts for approximately 70ish percent of the code. The rest I wrote myself since the initial prompts were able to navigate the code pretty well.</p>
-            <p>-Ian</p>
+            <h3>Prototypes</h3>
+            <p>This space is where I track and showcase the prototypes I've built, a kind of a digital workshop for my ideas. The prototypes here are less about polished products for mass use and more about experimentation—trying out new tools, testing concepts, and scratching the itch of an idea without the weight of turning it into a full company. It’s a playground where I get to solve immediate problems I'm experiencing or explore ideas that don’t yet need to grow into something larger—at least, not yet. </p>
             <ul className="work-list">
               <li>
                 <div className="company-info">
