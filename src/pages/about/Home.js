@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import LazyLoad, { forceCheck } from 'react-lazyload';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Home.css';
 import profileImage from '../../ian.jpg';
@@ -29,63 +28,37 @@ import Chapter from '../../assets/Chapter.svg';
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [hoveredIcon, setHoveredIcon] = useState(null);
-  const [key, setKey] = useState(0);
   const location = useLocation();
 
-  // Force remount of LazyLoad components when the route changes
-  useEffect(() => {
-    setKey(prevKey => prevKey + 1);
-  }, [location.pathname]);
+  const renderLazyImage = useCallback((src, alt, className, height = 50) => (
+    <img src={src} alt={alt} className={className} loading="lazy" height={height} />
+  ), []);
 
-  useEffect(() => {
-    return () => {
-      // This will force a check of all LazyLoad components when the component unmounts
-      forceCheck();
-    };
+  const renderSocialIcons = useMemo(() => (
+    <div className="social-icons">
+      {['email', 'github', 'linkedin', 'twitter'].map((icon) => (
+        <div
+          key={icon}
+          className="social-icon"
+          onMouseEnter={() => setHoveredIcon(icon)}
+          onMouseLeave={() => setHoveredIcon(null)}
+        >
+          <i className={`fi fi-${icon === 'email' ? 'rr-envelope' : `brands-${icon}`}`}></i>
+        </div>
+      ))}
+    </div>
+  ), []);
+
+  const handleIconClick = useCallback((url) => {
+    window.open(url, '_blank');
   }, []);
 
-  const renderLazyImage = (src, alt, className, height = 50) => (
-    <LazyLoad key={`${key}-${src}`} height={height} once>
-      <img src={src} alt={alt} className={className} />
-    </LazyLoad>
-  );
-
-  const renderSocialIcons = () => (
-    <div className="social-icons">
-      <div
-        className="social-icon"
-        onMouseEnter={() => setHoveredIcon('email')}
-        onMouseLeave={() => setHoveredIcon(null)}
-      >
-        <i className="fi fi-rr-envelope"></i>
-      </div>
-      <div
-        className="social-icon"
-        onMouseEnter={() => setHoveredIcon('github')}
-        onMouseLeave={() => setHoveredIcon(null)}
-      >
-        <i className="fi fi-brands-github"></i>
-      </div>
-      <div
-        className="social-icon"
-        onMouseEnter={() => setHoveredIcon('linkedin')}
-        onMouseLeave={() => setHoveredIcon(null)}
-      >
-        <i className="fi fi-brands-linkedin"></i>
-      </div>
-      <div
-        className="social-icon"
-        onMouseEnter={() => setHoveredIcon('twitter')}
-        onMouseLeave={() => setHoveredIcon(null)}
-      >
-        <i className="fi fi-brands-twitter"></i>
-      </div>
-    </div>
-  );
-
-  const handleIconClick = (url) => {
-    window.open(url, '_blank');
-  };
+  const navItems = useMemo(() => [
+    { id: 'about', icon: 'fi-rr-user', text: 'About' },
+    { id: 'experience', icon: 'fi-rr-briefcase', text: 'Experience' },
+    { id: 'projects', icon: 'fi-rr-cube', text: 'Prototypes' },
+    { id: 'timemachine', icon: 'fi-rr-building', text: 'Projects' },
+  ], []);
 
   return (
     <div className="home-container">
@@ -93,47 +66,28 @@ const Home = () => {
         {renderLazyImage(profileImage, "Ian Castillo", "profile-image", 200)}
         <div className="home-nav">
           <div className="nav-items">
-            <div
-              className={`nav-item ${activeSection === 'about' ? 'active' : 'inactive'}`}
-              onClick={() => setActiveSection('about')}
-            >
-              <i className="fi fi-rr-user"></i>
-              <span className="nav-item-text">About</span>
-            </div>
-            <div
-              className={`nav-item ${activeSection === 'experience' ? 'active' : 'inactive'}`}
-              onClick={() => setActiveSection('experience')}
-            >
-              <i className="fi fi-rr-briefcase"></i>
-              <span className="nav-item-text">Experience</span>
-            </div>
-            <div
-              className={`nav-item ${activeSection === 'projects' ? 'active' : 'inactive'}`}
-              onClick={() => setActiveSection('projects')}
-            >
-              <i className="fi fi-rr-cube"></i>
-              <span className="nav-item-text">Prototypes</span>
-            </div>
-            <div
-              className={`nav-item ${activeSection === 'timemachine' ? 'active' : 'inactive'}`}
-              onClick={() => setActiveSection('timemachine')}
-            >
-              <i className="fi fi-rr-building"></i>
-              <span className="nav-item-text">Projects</span>
-            </div>
+            {navItems.map(({ id, icon, text }) => (
+              <div
+                key={id}
+                className={`nav-item ${activeSection === id ? 'active' : 'inactive'}`}
+                onClick={() => setActiveSection(id)}
+              >
+                <i className={`fi ${icon}`}></i>
+                <span className="nav-item-text">{text}</span>
+              </div>
+            ))}
           </div>
         </div>
         {activeSection === 'about' && (
           <>
             <div className="work-experience">
               <h2>Hi, I'm Ian.</h2>
-      
               <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My career interests are in zero-to-one design thinking, large language models and generative AI, and accelerating the Iowa start-up ecosystem.</p>
               <p>Currently, I lead product and design as a co-founder of <button onClick={() => window.open('https://www.argus.ai/', '_blank')} className="nav-button">ArgusAI</button>, where myself, Marten Roorda (former CEO of ACT), and Michael Weiler (former CEO of EduPath) are re-imagining and setting new standards for college admissions. At ArgusAI, I oversee product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. Our mission is to revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants and a more personalized experience for students.</p>
               <p>In addition to my work at ArgusAI, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <button onClick={() => window.open('https://tippie.uiowa.edu/people/ian-castillo', '_blank')} className="nav-button">John Pappajohn Entrepreneurial Center</button>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
               <p>Before ArgusAI, I was a Product Manager & Designer at <button onClick={() => window.open('https://riiid.com', '_blank')} className="nav-button">Riiid Labs</button>, where I facilitated advancements in AI-driven education applications. While on the LX team, I collaborated with AI researchers, engineers, and designers, driving forward projects that utilized Machine Learning and LLMs to enhance learning outcomes. My work centered on developing digital products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
               <p>I apperciate you reading this far and hopefully you look around at the things I'm building or have built. I'm at capacity at the moment working on my own projects, but I'm always interested in connecting with other builders/designers/developers. If thats you, let's connect and explore re-imagining the digital future.</p>
-              {renderSocialIcons()}
+              {renderSocialIcons}
             </div>
           </>
         )}
@@ -304,7 +258,7 @@ const Home = () => {
         {activeSection === 'projects' && (
           <div className="work-experience">
             <h3>Prototypes</h3>
-            <p>This space is where I track and showcase the prototypes I've built, a kind of a digital workshop for my ideas. The prototypes here are less about polished products for mass use and more about experimentation—trying out new tools, testing concepts, and scratching the itch of an idea without the weight of turning it into a full company. It’s a playground where I get to solve immediate problems I'm experiencing or explore ideas that don’t yet need to grow into something larger—at least, not yet. </p>
+            <p>This space is where I track and showcase the prototypes I've built, a kind of a digital workshop for my ideas. The prototypes here are less about polished products for mass use and more about experimentation—trying out new tools, testing concepts, and scratching the itch of an idea without the weight of turning it into a full company. It's a playground where I get to solve immediate problems I'm experiencing or explore ideas that don't yet need to grow into something larger—at least, not yet. </p>
             <ul className="work-list">
               <li>
                 <div className="company-info">
@@ -426,4 +380,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default React.memo(Home);
