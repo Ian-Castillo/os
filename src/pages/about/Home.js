@@ -19,11 +19,12 @@ import HoundSync from '../../assets/houndsync.svg'
 import SoundWave from '../../assets/soundwave.svg'
 import Mirage from '../../assets/mirage.svg'
 import tmintroImage from '../../assets/tmintro.png';
-import tmlogofull from '../../assets/tmlogofull.png';
+import tmlogofull from '../../assets/tmlogo.svg';
 import spacemono from '../../assets/spacemono.png';
-import tmp from '../../assets/TMP.png';
+import tmp from '../../assets/tmlogo.svg';
 import './TimeMachine.css';
 import Chapter from '../../assets/Chapter.svg'; 
+import spacePirateLabs from '../../assets/SpacePirateLabs.svg';
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -56,8 +57,8 @@ const Home = () => {
   const navItems = useMemo(() => [
     { id: 'about', icon: 'fi-rr-user', text: 'About' },
     { id: 'experience', icon: 'fi-rr-briefcase', text: 'Experience' },
-    { id: 'projects', icon: 'fi-rr-cube', text: 'Prototypes' },
-    { id: 'timemachine', icon: 'fi-rr-building', text: 'Projects' },
+    { id: 'prototypes', icon: 'fi-rr-cube', text: 'Prototypes' },
+    { id: 'projects', icon: 'fi-rr-building', text: 'Projects' },
   ], []);
 
   return (
@@ -83,7 +84,7 @@ const Home = () => {
             <div className="work-experience">
               <h2>Hi, I'm Ian.</h2>
               <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My career interests are in zero-to-one design thinking, large language models and generative AI, and accelerating the Iowa start-up ecosystem.</p>
-              <p>Currently, I lead product and design as a co-founder of <button onClick={() => window.open('https://www.argus.ai/', '_blank')} className="nav-button">ArgusAI</button>, where myself, Marten Roorda (former CEO of ACT), and Michael Weiler (former CEO of EduPath) are re-imagining and setting new standards for college admissions. At ArgusAI, I oversee product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. Our mission is to revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants and a more personalized experience for students.</p>
+              <p>Previously, I lead product and design as a co-founder of <button onClick={() => window.open('https://www.argus.ai/', '_blank')} className="nav-button">ArgusAI</button>, where myself, Marten Roorda (former CEO of ACT), and Michael Weiler (former CEO of EduPath) were re-imagining and setting new standards for college admissions. At ArgusAI, I led product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. ArgusAIs mission is revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants and a more personalized experience for students.</p>
               <p>In addition to my work at ArgusAI, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <button onClick={() => window.open('https://tippie.uiowa.edu/people/ian-castillo', '_blank')} className="nav-button">John Pappajohn Entrepreneurial Center</button>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
               <p>Before ArgusAI, I was a Product Manager & Designer at <button onClick={() => window.open('https://riiid.com', '_blank')} className="nav-button">Riiid Labs</button>, where I facilitated advancements in AI-driven education applications. While on the LX team, I collaborated with AI researchers, engineers, and designers, driving forward projects that utilized Machine Learning and LLMs to enhance learning outcomes. My work centered on developing digital products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
               <p>I apperciate you reading this far and hopefully you look around at the things I'm building or have built. I'm at capacity at the moment working on my own projects, but I'm always interested in connecting with other builders/designers/developers. If thats you, let's connect and explore re-imagining the digital future.</p>
@@ -255,11 +256,12 @@ const Home = () => {
             </ul>
           </div>
         )}
-        {activeSection === 'projects' && (
+        {activeSection === 'prototypes' && (
           <div className="work-experience">
             <h3>Prototypes</h3>
-            <p>This space is where I track and showcase the prototypes I've built, a kind of a digital workshop for my ideas. The prototypes here are less about polished products for mass use and more about experimentation—trying out new tools, testing concepts, and scratching the itch of an idea without the weight of turning it into a full company. It's a playground where I get to solve immediate problems I'm experiencing or explore ideas that don't yet need to grow into something larger—at least, not yet. </p>
+            <p>This space is where I track and showcase the prototypes I've built, a kind of a digital workshop for my ideas. I try and keep these limited to weekend sprints and get them to an Alpha stage before my attention turns to other projects. The prototypes here are less about becomingpolished products for mass use and more about my own experimentation—trying out new tools, testing concepts, and scratching the itch of an idea without the weight of turning it into a full company. It's a playground where I get to solve immediate problems I'm experiencing or explore ideas that don't yet need to grow into something larger—at least, not yet. </p>
             <ul className="work-list">
+              
               <li>
                 <div className="company-info">
                   {renderLazyImage(Chapter, "Chapter", "company-logo")}
@@ -295,7 +297,7 @@ const Home = () => {
                   <div>
                     <span className="company">
                       <a href="https://houndsync.vercel.app/" className="company-link">HoundSync</a>
-                      <span className="stack">Beta</span>
+                      <span className="stack">Alpha</span>
                     </span>
                     <span className="role">AUG</span>
                     <span className="dates">2024</span>
@@ -335,44 +337,41 @@ const Home = () => {
             </ul>
           </div>
         )}
-        {activeSection === 'timemachine' && (
-          <div className="gradient-container">
-            <div className="main-content">
-              <img src={tmp} alt="time machine grid background" className="profile-image" />
-              <div className="gradient-nav">
-                <div className="nav-items">
-                  <div></div>
+        {activeSection === 'projects' && (
+          <div className="work-experience">
+            <h3>Projects</h3>
+            <p>This section showcases the projects I've been working on or have launched. These are more developed ideas that have grown beyond the prototype stage and are either in active development or have been released.</p>
+            <ul className="work-list">
+            
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(tmlogofull, "Time Machine Print", "company-logo")}
                   <div>
-                    <span className="gradient-item-text">timemachineprint.com</span>
+                    <span className="company">
+                      <a href="https://timemachineprint.com" className="company-link">Time Machine Print</a>
+                      <span className="stack">Active</span>
+                    </span>
+                    <span className="role">Curation & Creativity</span>
+                    <span className="dates">2024 - Present</span>
+                    <span className="about">A neural network for creatives and creators. Time Machine Print is a bookstore and cultural hub celebrating deep thinkers, dreamers, and outliers shaping our creative future.</span>
                   </div>
                 </div>
-              </div>
-              <div>
-                <h1>Time Machine Print (aka Time Machine)</h1>
-                <h2>A neural network for the creatives and creators.</h2>
-                <p>Welcome to Time Machine Print, where culture and creativity collide like two celestial bodies sparking an explosion of ideas. We're not just a bookstore—we're a portal for the curious, the creators, and the disruptors. Here, stories aren't just printed on paper; they are the seeds of revolutions, the musings of rebels, and the blueprints of tomorrow's icons.</p>
-                <p>In a world obsessed with the fast and the forgettable, we celebrate the deep thinkers, the dreamers, and the outliers who shape our creative future. Time Machine Print is a sanctuary for those who seek the kind of inspiration that lingers—a place where every book has a purpose, every page a manifesto.</p>
-                <p>Think of it as a time capsule for the bold, the weird, and the beautiful—a place where today's ideas meet the timeless ethos of those who came before us. Let's turn the pages together. </p>
-                <p>The future has always belonged to the creators.</p>
-              </div>
-            </div>
-            <div className="social-icons">
-              <div className="social-icon" onClick={() => handleIconClick('mailto:hello@timemachineprint.com')}>
-                <i className="fi fi-rr-envelope"></i>
-              </div>
-              <div className="social-icon" onClick={() => handleIconClick('https://www.linkedin.com/in/your-profile')}>
-                <i className="fi fi-brands-linkedin"></i>
-              </div>
-              <div className="social-icon" onClick={() => handleIconClick('https://twitter.com/tsprintcompany')}>
-                <i className="fi fi-brands-twitter"></i>
-              </div>
-              <div className="social-icon" onClick={() => handleIconClick('https://www.instagram.com/timemachineprint')}>
-                <i className="fi fi-brands-instagram"></i>
-              </div>
-              <div className="social-icon" onClick={() => handleIconClick('https://www.tiktok.com/@your-profile')}>
-                <i className="fi fi-brands-tik-tok"></i>
-              </div>
-            </div>
+              </li>
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(spacePirateLabs, "Space Pirate Labs", "company-logo")}
+                  <div>
+                    <span className="company">
+                      <a href="https://spacepiratelabs.com" className="company-link">Space Pirate Labs</a>
+                      <span className="stack">Active</span>
+                    </span>
+                    <span className="role">Consulting & Design</span>
+                    <span className="dates">2021 - Present</span>
+                    <span className="about">An experimental lab focused on pushing the boundaries of technology and creativity.</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         )}
       </div>
