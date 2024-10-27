@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Library.css'; // Ensure your CSS file is linked
+import '../resources/Bookmarks.css';
 
 const librariesData = [
   {
@@ -524,15 +524,11 @@ const Libraries = () => {
     setSelectedLibrary(library);
   };
 
-  const handleBackClick = () => {
-    setSelectedLibrary(null);
-  };
-
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredLibraries= librariesData.filter(library => 
+  const filteredLibraries = librariesData.filter(library => 
     library.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     library.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
   );
@@ -540,22 +536,28 @@ const Libraries = () => {
   return (
     <div className="libraries-container">
       <div className="libraries-sidebar">
-      <input 
-          type="text" 
-          placeholder="Search library..." 
-          value={searchTerm} 
-          onChange={handleSearchChange} 
-          className="search-bar"
-        />
+        <div className="search-container">
+          <input 
+            type="text" 
+            placeholder="Search bookmarks..." 
+            value={searchTerm} 
+            onChange={handleSearchChange} 
+            className="search-bar"
+          />
+        </div>
         <ul className="libraries-list">
           {filteredLibraries.map((library) => (
-            <li key={library.id} onClick={() => handleLibraryClick(library)}>
+            <li 
+              key={library.id} 
+              onClick={() => handleLibraryClick(library)}
+              className={selectedLibrary && selectedLibrary.id === library.id ? 'selected' : ''}
+            >
               <div className="library-info">
-                <div className="library-title">{library.title}</div>
-                <div className="library-favicon-url">
-                  <img className="library-favicon" src={library.favicon} alt="" />
-                  <div className="library-url">{library.url.replace(/^https?:\/\//, '')}</div>
+                <div className="library-title-row">
+                  <img src={library.favicon} alt="" className="library-favicon" />
+                  <div className="library-title">{library.title}</div>
                 </div>
+                <div className="library-description">{library.description}</div>
                 <div className="library-tags">
                   {library.tags.map(tag => <span key={tag}>{tag}</span>)}
                 </div>
@@ -566,10 +568,15 @@ const Libraries = () => {
       </div>
       {selectedLibrary && (
         <div className="library-details">
-          <button className="back-button" onClick={handleBackClick}>Back</button>
-          <h3>{selectedLibrary.title}</h3>
+          <div className="library-title-row">
+            <img src={selectedLibrary.favicon} alt="" className="library-favicon" />
+            <h2>{selectedLibrary.title}</h2>
+          </div>
           <p>{selectedLibrary.description}</p>
-          <a href={selectedLibrary.url} target="_blank" rel="noopener noreferrer">Visit</a>
+          <div className="library-tags">
+            {selectedLibrary.tags.map(tag => <span key={tag}>{tag}</span>)}
+          </div>
+          <a href={selectedLibrary.url} target="_blank" rel="noopener noreferrer">Visit Library</a>
         </div>
       )}
     </div>

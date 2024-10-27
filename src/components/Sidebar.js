@@ -102,24 +102,24 @@ const Sidebar = () => {
                     </ul> */}
                 </div>
                 <div className="menu-section">
-                    <h3>Bookmarks</h3>
+                    <h3>Resources</h3>
                     <ul>
                         <li onClick={() => setSelected('tools')}>
                             <Link to="/tools" className={selected === 'tools' ? 'selected' : ''}>
                                 <i className="fi fi-ss-cursor"></i> Tools
                             </Link>
                         </li>
-                    
-                        <li onClick={() => setSelected('highlights')}>
-                            <Link to="/highlights" className={selected === 'highlights' ? 'selected' : ''}>
+                        <li onClick={() => setSelected('bookmarks')}>
+                            <Link to="/bookmarks" className={selected === 'bookmarks' ? 'selected' : ''}>
+                                <i className="fi fi-br-chart-simple-horizontal "></i> Bookmarks
+                            </Link>
+                        </li> 
+                        <li onClick={() => setSelected('quotes')}>
+                            <Link to="/quotes" className={selected === 'quotes' ? 'selected' : ''}>
                                 <i className="fi fi-ss-quote-right"></i> Quotes
                             </Link>
                         </li>
-                        <li onClick={() => setSelected('library')}>
-                            <Link to="/library" className={selected === 'library' ? 'selected' : ''}>
-                                <i className="fi fi-br-chart-simple-horizontal "></i> www
-                            </Link>
-                        </li>
+                   
                         {/* <li onClick={() => setSelected('highlights')}>
                             <Link to="/" className={selected === 'highlights' ? 'selected' : ''}>
                                 <i className="fi fi-br-camera-movie"></i> Videos

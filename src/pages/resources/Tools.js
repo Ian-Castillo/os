@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Tools.css'; // Ensure your CSS file is linked
+import './Tools.css';
 
 const toolsData = [
   {
@@ -340,10 +340,6 @@ const Tools = () => {
     setSelectedTool(tool);
   };
 
-  const handleBackClick = () => {
-    setSelectedTool(null);
-  };
-
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -365,13 +361,17 @@ const Tools = () => {
         />
         <ul className="tools-list">
           {filteredTools.map((tool) => (
-            <li key={tool.id} onClick={() => handleToolClick(tool)}>
+            <li 
+              key={tool.id} 
+              onClick={() => handleToolClick(tool)}
+              className={selectedTool && selectedTool.id === tool.id ? 'selected' : ''}
+            >
               <div className="tool-info">
-                <div className="tool-title">{tool.title}</div>
-                <div className="tool-favicon-url">
-                  <img className="tool-favicon" src={tool.favicon} alt={`${tool.title} favicon`} />
-                  <div className="tool-url">{tool.url.replace(/^https?:\/\//, '')}</div>
+                <div className="tool-title-row">
+                  <img src={tool.favicon} alt="" className="tool-favicon" />
+                  <div className="tool-title">{tool.title}</div>
                 </div>
+                <div className="tool-description">{tool.description}</div>
                 <div className="tool-tags">
                   {tool.tags.map(tag => <span key={tag}>{tag}</span>)}
                 </div>
@@ -382,10 +382,15 @@ const Tools = () => {
       </div>
       {selectedTool && (
         <div className="tool-details">
-          <button className="back-button" onClick={handleBackClick}>Back</button>
-          <h3>{selectedTool.title}</h3>
+          <div className="tool-title-row">
+            <img src={selectedTool.favicon} alt="" className="tool-favicon" />
+            <h2>{selectedTool.title}</h2>
+          </div>
           <p>{selectedTool.description}</p>
-          <a href={selectedTool.url} target="_blank" rel="noopener noreferrer">Visit</a>
+          <div className="tool-tags">
+            {selectedTool.tags.map(tag => <span key={tag}>{tag}</span>)}
+          </div>
+          <a href={selectedTool.url} target="_blank" rel="noopener noreferrer">Visit Tool</a>
         </div>
       )}
     </div>

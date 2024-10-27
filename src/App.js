@@ -13,7 +13,7 @@ import Sunny from './pages/projects/Sunny.js';
 import SPL from './pages/projects/SpacePirateLabs.js';
 import TimeMachine from './pages/projects/TimeMachine.js';
 //resource pages
-import Library from './pages/resources/Library'; 
+import Library from './pages/resources/Bookmarks.js'; 
 import Tools from './pages/resources/Tools.js'
 import Highlights from './pages/resources/Highlights.js';
 
@@ -34,7 +34,7 @@ const App = () => {
             <Route path="/TimeMachine" element={<TimeMachine />} />
             <Route path="/SpacePirateLabs" element={<SPL />} />
             <Route path="/tools" element={<Tools />} />
-            <Route path="/library" element={<Library />} />
+            <Route path="/bookmarks" element={<Library />} />
             <Route path="/highlights" element={<Highlights />} />
           </Routes>
         </div>
