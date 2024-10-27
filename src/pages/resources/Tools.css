@@ -32,31 +32,18 @@
     background: #ffffff;
     border-radius: 8px;
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;  /* Align items to the top */
 }
 
 .tool-info {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.tool-title-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-.tool-favicon {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
+    flex: 1;
 }
 
 .tool-title {
     font-size: 16px;
     font-weight: 600;
     color: #333;
+    margin-bottom: 5px;
 }
 
 .tool-description {
@@ -111,6 +98,15 @@
     box-sizing: border-box;
 }
 
+/* New styles for the favicon */
+.tool-favicon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
 /* Media query for mobile view */
 @media (max-width: 768px) {
     .tools-container {
@@ -134,5 +130,10 @@
 
     .tools-list li {
         margin-bottom: 15px;
+        flex-direction: row;
+    }
+
+    .tool-info {
+        margin-left: 10px;
     }
 }

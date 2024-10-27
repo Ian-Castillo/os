@@ -114,8 +114,8 @@ const Sidebar = () => {
                                 <i className="fi fi-br-chart-simple-horizontal "></i> Bookmarks
                             </Link>
                         </li> 
-                        <li onClick={() => setSelected('quotes')}>
-                            <Link to="/quotes" className={selected === 'quotes' ? 'selected' : ''}>
+                        <li onClick={() => setSelected('highlights')}>
+                            <Link to="/highlights" className={selected === 'highlights' ? 'selected' : ''}>
                                 <i className="fi fi-ss-quote-right"></i> Quotes
                             </Link>
                         </li>

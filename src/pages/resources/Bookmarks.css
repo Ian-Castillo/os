@@ -1,27 +1,44 @@
 /* Global styles applied to both mobile and desktop */
-.libraries-container {
+.bookmarks-container {
     display: flex;
-    flex-direction: row; /* Ensure the sidebar and main content are side by side */
+    flex-direction: row;
     min-height: 100vh;
     background: #ffffff;
 }
 
-.libraries-sidebar {
-    width: 300px; /* Adjust width as needed */
+.bookmarks-sidebar {
+    width: 300px;
     background: #ffffff;
-    padding: 10px;
-    overflow-y: auto; /* Enable scrolling for the list */
-    border-right: 2px solid #f7f7f7;
-    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
 }
 
-.libraries-list {
+.search-container {
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.bookmarks-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex: 1;
+    overflow-y: auto;
 }
 
-.libraries-list li {
+.bookmarks-list li {
     padding: 20px 15px;
     margin-bottom: 5px;
     cursor: pointer;
@@ -33,60 +50,42 @@
     align-items: flex-start;
 }
 
-.library-info {
+.bookmark-info {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.library-title {
-    font-size: 14px;
-    font-weight: medium;
-    color: #3d3d3d;
+.bookmark-title-row {
+    display: flex;
+    align-items: center;
     margin-bottom: 5px;
 }
 
-.library-favicon-url {
-    display: flex;
-    align-items: center;
-}
-
-.library-favicon {
+.bookmark-favicon {
     width: 16px;
     height: 16px;
     margin-right: 8px;
 }
 
-.library-url {
+.bookmark-title {
+    font-size: 14px;
+    font-weight: medium;
+    color: #3d3d3d;
+}
+
+.bookmark-url {
     font-size: 12px;
     color: #a4a4a4;
+    margin-bottom: 5px;
 }
 
-.libraries-list li:hover {
-    background-color: #f0f0f0;
-}
-
-.libraries-list li:hover .library-tags span,
-.libraries-list li.selected .library-tags span {
-    background: #2c2c2c;
-    color: #fff;
-}
-.library-details {
-    flex: 1;
-    padding: 30px;
-    background: #ffffff;
-    overflow-y: auto; /* Enable scrolling for the content */
-    height: calc(100vh - 60px); /* Adjust the height to fill the viewport */
-}
-.library-tags {
-    font-size: 12px;
-    color: #888;
-    margin-top: 5px;
+.bookmark-tags {
     display: flex;
     flex-wrap: wrap;
 }
 
-.library-tags span {
+.bookmark-tag {
     background: #f0f0f0;
     border-radius: 3px;
     padding: 2px 6px;
@@ -95,35 +94,76 @@
     color: #555;
     font-size: 12px;
 }
-.back-button {
+
+.bookmarks-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.bookmarks-list li:hover .bookmark-tag,
+.bookmarks-list li.selected .bookmark-tag {
     background: #2c2c2c;
     color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+}
+
+.bookmark-details {
+    flex: 1;
+    padding: 30px;
+    background: #ffffff;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+/* Add styles for the header section */
+.bookmark-details-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;  /* Consistent spacing between icon and title */
     margin-bottom: 20px;
+}
+
+.bookmark-details-header img {
+    width: 24px;  /* Slightly larger icon for the header */
+    height: 24px;
+    object-fit: contain;
+}
+
+.bookmark-details-header h2 {
+    margin: 0;  /* Remove default margins */
+    font-size: 24px;
+    color: #2c2c2c;
+}
+
+.bookmark-details p {
+    margin-bottom: 20px;
+}
+
+.visit-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.visit-button:hover {
+    background-color: #0056b3;
 }
 
 /* Media query for mobile view */
 @media (max-width: 768px) {
-    .libraries-container {
+    .bookmarks-container {
         flex-direction: column;
     }
 
-    .libraries-sidebar {
+    .bookmarks-sidebar {
         width: 100%; /* Full width on mobile */
         border-right: none; /* Remove border on mobile */
         border-bottom: 2px solid #f7f7f7; /* Add bottom border on mobile */
     }
 
-    .library-details {
+    .bookmark-details {
         height: auto; /* Adjust height for mobile */
     }
-}
-
-.library-title-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
 }

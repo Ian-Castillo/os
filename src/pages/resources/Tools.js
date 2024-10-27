@@ -366,11 +366,9 @@ const Tools = () => {
               onClick={() => handleToolClick(tool)}
               className={selectedTool && selectedTool.id === tool.id ? 'selected' : ''}
             >
+              <img src={tool.favicon} alt="" className="tool-favicon" />
               <div className="tool-info">
-                <div className="tool-title-row">
-                  <img src={tool.favicon} alt="" className="tool-favicon" />
-                  <div className="tool-title">{tool.title}</div>
-                </div>
+                <div className="tool-title">{tool.title}</div>
                 <div className="tool-description">{tool.description}</div>
                 <div className="tool-tags">
                   {tool.tags.map(tag => <span key={tag}>{tag}</span>)}

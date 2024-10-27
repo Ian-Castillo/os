@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../resources/Bookmarks.css';
 
-const librariesData = [
+const bookmarksData = [
   {
   id: 1,
   title: "Paul Graham Essays",
@@ -516,26 +516,26 @@ const librariesData = [
     }
     ];
 
-const Libraries = () => {
-  const [selectedLibrary, setSelectedLibrary] = useState(null);
+const Bookmarks = () => {
+  const [selectedBookmark, setSelectedBookmark] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleLibraryClick = (library) => {
-    setSelectedLibrary(library);
+  const handleBookmarkClick = (bookmark) => {
+    setSelectedBookmark(bookmark);
   };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredLibraries = librariesData.filter(library => 
-    library.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    library.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+  const filteredBookmarks = bookmarksData.filter(bookmark => 
+    bookmark.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    bookmark.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
   return (
-    <div className="libraries-container">
-      <div className="libraries-sidebar">
+    <div className="bookmarks-container">
+      <div className="bookmarks-sidebar">
         <div className="search-container">
           <input 
             type="text" 
@@ -545,42 +545,42 @@ const Libraries = () => {
             className="search-bar"
           />
         </div>
-        <ul className="libraries-list">
-          {filteredLibraries.map((library) => (
+        <ul className="bookmarks-list">
+          {filteredBookmarks.map((bookmark) => (
             <li 
-              key={library.id} 
-              onClick={() => handleLibraryClick(library)}
-              className={selectedLibrary && selectedLibrary.id === library.id ? 'selected' : ''}
+              key={bookmark.id} 
+              onClick={() => handleBookmarkClick(bookmark)}
+              className={selectedBookmark && selectedBookmark.id === bookmark.id ? 'selected' : ''}
             >
-              <div className="library-info">
-                <div className="library-title-row">
-                  <img src={library.favicon} alt="" className="library-favicon" />
-                  <div className="library-title">{library.title}</div>
+              <div className="bookmark-info">
+                <div className="bookmark-title-row">
+                  <img src={bookmark.favicon} alt="" className="bookmark-favicon" />
+                  <div className="bookmark-title">{bookmark.title}</div>
                 </div>
-                <div className="library-description">{library.description}</div>
-                <div className="library-tags">
-                  {library.tags.map(tag => <span key={tag}>{tag}</span>)}
+                <div className="bookmark-url">{bookmark.url}</div>
+                <div className="bookmark-tags">
+                  {bookmark.tags.map(tag => <span key={tag} className="bookmark-tag">{tag}</span>)}
                 </div>
               </div>
             </li>
           ))}
         </ul>
       </div>
-      {selectedLibrary && (
-        <div className="library-details">
-          <div className="library-title-row">
-            <img src={selectedLibrary.favicon} alt="" className="library-favicon" />
-            <h2>{selectedLibrary.title}</h2>
+      {selectedBookmark && (
+        <div className="bookmark-details">
+          <div className="bookmark-title-row">
+            <img src={selectedBookmark.favicon} alt="" className="bookmark-favicon" />
+            <h2>{selectedBookmark.title}</h2>
           </div>
-          <p>{selectedLibrary.description}</p>
-          <div className="library-tags">
-            {selectedLibrary.tags.map(tag => <span key={tag}>{tag}</span>)}
+          <p>{selectedBookmark.description}</p>
+          <div className="bookmark-tags">
+            {selectedBookmark.tags.map(tag => <span key={tag} className="bookmark-tag">{tag}</span>)}
           </div>
-          <a href={selectedLibrary.url} target="_blank" rel="noopener noreferrer">Visit Library</a>
+          <a href={selectedBookmark.url} target="_blank" rel="noopener noreferrer" className="visit-button">Visit Bookmark</a>
         </div>
       )}
     </div>
   );
 };
 
-export default Libraries;
+export default Bookmarks;
