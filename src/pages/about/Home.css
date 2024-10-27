@@ -246,13 +246,15 @@ h3 { font-size: 18px; }
     padding: 20px;
   }
 
+  .main-content {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
   .profile-image {
     max-width: 100%;
     margin-bottom: 15px;
-  }
-
-  .main-content {
-    padding: 0px;
   }
 
   h1 { font-size: 22px; }
@@ -266,11 +268,28 @@ h3 { font-size: 18px; }
 
   .home-nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
   }
 
   .nav-items {
-    margin-bottom: 10px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .nav-item.active,
+  .nav-item.inactive {
+    border-radius: 5px;
   }
 
   .work-list,
