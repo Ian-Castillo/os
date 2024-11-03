@@ -25,6 +25,7 @@ import tmp from '../../assets/tmlogo.svg';
 import './TimeMachine.css';
 import Chapter from '../../assets/Chapter.svg'; 
 import spacePirateLabs from '../../assets/SpacePirateLabs.svg';
+import sunnyWeather from '../../assets/sunnnylogo.svg';
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -268,7 +269,7 @@ const Home = () => {
                   {renderLazyImage(Chapter, "Chapter", "company-logo")}
                   <div>
                     <span className="company">
-                      <a href="#" className="company-link">Chapter</a>
+                      <a href="https://www.timemachineprint.com/chapter-app-ios-and-android" className="company-link">Chapter</a>
                       <span className="stack">In-Progress</span>
                     </span>
                     <span className="role">NOV-Anticipated</span>
@@ -341,9 +342,23 @@ const Home = () => {
         {activeSection === 'projects' && (
           <div className="work-experience">
             <h3>Projects</h3>
-            <p>This section showcases the projects I've been working on or have launched. These are more developed ideas that have grown beyond the prototype stage and are either in active development or have been released.</p>
+            <p>This section is a showcase of projects that have matured from initial prototypes into fully-fledged initiatives with clear missions and ongoing development. Each project here represents my commitment to creating meaningful, impactful products and platforms that resonate with unique communities—whether through fostering creativity, connecting like-minded thinkers, or exploring new technological frontiers.</p>
+            <p>Each project reflects a different facet of my interests and expertise, yet all share a common goal: to contribute something valuable, whether it's by inspiring creativity, facilitating connections, or redefining the intersection of art and technology. This is where my ideas take form, where they move beyond experimentation into thoughtful, user-centered products with a lasting impact.</p>
             <ul className="work-list">
-            
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(sunnyWeather, "Sunny Weather", "company-logo")}
+                  <div>
+                    <span className="company">
+                      <a href="" className="company-link">Sunny Weather</a>
+                      <span className="stack">Active</span>
+                    </span>
+                    <span className="role">AI & Weather</span>
+                    <span className="dates">2024 - Present</span>
+                    <span className="about">An AI-powered weather application that provides personalized weather insights and forecasts.</span>
+                  </div>
+                </div>
+              </li>
               <li>
                 <div className="company-info">
                   {renderLazyImage(tmlogofull, "Time Machine Print", "company-logo")}

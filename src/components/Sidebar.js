@@ -55,7 +55,7 @@ const Sidebar = () => {
                         </li> */}
                         <li onClick={() => setSelected('designs')}>
                             <Link to="/designs" className={selected === 'designs' ? 'selected' : ''}>
-                                <i className="fi fi-br-scribble"></i> Designs
+                                <i className="fi fi-br-scribble"></i> UI/UX Designs
                             </Link>
                         </li>  
                         {/* <li onClick={() => setSelected('')}>
