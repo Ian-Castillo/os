@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Home.css';
 import profileImage from '../../ian.jpg';
@@ -13,14 +13,12 @@ import SCC from '../../assets/SCC.jpeg';
 import Techstars from '../../assets/techstars.png';
 import SXSW from '../../assets/sxsw.png';
 import Rally from '../../assets/rally.png';
-import RaidGuild from '../../assets/RaidGuild.jpg'
 import EmojiManager from '../../assets/EmojiManager.svg' 
 import HoundSync from '../../assets/houndsync.svg'
 import SoundWave from '../../assets/soundwave.svg'
 import Mirage from '../../assets/mirage.svg'
 import tmintroImage from '../../assets/tmintro.png';
 import tmlogofull from '../../assets/tmlogo.svg';
-import spacemono from '../../assets/spacemono.png';
 import tmp from '../../assets/tmlogo.svg';
 import './TimeMachine.css';
 import Chapter from '../../assets/Chapter.svg'; 
@@ -32,6 +30,10 @@ const Home = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
   const location = useLocation();
 
+  const handleIconClick = useCallback((url) => {
+    window.open(url, '_blank');
+  }, []);
+
   const renderLazyImage = useCallback((src, alt, className, height = 50) => (
     <img src={src} alt={alt} className={className} loading="lazy" height={height} />
   ), []);
@@ -42,18 +44,30 @@ const Home = () => {
         <div
           key={icon}
           className="social-icon"
-          onMouseEnter={() => setHoveredIcon(icon)}
-          onMouseLeave={() => setHoveredIcon(null)}
+          onClick={() => {
+            switch(icon) {
+              case 'linkedin':
+                handleIconClick('https://www.linkedin.com/in/iancastillo/');
+                break;
+              case 'github':
+                handleIconClick('https://github.com/Ian-Castillo');
+                break;
+              case 'twitter':
+                handleIconClick('https://x.com/imcsays');
+                break;
+              case 'email':
+                handleIconClick('mailto:ian@spacepiratelabs.com');
+                break;
+              default:
+                break;
+            }
+          }}
         >
           <i className={`fi fi-${icon === 'email' ? 'rr-envelope' : `brands-${icon}`}`}></i>
         </div>
       ))}
     </div>
-  ), []);
-
-  const handleIconClick = useCallback((url) => {
-    window.open(url, '_blank');
-  }, []);
+  ), [handleIconClick]);
 
   const navItems = useMemo(() => [
     { id: 'about', icon: 'fi-rr-user', text: 'About' },
