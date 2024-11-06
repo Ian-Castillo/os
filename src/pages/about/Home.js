@@ -23,7 +23,7 @@ import tmp from '../../assets/tmlogo.svg';
 import './TimeMachine.css';
 import Chapter from '../../assets/Chapter.png'; 
 import spacePirateLabs from '../../assets/SpacePirateLabs.svg';
-import sunnyWeather from '../../assets/sunnnylogo.svg';
+import sunnyWeather from '../../assets/sunnylogo.svg';
 import deviowa from '../../assets/deviowa.png';
 
 
