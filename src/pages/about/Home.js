@@ -46,9 +46,9 @@ const Home = () => {
       height={height}
       style={
         alt === "University of Iowa" || alt === "deviowa" || alt === "Southeastern Community College"
-          ? { backgroundColor: 'black', padding: '4px' }
+          ? { backgroundColor: 'black', padding: '2px' }
           : alt === "12 Triangles"
-            ? { border: '2px solid black', padding: '4px' }
+            ? { border: '1px solid black', padding: '1px' }
             : {}
       }
     />
