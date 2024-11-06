@@ -13,15 +13,15 @@ import SCC from '../../assets/scc.png';
 import Techstars from '../../assets/techstars.png';
 import SXSW from '../../assets/sxsw.png';
 import Rally from '../../assets/rally.png';
-import EmojiManager from '../../assets/EmojiManager.svg' 
-import HoundSync from '../../assets/houndsync.svg'
-import SoundWave from '../../assets/soundwave.svg'
-import Mirage from '../../assets/mirage.svg'
+import EmojiManager from '../../assets/EmojiManager.png' 
+import HoundSync from '../../assets/Houndsync.png'
+import SoundWave from '../../assets/Soundwave.png'
+import Mirage from '../../assets/Mirage.png'
 import tmintroImage from '../../assets/tmintro.png';
 import tmlogofull from '../../assets/tmlogo.svg';
 import tmp from '../../assets/tmlogo.svg';
 import './TimeMachine.css';
-import Chapter from '../../assets/Chapter.svg'; 
+import Chapter from '../../assets/Chapter.png'; 
 import spacePirateLabs from '../../assets/SpacePirateLabs.svg';
 import sunnyWeather from '../../assets/sunnnylogo.svg';
 import deviowa from '../../assets/deviowa.png';
@@ -279,7 +279,7 @@ const Home = () => {
     </div>
   </li>
 </ul>
-            <h4>University Studies</h4>
+            <h4>Academic Studies</h4>
 
               <ul className="work-list">
 
@@ -311,7 +311,11 @@ const Home = () => {
         {activeSection === 'prototypes' && (
           <div className="work-experience">
             <h3>Prototypes</h3>
-            <p>This space is where I track and showcase the prototypes I've built, a kind of a digital workshop for my ideas. I try and keep these limited to weekend sprints and get them to an Alpha stage before my attention turns to other projects. The prototypes here are less about becomingpolished products for mass use and more about my own experimentation—trying out new tools, testing concepts, and scratching the itch of an idea without the weight of turning it into a full company. It's a playground where I get to solve immediate problems I'm experiencing or explore ideas that don't yet need to grow into something larger—at least, not yet. </p>
+            <p>This is my digital back-alley workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. Each prototype here is a creative limitation with 48 hours of  boxed time to deliver to an Alpha stage. I know I get bored easily so the goal is alpha to beta to v1.0. </p>
+            <p>I've turned this corner of the internet into my own dimly-lit garage. No pretense, no polished veneer—just a place where I can get my hands dirty with code and design without someone breathing down my neck about finishing everything. Sometimes the best ideas come from the prototypes you "did that one time".</p>
+            <p>So thats essentially what these are. Prototypes I did one time, some with a few updates because I had an itch or a "a-ha" moment after I already shipped it. </p>
+            <p>I'm not sure what the future holds for these. I've learned a lot since I've built them and I'm sure I'll eventually revisit them with a fresh set of eyes. </p>
+            <p>Enjoy. Or don't.</p>
             <ul className="work-list">
               
               <li>
