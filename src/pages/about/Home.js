@@ -254,32 +254,32 @@ const Home = () => {
                 </li>
               </ul>
             <h3>Education</h3>
-            <h4>Coding Bootcamps</h4>
+            <h4>Developer Programs</h4>
 
-            <ul className="work-list">
-              <li>
-                <div className="company-info">
-                  {renderLazyImage(Bloomtech, "Bloomtech", "company-logo")}
-                  <div>
-                    <span className="company">Bloomtech <span className="location">Remote</span></span>
-                    <span className="role">Full Stack Software Engineer</span>
-                    <span className="dates">2019 - 2020</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="company-info">
-                  {renderLazyImage(deviowa, "deviowa", "company-logo")}
-                  <div>
-                    <span className="company">Dev/Iowa <span className="location">Iowa City, IA
-                    </span></span>
-                    <span className="role">Full Stack Software Engineer</span>
-                    <span className="dates">2015</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <h4>Academic</h4>
+<ul className="work-list">
+  <li>
+    <div className="company-info">
+      {renderLazyImage(Bloomtech, "Bloomtech", "company-logo")}
+      <div>
+        <span className="company">Bloomtech <span className="location">Remote</span></span>
+        <span className="role">Full Stack Software Engineer</span>
+        <span className="dates">2019 - 2020</span>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div className="company-info">
+      {renderLazyImage(deviowa, "deviowa", "company-logo")}
+      <div>
+        <span className="company">Dev/Iowa <span className="location">Iowa City, IA
+        </span></span>
+        <span className="role">Full Stack Software Engineer</span>
+        <span className="dates">2015</span>
+      </div>
+    </div>
+  </li>
+</ul>
+            <h4>University Studies</h4>
 
               <ul className="work-list">
 
@@ -289,7 +289,7 @@ const Home = () => {
                   {renderLazyImage(Iowa, "University of Iowa", "company-logo")}
                   <div>
                     <span className="company">The University of Iowa <span className="location">Iowa City, IA</span></span>
-                    <span className="role">Political Science, Incomplete</span>
+                    <span className="role">Political Science (Paused)</span>
                     <span className="dates">2011 - 2013</span>
                   </div>
                 </div>
@@ -299,12 +299,13 @@ const Home = () => {
                   {renderLazyImage(SCC, "Southeastern Community College", "company-logo")}
                   <div>
                     <span className="company">Southeastern Community College <span className="location">Burlington, IA</span></span>
-                    <span className="role">General Studies, Associates Degree</span>
+                    <span className="role">General Studies (Associates Degree)</span>
                     <span className="dates">2009 - 2011</span>
                   </div>
                 </div>
               </li>
             </ul>
+            
           </div>
         )}
         {activeSection === 'prototypes' && (
