@@ -396,8 +396,10 @@ const Home = () => {
         {activeSection === 'projects' && (
           <div className="work-experience">
             <h3>Projects</h3>
-            <p>This section is a showcase of projects that have matured from initial prototypes into fully-fledged initiatives with clear missions and ongoing development. Each project here represents my commitment to creating meaningful, impactful products and platforms that resonate with unique communities—whether through fostering creativity, connecting like-minded thinkers, or exploring new technological frontiers.</p>
-            <p>Each project reflects a different facet of my interests and expertise, yet all share a common goal: to contribute something valuable, whether it's by inspiring creativity, facilitating connections, or redefining the intersection of art and technology. This is where my ideas take form, where they move beyond experimentation into thoughtful, user-centered products with a lasting impact.</p>
+            <p>These projects are pieces of me brought to life—a digital reflection of my interests and obsessions that refused to stay in the group chat. Each one showcases how I view things at large. They’re not just products; they’re digital extensions of who I am.</p>
+            <p>What began as rough outlines in a digital garage has now matured into distinct operations: a bookstore doubling as a cultural outpost, a design studio with reach beyond its size, and a weather app about to set sail. </p>
+            <p>They’re still evolving, still pushing boundaries, but now they’re doing it at scale, solving real problems for real people in ways I never initially imagined. All started as napkin sketches.</p>
+            <p>Enjoy.</p>
             <ul className="work-list">
               <li>
                 <div className="company-info">
