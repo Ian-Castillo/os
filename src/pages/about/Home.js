@@ -9,7 +9,7 @@ import Twelve from '../../assets/Twelve.jpeg';
 import Nosh from '../../assets/Nosh.jpeg'; 
 import Bloomtech from '../../assets/BloomTech.jpeg'; 
 import Textpress from '../../assets/Textpress.jpeg'; 
-import SCC from '../../assets/SCC.jpeg'; 
+import SCC from '../../assets/scc.png'; 
 import Techstars from '../../assets/techstars.png';
 import SXSW from '../../assets/sxsw.png';
 import Rally from '../../assets/rally.png';
@@ -24,6 +24,9 @@ import './TimeMachine.css';
 import Chapter from '../../assets/Chapter.svg'; 
 import spacePirateLabs from '../../assets/SpacePirateLabs.svg';
 import sunnyWeather from '../../assets/sunnnylogo.svg';
+import deviowa from '../../assets/deviowa.png';
+
+
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -35,7 +38,20 @@ const Home = () => {
   }, []);
 
   const renderLazyImage = useCallback((src, alt, className, height = 50) => (
-    <img src={src} alt={alt} className={className} loading="lazy" height={height} />
+    <img 
+      src={src} 
+      alt={alt} 
+      className={className} 
+      loading="lazy" 
+      height={height}
+      style={
+        alt === "University of Iowa" || alt === "deviowa" || alt === "Southeastern Community College"
+          ? { backgroundColor: 'black', padding: '4px' }
+          : alt === "12 Triangles"
+            ? { border: '2px solid black', padding: '4px' }
+            : {}
+      }
+    />
   ), []);
 
   const renderSocialIcons = useMemo(() => (
@@ -238,6 +254,8 @@ const Home = () => {
                 </li>
               </ul>
             <h3>Education</h3>
+            <h4>Coding Bootcamps</h4>
+
             <ul className="work-list">
               <li>
                 <div className="company-info">
@@ -250,6 +268,23 @@ const Home = () => {
                 </div>
               </li>
               <li>
+                <div className="company-info">
+                  {renderLazyImage(deviowa, "deviowa", "company-logo")}
+                  <div>
+                    <span className="company">Dev/Iowa <span className="location">Iowa City, IA
+                    </span></span>
+                    <span className="role">Full Stack Software Engineer</span>
+                    <span className="dates">2015</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <h4>Academic</h4>
+
+              <ul className="work-list">
+
+              <li>
+
                 <div className="company-info">
                   {renderLazyImage(Iowa, "University of Iowa", "company-logo")}
                   <div>
@@ -265,7 +300,7 @@ const Home = () => {
                   <div>
                     <span className="company">Southeastern Community College <span className="location">Burlington, IA</span></span>
                     <span className="role">General Studies, Associates Degree</span>
-                    <span className="dates">2009 - 2013</span>
+                    <span className="dates">2009 - 2011</span>
                   </div>
                 </div>
               </li>
