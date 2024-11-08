@@ -525,9 +525,10 @@ const Home = () => {
         {activeSection === 'projects' && (
           <div className="work-experience">
             <h3>Projects</h3>
-            <p>These projects are pieces of me brought to life—a digital reflection of my interests and obsessions that refused to stay in the group chat. Each one showcases how I view things at large. They’re not just products; they’re digital extensions of who I am.</p>
+            <p>These projects are a digital reflection of my interests, ideas, and obsessions that refused to stay in the "group chat". Each one showcases how I view things at large. They’re not just products; they’re digital extensions of who I am.</p>
             <p>What began as rough outlines in a digital garage has now matured into distinct operations: a bookstore doubling as a cultural outpost, a design studio with reach beyond its size, and a weather app about to set sail. </p>
-            <p>They’re still evolving, still pushing boundaries, but now they’re doing it at scale, solving real problems for real people in ways I never initially imagined. All started as napkin sketches.</p>
+            <p>They’re still evolving, still pushing boundaries, but now they’re doing it at scale, solving real problems for real people in ways I never initially imagined.</p>
+            <p>All started as napkin sketches.</p>
             <p>Enjoy.</p>
             <ul className="work-list">
               <li>
