@@ -53,11 +53,11 @@ const Sidebar = () => {
                                 <i className="fi fi-br-photo-capture"></i> Photos
                             </Link>
                         </li> */}
-                        <li onClick={() => setSelected('designs')}>
+                        {/* <li onClick={() => setSelected('designs')}>
                             <Link to="/designs" className={selected === 'designs' ? 'selected' : ''}>
                                 <i className="fi fi-br-scribble"></i> UI/UX Designs
                             </Link>
-                        </li>  
+                        </li>   */}
                         {/* <li onClick={() => setSelected('')}>
                             <Link to="/" className={selected === '' ? '' : ''}>
                                 <i className="fi fi-br-build-alt"></i> Projects

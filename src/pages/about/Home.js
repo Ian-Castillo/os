@@ -1,30 +1,44 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Home.css';
+import './TimeMachine.css';
 import profileImage from '../../ian.jpg';
-import Iowa from '../../assets/Gold.png';
+//Work Images
 import Argus from '../../assets/ArgusAI.png'; 
 import Riiid from '../../assets/Riiid.jpeg'; 
 import Twelve from '../../assets/Twelve.jpeg'; 
 import Nosh from '../../assets/Nosh.jpeg'; 
-import Bloomtech from '../../assets/BloomTech.jpeg'; 
 import Textpress from '../../assets/Textpress.jpeg'; 
-import SCC from '../../assets/scc.png'; 
-import Techstars from '../../assets/techstars.png';
+//Advisory Images
 import SXSW from '../../assets/sxsw.png';
 import Rally from '../../assets/rally.png';
-import EmojiManager from '../../assets/EmojiManager.png' 
-import HoundSync from '../../assets/Houndsync.png'
+//Prototypes Images
+import Chapter from '../../assets/Chapter.png'; 
 import SoundWave from '../../assets/Soundwave.png'
 import Mirage from '../../assets/Mirage.png'
-import tmintroImage from '../../assets/tmintro.png';
+import HoundSync from '../../assets/Houndsync.png'
+import EmojiManager from '../../assets/EmojiManager.png' 
+//Project Images
 import tmlogofull from '../../assets/tmlogo.svg';
-import tmp from '../../assets/tmlogo.svg';
-import './TimeMachine.css';
-import Chapter from '../../assets/Chapter.png'; 
 import spacePirateLabs from '../../assets/SpacePirateLabs.svg';
 import sunnyWeather from '../../assets/sunnylogo.svg';
+//Community Images
+import Techstars from '../../assets/techstars.png';
+//Education Images
+import Bloomtech from '../../assets/BloomTech.jpeg'; 
+import Iowa from '../../assets/Gold.png';
+import SCC from '../../assets/scc.png'; 
 import deviowa from '../../assets/deviowa.png';
+//UI/UX Images
+import argusHero from '../../assets/argus.png';
+import nounsImage from '../../assets/Nouns.png';
+import overtureImage from '../../assets/Overture.png';
+import projectEImage from '../../assets/ProjectE.png';
+import statusImage from '../../assets/Status.png';
+import summitImage from '../../assets/Summit.png';
+import houndsyncImage from '../../assets/Houndsync.png';
+import updexImage from '../../assets/Updex.png';
+import walkthroughImage from '../../assets/Walkthrough.png';
 
 const BlurImage = ({ src, alt, className, height }) => {
   const [isLoading, setLoading] = useState(true);
@@ -106,6 +120,7 @@ const Home = () => {
   const navItems = useMemo(() => [
     { id: 'about', icon: 'fi-rr-user', text: 'About' },
     { id: 'experience', icon: 'fi-rr-briefcase', text: 'Experience' },
+    { id: 'uiux', icon: 'fi fi-br-scribble', text: 'UI/UX' },
     { id: 'prototypes', icon: 'fi-rr-cube', text: 'Prototypes' },
     { id: 'projects', icon: 'fi-rr-building', text: 'Projects' },
   ], []);
@@ -113,7 +128,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="main-content">
-        {renderLazyImage(profileImage, "Ian Castillo", "profile-image", 1100)}
+        {renderLazyImage(profileImage, "Ian Castillo", "profile-image", 1200)}
         <div className="home-nav">
           <div className="nav-items">
             {navItems.map(({ id, icon, text }) => (
@@ -407,6 +422,102 @@ const Home = () => {
                   </div>
                 </div>
                 
+              </li>
+            </ul>
+          </div>
+        )}
+        {activeSection === 'uiux' && (
+          <div className="work-experience">
+            <h3>UI/UX Designs</h3>
+            <p>A collection of product design work spanning AI, Web3, and productivity tools.</p>
+            
+            <ul className="uiux-list">
+            <li className="uiux-item">
+                {renderLazyImage(projectEImage, "Project E Design", "uiux-image")}
+                <div className="uiux-content">
+                  <span className="company">
+                    Project E
+                    <span className="stack">WEB3 • Education</span>
+                  </span>
+                  <span className="about">Blockchain for academic transcripts.</span>
+                </div>
+              </li>
+
+              <li className="uiux-item">
+                {renderLazyImage(walkthroughImage, "Walkthrough Design", "uiux-image")}
+                <div className="uiux-content">
+                  <span className="company">
+                    Walkthrough
+                    <span className="stack">Education • Software</span>
+                  </span>
+                  <span className="about">A tool for creating interactive walkthroughs and guides for digital cameras.</span>
+                </div>
+              </li>
+              
+              <li className="uiux-item">
+                {renderLazyImage(argusHero, "Argus Design", "uiux-image")}
+                <div className="uiux-content">
+                  <span className="company">
+                    Argus
+                    <span className="stack">AI • Education</span>
+                  </span>
+                  <span className="about">AI-powered education platform.</span>
+                </div>
+              </li>
+
+              <li className="uiux-item">
+                {renderLazyImage(nounsImage, "Nouns Design", "uiux-image")}
+                <div className="uiux-content">
+                  <span className="company">
+                    Nouns
+                    <span className="stack">WEB3 • DAO</span>
+                  </span>
+                  <span className="about">An escrow tool proposed to the Nouns DAO.</span>
+                </div>
+              </li>
+
+              <li className="uiux-item">
+                {renderLazyImage(overtureImage, "Overture Design", "uiux-image")}
+                <div className="uiux-content">
+                  <span className="company">
+                    Overture
+                    <span className="stack">AI • Music</span>
+                  </span>
+                  <span className="about">An AI-powered time and mood based music platform.</span>
+                </div>
+              </li>
+
+              <li className="uiux-item">
+                {renderLazyImage(summitImage, "Summit Design", "uiux-image")}
+                <div className="uiux-content">
+                  <span className="company">
+                    Summit
+                    <span className="stack">WEB3 • Platform</span>
+                  </span>
+                  <span className="about">A comprehensive platform for consuming web3 media.</span>
+                </div>
+              </li>
+
+              <li className="uiux-item">
+                {renderLazyImage(statusImage, "Status Design", "uiux-image")}
+                <div className="uiux-content">
+                  <span className="company">
+                    Status
+                    <span className="stack">Productivity • Management</span>
+                  </span>
+                  <span className="about">A streamlined system for tracking and updating project statuses.</span>
+                </div>
+              </li>
+
+              <li className="uiux-item">
+                {renderLazyImage(updexImage, "Updex Design", "uiux-image")}
+                <div className="uiux-content">
+                  <span className="company">
+                    Updex
+                    <span className="stack">Productivity • Organization</span>
+                  </span>
+                  <span className="about">A system for efficiently indexing and tracking updates across multiple projects.</span>
+                </div>
               </li>
             </ul>
           </div>
