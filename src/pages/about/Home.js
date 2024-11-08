@@ -344,11 +344,11 @@ const Home = () => {
         {activeSection === 'prototypes' && (
           <div className="work-experience">
             <h3>Prototypes</h3>
-            <p>This is my digital back-alley workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. Each prototype here is a creative limitation with 48 hours of  boxed time to deliver to an Alpha stage. I know I get bored easily so the goal is alpha to beta to v1.0. </p>
-            <p>I've turned this corner of the internet into my own dimly-lit garage. No pretense, no polished veneer—just a place where I can get my hands dirty with code and design without someone breathing down my neck about finishing everything. Sometimes the best ideas come from the prototypes you "did that one time".</p>
+            <p>This page is my digital workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. Each prototype here is a creative limitation with 48 hours of  boxed time to deliver to an Alpha stage. I know I get bored easily so the goal is alpha to beta to v1.0. </p>
+            <p>Here, there is no pretense, no polished veneer—just a place where I can get my hands dirty with code and design without expectation of finishing anything listed. Sometimes the best ideas come from the prototypes you "did that one time".</p>
             <p>So thats essentially what these are. Prototypes I did one time, some with a few updates because I had an itch or a "a-ha" moment after I already shipped it. </p>
             <p>I'm not sure what the future holds for these. I've learned a lot since I've built them and I'm sure I'll eventually revisit them with a fresh set of eyes. </p>
-            <p>Enjoy. Or don't.</p>
+            <p>Enjoy.</p>
             <ul className="work-list">
               
               <li>
@@ -453,7 +453,7 @@ const Home = () => {
                   <span className="about">A tool for creating interactive walkthroughs and guides for digital cameras.</span>
                 </div>
               </li>
-              
+
               <li className="uiux-item">
                 {renderLazyImage(argusHero, "Argus Design", "uiux-image")}
                 <div className="uiux-content">
@@ -516,7 +516,7 @@ const Home = () => {
                     Updex
                     <span className="stack">Productivity • Organization</span>
                   </span>
-                  <span className="about">A system for efficiently indexing and tracking updates across multiple projects.</span>
+                  <span className="about">A wireframe design for a system for efficiently indexing and tracking updates across multiple projects.</span>
                 </div>
               </li>
             </ul>
