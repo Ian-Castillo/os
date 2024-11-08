@@ -26,7 +26,22 @@ import spacePirateLabs from '../../assets/SpacePirateLabs.svg';
 import sunnyWeather from '../../assets/sunnylogo.svg';
 import deviowa from '../../assets/deviowa.png';
 
+const BlurImage = ({ src, alt, className, height }) => {
+  const [isLoading, setLoading] = useState(true);
 
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={`${className} ${isLoading ? 'blur-up' : ''}`}
+      height={height}
+      width={height}
+      decoding="async"
+      loading="lazy"
+      onLoad={() => setLoading(false)}
+    />
+  );
+};
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -44,13 +59,16 @@ const Home = () => {
       className={className} 
       loading="lazy" 
       height={height}
-      style={
-        alt === "University of Iowa" || alt === "deviowa" || alt === "Southeastern Community College"
+      width={height}
+      decoding="async"
+      style={{
+        ...alt === "University of Iowa" || alt === "deviowa" || alt === "Southeastern Community College"
           ? { backgroundColor: 'black', padding: '2px' }
           : alt === "12 Triangles"
             ? { border: '1px solid black', padding: '1px' }
-            : {}
-      }
+            : {},
+        objectFit: 'contain'
+      }}
     />
   ), []);
 
@@ -95,7 +113,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="main-content">
-        {renderLazyImage(profileImage, "Ian Castillo", "profile-image", 200)}
+        {renderLazyImage(profileImage, "Ian Castillo", "profile-image", 1100)}
         <div className="home-nav">
           <div className="nav-items">
             {navItems.map(({ id, icon, text }) => (
