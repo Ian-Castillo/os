@@ -23,13 +23,13 @@ const designsData = [
     tags: ["AI", "Education"],
     image: argusHero
   },
-  {
-    id: 2,
-    title: "HoundSync",
-    description: "A data clean up tool for small businesses.",
-    tags: ["OCR", "Data"],
-    image: houndsyncImage
-  },
+  // {
+  //   id: 2,
+  //   title: "HoundSync",
+  //   description: "A data clean up tool for small businesses.",
+  //   tags: ["OCR", "Data"],
+  //   image: houndsyncImage
+  // },
   {
     id: 3,
     title: "Nouns",
