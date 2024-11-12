@@ -102,7 +102,7 @@
   height: auto;
   border-radius: 10px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Content text */
@@ -116,7 +116,7 @@
 /* Heading styling */
 h1, h2, h3 {
   font-weight: 700;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 }
 
 h1 { font-size: 24px; }
@@ -146,7 +146,7 @@ h3 { font-size: 18px; }
 
 /* Work experience section */
 .work-experience {
-  margin-top: 16px;
+  margin-top: 14px;
   text-align: left;
 }
 
@@ -156,14 +156,14 @@ h3 { font-size: 18px; }
 }
 
 .work-experience li {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Company info styling */
 .company-info {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 4px;
 }
 
 .company-logo {
@@ -226,6 +226,7 @@ h3 { font-size: 18px; }
 .about {
   font-size: 13px;
   color: #6a6a6a;
+  margin-bottom: 10px;
 }
 
 /* List layout */
@@ -264,7 +265,7 @@ h3 { font-size: 18px; }
 
   p {
     font-size: 12px;
-    margin: 0 0 15px;
+    margin: 0 0 10px;
   }
 
   .home-nav {
@@ -301,11 +302,11 @@ h3 { font-size: 18px; }
   .work-list li,
   .advisory-list li {
     width: 100%;
-    margin-bottom: 20px;
   }
 
   .company, .role, .about {
     font-size: 12px;
+
   }
 
   .company-info {
@@ -315,7 +316,7 @@ h3 { font-size: 18px; }
 
   .company-logo {
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
 
   .company-info > div {
@@ -404,14 +405,14 @@ h3 { font-size: 18px; }
 }
 
 .uiux-item {
-  margin-bottom: 40px;
+  margin-bottom: 2px;
 }
 
 .uiux-image {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   object-fit: cover;
 }
 
@@ -422,7 +423,7 @@ h3 { font-size: 18px; }
 .uiux-content .company {
   display: block;
   font-size: 1.2em;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .uiux-content .stack {

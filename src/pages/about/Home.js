@@ -161,36 +161,37 @@ const Home = () => {
           <div className="work-experience">
             <h3>Work</h3>
             <ul className="work-list">
+            <li>
+                <div className="company-info">
+                  {renderLazyImage(spacePirateLabs, "Space Pirate Labs", "company-logo")}
+                  <div>
+                    <span className="company">
+                      <a href="https://spacepiratelabs.com" className="company-link">Space Pirate Labs</a>
+                      <span className="stack">Remote</span>
+                    </span>
+                    <span className="role">Founder, CEO</span>
+                    <span className="dates">2021 - </span>
+                    <span className="about">A design & consulting agency designing forward-thinking ideas.</span>
+                  </div>
+                </div>
+              </li>
               <li>
                 <div className="company-info">
                   {renderLazyImage(Iowa, "University of Iowa", "company-logo")}
                   <div>
                     <span className="company">
-                    <a href="https://iowajpec.org/" className="company-link">The University of Iowa</a>
+                    <a href="https://iowajpec.org/" className="company-link">U of I Tippie College of Business</a>
                       <span className="location">Hybrid</span></span>
-                    <span className="role">Tippie College of Business Adjunct Instructor, Management & Entrepreneurship</span>
-                    <span className="dates">2023 - Current</span>
+                    <span className="role">Adjunct Instructor, Management & Entrepreneurship</span>
+                    <span className="dates">2023 - </span>
                     <span className="about">Accelerating ideas & people in the JPEC Start-Up Incubator.</span>
                   </div>
                 </div>
               </li>
-              <li>
-                <div className="company-info">
-                  {renderLazyImage(Argus, "Argus", "company-logo")}
-                  <div>
-                    <span className="company">
-                    <a href="https://www.argus.ai" className="company-link">Argus.AI</a>
-                    <span className="location">Remote</span>
-                    </span>
-                    <span className="role">Head of Product & Design</span>
-                    <span className="dates">2022 - Current</span>
-                    <span className="about">Re-imagining college admissions.</span>
-                  </div>
-                </div>
-              </li>
+             
             </ul>
             <h3>Advisory</h3>
-            <ul className="advisory-list">
+            <ul className="work-list">
               <li>
                 <div className="company-info">
                   {renderLazyImage(SXSW, "SXSW", "company-logo")}
@@ -221,6 +222,20 @@ const Home = () => {
             
             <h3>Experience</h3>
             <ul>
+            <li>
+                <div className="company-info">
+                  {renderLazyImage(Argus, "Argus", "company-logo")}
+                  <div>
+                    <span className="company">
+                    <a href="https://www.argus.ai" className="company-link">Argus.AI</a>
+                    <span className="location">Remote</span>
+                    </span>
+                    <span className="role">Head of Product & Design</span>
+                    <span className="dates">2022 - 2025</span>
+                    <span className="about">Re-imagining college admissions.</span>
+                  </div>
+                </div>
+              </li>
               <li>
                 <div className="company-info">
                   {renderLazyImage(Riiid, "Riiid", "company-logo")}
@@ -272,20 +287,7 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-            <h3>Community</h3>
-            <ul className="advisory-list">
-                <li>
-                  <div className="company-info">
-                    {renderLazyImage(Techstars, "Techstars", "company-logo")}
-                    <div>
-                      <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
-                      <span className="role">Facilitator, Mentor, Judge</span>
-                      <span className="dates">2015 - Current</span>
-                      <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+       
             <h3>Education</h3>
             <h4>Developer Programs</h4>
 
@@ -338,7 +340,20 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-            
+            <h3>Community</h3>
+            <ul className="work-list">
+                <li>
+                  <div className="company-info">
+                    {renderLazyImage(Techstars, "Techstars", "company-logo")}
+                    <div>
+                      <span className="company">Techstars | Startup Weekend <span className="location">Remote</span></span>
+                      <span className="role">Facilitator, Mentor, Judge</span>
+                      <span className="dates">2015 - Current</span>
+                      <p>Helping future entrepreneurs build start-ups in 54 hours.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
           </div>
         )}
         {activeSection === 'prototypes' && (
@@ -559,20 +574,7 @@ const Home = () => {
                   </div>
                 </div>
               </li>
-              <li>
-                <div className="company-info">
-                  {renderLazyImage(spacePirateLabs, "Space Pirate Labs", "company-logo")}
-                  <div>
-                    <span className="company">
-                      <a href="https://spacepiratelabs.com" className="company-link">Space Pirate Labs</a>
-                      <span className="stack">Active</span>
-                    </span>
-                    <span className="role">Consulting & Design</span>
-                    <span className="dates">2021 - Present</span>
-                    <span className="about">An experimental lab focused on pushing the boundaries of technology and creativity.</span>
-                  </div>
-                </div>
-              </li>
+             
             </ul>
           </div>
         )}
