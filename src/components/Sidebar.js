@@ -53,11 +53,11 @@ const Sidebar = () => {
                                 <i className="fi fi-br-photo-capture"></i> Photos
                             </Link>
                         </li> */}
-                        {/* <li onClick={() => setSelected('designs')}>
+                        <li onClick={() => setSelected('designs')}>
                             <Link to="/designs" className={selected === 'designs' ? 'selected' : ''}>
-                                <i className="fi fi-br-scribble"></i> UI/UX Designs
+                                <i className="fi fi-br-scribble"></i> Portfolio
                             </Link>
-                        </li>   */}
+                        </li>  
                         {/* <li onClick={() => setSelected('')}>
                             <Link to="/" className={selected === '' ? '' : ''}>
                                 <i className="fi fi-br-build-alt"></i> Projects
@@ -66,19 +66,11 @@ const Sidebar = () => {
                     </ul>
                 </div>
                 <div className="menu-section">
-                    {/* <h3>Ventures</h3> */}
+                    <h3>Projects</h3>
                     <ul>
-                        {/* <li onClick={() => setSelected('daydrink')}>
-                            <Link to="/daydrink" className={selected === 'daydrink' ? 'selected' : ''}>
-                                <div className="icon-container">
-                                    <img src={daydrinklight} alt="Daydrink Logo Dark" className="icon dark Daydrink" />
-                                    <img src={daydrinkdark} alt="Daydrink Logo Light" className="icon light Daydrink" />
-                                </div>
-                                Daydrink Coffee
-                            </Link>
-                        </li> */}
+              
                     </ul>
-                    {/* <ul>
+                    <ul>
                         <li onClick={() => setSelected('sunny')}>
                             <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
                                 <div className="icon-container">
@@ -88,8 +80,8 @@ const Sidebar = () => {
                                 Sunny Weather
                             </Link>
                         </li>
-                    </ul> */}
-                    {/* <ul>
+                    </ul> 
+                     <ul>
                         <li onClick={() => setSelected('timeMachine')}>
                             <Link to="/timeMachine" className={selected === 'timeMachine' ? 'selected' : ''}>
                                 <div className="icon-container">
@@ -99,7 +91,7 @@ const Sidebar = () => {
                                 Time Machine Print
                             </Link>
                         </li>
-                    </ul> */}
+                    </ul> 
                 </div>
                 <div className="menu-section">
                     <h3>Resources</h3>

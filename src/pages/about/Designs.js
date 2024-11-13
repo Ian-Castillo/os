@@ -15,21 +15,20 @@ import walkthroughImage from '../../assets/Walkthrough.png';
 // Import TimeMachine component if it exists
 
 const designsData = [
-
   {
     id: 1,
+    title: "Project E",
+    description: "Blockchainfor academic transcripts.",
+    tags: ["WEB3", "Education"],
+    image: projectEImage
+  },
+  {
+    id: 2,
     title: "Argus",
     description: "AI-powered education platform.",
     tags: ["AI", "Education"],
     image: argusHero
   },
-  // {
-  //   id: 2,
-  //   title: "HoundSync",
-  //   description: "A data clean up tool for small businesses.",
-  //   tags: ["OCR", "Data"],
-  //   image: houndsyncImage
-  // },
   {
     id: 3,
     title: "Nouns",
@@ -44,13 +43,13 @@ const designsData = [
     tags: ["AI", "Music"],
     image: overtureImage
   },
-  {
-    id: 5,
-    title: "Project E",
-    description: "Blockchainfor academic transcripts.",
-    tags: ["WEB3", "Education"],
-    image: projectEImage
-  },
+  // {
+  //   id: 5,
+  //   title: "Project E",
+  //   description: "Blockchainfor academic transcripts.",
+  //   tags: ["WEB3", "Education"],
+  //   image: projectEImage
+  // },
   {
     id: 6,
     title: "Summit",
@@ -67,14 +66,14 @@ const designsData = [
   },
 
   {
-    id: 9,
+    id: 8,
     title: "Updex",
     description: "A system for efficiently indexing and tracking updates across multiple projects.",
     tags: ["Productivity", "Organization"],
     image: updexImage
   },
   {
-    id: 10,
+    id: 9,
     title: "Walkthrough",
     description: "A tool for creating interactive walkthroughs and guides for digital cameras.",
     tags: ["Education", "Software"],

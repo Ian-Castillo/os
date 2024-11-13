@@ -118,11 +118,10 @@ const Home = () => {
   ), [handleIconClick]);
 
   const navItems = useMemo(() => [
-    { id: 'about', icon: 'fi-rr-user', text: 'About' },
+    { id: 'about', icon: 'fi-rr-user', text: 'Ian Castillo' },
     { id: 'experience', icon: 'fi-rr-briefcase', text: 'Experience' },
-    { id: 'uiux', icon: 'fi fi-br-scribble', text: 'UI/UX' },
+    // { id: 'uiux', icon: 'fi fi-br-scribble', text: 'UI/UX' },
     { id: 'prototypes', icon: 'fi-rr-cube', text: 'Prototypes' },
-    { id: 'projects', icon: 'fi-rr-building', text: 'Projects' },
   ], []);
 
   return (
@@ -148,8 +147,8 @@ const Home = () => {
             <div className="work-experience">
               <h2>Hi, I'm Ian.</h2>
               <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My career interests are in zero-to-one design thinking, large language models and generative AI, and accelerating the Iowa start-up ecosystem.</p>
-              <p>Currently, I'm building something in STEALH MODE.</p>
-              <p>In addition to my work at STEALTH MODE, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <button onClick={() => window.open('https://tippie.uiowa.edu/people/ian-castillo', '_blank')} className="nav-button">John Pappajohn Entrepreneurial Center</button>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
+              <p>Currently, I'm focused on building Space Pirate Labs - a design agency partner designing future-thinking ideas.</p>
+              <p>In addition to my work at Space Pirate Labs, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <button onClick={() => window.open('https://tippie.uiowa.edu/people/ian-castillo', '_blank')} className="nav-button">John Pappajohn Entrepreneurial Center</button>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
               <p>Previously, I lead product and design as a co-founder of <button onClick={() => window.open('https://www.argus.ai/', '_blank')} className="nav-button">ArgusAI</button>, where myself, Marten Roorda (former CEO of ACT), and Michael Weiler (former CEO of EduPath) were re-imagining and setting new standards for college admissions. At ArgusAI, I led product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. ArgusAIs mission is revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants and a more personalized experience for students.</p>
               <p>Before ArgusAI, I was a Product Manager & Designer at <button onClick={() => window.open('https://riiid.com', '_blank')} className="nav-button">Riiid Labs</button>, where I facilitated advancements in AI-driven education applications. While on the LX team, I collaborated with AI researchers, engineers, and designers, driving forward projects that utilized Machine Learning and LLMs to enhance learning outcomes. My work centered on developing digital products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
               <p>I apperciate you reading this far and hopefully you look around at the things I'm building or have built. I'm at capacity at the moment working on my own projects, but I'm always interested in connecting with other builders/designers/developers. If thats you, let's connect and explore re-imagining the digital future.</p>

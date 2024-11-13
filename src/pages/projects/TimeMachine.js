@@ -18,7 +18,14 @@ const TimeMachine = () => {
           
             </div>
             <div>
-              <span className="gradient-item-text">timemachineprint.com</span>
+              <a 
+                href="https://timemachineprint.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="gradient-item-text white-link"
+              >
+                timemachineprint.com
+              </a>
             </div>
           </div>
           
@@ -30,7 +37,7 @@ const TimeMachine = () => {
         <p>Welcome to Time Machine Print, where culture and creativity collide like two celestial bodies sparking an explosion of ideas. We’re not just a bookstore—we're a portal for the curious, the creators, and the disruptors. Here, stories aren’t just printed on paper; they are the seeds of revolutions, the musings of rebels, and the blueprints of tomorrow’s icons.</p>
       <p>In a world obsessed with the fast and the forgettable, we celebrate the deep thinkers, the dreamers, and the outliers who shape our creative future. Time Machine Print is a sanctuary for those who seek the kind of inspiration that lingers—a place where every book has a purpose, every page a manifesto.</p>
      <p>Think of it as a time capsule for the bold, the weird, and the beautiful—a place where today’s ideas meet the timeless ethos of those who came before us. Let’s turn the pages together. The future has always belonged to the creators.</p>
-        <p>Launching September 28th, 2024</p>
+        <p></p>
         </div>
         </div>
         <div className="social-icons">
