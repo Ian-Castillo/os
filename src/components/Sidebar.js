@@ -35,7 +35,7 @@ const Sidebar = () => {
                     </div>
                 </div>
                 <div className="menu-section">
-                    <h3>About</h3>
+                    <h3>Overview</h3>
                     <ul>
                         <li onClick={() => setSelected('home')}>
                             <Link to="/" className={selected === 'home' ? 'selected' : ''}>

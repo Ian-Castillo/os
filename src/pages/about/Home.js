@@ -170,7 +170,7 @@ const Home = () => {
                     </span>
                     <span className="role">Founder, CEO</span>
                     <span className="dates">2021 - </span>
-                    <span className="about">A design & consulting agency designing forward-thinking ideas.</span>
+                    <span className="about">A design & consulting agency shaping forward-thinking ideas.</span>
                   </div>
                 </div>
               </li>
