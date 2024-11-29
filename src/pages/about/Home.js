@@ -373,13 +373,26 @@ const Home = () => {
                       <a href="https://www.timemachineprint.com/chapter-app-ios-and-android" className="company-link">Chapter</a>
                       <span className="stack">In-Progress</span>
                     </span>
-                    <span className="role">NOV-Anticipated</span>
+                    <span className="role">DEC-Anticipated</span>
                     <span className="dates">2024</span>
                     <span className="about">A mobile app for book lovers to bookmark, track, and discover personalized recommendations.</span>
                   </div>
                 </div>
               </li>
-              
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(SoundWave, "SoundWave", "company-logo")}
+                  <div>
+                    <span className="company">
+                      <a href="" className="company-link">Breadcrumb</a>
+                      <span className="stack">Alpha</span>
+                    </span>
+                    <span className="role">NOV</span>
+                    <span className="dates">2024</span>
+                    <span className="about">A Changelog tool for multiprenuers.</span>
+                  </div>
+                </div>
+              </li>
               <li>
                 <div className="company-info">
                   {renderLazyImage(SoundWave, "SoundWave", "company-logo")}
