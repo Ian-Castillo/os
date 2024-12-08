@@ -384,7 +384,7 @@ const Home = () => {
                   {renderLazyImage(SoundWave, "SoundWave", "company-logo")}
                   <div>
                     <span className="company">
-                      <a href="" className="company-link">Breadcrumb</a>
+                      <a href="https://withbreadcrumb.com" className="company-link">Breadcrumb</a>
                       <span className="stack">Alpha</span>
                     </span>
                     <span className="role">NOV</span>
