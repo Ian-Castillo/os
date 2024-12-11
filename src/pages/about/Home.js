@@ -378,7 +378,7 @@ const Home = () => {
                     </span>
                     <span className="role">DEC-Anticipated</span>
                     <span className="dates">2024</span>
-                    <span className="about">A mobile app for book lovers to bookmark, track, and discover personalized recommendations.</span>
+                    <span className="about">Bookmark, track, and discover book recommendations.</span>
                   </div>
                 </div>
               </li>
