@@ -18,6 +18,7 @@ import SoundWave from '../../assets/Soundwave.png'
 import Mirage from '../../assets/Mirage.png'
 import HoundSync from '../../assets/Houndsync.png'
 import EmojiManager from '../../assets/EmojiManager.png' 
+import Breadcrumb from '../../assets/breadcrumb.png'
 //Project Images
 import tmlogofull from '../../assets/tmlogo.svg';
 import spacePirateLabs from '../../assets/SpacePirateLabs.svg';
@@ -358,10 +359,10 @@ const Home = () => {
         {activeSection === 'prototypes' && (
           <div className="work-experience">
             <h3>Prototypes</h3>
-            <p>This page is my digital workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. Each prototype here is a creative limitation with 48 hours of  boxed time to deliver to an Alpha stage. I know I get bored easily so the goal is alpha to beta to v1.0. </p>
+            <p>This page is my digital workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. Each prototype here is a creative limitation with 48 hours of  boxed time to deliver to an Alpha. </p>
             <p>Here, there is no pretense, no polished veneer—just a place where I can get my hands dirty with code and design without expectation of finishing anything listed. Sometimes the best ideas come from the prototypes you "did that one time".</p>
             <p>So thats essentially what these are. Prototypes I did one time, some with a few updates because I had an itch or a "a-ha" moment after I already shipped it. </p>
-            <p>I'm not sure what the future holds for these. I've learned a lot since I've built them and I'm sure I'll eventually revisit them with a fresh set of eyes. </p>
+            <p> </p>
             <p>Enjoy.</p>
             <ul className="work-list">
               
@@ -370,6 +371,8 @@ const Home = () => {
                   {renderLazyImage(Chapter, "Chapter", "company-logo")}
                   <div>
                     <span className="company">
+                    <span className="black-dot"></span>
+
                       <a href="https://www.timemachineprint.com/chapter-app-ios-and-android" className="company-link">Chapter</a>
                       <span className="stack">In-Progress</span>
                     </span>
@@ -381,15 +384,17 @@ const Home = () => {
               </li>
               <li>
                 <div className="company-info">
-                  {renderLazyImage(SoundWave, "SoundWave", "company-logo")}
+                  {renderLazyImage(Breadcrumb, "breadcrumb", "company-logo")}
                   <div>
                     <span className="company">
+                    <span className="green-dot"></span>
+
                       <a href="https://withbreadcrumb.com" className="company-link">Breadcrumb</a>
-                      <span className="stack">Alpha</span>
+                      <span className="stack">v1.0</span>
                     </span>
                     <span className="role">NOV</span>
                     <span className="dates">2024</span>
-                    <span className="about">A Changelog tool for multiprenuers.</span>
+                    <span className="about">A Changelog tool for solopreneurs.</span>
                   </div>
                 </div>
               </li>
@@ -398,6 +403,7 @@ const Home = () => {
                   {renderLazyImage(SoundWave, "SoundWave", "company-logo")}
                   <div>
                     <span className="company">
+                    <span className="green-dot"></span>
                       <a href="" className="company-link">SoundWave</a>
                       <span className="stack">Alpha</span>
                     </span>
@@ -407,25 +413,14 @@ const Home = () => {
                   </div>
                 </div>
               </li>
-              <li>
-              <div className="company-info">
-                  {renderLazyImage(HoundSync, "HoundSync", "company-logo")}
-                  <div>
-                    <span className="company">
-                      <a href="https://houndsync.vercel.app/" className="company-link">HoundSync</a>
-                      <span className="stack">Alpha</span>
-                    </span>
-                    <span className="role">AUG</span>
-                    <span className="dates">2024</span>
-                    <span className="about">An application for parsing invoices to streamline data entry.</span>
-                  </div>
-                </div>
-              </li>
+          
               <li>
               <div className="company-info">
                   {renderLazyImage(Mirage, "Mirage", "company-logo")}
                   <div>
                     <span className="company">
+                    <span className="green-dot"></span>
+
                       <a href="" className="company-link">Mirage</a>
                       <span className="stack">Beta</span>
                     </span>
@@ -440,6 +435,8 @@ const Home = () => {
                   {renderLazyImage(EmojiManager, "Emoji Manager", "company-logo")}
                   <div>
                     <span className="company">
+                    <span className="green-dot"></span>
+
                       <a href="https://emojimanager.com" className="company-link">Emoji Manager</a>
                       <span className="stack">v1.0</span>
                     </span>
@@ -449,6 +446,23 @@ const Home = () => {
                   </div>
                 </div>
                 
+              </li>
+              <li>
+              <div className="company-info">
+                  {renderLazyImage(HoundSync, "HoundSync", "company-logo")}
+                  <div>
+                    <span className="company">
+                    <span className="red-dot"></span>
+                      <span className="">HoundSync</span>
+                      <span className="stack">Alpha</span>
+                      <span className="stack">Deprecated</span>
+
+                    </span>
+                    <span className="role">AUG</span>
+                    <span className="dates">2024</span>
+                    <span className="about">An application for parsing invoices to streamline data entry.</span>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
