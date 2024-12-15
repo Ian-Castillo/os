@@ -359,8 +359,8 @@ const Home = () => {
         {activeSection === 'prototypes' && (
           <div className="work-experience">
             <h3>Prototypes</h3>
-            <p>This page is my digital workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. Each prototype here is a creative limitation with 48 hours of  boxed time to deliver to an Alpha. </p>
-            <p>Here, there is no pretense, no polished veneer—just a place where I can get my hands dirty with code and design without expectation of finishing anything listed. Sometimes the best ideas come from the prototypes you "did that one time".</p>
+            <p>This small section is my digital workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. Here, everything is 48 hours of boxed time to ship a working prototype. </p>
+            <p>Here, there is no pretense, no polished veneer—just a place where I can get my hands dirty with code and design without expectation of finishing anything listed. I've learned that sometimes the best ideas and work come from the things you "did that one time".</p>
             <p>So thats essentially what these are. Prototypes I did one time, some with a few updates because I had an itch or a "a-ha" moment after I already shipped it. </p>
             <p> </p>
             <p>Enjoy.</p>
