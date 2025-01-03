@@ -109,9 +109,9 @@ const Home = () => {
   const navItems = useMemo(() => [
     { id: 'about', icon: 'fi-rr-user', text: 'Ian Castillo' },
     { id: 'experience', icon: 'fi-rr-briefcase', text: 'Experience' },
-    { id: 'projects', icon: 'fi-rr-cube', text: 'Projects' },
-    { id: 'prototypes', icon: 'fi-rr-box', text: 'Prototypes' },
     { id: 'uiux', icon: 'fi-rr-layout-fluid', text: 'UI/UX' },
+    { id: 'projects', icon: 'fi-rr-cube', text: 'Projects' },
+    // { id: 'prototypes', icon: 'fi-rr-box', text: 'Prototypes' },
   ], []);
 
   return (
@@ -347,7 +347,60 @@ const Home = () => {
         )}
         {activeSection === 'prototypes' && (
           <div className="work-experience">
-            <h3>Prototypes</h3>
+         
+          </div>
+        )}
+        {activeSection === 'projects' && (
+  <div className="work-experience">
+    <h3>Projects</h3>
+    <p>
+      Where I spend my weekends. These projects are a digital reflection of my interests and ideas. 
+   
+    </p>
+    <ul className="work-list">
+      {/* Sunny Weather */}
+      <li>
+        <div className="company-info">
+          {renderLazyImage(sunnyWeather, "Sunny Weather", "company-logo")}
+          <div>
+            <span className="company">
+              <a href="#" className="company-link">Sunny Weather</a>
+              <span className="stack">Active</span>
+            </span>
+            <span className="role">AI & Weather</span>
+            <span className="dates">2024 - Present</span>
+            <span className="about">
+              An AI-powered weather application that provides personalized 
+              weather insights and forecasts.
+            </span>
+          </div>
+        </div>
+      </li>
+
+      {/* Time Machine Print */}
+      <li>
+        <div className="company-info">
+          {renderLazyImage(tmlogofull, "Time Machine Print", "company-logo")}
+          <div>
+            <span className="company">
+              <a href="https://timemachineprint.com" className="company-link">
+                Time Machine Print
+              </a>
+              <span className="stack">Active</span>
+            </span>
+            <span className="role">Curation & Creativity</span>
+            <span className="dates">2024 - Present</span>
+            <span className="about">
+               Time Machine Print is an online  
+              bookstore celebrating deep thinkers, dreamers,
+              and outliers shaping our creative future. A neural network for creatives and creators.
+            </span>
+          </div>
+        </div>
+      </li>
+      {/* Add more “projects” as desired */}
+    </ul>
+    <h3>Prototypes</h3>
             <p>This small section is my digital workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. Here, everything is 48 hours of boxed time to ship a working prototype. </p>
             <p>Here, there is no pretense, no polished veneer—just a place where I can get my hands dirty with code and design without expectation of finishing anything listed. I've learned that sometimes the best ideas and work come from the things you "did that one time".</p>
             <p>So thats essentially what these are. Prototypes I did one time, some with a few updates because I had an itch or a "a-ha" moment after I already shipped it. </p>
@@ -436,78 +489,10 @@ const Home = () => {
                 </div>
                 
               </li>
-              <li>
-              {/* <div className="company-info">
-                  {renderLazyImage(HoundSync, "HoundSync", "company-logo")}
-                  <div>
-                    <span className="company">
-                    <span className="red-dot"></span>
-                      <span className="">HoundSync</span>
-                      <span className="stack">Alpha</span>
-                      <span className="stack">Deprecated</span>
-
-                    </span>
-                    <span className="role">AUG</span>
-                    <span className="dates">2024</span>
-                    <span className="about">An application for parsing invoices to streamline data entry.</span>
-                  </div>
-                </div> */}
-              </li>
+          
             </ul>
-          </div>
-        )}
-        {activeSection === 'projects' && (
-  <div className="work-experience">
-    <h3>Projects</h3>
-    <p>
-      These projects are a digital reflection of my interests and ideas. 
-      They’ve grown from rough outlines in a digital garage 
-      to distinct operations solving real problems at scale.
-    </p>
-    <ul className="work-list">
-      {/* Sunny Weather */}
-      <li>
-        <div className="company-info">
-          {renderLazyImage(sunnyWeather, "Sunny Weather", "company-logo")}
-          <div>
-            <span className="company">
-              <a href="#" className="company-link">Sunny Weather</a>
-              <span className="stack">Active</span>
-            </span>
-            <span className="role">AI & Weather</span>
-            <span className="dates">2024 - Present</span>
-            <span className="about">
-              An AI-powered weather application that provides personalized 
-              weather insights and forecasts.
-            </span>
-          </div>
-        </div>
-      </li>
-
-      {/* Time Machine Print */}
-      <li>
-        <div className="company-info">
-          {renderLazyImage(tmlogofull, "Time Machine Print", "company-logo")}
-          <div>
-            <span className="company">
-              <a href="https://timemachineprint.com" className="company-link">
-                Time Machine Print
-              </a>
-              <span className="stack">Active</span>
-            </span>
-            <span className="role">Curation & Creativity</span>
-            <span className="dates">2024 - Present</span>
-            <span className="about">
-              A neural network for creatives and creators. Time Machine Print is a 
-              bookstore and cultural hub celebrating deep thinkers, dreamers,
-              and outliers shaping our creative future.
-            </span>
-          </div>
-        </div>
-      </li>
-      {/* Add more “projects” as desired */}
-    </ul>
   </div>
+  
 )}
         {activeSection === 'uiux' && (
           <div className="work-experience">
@@ -607,125 +592,7 @@ const Home = () => {
         )}
         {activeSection === 'prototypes' && (
           <div className="work-experience">
-            {/* <h3>Concepts</h3>
-            <p>
-              Here are future-facing concepts or ideas that I've been exploring. 
-              Each concept is a chance to map out and experiment with what's possible.
-            </p>
-            <ul className="work-list">
-              <li>
-                <div className="company-info">
-                  {renderLazyImage(sunnyWeather, 'Sunny Weather', 'company-logo')}
-                  <div>
-                    <span className="company">
-                      <a href="#" className="company-link">Sunny Weather</a>
-                      <span className="stack">Active</span>
-                    </span>
-                    <span className="role">AI & Weather</span>
-                    <span className="dates">2024 - Present</span>
-                    <span className="about">
-                      An AI-powered weather application that provides personalized weather insights 
-                      and forecasts.
-                    </span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="company-info">
-                  {renderLazyImage(tmlogofull, 'Time Machine Print', 'company-logo')}
-                  <div>
-                    <span className="company">
-                      <a href="https://timemachineprint.com" className="company-link">
-                        Time Machine Print
-                      </a>
-                      <span className="stack">Active</span>
-                    </span>
-                    <span className="role">Curation & Creativity</span>
-                    <span className="dates">2024 - Present</span>
-                    <span className="about">
-                      A neural network for creatives and creators. Time Machine Print is a 
-                      bookstore and cultural hub celebrating deep thinkers, dreamers, and 
-                      outliers shaping our creative future.
-                    </span>
-                  </div>
-                </div>
-              </li>
-            </ul> */}
-            {/* <h3>Prototypes</h3>
-            <p>
-              This small section is my digital workshop—a place where I dive into weekend sprints 
-              and build solutions for my own problems in 48 hours. These prototypes are rough 
-              around the edges, yet they highlight my problem-solving approach and creativity.
-            </p> */}
-            <ul className="work-list">
-              {/* <li>
-                <div className="company-info">
-                  {renderLazyImage(Breadcrumb, 'Breadcrumb', 'company-logo')}
-                  <div>
-                    <span className="company">
-                      <span className="green-dot"></span>
-                      <a href="https://withbreadcrumb.com" className="company-link">Breadcrumb</a>
-                      <span className="stack">v1.0</span>
-                    </span>
-                    <span className="role">NOV</span>
-                    <span className="dates">2024</span>
-                    <span className="about">A Changelog tool for solopreneurs.</span>
-                  </div>
-                </div> */}
-              {/* </li> */}
-              {/* <li>
-                <div className="company-info">
-                  {renderLazyImage(SoundWave, 'SoundWave', 'company-logo')}
-                  <div>
-                    <span className="company">
-                      <span className="green-dot"></span>
-                      <a href="#" className="company-link">SoundWave</a>
-                      <span className="stack">Alpha</span>
-                    </span>
-                    <span className="role">SEPT</span>
-                    <span className="dates">2024</span>
-                    <span className="about">
-                      Transcript & summary assistant for YouTube videos.
-                    </span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="company-info">
-                  {renderLazyImage(Mirage, 'Mirage', 'company-logo')}
-                  <div>
-                    <span className="company">
-                      <span className="green-dot"></span>
-                      <a href="#" className="company-link">Mirage</a>
-                      <span className="stack">v0.2</span>
-                    </span>
-                    <span className="role">OCT</span>
-                    <span className="dates">2023</span>
-                    <span className="about">
-                      A quick AR/VR mock simulation concept.
-                    </span>
-                  </div>
-                </div>
-              </li> */}
-              {/* <li>
-                <div className="company-info">
-                  {renderLazyImage(NFTManager, 'NFT Manager', 'company-logo')}
-                  <div>
-                    <span className="company">
-                      <span className="green-dot"></span>
-                      <a href="#" className="company-link">NFT Manager</a>
-                      <span className="stack">Sandbox</span>
-                    </span>
-                    <span className="role">JUNE</span>
-                    <span className="dates">2023</span>
-                    <span className="about">
-                      A simplified interface to create, manage, and track NFTs 
-                      across multiple chains.
-                    </span>
-                  </div>
-                </div>
-              </li> */}
-            </ul>
+            <p>Prototypes moved to Projects tab.</p>
           </div>
         )}
       </div>
