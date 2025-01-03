@@ -53,11 +53,11 @@ const Sidebar = () => {
                                 <i className="fi fi-br-photo-capture"></i> Photos
                             </Link>
                         </li> */}
-                        <li onClick={() => setSelected('designs')}>
+                        {/* <li onClick={() => setSelected('designs')}>
                             <Link to="/designs" className={selected === 'designs' ? 'selected' : ''}>
                                 <i className="fi fi-br-scribble"></i> Portfolio
                             </Link>
-                        </li>  
+                        </li>   */}
                         {/* <li onClick={() => setSelected('')}>
                             <Link to="/" className={selected === '' ? '' : ''}>
                                 <i className="fi fi-br-build-alt"></i> Projects
@@ -65,7 +65,7 @@ const Sidebar = () => {
                         </li> */}
                     </ul>
                 </div>
-                <div className="menu-section">
+                {/* <div className="menu-section">
                     <h3>Projects</h3>
                     <ul>
               
@@ -92,7 +92,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                     </ul> 
-                </div>
+                </div> */}
                 <div className="menu-section">
                     <h3>Resources</h3>
                     <ul>

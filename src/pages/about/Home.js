@@ -16,7 +16,7 @@ import Rally from '../../assets/rally.png';
 import Chapter from '../../assets/Chapter.png'; 
 import SoundWave from '../../assets/Soundwave.png'
 import Mirage from '../../assets/Mirage.png'
-import HoundSync from '../../assets/Houndsync.png'
+// import HoundSync from '../../assets/Houndsync.png'
 import EmojiManager from '../../assets/EmojiManager.png' 
 import Breadcrumb from '../../assets/breadcrumb.png'
 //Project Images
@@ -37,7 +37,7 @@ import overtureImage from '../../assets/Overture.png';
 import projectEImage from '../../assets/ProjectE.png';
 import statusImage from '../../assets/Status.png';
 import summitImage from '../../assets/Summit.png';
-import houndsyncImage from '../../assets/Houndsync.png';
+// import houndsyncImage from '../../assets/Houndsync.png';
 import updexImage from '../../assets/Updex.png';
 import walkthroughImage from '../../assets/Walkthrough.png';
 
@@ -87,33 +87,21 @@ const Home = () => {
     />
   ), []);
 
+  const iconUrls = {
+    linkedin: 'https://www.linkedin.com/in/iancastillo/',
+    github: 'https://github.com/Ian-Castillo',
+    twitter: 'https://x.com/imcsays',
+    email: 'mailto:ian@spacepiratelabs.com'
+  };
+
   const renderSocialIcons = useMemo(() => (
     <div className="social-icons">
       {['email', 'github', 'linkedin', 'twitter'].map((icon) => (
         <div
           key={icon}
           className="social-icon"
-          onClick={() => {
-            switch(icon) {
-              case 'linkedin':
-                handleIconClick('https://www.linkedin.com/in/iancastillo/');
-                break;
-              case 'github':
-                handleIconClick('https://github.com/Ian-Castillo');
-                break;
-              case 'twitter':
-                handleIconClick('https://x.com/imcsays');
-                break;
-              case 'email':
-                handleIconClick('mailto:ian@spacepiratelabs.com');
-                break;
-              default:
-                break;
-            }
-          }}
-        >
-          <i className={`fi fi-${icon === 'email' ? 'rr-envelope' : `brands-${icon}`}`}></i>
-        </div>
+          onClick={() => handleIconClick(iconUrls[icon])}
+        />
       ))}
     </div>
   ), [handleIconClick]);
@@ -121,8 +109,9 @@ const Home = () => {
   const navItems = useMemo(() => [
     { id: 'about', icon: 'fi-rr-user', text: 'Ian Castillo' },
     { id: 'experience', icon: 'fi-rr-briefcase', text: 'Experience' },
-    // { id: 'uiux', icon: 'fi fi-br-scribble', text: 'UI/UX' },
-    { id: 'prototypes', icon: 'fi-rr-cube', text: 'Prototypes' },
+    { id: 'projects', icon: 'fi-rr-cube', text: 'Projects' },
+    { id: 'prototypes', icon: 'fi-rr-box', text: 'Prototypes' },
+    { id: 'uiux', icon: 'fi-rr-layout-fluid', text: 'UI/UX' },
   ], []);
 
   return (
@@ -448,7 +437,7 @@ const Home = () => {
                 
               </li>
               <li>
-              <div className="company-info">
+              {/* <div className="company-info">
                   {renderLazyImage(HoundSync, "HoundSync", "company-logo")}
                   <div>
                     <span className="company">
@@ -462,11 +451,64 @@ const Home = () => {
                     <span className="dates">2024</span>
                     <span className="about">An application for parsing invoices to streamline data entry.</span>
                   </div>
-                </div>
+                </div> */}
               </li>
             </ul>
           </div>
         )}
+        {activeSection === 'projects' && (
+  <div className="work-experience">
+    <h3>Projects</h3>
+    <p>
+      These projects are a digital reflection of my interests and ideas. 
+      They’ve grown from rough outlines in a digital garage 
+      to distinct operations solving real problems at scale.
+    </p>
+    <ul className="work-list">
+      {/* Sunny Weather */}
+      <li>
+        <div className="company-info">
+          {renderLazyImage(sunnyWeather, "Sunny Weather", "company-logo")}
+          <div>
+            <span className="company">
+              <a href="#" className="company-link">Sunny Weather</a>
+              <span className="stack">Active</span>
+            </span>
+            <span className="role">AI & Weather</span>
+            <span className="dates">2024 - Present</span>
+            <span className="about">
+              An AI-powered weather application that provides personalized 
+              weather insights and forecasts.
+            </span>
+          </div>
+        </div>
+      </li>
+
+      {/* Time Machine Print */}
+      <li>
+        <div className="company-info">
+          {renderLazyImage(tmlogofull, "Time Machine Print", "company-logo")}
+          <div>
+            <span className="company">
+              <a href="https://timemachineprint.com" className="company-link">
+                Time Machine Print
+              </a>
+              <span className="stack">Active</span>
+            </span>
+            <span className="role">Curation & Creativity</span>
+            <span className="dates">2024 - Present</span>
+            <span className="about">
+              A neural network for creatives and creators. Time Machine Print is a 
+              bookstore and cultural hub celebrating deep thinkers, dreamers,
+              and outliers shaping our creative future.
+            </span>
+          </div>
+        </div>
+      </li>
+      {/* Add more “projects” as desired */}
+    </ul>
+  </div>
+)}
         {activeSection === 'uiux' && (
           <div className="work-experience">
             <h3>UI/UX Designs</h3>
@@ -563,44 +605,126 @@ const Home = () => {
             </ul>
           </div>
         )}
-        {activeSection === 'projects' && (
+        {activeSection === 'prototypes' && (
           <div className="work-experience">
-            <h3>Projects</h3>
-            <p>These projects are digital reflection of my interests, ideas, and obsessions that refused to stay in the "group chat". Each one showcases how I view things at large. They’re not just products; they’re digital extensions of who I am.</p>
-            <p>What began as rough outlines in a digital garage has now matured into distinct operations: a bookstore doubling as a cultural outpost, a design studio with reach beyond its size, and a weather app about to set sail. </p>
-            <p>They’re still evolving, still pushing boundaries, but now they’re doing it at scale, solving real problems for real people in ways I never initially imagined.</p>
-            <p>All started as napkin sketches.</p>
-            <p>Enjoy.</p>
+            {/* <h3>Concepts</h3>
+            <p>
+              Here are future-facing concepts or ideas that I've been exploring. 
+              Each concept is a chance to map out and experiment with what's possible.
+            </p>
             <ul className="work-list">
               <li>
                 <div className="company-info">
-                  {renderLazyImage(sunnyWeather, "Sunny Weather", "company-logo")}
+                  {renderLazyImage(sunnyWeather, 'Sunny Weather', 'company-logo')}
                   <div>
                     <span className="company">
-                      <a href="" className="company-link">Sunny Weather</a>
+                      <a href="#" className="company-link">Sunny Weather</a>
                       <span className="stack">Active</span>
                     </span>
                     <span className="role">AI & Weather</span>
                     <span className="dates">2024 - Present</span>
-                    <span className="about">An AI-powered weather application that provides personalized weather insights and forecasts.</span>
+                    <span className="about">
+                      An AI-powered weather application that provides personalized weather insights 
+                      and forecasts.
+                    </span>
                   </div>
                 </div>
               </li>
               <li>
                 <div className="company-info">
-                  {renderLazyImage(tmlogofull, "Time Machine Print", "company-logo")}
+                  {renderLazyImage(tmlogofull, 'Time Machine Print', 'company-logo')}
                   <div>
                     <span className="company">
-                      <a href="https://timemachineprint.com" className="company-link">Time Machine Print</a>
+                      <a href="https://timemachineprint.com" className="company-link">
+                        Time Machine Print
+                      </a>
                       <span className="stack">Active</span>
                     </span>
                     <span className="role">Curation & Creativity</span>
                     <span className="dates">2024 - Present</span>
-                    <span className="about">A neural network for creatives and creators. Time Machine Print is a bookstore and cultural hub celebrating deep thinkers, dreamers, and outliers shaping our creative future.</span>
+                    <span className="about">
+                      A neural network for creatives and creators. Time Machine Print is a 
+                      bookstore and cultural hub celebrating deep thinkers, dreamers, and 
+                      outliers shaping our creative future.
+                    </span>
                   </div>
                 </div>
               </li>
-             
+            </ul> */}
+            {/* <h3>Prototypes</h3>
+            <p>
+              This small section is my digital workshop—a place where I dive into weekend sprints 
+              and build solutions for my own problems in 48 hours. These prototypes are rough 
+              around the edges, yet they highlight my problem-solving approach and creativity.
+            </p> */}
+            <ul className="work-list">
+              {/* <li>
+                <div className="company-info">
+                  {renderLazyImage(Breadcrumb, 'Breadcrumb', 'company-logo')}
+                  <div>
+                    <span className="company">
+                      <span className="green-dot"></span>
+                      <a href="https://withbreadcrumb.com" className="company-link">Breadcrumb</a>
+                      <span className="stack">v1.0</span>
+                    </span>
+                    <span className="role">NOV</span>
+                    <span className="dates">2024</span>
+                    <span className="about">A Changelog tool for solopreneurs.</span>
+                  </div>
+                </div> */}
+              {/* </li> */}
+              {/* <li>
+                <div className="company-info">
+                  {renderLazyImage(SoundWave, 'SoundWave', 'company-logo')}
+                  <div>
+                    <span className="company">
+                      <span className="green-dot"></span>
+                      <a href="#" className="company-link">SoundWave</a>
+                      <span className="stack">Alpha</span>
+                    </span>
+                    <span className="role">SEPT</span>
+                    <span className="dates">2024</span>
+                    <span className="about">
+                      Transcript & summary assistant for YouTube videos.
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(Mirage, 'Mirage', 'company-logo')}
+                  <div>
+                    <span className="company">
+                      <span className="green-dot"></span>
+                      <a href="#" className="company-link">Mirage</a>
+                      <span className="stack">v0.2</span>
+                    </span>
+                    <span className="role">OCT</span>
+                    <span className="dates">2023</span>
+                    <span className="about">
+                      A quick AR/VR mock simulation concept.
+                    </span>
+                  </div>
+                </div>
+              </li> */}
+              {/* <li>
+                <div className="company-info">
+                  {renderLazyImage(NFTManager, 'NFT Manager', 'company-logo')}
+                  <div>
+                    <span className="company">
+                      <span className="green-dot"></span>
+                      <a href="#" className="company-link">NFT Manager</a>
+                      <span className="stack">Sandbox</span>
+                    </span>
+                    <span className="role">JUNE</span>
+                    <span className="dates">2023</span>
+                    <span className="about">
+                      A simplified interface to create, manage, and track NFTs 
+                      across multiple chains.
+                    </span>
+                  </div>
+                </div>
+              </li> */}
             </ul>
           </div>
         )}
