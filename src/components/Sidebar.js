@@ -42,15 +42,16 @@ const Sidebar = () => {
                                 <i className="fi fi-sr-house-blank"></i> Home
                             </Link>
                         </li>
-                        {/* <li onClick={() => setSelected('thoughts')}>
+                        
+                        <li onClick={() => setSelected('thoughts')}>
                             <Link to="/thoughts" className={selected === 'thoughts' ? 'selected' : ''}>
-                                <i className="fi fi-ss-comment"></i> Thoughts
+                                <i className="fi fi-ss-comment"></i> Blog
                             </Link>
-                        </li> */}
+                        </li> 
                       
                         {/* <li onClick={() => setSelected('photos')}>
                             <Link to="/photos" className={selected === 'photos' ? 'selected' : ''}>
-                                <i className="fi fi-br-photo-capture"></i> Photos
+                                <i className="fi fi-br-photo-capture"></i> Photography
                             </Link>
                         </li> */}
                         {/* <li onClick={() => setSelected('designs')}>
@@ -65,34 +66,38 @@ const Sidebar = () => {
                         </li> */}
                     </ul>
                 </div>
-                {/* <div className="menu-section">
-                    <h3>Projects</h3>
+                <div className="menu-section">
+                    <h3>Contact</h3>
                     <ul>
-              
+                        <li onClick={() => setSelected('email')}>
+                            <a href="mailto:i.michaelcastillo@gmail.com" className={selected === 'email' ? 'selected' : ''}>
+                                <i className="fi fi-ss-envelope"></i> E-mail
+                            </a>
+                        </li>
                     </ul>
                     <ul>
-                        <li onClick={() => setSelected('sunny')}>
-                            <Link to="/sunny" className={selected === 'sunny' ? 'selected' : ''}>
-                                <div className="icon-container">
-                                    <img src={sunnyDark} alt="Sunny Logo Dark" className="icon dark sunny-logo" />
-                                    <img src={sunnyLight} alt="Sunny Logo Light" className="icon light sunny-logo" />
-                                </div>
-                                Sunny Weather
-                            </Link>
+                        <li onClick={() => setSelected('X')}>
+                            <a href="https://www.x.com/imcsays" target="_blank" rel="noopener noreferrer" className={selected === 'x' ? 'selected' : ''}>
+                                <i className="fi fi-brands-twitter"></i> Twitter
+                            </a>
                         </li>
-                    </ul> 
-                     <ul>
-                        <li onClick={() => setSelected('timeMachine')}>
-                            <Link to="/timeMachine" className={selected === 'timeMachine' ? 'selected' : ''}>
-                                <div className="icon-container">
-                                    <img src={timeMachineLogoDark} alt="Time Machine Logo Dark" className="icon dark TimeMachine" />
-                                    <img src={timeMachineLogoLight} alt="Time Machine Logo Light" className="icon light TimeMachine" />
-                                </div>
-                                Time Machine Print
-                            </Link>
+                    </ul>
+                    <ul>
+                        <li onClick={() => setSelected('Github')}>
+                            <a href="https://www.github.com/ian-castillo" target="_blank" rel="noopener noreferrer" className={selected === 'github' ? 'selected' : ''}>
+                                <i className="fi fi-brands-github"></i> Github
+                            </a>
                         </li>
-                    </ul> 
-                </div> */}
+                    </ul>
+                    <ul>
+                        <li onClick={() => setSelected('LinkedIn')}>
+                            <a href="https://www.linkedin.com/in/iancastillo" target="_blank" rel="noopener noreferrer" className={selected === 'linkedin' ? 'selected' : ''}>
+                                <i className="fi fi-brands-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
                 <div className="menu-section">
                     <h3>Resources</h3>
                     <ul>

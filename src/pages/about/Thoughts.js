@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import ReactMarkdown from 'react-markdown';
 import thoughtsData from './thoughtsData';
 import './Thoughts.css';
 
-const ThoughtSidebar = ({ thoughts, selectedThoughtId, onThoughtSelect, searchTerm, onSearchChange }) => (
+const ThoughtSidebar = React.memo(({ thoughts, selectedThoughtId, onThoughtSelect, searchTerm, onSearchChange }) => (
   <div className="thoughts-sidebar">
     <input
       type="text"
@@ -32,42 +32,53 @@ const ThoughtSidebar = ({ thoughts, selectedThoughtId, onThoughtSelect, searchTe
       ))}
     </ul>
   </div>
-);
+));
 
-const ThoughtDetails = ({ thought, onBack }) => {
-  return (
-    <div className="thought-details">
-      <button onClick={onBack} className="back-button">Back to Thoughts</button>
-      <div className="thought-content">
-        <h2>{thought.title}</h2>
-        {thought.image && <img src={thought.image} alt={thought.title} className="thought-image" />}
-        <p>{thought.content}</p>
-        <div className="thought-tags">
-          {thought.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
-        </div>
+const ThoughtDetails = ({ thought, onBack }) => (
+  <div className="thought-details">
+    <button onClick={onBack} className="back-button">Back to Thoughts</button>
+    <div className="thought-content">
+      <h2>{thought.title}</h2>
+      {thought.image && <img src={thought.image} alt={thought.title} className="thought-image" />}
+      <ReactMarkdown>{thought.content}</ReactMarkdown>
+      <div className="thought-tags">
+        {thought.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 const Thoughts = () => {
   const [selectedThoughtId, setSelectedThoughtId] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredThoughts = thoughtsData.filter(thought => 
-    thought.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+  const filteredThoughts = useMemo(() => 
+    thoughtsData.filter(thought => 
+      thought.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    ), [searchTerm]
   );
 
-  const selectedThought = thoughtsData.find(thought => thought.id === selectedThoughtId);
+  const selectedThought = useMemo(() => 
+    thoughtsData.find(thought => thought.id === selectedThoughtId), 
+    [selectedThoughtId]
+  );
+
+  const handleThoughtSelect = useCallback((id) => {
+    setSelectedThoughtId(id);
+  }, []);
+
+  const handleSearchChange = useCallback((term) => {
+    setSearchTerm(term);
+  }, []);
 
   return (
     <div className="thoughts-container">
       <ThoughtSidebar 
         thoughts={filteredThoughts}
         selectedThoughtId={selectedThoughtId}
-        onThoughtSelect={setSelectedThoughtId}
+        onThoughtSelect={handleThoughtSelect}
         searchTerm={searchTerm}
-        onSearchChange={setSearchTerm}
+        onSearchChange={handleSearchChange}
       />
       {selectedThought && (
         <ThoughtDetails 

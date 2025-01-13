@@ -12,17 +12,15 @@ import Textpress from '../../assets/Textpress.jpeg';
 //Advisory Images
 import SXSW from '../../assets/sxsw.png';
 import Rally from '../../assets/rally.png';
-//Prototypes Images
+//Projects Images
 import Chapter from '../../assets/Chapter.png'; 
 import SoundWave from '../../assets/Soundwave.png'
 import Mirage from '../../assets/Mirage.png'
-// import HoundSync from '../../assets/Houndsync.png'
 import EmojiManager from '../../assets/EmojiManager.png' 
-import Breadcrumb from '../../assets/breadcrumb.png'
-//Project Images
-import tmlogofull from '../../assets/tmlogo.svg';
+import Breadcrumb from '../../assets/newbreadcrumblogo.png'
+import tmlogofull from '../../assets/newtmlogo.png';
 import spacePirateLabs from '../../assets/SpacePirateLabs.svg';
-import sunnyWeather from '../../assets/sunnylogo.svg';
+import sunnyWeather from '../../assets/newsunnylogo.svg';
 //Community Images
 import Techstars from '../../assets/techstars.png';
 //Education Images
@@ -107,11 +105,11 @@ const Home = () => {
   ), [handleIconClick]);
 
   const navItems = useMemo(() => [
-    { id: 'about', icon: 'fi-rr-user', text: 'Ian Castillo' },
+    { id: 'about', icon: 'fi-rr-user', text: 'About Ian' },
+    // { id: 'thinking', icon: '', text: 'Design Thinking', svg: true },
     { id: 'experience', icon: 'fi-rr-briefcase', text: 'Experience' },
-    { id: 'uiux', icon: 'fi-rr-layout-fluid', text: 'UI/UX' },
+    { id: 'uiux', icon: 'fi-rr-layout-fluid', text: 'UI/UX Designs' },
     { id: 'projects', icon: 'fi-rr-cube', text: 'Projects' },
-    // { id: 'prototypes', icon: 'fi-rr-box', text: 'Prototypes' },
   ], []);
 
   return (
@@ -120,13 +118,30 @@ const Home = () => {
         {renderLazyImage(profileImage, "Ian Castillo", "profile-image", 1200)}
         <div className="home-nav">
           <div className="nav-items">
-            {navItems.map(({ id, icon, text }) => (
+            {navItems.map(({ id, icon, text, svg }) => (
               <div
                 key={id}
                 className={`nav-item ${activeSection === id ? 'active' : 'inactive'}`}
                 onClick={() => setActiveSection(id)}
               >
-                <i className={`fi ${icon}`}></i>
+                {svg ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="feather feather-lightbulb"
+                  >
+                    <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-7 7c0 3.87 3.13 7 7 7s7-3.13 7-7a7 7 0 0 0-7-7z"></path>
+                  </svg>
+                ) : (
+                  <i className={`fi ${icon}`}></i>
+                )}
                 <span className="nav-item-text">{text}</span>
               </div>
             ))}
@@ -135,22 +150,76 @@ const Home = () => {
         {activeSection === 'about' && (
           <>
             <div className="work-experience">
-              <h2>Hi, I'm Ian.</h2>
-              <p>I'm an entrepreneur, designer, and software developer based in Iowa City, Iowa. My career interests are in zero-to-one design thinking, large language models and generative AI, and accelerating the Iowa start-up ecosystem.</p>
-              <p>Currently, I'm focused on building Space Pirate Labs - a design agency partner designing future-thinking ideas.</p>
-              <p>In addition to my work at Space Pirate Labs, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <button onClick={() => window.open('https://tippie.uiowa.edu/people/ian-castillo', '_blank')} className="nav-button">John Pappajohn Entrepreneurial Center</button>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
-              <p>Previously, I lead product and design as a co-founder of <button onClick={() => window.open('https://www.argus.ai/', '_blank')} className="nav-button">ArgusAI</button>, where myself, Marten Roorda (former CEO of ACT), and Michael Weiler (former CEO of EduPath) were re-imagining and setting new standards for college admissions. At ArgusAI, I led product development and design, ensuring that our solutions not only meet but exceed the expectations of institutions and students alike. ArgusAIs mission is revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants and a more personalized experience for students.</p>
+              <h4 className="subheading">Product | AI | Design</h4>
+              <h3>Hi, I'm Ian!</h3>
+              <p>I'm a product manager focused on turning ambitious ideas into scalable, real-world solutions. I work at the intersection of AI and product, where the challenge isn't just building something groundbreaking but ensuring it works seamlessly. With experience navigating complex systems and cross-functional teams, I'm driven to create platforms that are not only powerful but also intuitive, efficient, and built to last.</p>
+              <p>Currently, I lead product and design as a co-founder of <button onClick={() => window.open('https://www.argus.ai/', '_blank')} className="nav-button">ArgusAI</button>, where myself, Marten Roorda (former CEO of ACT), and Michael Weiler (former CEO of EduPath) are re-imagining and setting new standards for college admissions. At ArgusAI, I led product development and design, ensuring that our AI enabled platform not only meet but exceed the expectations of institutions and students alike. ArgusAI's mission is revolutionize the admissions process, making it more transparent, efficient, and fair. By leveraging advanced algorithms and data analytics, we aim to provide a more holistic view of applicants and a more personalized experience for students.</p>
+              <p>In addition to my work at ArgusAI, I am deeply committed to fostering the next generation of entrepreneurs and innovators. As an adjunct faculty member at the University of Iowa's <button onClick={() => window.open('https://tippie.uiowa.edu/people/ian-castillo', '_blank')} className="nav-button">John Pappajohn Entrepreneurial Center</button>, I have the privilege of teaching and mentoring students in management and entrepreneurship. This role allows me to share my industry experience and insights, helping students develop the skills and mindset needed to succeed in the competitive world of start-ups.</p>
               <p>Before ArgusAI, I was a Product Manager & Designer at <button onClick={() => window.open('https://riiid.com', '_blank')} className="nav-button">Riiid Labs</button>, where I facilitated advancements in AI-driven education applications. While on the LX team, I collaborated with AI researchers, engineers, and designers, driving forward projects that utilized Machine Learning and LLMs to enhance learning outcomes. My work centered on developing digital products that personalized education through artificial intelligence, making learning more accessible and effective for students worldwide.</p>
-              <p>I apperciate you reading this far and hopefully you look around at the things I'm building or have built. I'm at capacity at the moment working on my own projects, but I'm always interested in connecting with other builders/designers/developers. If thats you, let's connect and explore re-imagining the digital future.</p>
-              {renderSocialIcons}
+              <p>I'm always interested in expanding my network! If you're still reading, let's connect and maybe we can re-imagine the future!</p>
             </div>
           </>
+        )}
+        {activeSection === 'thinking' && (
+          <div className="work-experience design-thinking-section">
+            <h3>Design Thinking</h3>
+            <p>
+              In the ever-evolving landscape of technology and design, there lies an extraordinary opportunity to rethink how we build,
+              connect, and create. Design, at its best, is not about decoration or mere utility—it's about clarity, purpose, and the
+              pursuit of something that feels inevitable once it exists. It's the quiet, invisible force that shapes our understanding
+              of the world, transforms how we engage with it, and inspires us to imagine what's possible.
+            </p>
+            <p>
+              I've always believed that the most compelling stories are written at the intersection of innovation and human potential.
+              My work is an exploration of this intersection—a pursuit to distill complex ideas into intuitive, human-centered experiences
+              that resonate far beyond the digital frontier. To me, design is more than problem-solving; it's about creating environments
+              where people feel empowered, seen, and deeply connected to the things they value most.
+            </p>
+            <p>
+              We live in a time defined by transformative technologies like artificial intelligence, generative tools, and increasingly
+              intricate systems. But as these innovations grow in complexity, I see design as the essential bridge that connects technology
+              to humanity. It's the craft of taking what could be overwhelming or opaque and making it simple, approachable, and even delightful.
+              It's about finding an elegance in both form and function—achieving not just efficiency but meaning.
+            </p>
+            <p>
+              When I think about design, I think about intention. Every decision, no matter how small, is a chance to refine, improve, and
+              elevate. It's a discipline rooted in empathy and imagination, but it also demands a relentless focus—a commitment to stripping
+              away the unnecessary and honing what remains until it feels just right. This pursuit of clarity is not an endpoint but an ethos,
+              one that informs everything I create, from the digital products I build to the experiences I shape for others.
+            </p>
+            <p>
+              Human potential is central to this process. As a designer, entrepreneur, and educator, my goal is not just to create better
+              tools but to amplify the creativity, resilience, and ingenuity of others. Whether I'm building platforms that empower users,
+              mentoring students to turn ideas into action, or collaborating with teams to explore uncharted possibilities, I see design as
+              a medium for transformation—a way to craft systems that work in harmony with people rather than dictating to them.
+            </p>
+            <p>
+              I've come to understand that the most impactful work is rarely the loudest or most complex. It's the quiet details, the moments
+              of delight, and the clarity of purpose that resonate. Whether reimagining how we learn, collaborate, or connect, I am driven
+              by a commitment to build with intention, simplicity, and a sense of wonder for what's possible. For me, every product, every
+              project, and every prototype is a story—a reflection of our collective potential to create something extraordinary.
+            </p>
+          </div>
         )}
         {activeSection === 'experience' && (
           <div className="work-experience">
             <h3>Work</h3>
             <ul className="work-list">
             <li>
+                <div className="company-info">
+                  {renderLazyImage(Argus, "Argus", "company-logo")}
+                  <div>
+                    <span className="company">
+                    <a href="https://www.argus.ai" className="company-link">Argus.AI</a>
+                    <span className="location">Remote</span>
+                    </span>
+                    <span className="role">Head of Product & Design</span>
+                    <span className="dates">2022 - </span>
+                    <span className="about">Re-imagining college admissions.</span>
+                  </div>
+                </div>
+              </li>
+            {/* <li>
                 <div className="company-info">
                   {renderLazyImage(spacePirateLabs, "Space Pirate Labs", "company-logo")}
                   <div>
@@ -163,7 +232,7 @@ const Home = () => {
                     <span className="about">A design & consulting agency shaping forward-thinking ideas.</span>
                   </div>
                 </div>
-              </li>
+              </li> */}
               <li>
                 <div className="company-info">
                   {renderLazyImage(Iowa, "University of Iowa", "company-logo")}
@@ -211,20 +280,7 @@ const Home = () => {
             
             <h3>Experience</h3>
             <ul>
-            <li>
-                <div className="company-info">
-                  {renderLazyImage(Argus, "Argus", "company-logo")}
-                  <div>
-                    <span className="company">
-                    <a href="https://www.argus.ai" className="company-link">Argus.AI</a>
-                    <span className="location">Remote</span>
-                    </span>
-                    <span className="role">Head of Product & Design</span>
-                    <span className="dates">2022 - 2025</span>
-                    <span className="about">Re-imagining college admissions.</span>
-                  </div>
-                </div>
-              </li>
+       
               <li>
                 <div className="company-info">
                   {renderLazyImage(Riiid, "Riiid", "company-logo")}
@@ -353,61 +409,69 @@ const Home = () => {
         {activeSection === 'projects' && (
   <div className="work-experience">
     <h3>Projects</h3>
-    <p>
-      Where I spend my weekends. These projects are a digital reflection of my interests and ideas. 
-   
-    </p>
+    <p>This small section is my digital workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. </p>
+     
     <ul className="work-list">
-      {/* Sunny Weather */}
+      <li>
+                <div className="company-info">
+                  {renderLazyImage(Breadcrumb, "breadcrumb", "company-logo")}
+                  <div>
+                    <span className="company">
+                    <span className="green-dot"></span>
+
+                      <a href="https://withbreadcrumb.com" className="company-link">Breadcrumb</a>
+                      <span className="stack">Active</span>
+                    </span>
+                    {/* <span className="role">NOV</span>
+                    <span className="dates">2024</span> */}
+                    <span className="about">A productivity and changelog tool.</span>
+                  </div>
+                </div>
+          </li>
+   
+      <li>
+        <div className="company-info">
+          {renderLazyImage(tmlogofull, "Time Machine Print", "company-logo")}
+          <div>
+            
+            <span className="company">
+            <span className="grey-dot"></span>
+
+              <a href="https://timemachineprint.com" className="company-link">
+                Time Machine Print
+              </a>
+              
+              <span className="stack">Paused</span>
+            </span>
+            {/* <span className="role">Curation & Creativity</span>
+            <span className="dates">2024 - Present</span> */}
+            <span className="about">
+               Online  
+              bookstore celebrating thinkers, dreamers,
+              & outliers. 
+            </span>
+          </div>
+        </div>
+      </li>
       <li>
         <div className="company-info">
           {renderLazyImage(sunnyWeather, "Sunny Weather", "company-logo")}
           <div>
             <span className="company">
-              <a href="#" className="company-link">Sunny Weather</a>
-              <span className="stack">Active</span>
-            </span>
-            <span className="role">AI & Weather</span>
-            <span className="dates">2024 - Present</span>
-            <span className="about">
-              An AI-powered weather application that provides personalized 
-              weather insights and forecasts.
-            </span>
-          </div>
-        </div>
-      </li>
+            <span className="green-dot"></span>
 
-      {/* Time Machine Print */}
-      <li>
-        <div className="company-info">
-          {renderLazyImage(tmlogofull, "Time Machine Print", "company-logo")}
-          <div>
-            <span className="company">
-              <a href="https://timemachineprint.com" className="company-link">
-                Time Machine Print
-              </a>
+              <a href="https://sunnyweather.co" className="company-link">Sunny Weather</a>
               <span className="stack">Active</span>
             </span>
-            <span className="role">Curation & Creativity</span>
-            <span className="dates">2024 - Present</span>
+            {/* <span className="role">AI & Weather</span>
+            <span className="dates">2024 - Present</span> */}
             <span className="about">
-               Time Machine Print is an online  
-              bookstore celebrating deep thinkers, dreamers,
-              and outliers shaping our creative future. A neural network for creatives and creators.
+              AI-powered weather app providing personalized weather forecasts.
             </span>
           </div>
         </div>
       </li>
-      {/* Add more “projects” as desired */}
-    </ul>
-    <h3>Prototypes</h3>
-            <p>This small section is my digital workshop—a very unpolished corner where I dive into weekend sprints and build solutions to my own specific problems. Here, everything is 48 hours of boxed time to ship a working prototype. </p>
-            <p>Here, there is no pretense, no polished veneer—just a place where I can get my hands dirty with code and design without expectation of finishing anything listed. I've learned that sometimes the best ideas and work come from the things you "did that one time".</p>
-            <p>So thats essentially what these are. Prototypes I did one time, some with a few updates because I had an itch or a "a-ha" moment after I already shipped it. </p>
-            <p> </p>
-            <p>Enjoy.</p>
-            <ul className="work-list">
-              
+  
               <li>
                 <div className="company-info">
                   {renderLazyImage(Chapter, "Chapter", "company-logo")}
@@ -416,59 +480,11 @@ const Home = () => {
                     <span className="black-dot"></span>
 
                       <a href="https://www.timemachineprint.com/chapter-app-ios-and-android" className="company-link">Chapter</a>
-                      <span className="stack">In-Progress</span>
+                      <span className="stack">Archived</span>
                     </span>
-                    <span className="role">DEC-Anticipated</span>
-                    <span className="dates">2024</span>
+                    {/* <span className="role">DEC-Anticipated</span> */}
+                    {/* <span className="dates">2024</span> */}
                     <span className="about">Bookmark, track, and discover book recommendations.</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="company-info">
-                  {renderLazyImage(Breadcrumb, "breadcrumb", "company-logo")}
-                  <div>
-                    <span className="company">
-                    <span className="green-dot"></span>
-
-                      <a href="https://withbreadcrumb.com" className="company-link">Breadcrumb</a>
-                      <span className="stack">v1.0</span>
-                    </span>
-                    <span className="role">NOV</span>
-                    <span className="dates">2024</span>
-                    <span className="about">A Changelog tool for solopreneurs.</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="company-info">
-                  {renderLazyImage(SoundWave, "SoundWave", "company-logo")}
-                  <div>
-                    <span className="company">
-                    <span className="green-dot"></span>
-                      <a href="" className="company-link">SoundWave</a>
-                      <span className="stack">Alpha</span>
-                    </span>
-                    <span className="role">SEPT</span>
-                    <span className="dates">2024</span>
-                    <span className="about">Transcript & summary assistant for Youtube videos.</span>
-                  </div>
-                </div>
-              </li>
-          
-              <li>
-              <div className="company-info">
-                  {renderLazyImage(Mirage, "Mirage", "company-logo")}
-                  <div>
-                    <span className="company">
-                    <span className="green-dot"></span>
-
-                      <a href="" className="company-link">Mirage</a>
-                      <span className="stack">Beta</span>
-                    </span>
-                    <span className="role">AUG</span>
-                    <span className="dates">2024</span>
-                    <span className="about">A tool for removing backgrounds from images.</span>
                   </div>
                 </div>
               </li>
@@ -480,24 +496,55 @@ const Home = () => {
                     <span className="green-dot"></span>
 
                       <a href="https://emojimanager.com" className="company-link">Emoji Manager</a>
-                      <span className="stack">v1.0</span>
+                      <span className="stack">Active</span>
                     </span>
-                    <span className="role">JULY</span>
-                    <span className="dates">2024</span>
+                    {/* <span className="role">JULY</span>
+                    <span className="dates">2024</span> */}
                     <span className="about">A web app for searching emojis.</span>
                   </div>
                 </div>
-                
               </li>
+              <li>
+                <div className="company-info">
+                  {renderLazyImage(SoundWave, "SoundWave", "company-logo")}
+                  <div>
+                    <span className="company">
+                    <span className="black-dot"></span>
+                      <a href="" className="company-link">SoundWave</a>
+                      <span className="stack">Archived</span>
+                    </span>
+                    {/* <span className="role">SEPT</span> */}
+                    {/* <span className="dates">2024</span> */}
+                    <span className="about">Transcript & summary assistant for Youtube videos.</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+              <div className="company-info">
+                  {renderLazyImage(Mirage, "Mirage", "company-logo")}
+                  <div>
+                    <span className="company">
+                    <span className="black-dot"></span>
+                      <a href="" className="company-link">Mirage</a>
+                      <span className="stack">Archived</span>
+                    </span>
+                    {/* <span className="role">AUG</span> */}
+                    {/* <span className="dates">2024</span> */}
+                    <span className="about">A tool for removing backgrounds from images.</span>
+                  </div>
+                </div>
+              </li>
+     
           
-            </ul>
+                 {/* Add more “projects” as desired */}
+    </ul>
   </div>
   
 )}
         {activeSection === 'uiux' && (
           <div className="work-experience">
             <h3>UI/UX Designs</h3>
-            <p>A collection of product design work spanning AI, Web3, and productivity tools.</p>
+            <p>A collection of user interfaces I've designed. Spanning from AI and Web3, to productivity tools.</p>
             
             <ul className="uiux-list">
             <li className="uiux-item">
@@ -590,11 +637,7 @@ const Home = () => {
             </ul>
           </div>
         )}
-        {activeSection === 'prototypes' && (
-          <div className="work-experience">
-            <p>Prototypes moved to Projects tab.</p>
-          </div>
-        )}
+    
       </div>
     </div>
   );

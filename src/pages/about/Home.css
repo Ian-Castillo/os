@@ -108,7 +108,7 @@
 /* Content text */
 .main-content p {
   text-align: left;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   line-height: 1.6;
   font-size: 14px;
 }
@@ -451,6 +451,17 @@ h3 { font-size: 18px; }
   box-shadow: 0 0 5px #32CD32;
 }
 
+.grey-dot {
+  display: inline-block;
+  margin-right: 5px;
+  height: 8px;
+  width: 8px;
+  background-color: #b3b3b3; /* Orange color */
+  border-radius: 50%;
+  box-shadow: 0 0 5px #b3b3b3;
+}
+
+
 .black-dot {
   display: inline-block;
   margin-right: 5px;
@@ -470,4 +481,8 @@ h3 { font-size: 18px; }
   background-color: #ff0000; /* LimeGreen color */
   border-radius: 50%;
   box-shadow: 0 0 5px #ff0000;
+}
+
+.subheading {
+  color: #4a4a4a; /* Slightly black/grey color */
 }
